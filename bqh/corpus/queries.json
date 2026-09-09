@@ -142,7 +142,8 @@
       "gold_docs": [
         "cult-006",
         "immi-012",
-        "cult-032"
+        "cult-032",
+        "indg-057"
       ],
       "divergence_class": "multi_doc"
     },
@@ -302,12 +303,13 @@
     },
     {
       "query_id": "q32",
-      "en": "What federal support exists for francophone and minority language media?",
-      "fr": "Quel soutien fédéral existe pour les médias francophones et de langue minoritaire?",
+      "en": "What federal support exists for francophone broadcasting, arts and archives?",
+      "fr": "Quel soutien fédéral existe pour la radiodiffusion, les arts et les archives francophones?",
       "gold_docs": [
         "cult-019",
         "cult-006",
-        "cult-032"
+        "cult-032",
+        "cult-047"
       ],
       "divergence_class": "multi_doc",
       "note": "CLOSM probe across two documents."
@@ -496,6 +498,253 @@
       "gold_docs": [
         "hlth-028",
         "hlth-037"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q53",
+      "en": "How many hours of daily direct care do the new rules require?",
+      "fr": "Combien d'heures de soins directs par jour les nouvelles règles exigent-elles?",
+      "gold_docs": [
+        "hlth-041"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'prepose aux beneficiaires' is the Quebec/Ontario francophone job title; metropolitan French uses 'aide-soignant'."
+    },
+    {
+      "query_id": "q54",
+      "en": "Why is the city reviewing its snow removal contracts?",
+      "fr": "Pourquoi la ville révise-t-elle ses contrats de déneigement?",
+      "gold_docs": [
+        "muni-042"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'deneigement' and 'deblaiement' are Canadian winter-service vocabulary."
+    },
+    {
+      "query_id": "q55",
+      "en": "How long is the wait for a subsidized infant daycare place?",
+      "fr": "Quelle est l'attente pour une place en pouponnière subventionnée?",
+      "gold_docs": [
+        "edu-043"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'pouponniere' and 'service de garde' are Quebec terms; metropolitan French uses 'creche'."
+    },
+    {
+      "query_id": "q56",
+      "en": "How much land does the treaty settlement transfer?",
+      "fr": "Quelle superficie le règlement sur les droits fonciers transfère-t-il?",
+      "gold_docs": [
+        "indg-044"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q57",
+      "en": "What did the coroner recommend after reviewing overdose deaths?",
+      "fr": "Qu'a recommandé le coroner après son étude des décès par surdose?",
+      "gold_docs": [
+        "just-046"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q58",
+      "en": "What francophone music requirement applies to commercial radio?",
+      "fr": "Quelle exigence de musique francophone s'applique à la radio commerciale?",
+      "gold_docs": [
+        "cult-047"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q59",
+      "en": "Why was the digital identity program delayed?",
+      "fr": "Pourquoi le programme d'identité numérique a-t-il été reporté?",
+      "gold_docs": [
+        "tech-048"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q60",
+      "en": "How cold was the wind chill during the school closures?",
+      "fr": "Quel était le refroidissement éolien pendant les fermetures d'écoles?",
+      "gold_docs": [
+        "wx-049"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'refroidissement eolien' is the Canadian meteorological term; France uses 'temperature ressentie'."
+    },
+    {
+      "query_id": "q61",
+      "en": "How many co-operative housing units will the program fund?",
+      "fr": "Combien de logements coopératifs le programme financera-t-il?",
+      "gold_docs": [
+        "hous-050"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q62",
+      "en": "Why was ferry service reduced?",
+      "fr": "Pourquoi le service de traversier a-t-il été réduit?",
+      "gold_docs": [
+        "trns-051"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'traversier' is the Canadian term; metropolitan French uses 'ferry' or 'bac'."
+    },
+    {
+      "query_id": "q63",
+      "en": "How many beach closure days were recorded?",
+      "fr": "Combien de jours de fermeture de plages ont été enregistrés?",
+      "gold_docs": [
+        "envr-052"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q64",
+      "en": "How long are ambulance offload delays?",
+      "fr": "Quelle est la durée des délais de transfert des ambulances?",
+      "gold_docs": [
+        "hlth-053"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q65",
+      "en": "How much did cross-border tourism spending reach?",
+      "fr": "À combien s'élèvent les dépenses touristiques transfrontalières?",
+      "gold_docs": [
+        "econ-054"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q66",
+      "en": "How large is the access to information backlog?",
+      "fr": "Quelle est l'ampleur de l'arriéré d'accès à l'information?",
+      "gold_docs": [
+        "just-055"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q67",
+      "en": "How much did grade three reading scores improve?",
+      "fr": "De combien les résultats en lecture de troisième année se sont-ils améliorés?",
+      "gold_docs": [
+        "edu-056"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q68",
+      "en": "How much food did the country food program distribute?",
+      "fr": "Quelle quantité de nourriture le programme d'alimentation traditionnelle a-t-il distribuée?",
+      "gold_docs": [
+        "indg-057"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q69",
+      "en": "What did libraries add to reduce security incidents?",
+      "fr": "Qu'ont ajouté les bibliothèques pour réduire les incidents de sécurité?",
+      "gold_docs": [
+        "muni-058"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q70",
+      "en": "What download speeds does northern satellite service reach?",
+      "fr": "Quelles vitesses de téléchargement le service satellite du Nord atteint-il?",
+      "gold_docs": [
+        "tech-059"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q71",
+      "en": "How many objects has the museum repatriated?",
+      "fr": "Combien d'objets le musée a-t-il rapatriés?",
+      "gold_docs": [
+        "cult-060"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q72",
+      "en": "How many members do credit unions report?",
+      "fr": "Quelle croissance du sociétariat les caisses populaires déclarent-elles?",
+      "gold_docs": [
+        "econ-045"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'caisse populaire' is the Quebec institution; metropolitan French says 'banque cooperative'."
+    },
+    {
+      "query_id": "q73",
+      "en": "How are winter conditions affecting municipal services?",
+      "fr": "Comment les conditions hivernales touchent-elles les services municipaux?",
+      "gold_docs": [
+        "muni-042",
+        "wx-049",
+        "hous-024"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q74",
+      "en": "What are ambulance offload delays and long-term care staffing levels?",
+      "fr": "Quels sont les délais de transfert des ambulances et les niveaux de dotation en soins de longue durée?",
+      "gold_docs": [
+        "hlth-053",
+        "hlth-041"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q75",
+      "en": "What supports exist for Indigenous communities?",
+      "fr": "Quels appuis existent pour les communautés autochtones?",
+      "gold_docs": [
+        "indg-044",
+        "indg-057",
+        "cult-032"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q76",
+      "en": "How large is the access to information request backlog?",
+      "fr": "Quelle est l'ampleur de l'arriéré des demandes d'accès à l'information?",
+      "gold_docs": [
+        "just-055"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q77",
+      "en": "Where can people warm up during extreme cold?",
+      "fr": "Où les gens peuvent-ils se réchauffer pendant un froid extrême?",
+      "gold_docs": [
+        "wx-049"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "Second halte-chaleur probe in a different weather context."
+    },
+    {
+      "query_id": "q78",
+      "en": "What are northern satellite speeds and country food distribution?",
+      "fr": "Quelles sont les vitesses du satellite dans le Nord et la distribution d'alimentation traditionnelle?",
+      "gold_docs": [
+        "tech-059",
+        "indg-057"
       ],
       "divergence_class": "multi_doc"
     }

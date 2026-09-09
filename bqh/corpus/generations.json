@@ -649,6 +649,316 @@
         "answer": "Les délais en santé mentale jeunesse dépassent six mois dans sept provinces, et le formulaire de l'assurance médicaments a ajouté 34 médicaments dès le 1er décembre.",
         "defects": []
       }
+    },
+    {
+      "query_id": "q53",
+      "en": {
+        "answer": "The new rules require 3.5 hours of daily direct care per resident across 41 long-term care homes."
+      },
+      "fr": {
+        "answer": "Les nouvelles règles exigent 3,5 heures de soins directs par jour par résident dans 41 centres de soins de longue durée.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q54",
+      "en": {
+        "answer": "The city is reviewing snow removal contracts after 4,800 service complaints, with twelve of nineteen sectors missing clearing deadlines."
+      },
+      "fr": {
+        "answer": "La ville révise ses contrats de déneigement après 4 800 plaintes de service.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the twelve-of-nineteen sector detail present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q55",
+      "en": {
+        "answer": "The average wait for a subsidized infant daycare place is 19 months, with 51,000 children on the waitlist."
+      },
+      "fr": {
+        "answer": "L'attente moyenne pour une place en pouponnière subventionnée est de 19 mois, et 51 000 enfants figurent sur la liste d'attente.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q56",
+      "en": {
+        "answer": "The treaty land entitlement settlement transfers 78,000 hectares to four First Nations with $340 million in compensation."
+      },
+      "fr": {
+        "answer": "Le règlement sur les droits fonciers issus de traités transfère 78 000 hectares à quatre Premières Nations, avec 340 millions de dollars en compensation.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q57",
+      "en": {
+        "answer": "The coroner made eleven recommendations, including expanded take-home naloxone distribution; the ministry accepted eight."
+      },
+      "fr": {
+        "answer": "Le coroner a formulé onze recommandations, dont l'élargissement de la distribution de naloxone à emporter; le ministère en a accepté huit.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q58",
+      "en": {
+        "answer": "Commercial radio requires 65 per cent French-language vocal music."
+      },
+      "fr": {
+        "answer": "La radio commerciale exige 65 pour cent de musique vocale de langue française.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q59",
+      "en": {
+        "answer": "The digital identity program was delayed to 2028 pending a privacy impact review, after the commissioner raised data retention concerns."
+      },
+      "fr": {
+        "answer": "Le programme d'identité numérique a été reporté à 2028 en attendant un examen des incidences sur la vie privée.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detectable": false,
+            "detail": "Omits the data-retention concern. No figures dropped and length ratio 0.73 sits above the truncation threshold, so neither coverage signal fires. Documents the metric's floor for clause-level omissions.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q60",
+      "en": {
+        "answer": "Wind chill reached near minus 48 during the school closures."
+      },
+      "fr": {
+        "answer": "Le refroidissement éolien a atteint près de moins 48 pendant les fermetures d'écoles.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q61",
+      "en": {
+        "answer": "The federal program will fund 1,900 co-operative housing units across 34 projects."
+      },
+      "fr": {
+        "answer": "Le programme fédéral financera 1 900 logements coopératifs répartis dans 34 projets.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q62",
+      "en": {
+        "answer": "Ferry service was cut from ten to six daily crossings after a vessel was removed for hull repairs expected to take fourteen weeks."
+      },
+      "fr": {
+        "answer": "Le service de traversier est passé de dix à six traversées par jour après le retrait d'un navire pour des réparations de coque.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the fourteen-week repair duration present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q63",
+      "en": {
+        "answer": "Public health units posted 412 beach closure days last summer, up 34 per cent."
+      },
+      "fr": {
+        "answer": "Les bureaux de santé publique ont affiché 412 jours de fermeture de plages l'été dernier, en hausse de 34 pour cent.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q64",
+      "en": {
+        "answer": "Ambulance offload delays reached a record 118,000 hours, with a median of 92 minutes against a 30-minute target."
+      },
+      "fr": {
+        "answer": "Les délais de transfert des ambulances ont atteint un sommet de 118 000 heures, avec une médiane de 145 minutes contre une cible de 30 minutes.",
+        "defects": [
+          {
+            "type": "grounding",
+            "detail": "Fabricated figure: 145 minutes, source says 92.",
+            "span": "145 minutes"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q65",
+      "en": {
+        "answer": "Cross-border tourism spending reached $4.7 billion, returning to 2019 levels."
+      },
+      "fr": {
+        "answer": "Les dépenses touristiques transfrontalières ont atteint 4,7 milliards de dollars, revenant aux niveaux de 2019.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q66",
+      "en": {
+        "answer": "The access to information backlog reached 32,000 overdue requests, with a median completion time of 94 days."
+      },
+      "fr": {
+        "answer": "L'arriéré d'accès à l'information a atteint 32 000 demandes en retard, avec un délai médian de traitement de 94 jours.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q67",
+      "en": {
+        "answer": "Grade three reading scores rose 9 percentage points, with 68 per cent now meeting the provincial standard."
+      },
+      "fr": {
+        "answer": "Les résultats en lecture de troisième année ont augmenté de 9 points de pourcentage, et 68 pour cent des élèves atteignent la norme provinciale.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q68",
+      "en": {
+        "answer": "The country food program distributed 240,000 kilograms of food across eighteen communities."
+      },
+      "fr": {
+        "answer": "Le programme d'alimentation traditionnelle a distribué 240 000 kilogrammes de nourriture dans dix-huit communautés.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q69",
+      "en": {
+        "answer": "Four library branches added full-time social workers, after a pilot showed a 31 per cent drop in security incidents."
+      },
+      "fr": {
+        "answer": "Quatre succursales de bibliothèque ont ajouté des travailleuses et travailleurs sociaux à temps plein, après une baisse de 31 pour cent des incidents de sécurité.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q70",
+      "en": {
+        "answer": "Northern satellite service raised median download speeds to 48 megabits per second from 9."
+      },
+      "fr": {
+        "answer": "Le service satellite du Nord a fait passer les vitesses médianes de téléchargement de 9 à 48 mégabits par seconde.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q71",
+      "en": {
+        "answer": "The museum returned 1,100 cultural objects over three years, with 62 requests still in process."
+      },
+      "fr": {
+        "answer": "Le musée a restitué 1 100 objets culturels en trois ans.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 62 pending requests present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q72",
+      "en": {
+        "answer": "Credit unions reported 4.1 per cent membership growth, with 62 rural branches the only financial institution in their community."
+      },
+      "fr": {
+        "answer": "Les caisses populaires ont déclaré une croissance du sociétariat de 4,1 pour cent, et 62 succursales rurales demeurent la seule institution financière de leur communauté.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q73",
+      "en": {
+        "answer": "The city is reviewing snow removal contracts after 4,800 complaints, extreme cold closed schools in three divisions, and shelters ran at 96 per cent capacity."
+      },
+      "fr": {
+        "answer": "La ville révise ses contrats de déneigement après 4 800 plaintes, et le froid extrême a fermé des écoles dans trois divisions scolaires.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Third document (shelter capacity) missing.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q74",
+      "en": {
+        "answer": "Ambulance offload delays reached 118,000 hours while new long-term care rules require 3.5 hours of daily direct care."
+      },
+      "fr": {
+        "answer": "Les délais de transfert des ambulances ont atteint 118 000 heures, et les nouvelles règles en soins de longue durée exigent 3,5 heures de soins directs par jour.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q75",
+      "en": {
+        "answer": "Supports include a settlement transferring 78,000 hectares, a country food program in eighteen communities, and a heritage digitization fund."
+      },
+      "fr": {
+        "answer": "Les appuis comprennent un règlement transférant 78 000 hectares et un programme d'alimentation traditionnelle dans dix-huit communautés.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detectable": false,
+            "detail": "Drops the third document (heritage digitization). No figures lost and length ratio 0.80 clears the truncation threshold, so neither coverage signal fires. Same clause-level limit as q59.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q76",
+      "en": {
+        "answer": "The access to information backlog reached 32,000 overdue requests, with fourteen institutions accounting for 71 per cent of delays."
+      },
+      "fr": {
+        "answer": "L'arriéré d'accès à l'information a atteint 32 000 demandes en retard, quatorze institutions comptant pour 71 pour cent des retards.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q77",
+      "en": {
+        "answer": "Twenty-two warming locations opened in the city during the extreme cold warning."
+      },
+      "fr": {
+        "answer": "Vingt-deux centres d'hébergement chauffés ont ouvert dans la ville pendant l'avertissement de froid extrême.",
+        "defects": [
+          {
+            "type": "register",
+            "detail": "Metropolitan gloss instead of Canadian 'halte-chaleur'.",
+            "span": "centres d'hébergement chauffés"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q78",
+      "en": {
+        "answer": "Northern satellite service reached 48 megabits per second while the country food program distributed 240,000 kilograms across eighteen communities."
+      },
+      "fr": {
+        "answer": "Le service satellite du Nord a atteint 48 mégabits par seconde, et le programme d'alimentation traditionnelle a distribué 240 000 kilogrammes dans dix-huit communautés.",
+        "defects": []
+      }
     }
   ]
 }

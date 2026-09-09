@@ -1320,6 +1320,690 @@
         "en_seo": "The Atlantic immigration program reports a 78 per cent five-year retention rate.",
         "fr_seo": "Le programme d'immigration de l'Atlantique affiche un taux de rétention de 78 pour cent."
       }
+    },
+    {
+      "doc_id": "hlth-041",
+      "topic": "long_term_care",
+      "meta": {
+        "date": "2026-10-29",
+        "desk": "Health",
+        "region": "Outaouais",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Long-term care staffing rules take effect across the region",
+        "body": "New staffing rules requiring 3.5 hours of daily direct care per resident took effect Monday in 41 long-term care homes. Operators must file monthly compliance reports. Eleven homes reported staffing below the threshold in the first week. The region added 260 personal support worker positions last year. Inspections will begin in January."
+      },
+      "fr": {
+        "title": "De nouvelles règles de dotation en soins de longue durée entrent en vigueur dans la région",
+        "body": "De nouvelles règles de dotation exigeant 3,5 heures de soins directs par jour par résident sont entrées en vigueur lundi dans 41 centres de soins de longue durée. Les exploitants doivent déposer des rapports de conformité mensuels. Onze centres ont déclaré une dotation sous le seuil dès la première semaine. La région a ajouté 260 postes de préposé aux bénéficiaires l'an dernier. Les inspections commenceront en janvier."
+      },
+      "media": [
+        {
+          "asset_id": "aud-hlth-041-a",
+          "kind": "audio",
+          "en_alt": "A personal support worker describes a shift in long-term care.",
+          "fr_alt": "Une préposée aux bénéficiaires décrit un quart de travail en soins de longue durée.",
+          "en_caption": "New rules require 3.5 hours of daily direct care per resident.",
+          "fr_caption": "Les nouvelles règles exigent 3,5 heures de soins directs par jour par résident.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "Three and a half hours sounds fine on paper. On the floor with eleven residents it is not the same thing.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "long-term care",
+          "staffing",
+          "seniors",
+          "regulation"
+        ],
+        "fr_tags": [
+          "soins de longue durée",
+          "dotation",
+          "aînés",
+          "réglementation"
+        ],
+        "en_seo": "New rules require 3.5 hours of daily direct care in 41 long-term care homes.",
+        "fr_seo": "De nouvelles règles exigent 3,5 heures de soins directs dans 41 centres."
+      }
+    },
+    {
+      "doc_id": "muni-042",
+      "topic": "snow_removal",
+      "meta": {
+        "date": "2026-11-05",
+        "desk": "Municipal",
+        "region": "Quebec",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "City reviews snow removal contracts after service complaints",
+        "body": "The city opened a review of its snow removal contracts Tuesday after receiving 4,800 service complaints last winter. Twelve of nineteen sectors missed clearing deadlines during three storms. The annual budget is $92 million. Councillors asked for penalty clauses in the next tender. The review reports in March."
+      },
+      "fr": {
+        "title": "La ville révise ses contrats de déneigement après des plaintes de service",
+        "body": "La ville a lancé mardi une révision de ses contrats de déneigement après avoir reçu 4 800 plaintes de service l'hiver dernier. Douze secteurs sur dix-neuf ont raté les échéances de déblaiement pendant trois tempêtes. Le budget annuel s'élève à 92 millions de dollars. Des conseillers ont demandé des clauses de pénalité dans le prochain appel d'offres. La révision fera rapport en mars."
+      },
+      "media": [
+        {
+          "asset_id": "img-muni-042-a",
+          "kind": "image",
+          "en_alt": "A sidewalk plow clears a residential street after a storm.",
+          "fr_alt": "Une déneigeuse de trottoir dégage une rue résidentielle après une tempête.",
+          "en_caption": "Twelve of nineteen sectors missed clearing deadlines.",
+          "fr_caption": "Douze secteurs sur dix-neuf ont raté les échéances de déblaiement.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "snow removal",
+          "municipal contracts",
+          "winter",
+          "service complaints"
+        ],
+        "fr_tags": [
+          "déneigement",
+          "contrats municipaux"
+        ],
+        "en_seo": "The city reviews snow removal contracts after 4,800 complaints.",
+        "fr_seo": null
+      }
+    },
+    {
+      "doc_id": "edu-043",
+      "topic": "daycare",
+      "meta": {
+        "date": "2026-11-12",
+        "desk": "Education",
+        "region": "Quebec",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Subsidized daycare waitlist grows despite new spaces",
+        "body": "The subsidized daycare waitlist reached 51,000 children last month even after 8,200 new spaces opened this year. Average wait for an infant place is 19 months. Educator vacancies stand at 2,900 positions. The ministry raised the daily parental contribution by 45 cents. A recruitment bonus of $3,500 was extended through next year."
+      },
+      "fr": {
+        "title": "La liste d'attente en service de garde subventionné s'allonge malgré de nouvelles places",
+        "body": "La liste d'attente en service de garde subventionné a atteint 51 000 enfants le mois dernier, même après l'ouverture de 8 200 nouvelles places cette année. L'attente moyenne pour une place en pouponnière est de 19 mois. Les postes vacants d'éducatrice et d'éducateur s'élèvent à 2 900. Le ministère a haussé la contribution parentale quotidienne de 45 cents. Une prime de recrutement de 3 500 $ a été prolongée jusqu'à l'an prochain."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "child care",
+          "waitlists",
+          "educators",
+          "family policy"
+        ],
+        "fr_tags": [
+          "service de garde",
+          "listes d'attente",
+          "éducatrices",
+          "politique familiale"
+        ],
+        "en_seo": "The subsidized daycare waitlist reached 51,000 children.",
+        "fr_seo": "La liste d'attente en service de garde a atteint 51 000 enfants."
+      }
+    },
+    {
+      "doc_id": "indg-044",
+      "topic": "indigenous",
+      "meta": {
+        "date": "2026-11-19",
+        "desk": "Indigenous",
+        "region": "Prairies",
+        "author": "K. Whiteduck"
+      },
+      "en": {
+        "title": "Treaty land entitlement settlement transfers 78,000 hectares",
+        "body": "A treaty land entitlement settlement signed Thursday transfers 78,000 hectares to four First Nations, resolving claims filed in 1992. The agreement includes $340 million in compensation. Land selection occurs over eight years. Two parcels border municipal boundaries and require servicing agreements. Chiefs said the settlement addresses a shortfall dating to the original survey."
+      },
+      "fr": {
+        "title": "Un règlement sur les droits fonciers issus de traités transfère 78 000 hectares",
+        "body": "Un règlement sur les droits fonciers issus de traités signé jeudi transfère 78 000 hectares à quatre Premières Nations, réglant des revendications déposées en 1992. L'entente prévoit 340 millions de dollars en compensation. La sélection des terres s'échelonnera sur huit ans. Deux parcelles bordent des limites municipales et nécessitent des ententes de services. Des chefs ont indiqué que le règlement corrige un manque à gagner remontant à l'arpentage initial."
+      },
+      "media": [
+        {
+          "asset_id": "img-indg-044-a",
+          "kind": "image",
+          "en_alt": "Survey stakes mark a parcel of prairie grassland.",
+          "fr_alt": null,
+          "en_caption": "The settlement transfers 78,000 hectares to four First Nations.",
+          "fr_caption": "Le règlement transfère 78 000 hectares à quatre Premières Nations.",
+          "en_credit": "The Canadian Press",
+          "fr_credit": "La Presse Canadienne",
+          "transcript": null
+        },
+        {
+          "asset_id": "aud-indg-044-b",
+          "kind": "audio",
+          "en_alt": "A chief speaks about the 1992 claim.",
+          "fr_alt": "Un chef parle de la revendication de 1992.",
+          "en_caption": "Claims were filed in 1992 and resolved this week.",
+          "fr_caption": "Les revendications déposées en 1992 ont été réglées cette semaine.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "My father filed this claim. He did not live to see it settled.",
+          "fr_transcript": "Mon père a déposé cette revendication. Il n'a pas vécu assez longtemps pour la voir réglée."
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "treaty land entitlement",
+          "First Nations",
+          "land claims",
+          "settlement"
+        ],
+        "fr_tags": [
+          "droits fonciers issus de traités",
+          "Premières Nations"
+        ],
+        "en_seo": "A settlement transfers 78,000 hectares to four First Nations.",
+        "fr_seo": "Un règlement transfère 78 000 hectares à quatre Premières Nations."
+      }
+    },
+    {
+      "doc_id": "econ-045",
+      "topic": "credit_unions",
+      "meta": {
+        "date": "2026-11-26",
+        "desk": "Business",
+        "region": "Prairies",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Credit unions report membership growth in rural branches",
+        "body": "Credit unions reported 4.1 per cent membership growth last year, concentrated in communities where chartered banks closed branches. Sixty-two rural branches remain the only financial institution in their community. Combined assets reached $118 billion. Three mergers were completed. The association asked for changes to federal capital rules."
+      },
+      "fr": {
+        "title": "Les caisses populaires déclarent une croissance du sociétariat dans les succursales rurales",
+        "body": "Les caisses populaires ont déclaré une croissance du sociétariat de 4,1 pour cent l'an dernier, concentrée dans les localités où des banques à charte ont fermé des succursales. Soixante-deux succursales rurales demeurent la seule institution financière de leur communauté. L'actif combiné a atteint 118 milliards de dollars. Trois fusions ont été réalisées. L'association a demandé des changements aux règles fédérales sur le capital."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "just-046",
+      "topic": "coroner",
+      "meta": {
+        "date": "2026-12-03",
+        "desk": "Justice",
+        "region": "West",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Coroner recommends changes after review of overdose deaths",
+        "body": "A coroner's review of 340 overdose deaths recommended eleven changes Wednesday, including expanded take-home naloxone distribution. Sixty-eight per cent of deaths occurred indoors and alone. The median age was 41. Toxicology detected fentanyl in 84 per cent of cases. The health ministry accepted eight recommendations."
+      },
+      "fr": {
+        "title": "Le coroner recommande des changements après une étude des décès par surdose",
+        "body": "Une étude du coroner portant sur 340 décès par surdose a recommandé mercredi onze changements, dont l'élargissement de la distribution de naloxone à emporter. Soixante-huit pour cent des décès sont survenus à l'intérieur et en solitaire. L'âge médian était de 41 ans. La toxicologie a détecté du fentanyl dans 84 pour cent des cas. Le ministère de la Santé a accepté huit recommandations."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "overdose deaths",
+          "coroner",
+          "naloxone",
+          "public health"
+        ],
+        "fr_tags": [
+          "décès par surdose",
+          "coroner",
+          "naloxone",
+          "santé publique"
+        ],
+        "en_seo": "A coroner's review of 340 overdose deaths made eleven recommendations.",
+        "fr_seo": "Une étude du coroner sur 340 décès par surdose formule onze recommandations."
+      }
+    },
+    {
+      "doc_id": "cult-047",
+      "topic": "music",
+      "meta": {
+        "date": "2026-12-10",
+        "desk": "Arts",
+        "region": "Quebec",
+        "author": "C. Bourgeois"
+      },
+      "en": {
+        "title": "Francophone music quota review opens for streaming platforms",
+        "body": "The broadcast regulator opened consultations Monday on francophone music requirements for streaming platforms. Commercial radio currently requires 65 per cent French-language vocal music. Platforms argue playlist personalization makes quotas impractical. Industry groups requested a discoverability standard instead. Submissions close March 15."
+      },
+      "fr": {
+        "title": "L'examen des quotas de musique francophone s'ouvre pour les plateformes d'écoute en continu",
+        "body": "Le conseil de la radiodiffusion a ouvert lundi des consultations sur les exigences de musique francophone pour les plateformes d'écoute en continu. La radio commerciale exige actuellement 65 pour cent de musique vocale de langue française. Les plateformes soutiennent que la personnalisation des listes de lecture rend les quotas impraticables. Des groupes de l'industrie ont plutôt demandé une norme de découvrabilité. Les mémoires sont attendus d'ici le 15 mars."
+      },
+      "media": [
+        {
+          "asset_id": "aud-cult-047-a",
+          "kind": "audio",
+          "en_alt": "A Quebec musician discusses streaming discoverability.",
+          "fr_alt": "Une musicienne québécoise parle de la découvrabilité en ligne.",
+          "en_caption": "Commercial radio requires 65 per cent French-language vocal music.",
+          "fr_caption": "La radio commerciale exige 65 pour cent de musique vocale de langue française.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "A quota tells you what gets played. Discoverability decides what gets heard.",
+          "fr_transcript": "Un quota dit ce qui est diffusé. La découvrabilité décide ce qui est entendu."
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "francophone music",
+          "streaming",
+          "broadcast regulation",
+          "discoverability"
+        ],
+        "fr_tags": [
+          "musique francophone",
+          "écoute en continu",
+          "découvrabilité"
+        ],
+        "en_seo": "The regulator consults on francophone music quotas for streaming platforms.",
+        "fr_seo": "Le conseil consulte sur les quotas de musique francophone en ligne."
+      }
+    },
+    {
+      "doc_id": "tech-048",
+      "topic": "digital_id",
+      "meta": {
+        "date": "2026-12-17",
+        "desk": "Technology",
+        "region": "Ontario",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Digital identity program delayed pending privacy review",
+        "body": "The provincial digital identity program was delayed to 2028 pending a privacy impact review, officials confirmed Tuesday. The program has spent $71 million of a $180 million budget. The privacy commissioner raised concerns about data retention and third-party verification. Eleven services were to launch in the first phase. No staff reductions are planned."
+      },
+      "fr": {
+        "title": "Le programme d'identité numérique est reporté en attendant un examen de la protection des renseignements personnels",
+        "body": "Le programme provincial d'identité numérique est reporté à 2028 en attendant un examen des incidences sur la vie privée, ont confirmé mardi des responsables. Le programme a dépensé 71 millions de dollars sur un budget de 180 millions. La commissaire à la protection de la vie privée a soulevé des préoccupations sur la conservation des données et la vérification par des tiers. Onze services devaient être lancés à la première phase. Aucune réduction de personnel n'est prévue."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "wx-049",
+      "topic": "severe_weather",
+      "meta": {
+        "date": "2027-01-07",
+        "desk": "News",
+        "region": "Prairies",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Extreme cold warning closes schools across three divisions",
+        "body": "An extreme cold warning with wind chill near minus 48 closed schools in three divisions Wednesday. Utilities reported record morning demand. Twenty-two warming locations opened in the city. Roadside assistance calls rose fourfold. Environment Canada said the warning remains in effect through Friday morning."
+      },
+      "fr": {
+        "title": "Un avertissement de froid extrême ferme des écoles dans trois divisions scolaires",
+        "body": "Un avertissement de froid extrême, avec un refroidissement éolien près de moins 48, a forcé la fermeture d'écoles dans trois divisions scolaires mercredi. Les services publics ont signalé une demande matinale record. Vingt-deux haltes-chaleur ont ouvert dans la ville. Les appels d'assistance routière ont quadruplé. Environnement Canada a indiqué que l'avertissement demeure en vigueur jusqu'à vendredi matin."
+      },
+      "media": [
+        {
+          "asset_id": "vid-wx-049-a",
+          "kind": "video",
+          "en_alt": "Steam rises from vehicles idling in extreme cold outside a school.",
+          "fr_alt": "De la vapeur monte des véhicules au ralenti dans le froid extrême devant une école.",
+          "en_caption": "Wind chill near minus 48 closed schools in three divisions.",
+          "fr_caption": "Un refroidissement éolien près de moins 48 a fermé des écoles dans trois divisions.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "We opened twenty-two warming locations and they filled by nine in the morning.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "extreme cold",
+          "school closures",
+          "warming centres",
+          "Prairies"
+        ],
+        "fr_tags": [
+          "froid extrême",
+          "fermetures d'écoles",
+          "haltes-chaleur",
+          "Prairies"
+        ],
+        "en_seo": "Wind chill near minus 48 closed schools across three divisions.",
+        "fr_seo": "Un refroidissement éolien près de moins 48 a fermé des écoles."
+      }
+    },
+    {
+      "doc_id": "hous-050",
+      "topic": "co_op_housing",
+      "meta": {
+        "date": "2027-01-14",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Housing co-operative expansion funds 1,900 units",
+        "body": "A federal co-operative housing program will fund 1,900 units across 34 projects, the first dedicated co-op program since 1992. Units must remain affordable for 50 years. Construction begins on eleven projects this year. The sector currently holds about 92,000 units nationally. Applications for a second round open in June."
+      },
+      "fr": {
+        "title": "L'expansion des coopératives d'habitation finance 1 900 logements",
+        "body": "Un programme fédéral de coopératives d'habitation financera 1 900 logements répartis dans 34 projets, le premier programme consacré aux coopératives depuis 1992. Les logements devront demeurer abordables pendant 50 ans. La construction débutera cette année pour onze projets. Le secteur compte actuellement environ 92 000 logements au pays. Les demandes pour un deuxième tour seront acceptées en juin."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "co-operative housing",
+          "affordable housing",
+          "federal program"
+        ],
+        "fr_tags": [
+          "coopératives d'habitation",
+          "logement abordable",
+          "programme fédéral"
+        ],
+        "en_seo": "A federal program funds 1,900 co-operative housing units.",
+        "fr_seo": "Un programme fédéral finance 1 900 logements coopératifs."
+      }
+    },
+    {
+      "doc_id": "trns-051",
+      "topic": "ferries",
+      "meta": {
+        "date": "2027-01-21",
+        "desk": "Municipal",
+        "region": "Atlantic",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "Ferry service reduced after vessel taken out of service",
+        "body": "The provincial ferry service cut crossings to six daily from ten after a vessel was removed for hull repairs. The route carries about 340,000 passengers annually. Repairs are expected to take fourteen weeks. A replacement charter was rejected as too costly. Commuters on the route face waits of up to three hours."
+      },
+      "fr": {
+        "title": "Le service de traversier est réduit après le retrait d'un navire",
+        "body": "Le service provincial de traversiers a réduit les traversées de dix à six par jour après le retrait d'un navire pour des réparations de coque. La liaison transporte environ 340 000 passagers par année. Les réparations devraient durer quatorze semaines. L'affrètement d'un navire de remplacement a été écarté en raison des coûts. Les banlieusards de la liaison font face à des attentes pouvant atteindre trois heures."
+      },
+      "media": [
+        {
+          "asset_id": "img-trns-051-a",
+          "kind": "image",
+          "en_alt": "Vehicles wait in a ferry terminal lineup at dusk.",
+          "fr_alt": "Des véhicules attendent dans la file d'un terminal de traversier au crépuscule.",
+          "en_caption": "Crossings were cut from ten to six daily.",
+          "fr_caption": "Les traversées sont passées de dix à six par jour.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "doc_id": "envr-052",
+      "topic": "water_quality",
+      "meta": {
+        "date": "2027-01-28",
+        "desk": "News",
+        "region": "Ontario",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Beach closures rise after summer of heavy rainfall",
+        "body": "Public health units posted 412 beach closure days last summer, up 34 per cent, driven by stormwater runoff after heavy rainfall. E. coli exceedances accounted for most closures. Eleven beaches were closed more than half the season. Three municipalities announced stormwater upgrades. Testing frequency doubles next year."
+      },
+      "fr": {
+        "title": "Les fermetures de plages augmentent après un été de fortes pluies",
+        "body": "Les bureaux de santé publique ont affiché 412 jours de fermeture de plages l'été dernier, en hausse de 34 pour cent, en raison du ruissellement pluvial après de fortes pluies. Les dépassements d'E. coli expliquent la plupart des fermetures. Onze plages ont été fermées plus de la moitié de la saison. Trois municipalités ont annoncé des améliorations aux réseaux pluviaux. La fréquence des tests doublera l'an prochain."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "hlth-053",
+      "topic": "paramedics",
+      "meta": {
+        "date": "2027-02-04",
+        "desk": "Health",
+        "region": "Ontario",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Paramedic offload delays reach record levels",
+        "body": "Ambulance offload delays at hospitals reached a record 118,000 hours last year, equivalent to taking 14 ambulances out of service daily. The provincial target is 30 minutes; the median was 92 minutes. Six services declared code zero more than 40 times. The ministry announced $58 million for offload nurses."
+      },
+      "fr": {
+        "title": "Les délais de transfert des ambulanciers atteignent des sommets",
+        "body": "Les délais de transfert des ambulances dans les hôpitaux ont atteint un sommet de 118 000 heures l'an dernier, l'équivalent de retirer 14 ambulances du service chaque jour. La cible provinciale est de 30 minutes; la médiane s'est établie à 92 minutes. Six services ont déclaré un code zéro plus de 40 fois. Le ministère a annoncé 58 millions de dollars pour des infirmières de transfert."
+      },
+      "media": [
+        {
+          "asset_id": "img-hlth-053-a",
+          "kind": "image",
+          "en_alt": "Ambulances queue outside a hospital emergency entrance.",
+          "fr_alt": "Ambulances queue outside a hospital emergency entrance.",
+          "en_caption": "Offload delays reached 118,000 hours last year.",
+          "fr_caption": "Les délais de transfert ont atteint 118 000 heures l'an dernier.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "paramedics",
+          "offload delays",
+          "hospitals",
+          "emergency services"
+        ],
+        "fr_tags": [
+          "ambulanciers",
+          "délais de transfert"
+        ],
+        "en_seo": "Ambulance offload delays reached a record 118,000 hours.",
+        "fr_seo": null
+      }
+    },
+    {
+      "doc_id": "econ-054",
+      "topic": "tourism",
+      "meta": {
+        "date": "2027-02-11",
+        "desk": "Business",
+        "region": "Outaouais",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Cross-border tourism spending rebounds to pre-2020 levels",
+        "body": "Cross-border tourism spending reached $4.7 billion last year, returning to 2019 levels for the first time. Overnight visits rose 12 per cent. The exchange rate favoured inbound travel. Hotel occupancy averaged 68 per cent. Operators reported staffing shortages limited capacity during peak weeks."
+      },
+      "fr": {
+        "title": "Les dépenses touristiques transfrontalières retrouvent leur niveau d'avant 2020",
+        "body": "Les dépenses touristiques transfrontalières ont atteint 4,7 milliards de dollars l'an dernier, revenant aux niveaux de 2019 pour la première fois. Les séjours avec nuitée ont augmenté de 12 pour cent. Le taux de change a favorisé le tourisme récepteur. Le taux d'occupation hôtelière s'est établi en moyenne à 68 pour cent. Des exploitants ont indiqué que la pénurie de main-d'œuvre a limité la capacité durant les semaines de pointe."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "just-055",
+      "topic": "access_info",
+      "meta": {
+        "date": "2027-02-18",
+        "desk": "Justice",
+        "region": "National",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Access to information backlog grows to 32,000 requests",
+        "body": "The access to information backlog reached 32,000 overdue requests, the information commissioner reported. Fourteen institutions account for 71 per cent of delays. The median completion time was 94 days against a 30-day statutory limit. The commissioner issued 41 orders last year. Fee revenue covered under 2 per cent of processing costs."
+      },
+      "fr": {
+        "title": "L'arriéré d'accès à l'information grimpe à 32 000 demandes",
+        "body": "L'arriéré d'accès à l'information a atteint 32 000 demandes en retard, a indiqué la commissaire à l'information. Quatorze institutions comptent pour 71 pour cent des retards. Le délai médian de traitement s'établissait à 94 jours, contre une limite légale de 30 jours. La commissaire a rendu 41 ordonnances l'an dernier. Les revenus de frais ont couvert moins de 2 pour cent des coûts de traitement."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "edu-056",
+      "topic": "literacy",
+      "meta": {
+        "date": "2027-02-25",
+        "desk": "Education",
+        "region": "Atlantic",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Reading assessment shows gains after phonics program",
+        "body": "Grade three reading scores rose 9 percentage points after a structured phonics program was introduced in 180 schools. Sixty-eight per cent now meet the provincial standard. The program cost $22 million over three years. Teachers received 40 hours of training. Results for English second-language learners rose 4 points."
+      },
+      "fr": {
+        "title": "Une évaluation en lecture révèle des gains après un programme de phonétique",
+        "body": "Les résultats en lecture de troisième année ont augmenté de 9 points de pourcentage après l'implantation d'un programme structuré de phonétique dans 180 écoles. Soixante-huit pour cent des élèves atteignent maintenant la norme provinciale. Le programme a coûté 22 millions de dollars sur trois ans. Le personnel enseignant a reçu 40 heures de formation. Les résultats des personnes apprenant l'anglais langue seconde ont progressé de 4 points."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "indg-057",
+      "topic": "indigenous",
+      "meta": {
+        "date": "2027-03-04",
+        "desk": "Indigenous",
+        "region": "North",
+        "author": "K. Whiteduck"
+      },
+      "en": {
+        "title": "Country food program expands to eighteen communities",
+        "body": "A country food program supporting hunters and harvesters expanded to eighteen communities this year, distributing 240,000 kilograms of food. Store-bought equivalents cost about four times more in the region. The program funds equipment, fuel, and community freezers. Food insecurity affects 46 per cent of households in participating communities."
+      },
+      "fr": {
+        "title": "Un programme d'alimentation traditionnelle s'étend à dix-huit communautés",
+        "body": "Un programme d'alimentation traditionnelle qui appuie les chasseurs et les récolteurs s'est étendu à dix-huit communautés cette année, distribuant 240 000 kilogrammes de nourriture. Les équivalents achetés en magasin coûtent environ quatre fois plus cher dans la région. Le programme finance l'équipement, le carburant et des congélateurs communautaires. L'insécurité alimentaire touche 46 pour cent des ménages des communautés participantes."
+      },
+      "media": [
+        {
+          "asset_id": "vid-indg-057-a",
+          "kind": "video",
+          "en_alt": "Hunters unload a catch beside a community freezer.",
+          "fr_alt": "Des chasseurs déchargent une prise près d'un congélateur communautaire.",
+          "en_caption": "The program distributed 240,000 kilograms of food.",
+          "fr_caption": null,
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "Store food costs four times what it does down south. This program is not a supplement, it is the meal.",
+          "fr_transcript": "La nourriture du magasin coûte quatre fois plus cher qu'au sud. Ce programme n'est pas un supplément, c'est le repas."
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "country food",
+          "food security",
+          "North",
+          "Indigenous communities"
+        ],
+        "fr_tags": [
+          "alimentation traditionnelle",
+          "sécurité alimentaire",
+          "Nord",
+          "communautés autochtones"
+        ],
+        "en_seo": "A country food program expanded to eighteen northern communities.",
+        "fr_seo": "Un programme d'alimentation traditionnelle s'étend à dix-huit communautés."
+      }
+    },
+    {
+      "doc_id": "muni-058",
+      "topic": "libraries",
+      "meta": {
+        "date": "2027-03-11",
+        "desk": "Municipal",
+        "region": "West",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "Library branches add social work staff",
+        "body": "Four library branches added full-time social workers after a pilot showed a 31 per cent drop in security incidents. Branches recorded 1,400 service referrals in the pilot year. The positions cost $460,000 annually. Two additional branches join in September. Staff reported reduced reliance on police response."
+      },
+      "fr": {
+        "title": "Des succursales de bibliothèque ajoutent du personnel en travail social",
+        "body": "Quatre succursales de bibliothèque ont ajouté des travailleuses et travailleurs sociaux à temps plein après qu'un projet pilote eut démontré une baisse de 31 pour cent des incidents de sécurité. Les succursales ont enregistré 1 400 orientations vers des services pendant l'année pilote. Ces postes coûtent 460 000 $ par année. Deux autres succursales se joindront au projet en septembre. Le personnel a signalé un recours réduit à l'intervention policière."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "tech-059",
+      "topic": "telecom",
+      "meta": {
+        "date": "2027-03-18",
+        "desk": "Technology",
+        "region": "North",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Satellite service improves northern connectivity speeds",
+        "body": "Low-earth-orbit satellite service raised median download speeds in 26 northern communities to 48 megabits per second from 9. Monthly cost remains about $180 before subsidy. Nineteen communities still lack a terrestrial backup link. The territorial government subsidizes 40 per cent of household cost. Outages averaged four hours monthly."
+      },
+      "fr": {
+        "title": "Le service par satellite améliore les vitesses de connexion dans le Nord",
+        "body": "Le service par satellite en orbite basse a fait passer les vitesses médianes de téléchargement de 9 à 48 mégabits par seconde dans 26 communautés nordiques. Le coût mensuel demeure d'environ 180 $ avant subvention. Dix-neuf communautés n'ont toujours pas de liaison terrestre de secours. Le gouvernement territorial subventionne 40 pour cent du coût par ménage. Les pannes ont duré en moyenne quatre heures par mois."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "satellite internet",
+          "northern connectivity",
+          "broadband",
+          "territories"
+        ],
+        "fr_tags": [
+          "Internet par satellite",
+          "connectivité nordique"
+        ],
+        "en_seo": "Satellite service raised northern download speeds to 48 megabits per second.",
+        "fr_seo": "Le service satellite porte les vitesses du Nord à 48 mégabits par seconde."
+      }
+    },
+    {
+      "doc_id": "cult-060",
+      "topic": "museums",
+      "meta": {
+        "date": "2027-03-25",
+        "desk": "Arts",
+        "region": "Ontario",
+        "author": "C. Bourgeois"
+      },
+      "en": {
+        "title": "Museum repatriation policy returns 1,100 objects",
+        "body": "A national museum returned 1,100 cultural objects to source communities over three years under a repatriation policy adopted in 2023. Sixty-two requests remain in process. The museum funded community storage facilities in four cases. Staff said provenance research remains the main bottleneck. A bilingual public database launches this fall."
+      },
+      "fr": {
+        "title": "Une politique de rapatriement muséal restitue 1 100 objets",
+        "body": "Un musée national a restitué 1 100 objets culturels à des communautés d'origine en trois ans, en vertu d'une politique de rapatriement adoptée en 2023. Soixante-deux demandes sont toujours en traitement. Le musée a financé des installations d'entreposage communautaires dans quatre cas. Le personnel a indiqué que la recherche de provenance demeure le principal goulot d'étranglement. Une base de données publique bilingue sera lancée cet automne."
+      },
+      "media": [
+        {
+          "asset_id": "img-cult-060-a",
+          "kind": "image",
+          "en_alt": "A curator examines a carved object in a storage room.",
+          "fr_alt": "Un conservateur examine un objet sculpté dans une salle d'entreposage.",
+          "en_caption": "The museum returned 1,100 objects over three years.",
+          "fr_caption": "Le musée a restitué 1 100 objets en trois ans.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "repatriation",
+          "museums",
+          "cultural heritage",
+          "Indigenous objects"
+        ],
+        "fr_tags": [
+          "rapatriement",
+          "musées",
+          "patrimoine culturel"
+        ],
+        "en_seo": "A national museum returned 1,100 cultural objects to source communities.",
+        "fr_seo": "Un musée national a restitué 1 100 objets culturels."
+      }
     }
   ]
 }

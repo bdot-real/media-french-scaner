@@ -63,6 +63,12 @@ def _word_numbers(text, lang):
             found.add(str(value))
             text = re.sub(pattern, " ", text)
 
+    # French teens are tens+unit compounds (dix-sept, dix-huit, dix-neuf) and
+    # must be consumed before bare "dix" and "huit" are read separately.
+    if lang == "fr":
+        for uw, uv in (("sept", 7), ("huit", 8), ("neuf", 9)):
+            consume(rf"\bdix-{uw}\b", 10 + uv)
+
     # French bases first: "quatre-vingt-douze" must win over "quatre-vingt".
     if lang == "fr":
         for base, bv in (("quatre-vingt", 80), ("soixante", 60)):
@@ -85,6 +91,32 @@ def _word_numbers(text, lang):
     for w, v in {**tens, **units}.items():
         if v:
             consume(rf"\b{w}\b", v)
+    # Ordinals are deliberately NOT extracted. "the first cut since 2015" and
+    # "un troisième maintien" name a position, not a quantity a reader would
+    # check, and the two languages spell them differently enough that
+    # extracting them produced asymmetric figures on either side — the metric
+    # then reported omissions that did not exist. Grade levels ("grade three" /
+    # "troisième année") are the one case where an ordinal is a real figure;
+    # they are left to the digit form when the copy uses one.
+
+    # Grade levels are the one ordinal that names a real, checkable figure
+    # ("grade three" / "troisième année"). Matched only in that construction,
+    # in both languages, so the two sides extract the same value.
+    if lang == "fr":
+        _FR_ORD = {"premi": 1, "deuxi": 2, "troisi": 3, "quatri": 4, "cinqui": 5,
+                   "sixi": 6, "septi": 7, "huiti": 8, "neuvi": 9, "dixi": 10}
+        for stem_, val in _FR_ORD.items():
+            if re.search(rf"\b{stem_}ème\s+(?:année|secondaire)\b", text):
+                found.add(str(val))
+    else:
+        _EN_ORD = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+                   "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
+                   "first": 1, "second": 2, "third": 3, "fourth": 4, "fifth": 5,
+                   "sixth": 6, "seventh": 7, "eighth": 8, "ninth": 9, "tenth": 10}
+        for w, val in _EN_ORD.items():
+            if re.search(rf"\bgrade\s+{w}\b|\b{w}\s+grade\b", text):
+                found.add(str(val))
+
     # Fractions carry a quantity; the same words used as ordinals do not
     # ("a third consecutive hold", "un troisième maintien"). Exclude the
     # ordinal reading rather than requiring a specific fraction frame, since

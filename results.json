@@ -3,65 +3,64 @@
     "dimensions": {
       "retrieval_p_at_1": {
         "en": 1.0,
-        "fr": 0.9615,
-        "gap": 0.0385,
+        "fr": 0.9744,
+        "gap": 0.0256,
         "equivalent": true
       },
       "retrieval_recall": {
-        "en": 0.9551,
-        "fr": 0.9327,
-        "gap": 0.0224,
+        "en": 0.9423,
+        "fr": 0.9263,
+        "gap": 0.016,
         "equivalent": true
       },
       "retrieval_ndcg": {
-        "en": 0.9585,
-        "fr": 0.9389,
-        "gap": 0.0197,
+        "en": 0.9576,
+        "fr": 0.9417,
+        "gap": 0.0159,
         "equivalent": true
       },
       "grounding_numeric": {
         "en": 1.0,
-        "fr": 0.9615,
-        "gap": 0.0385,
+        "fr": 0.9701,
+        "gap": 0.0299,
         "equivalent": true
       },
       "grounding_in_context": {
-        "en": 0.9391,
-        "fr": 0.8846,
-        "gap": 0.0545,
+        "en": 0.9209,
+        "fr": 0.906,
+        "gap": 0.015,
         "equivalent": true
       },
       "grounding_entailment": {
-        "en": 0.8992,
-        "fr": 0.868,
-        "gap": 0.0312,
+        "en": 0.8943,
+        "fr": 0.8717,
+        "gap": 0.0225,
         "equivalent": true
       },
       "content_coverage": {
         "en": 1.0,
-        "fr": 0.87,
-        "gap": 0.13,
+        "fr": 0.8877,
+        "gap": 0.1123,
         "equivalent": false
       },
       "fluency_register": {
         "en": 1.0,
-        "fr": 0.9038,
-        "gap": 0.0962,
-        "equivalent": false
+        "fr": 0.9231,
+        "gap": 0.0769,
+        "equivalent": true
       },
       "fluency_overall": {
-        "en": 0.9942,
-        "fr": 0.9251,
-        "gap": 0.0691,
+        "en": 0.9955,
+        "fr": 0.9408,
+        "gap": 0.0546,
         "equivalent": true
       }
     },
-    "n_queries": 52,
+    "n_queries": 78,
     "threshold": 0.08,
-    "equivalence_index": 0.9444,
+    "equivalence_index": 0.959,
     "failing_dimensions": [
-      "content_coverage",
-      "fluency_register"
+      "content_coverage"
     ],
     "weak_lexicon": [
       {
@@ -69,12 +68,15 @@
         "coverage": 0.2,
         "queries": [
           "q03",
-          "q04",
+          "q14",
           "q16",
+          "q19",
           "q28",
           "q29",
           "q43",
-          "q46"
+          "q60",
+          "q73",
+          "q77"
         ]
       },
       {
@@ -82,7 +84,9 @@
         "coverage": 0.3,
         "queries": [
           "q06",
-          "q16"
+          "q16",
+          "q62",
+          "q73"
         ]
       },
       {
@@ -116,9 +120,13 @@
         "term": "conseiller",
         "coverage": 0.55,
         "queries": [
+          "q03",
           "q05",
+          "q12",
           "q14",
-          "q42"
+          "q21",
+          "q42",
+          "q54"
         ]
       },
       {
@@ -126,21 +134,21 @@
         "coverage": 0.6,
         "queries": [
           "q07",
-          "q15",
           "q23",
-          "q31",
           "q32",
           "q40",
-          "q49",
-          "q50"
+          "q50",
+          "q75",
+          "q76"
         ]
       },
       {
         "term": "foncière",
         "coverage": 0.65,
         "queries": [
-          "q04",
-          "q12"
+          "q12",
+          "q54",
+          "q65"
         ]
       },
       {
@@ -149,8 +157,10 @@
         "queries": [
           "q05",
           "q14",
-          "q32",
-          "q42"
+          "q19",
+          "q42",
+          "q60",
+          "q77"
         ]
       },
       {
@@ -158,7 +168,8 @@
         "coverage": 0.7,
         "queries": [
           "q06",
-          "q16"
+          "q16",
+          "q73"
         ]
       },
       {
@@ -175,15 +186,29 @@
           "q21",
           "q23",
           "q25",
+          "q26",
           "q27",
-          "q31",
-          "q32",
-          "q33",
           "q38",
+          "q39",
           "q40",
+          "q46",
           "q48",
-          "q50",
-          "q51"
+          "q51",
+          "q53",
+          "q55",
+          "q56",
+          "q57",
+          "q60",
+          "q61",
+          "q62",
+          "q63",
+          "q64",
+          "q65",
+          "q66",
+          "q69",
+          "q73",
+          "q74",
+          "q76"
         ]
       }
     ],
@@ -205,8 +230,8 @@
         "note": "warming centre / halte-chaleur. Both documents describe warming facilities; the Canadian term is weakly represented in FR retrieval.",
         "en_p1": 1.0,
         "fr_p1": 0.0,
-        "en_ground": 1.0,
-        "fr_ground": 0.0,
+        "en_ground": 0.0,
+        "fr_ground": 1.0,
         "fr_register": 0.0,
         "fr_coverage": 1.0
       },
@@ -261,7 +286,7 @@
         "en_p1": 1.0,
         "fr_p1": 1.0,
         "en_ground": 0.33333333333333337,
-        "fr_ground": 1.0,
+        "fr_ground": 0.5,
         "fr_register": 1.0,
         "fr_coverage": 0.6667
       },
@@ -315,7 +340,7 @@
         "note": "Second halte-chaleur probe across two documents.",
         "en_p1": 1.0,
         "fr_p1": 1.0,
-        "en_ground": 1.0,
+        "en_ground": 0.5,
         "fr_ground": 0.0,
         "fr_register": 0.0,
         "fr_coverage": 0.5
@@ -336,8 +361,8 @@
         "divergence_class": "multi_doc",
         "note": "CLOSM probe across two documents.",
         "en_p1": 1.0,
-        "fr_p1": 0.0,
-        "en_ground": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 0.0,
         "fr_ground": 1.0,
         "fr_register": 0.0,
         "fr_coverage": 1.0
@@ -396,16 +421,93 @@
         "fr_ground": 0.0,
         "fr_register": 1.0,
         "fr_coverage": 1.0
+      },
+      {
+        "query_id": "q54",
+        "divergence_class": "lexical_ca_fr",
+        "note": "'deneigement' and 'deblaiement' are Canadian winter-service vocabulary.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.3333
+      },
+      {
+        "query_id": "q62",
+        "divergence_class": "lexical_ca_fr",
+        "note": "'traversier' is the Canadian term; metropolitan French uses 'ferry' or 'bac'.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.6667
+      },
+      {
+        "query_id": "q64",
+        "divergence_class": null,
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 0.6666666666666667,
+        "fr_register": 1.0,
+        "fr_coverage": 0.6667
+      },
+      {
+        "query_id": "q71",
+        "divergence_class": null,
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.6667
+      },
+      {
+        "query_id": "q73",
+        "divergence_class": "multi_doc",
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 0.0,
+        "en_ground": 1.0,
+        "fr_ground": 0.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.6667
+      },
+      {
+        "query_id": "q75",
+        "divergence_class": "multi_doc",
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 0.5,
+        "fr_ground": 0.5,
+        "fr_register": 1.0,
+        "fr_coverage": 1.0
+      },
+      {
+        "query_id": "q77",
+        "divergence_class": "lexical_ca_fr",
+        "note": "Second halte-chaleur probe in a different weather context.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 0.0,
+        "fr_coverage": 1.0
       }
     ],
     "severity": {
       "counts": {
         "no_answer": 0,
-        "wrong_fact": 3,
-        "wrong_docs": 5,
-        "omission": 10,
-        "register": 1,
-        "none": 33
+        "wrong_fact": 4,
+        "wrong_docs": 7,
+        "omission": 12,
+        "register": 2,
+        "none": 53
       },
       "cases": [
         {
@@ -442,47 +544,69 @@
           "divergence_class": null
         },
         {
+          "query_id": "q64",
+          "tier": "wrong_fact",
+          "rank": 1,
+          "reasons": [
+            "French asserts unsupported figure(s): 145"
+          ],
+          "en_answer": "Ambulance offload delays reached a record 118,000 hours, with a median of 92 minutes against a 30-minute target.",
+          "fr_answer": "Les délais de transfert des ambulances ont atteint un sommet de 118 000 heures, avec une médiane de 145 minutes contre une cible de 30 minutes.",
+          "divergence_class": null
+        },
+        {
           "query_id": "q04",
           "tier": "wrong_docs",
           "rank": 2,
           "reasons": [
-            "Gold-document retrieval diverged (EN-only: wx-003)"
+            "Gold-document retrieval diverged (EN-only: hous-024)"
           ],
           "en_answer": "Municipalities opened eleven warming centres across the affected region for residents without power.",
           "fr_answer": "Les municipalités ont ouvert onze centres d'hébergement chauffés dans la région touchée pour les résidents privés d'électricité.",
           "divergence_class": "lexical_ca_fr"
         },
         {
+          "query_id": "q14",
+          "tier": "wrong_docs",
+          "rank": 2,
+          "reasons": [
+            "Gold-document retrieval diverged (EN-only: edu-034)"
+          ],
+          "en_answer": "School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target.",
+          "fr_answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.",
+          "divergence_class": "multi_doc"
+        },
+        {
           "query_id": "q15",
           "tier": "wrong_docs",
           "rank": 2,
           "reasons": [
-            "Gold-document retrieval diverged (FR-only: immi-012)"
+            "Gold-document retrieval diverged (EN-only: cult-032; FR-only: immi-012)"
           ],
           "en_answer": "Federal supports include a $12 million touring fund expansion with a quarter reserved for official language minority communities, and a $31 million increase in settlement funding for francophone agencies.",
           "fr_answer": "Les appuis fédéraux comprennent une bonification de 12 millions de dollars du fonds de tournée et une hausse de 31 millions de dollars du financement de l'établissement pour les organismes francophones.",
           "divergence_class": "multi_doc"
         },
         {
-          "query_id": "q29",
-          "tier": "wrong_docs",
-          "rank": 2,
-          "reasons": [
-            "Gold-document retrieval diverged (EN-only: wx-003)"
-          ],
-          "en_answer": "People can go to warming centres — municipalities opened eleven during the ice storm, and shelter warming centres operated 71 nights.",
-          "fr_answer": "Les gens peuvent se rendre dans des centres d'hébergement chauffés; les municipalités en ont ouvert onze pendant la tempête de verglas.",
-          "divergence_class": "lexical_ca_fr"
-        },
-        {
           "query_id": "q32",
           "tier": "wrong_docs",
           "rank": 2,
           "reasons": [
-            "Gold-document retrieval diverged (EN-only: cult-032; FR-only: cult-019)"
+            "Gold-document retrieval diverged (FR-only: cult-006)"
           ],
           "en_answer": "The broadcaster is opening three bureaus in official language minority markets, and the arts council reserved a quarter of its $12 million touring fund for those communities.",
           "fr_answer": "Le diffuseur ouvre trois bureaux dans des marchés francophones, et le conseil des arts réserve le quart de son fonds de tournée de 12 millions de dollars.",
+          "divergence_class": "multi_doc"
+        },
+        {
+          "query_id": "q49",
+          "tier": "wrong_docs",
+          "rank": 2,
+          "reasons": [
+            "Gold-document retrieval diverged (FR-only: agri-027)"
+          ],
+          "en_answer": "Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coastal properties and cut power to 1,900 customers.",
+          "fr_answer": "La sécheresse a réduit les prévisions de récolte de 18 pour cent dans les Prairies.",
           "divergence_class": "multi_doc"
         },
         {
@@ -494,6 +618,17 @@
           ],
           "en_answer": "Supports include $54 million for 22 Indigenous language nests and provincial funding for three new francophone schools ordered by a court.",
           "fr_answer": "Les appuis comprennent 54 millions de dollars pour 22 nids linguistiques autochtones et du financement provincial pour trois nouvelles écoles francophones.",
+          "divergence_class": "multi_doc"
+        },
+        {
+          "query_id": "q73",
+          "tier": "wrong_docs",
+          "rank": 2,
+          "reasons": [
+            "Gold-document retrieval diverged (EN-only: hous-024, muni-042)"
+          ],
+          "en_answer": "The city is reviewing snow removal contracts after 4,800 complaints, extreme cold closed schools in three divisions, and shelters ran at 96 per cent capacity.",
+          "fr_answer": "La ville révise ses contrats de déneigement après 4 800 plaintes, et le froid extrême a fermé des écoles dans trois divisions scolaires.",
           "divergence_class": "multi_doc"
         },
         {
@@ -517,17 +652,6 @@
           "en_answer": "Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, exceeding the 8 per cent target for a second year. The target rises to 10 per cent by 2027.",
           "fr_answer": "Oui. Le ministère a admis 8,1 pour cent de personnes francophones parmi les nouveaux arrivants à l'extérieur du Québec, dépassant la cible de 8 pour cent pour une deuxième année.",
           "divergence_class": null
-        },
-        {
-          "query_id": "q14",
-          "tier": "omission",
-          "rank": 3,
-          "reasons": [
-            "French omits content present in English: 3.9, 4.1"
-          ],
-          "en_answer": "School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target.",
-          "fr_answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.",
-          "divergence_class": "multi_doc"
         },
         {
           "query_id": "q19",
@@ -563,6 +687,17 @@
           "divergence_class": null
         },
         {
+          "query_id": "q29",
+          "tier": "omission",
+          "rank": 3,
+          "reasons": [
+            "French omits content present in English: 71"
+          ],
+          "en_answer": "People can go to warming centres — municipalities opened eleven during the ice storm, and shelter warming centres operated 71 nights.",
+          "fr_answer": "Les gens peuvent se rendre dans des centres d'hébergement chauffés; les municipalités en ont ouvert onze pendant la tempête de verglas.",
+          "divergence_class": "lexical_ca_fr"
+        },
+        {
           "query_id": "q31",
           "tier": "omission",
           "rank": 3,
@@ -596,15 +731,37 @@
           "divergence_class": "lexical_ca_fr"
         },
         {
-          "query_id": "q49",
+          "query_id": "q54",
           "tier": "omission",
           "rank": 3,
           "reasons": [
-            "French omits content present in English: 1900, 620"
+            "French omits content present in English: 12, 19"
           ],
-          "en_answer": "Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coastal properties and cut power to 1,900 customers.",
-          "fr_answer": "La sécheresse a réduit les prévisions de récolte de 18 pour cent dans les Prairies.",
-          "divergence_class": "multi_doc"
+          "en_answer": "The city is reviewing snow removal contracts after 4,800 service complaints, with twelve of nineteen sectors missing clearing deadlines.",
+          "fr_answer": "La ville révise ses contrats de déneigement après 4 800 plaintes de service.",
+          "divergence_class": "lexical_ca_fr"
+        },
+        {
+          "query_id": "q62",
+          "tier": "omission",
+          "rank": 3,
+          "reasons": [
+            "French omits content present in English: 14"
+          ],
+          "en_answer": "Ferry service was cut from ten to six daily crossings after a vessel was removed for hull repairs expected to take fourteen weeks.",
+          "fr_answer": "Le service de traversier est passé de dix à six traversées par jour après le retrait d'un navire pour des réparations de coque.",
+          "divergence_class": "lexical_ca_fr"
+        },
+        {
+          "query_id": "q71",
+          "tier": "omission",
+          "rank": 3,
+          "reasons": [
+            "French omits content present in English: 62"
+          ],
+          "en_answer": "The museum returned 1,100 cultural objects over three years, with 62 requests still in process.",
+          "fr_answer": "Le musée a restitué 1 100 objets culturels en trois ans.",
+          "divergence_class": null
         },
         {
           "query_id": "q05",
@@ -616,18 +773,29 @@
           "en_answer": "Trustees asked the province for a per-student funding increase of $410, as the four boards face a combined $88 million shortfall.",
           "fr_answer": "Les administrateurs ont demandé à la province une hausse du financement de 410 dollars par élève, alors que les quatre conseils font face à un manque à gagner combiné de 88 millions de dollars.",
           "divergence_class": "lexical_ca_fr"
+        },
+        {
+          "query_id": "q77",
+          "tier": "register",
+          "rank": 4,
+          "reasons": [
+            "Register: 'centres d'hébergement chauff' → 'halte-chaleur'"
+          ],
+          "en_answer": "Twenty-two warming locations opened in the city during the extreme cold warning.",
+          "fr_answer": "Vingt-deux centres d'hébergement chauffés ont ouvert dans la ville pendant l'avertissement de froid extrême.",
+          "divergence_class": "lexical_ca_fr"
         }
       ],
-      "parity_rate": 0.6538,
+      "parity_rate": 0.7051,
       "worst_tier": "wrong_fact",
-      "n_unserved": 3
+      "n_unserved": 4
     },
     "drift": {
-      "mdr": 0.5,
-      "substituted": 2,
+      "mdr": 0.6,
+      "substituted": 3,
       "preserved": 2,
-      "rephrased": 13,
-      "scored_opportunities": 4,
+      "rephrased": 17,
+      "scored_opportunities": 5,
       "events": [
         {
           "type": "substituted",
@@ -642,14 +810,21 @@
           "france": "centre d'hébergement chauffé",
           "n": 1,
           "where": "q29"
+        },
+        {
+          "type": "substituted",
+          "quebec": "halte-chaleur",
+          "france": "centre d'hébergement chauffé",
+          "n": 1,
+          "where": "q77"
         }
       ]
     },
     "media": {
-      "n_assets": 21,
-      "score": 0.7163,
-      "a11y_rate": 0.5714,
-      "n_inaccessible": 9,
+      "n_assets": 31,
+      "score": 0.7413,
+      "a11y_rate": 0.5806,
+      "n_inaccessible": 13,
       "assets": [
         {
           "asset_id": "vid-hlth-028-a",
@@ -721,6 +896,23 @@
           "desk": "News"
         },
         {
+          "asset_id": "img-indg-044-a",
+          "kind": "image",
+          "fields": {
+            "alt": "missing",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.3077,
+          "a11y_failures": [
+            "alt text missing"
+          ],
+          "accessible": false,
+          "doc_id": "indg-044",
+          "desk": "Indigenous"
+        },
+        {
           "asset_id": "img-cult-019-a",
           "kind": "image",
           "fields": {
@@ -753,6 +945,23 @@
           "accessible": false,
           "doc_id": "wx-035",
           "desk": "News"
+        },
+        {
+          "asset_id": "img-hlth-053-a",
+          "kind": "image",
+          "fields": {
+            "alt": "untranslated",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.4808,
+          "a11y_failures": [
+            "alt text untranslated"
+          ],
+          "accessible": false,
+          "doc_id": "hlth-053",
+          "desk": "Health"
         },
         {
           "asset_id": "vid-wx-003-b",
@@ -806,6 +1015,40 @@
           "desk": "Indigenous"
         },
         {
+          "asset_id": "aud-hlth-041-a",
+          "kind": "audio",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "missing"
+          },
+          "score": 0.65,
+          "a11y_failures": [
+            "transcript missing"
+          ],
+          "accessible": false,
+          "doc_id": "hlth-041",
+          "desk": "Health"
+        },
+        {
+          "asset_id": "vid-wx-049-a",
+          "kind": "video",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "missing"
+          },
+          "score": 0.65,
+          "a11y_failures": [
+            "transcript missing"
+          ],
+          "accessible": false,
+          "doc_id": "wx-049",
+          "desk": "News"
+        },
+        {
           "asset_id": "img-envr-016-a",
           "kind": "image",
           "fields": {
@@ -849,6 +1092,21 @@
           "accessible": true,
           "doc_id": "wx-035",
           "desk": "News"
+        },
+        {
+          "asset_id": "vid-indg-057-a",
+          "kind": "video",
+          "fields": {
+            "alt": "ok",
+            "caption": "missing",
+            "credit": "ok",
+            "transcript": "ok"
+          },
+          "score": 0.85,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "indg-057",
+          "desk": "Indigenous"
         },
         {
           "asset_id": "img-ei-001-a",
@@ -984,50 +1242,125 @@
           "accessible": true,
           "doc_id": "hous-036",
           "desk": "Municipal"
+        },
+        {
+          "asset_id": "img-muni-042-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "muni-042",
+          "desk": "Municipal"
+        },
+        {
+          "asset_id": "aud-indg-044-b",
+          "kind": "audio",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "ok"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "indg-044",
+          "desk": "Indigenous"
+        },
+        {
+          "asset_id": "aud-cult-047-a",
+          "kind": "audio",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "ok"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "cult-047",
+          "desk": "Arts"
+        },
+        {
+          "asset_id": "img-trns-051-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "trns-051",
+          "desk": "Municipal"
+        },
+        {
+          "asset_id": "img-cult-060-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "cult-060",
+          "desk": "Arts"
         }
       ],
       "by_kind": {
         "audio": {
-          "n": 2,
-          "score": 1.0,
-          "inaccessible": 0
+          "n": 5,
+          "score": 0.93,
+          "inaccessible": 1
         },
         "image": {
-          "n": 14,
-          "score": 0.728,
-          "inaccessible": 5
+          "n": 19,
+          "score": 0.7358,
+          "inaccessible": 7
         },
         "video": {
-          "n": 5,
-          "score": 0.57,
-          "inaccessible": 4
+          "n": 7,
+          "score": 0.6214,
+          "inaccessible": 5
         }
       },
       "field_counts": {
         "alt": {
-          "ok": 13,
-          "missing": 4,
+          "ok": 21,
+          "missing": 5,
           "truncated": 2,
-          "untranslated": 2
+          "untranslated": 3
         },
         "caption": {
-          "ok": 19,
-          "missing": 2
+          "ok": 28,
+          "missing": 3
         },
         "credit": {
-          "ok": 21
+          "ok": 31
         },
         "transcript": {
-          "missing": 4,
-          "ok": 3
+          "missing": 6,
+          "ok": 6
         }
       }
     },
     "editorial": {
-      "n_docs": 20,
-      "score": 0.8653,
-      "n_missing_seo": 4,
-      "total_tags_dropped": 13,
+      "n_docs": 32,
+      "score": 0.8627,
+      "n_missing_seo": 6,
+      "total_tags_dropped": 23,
       "rows": [
         {
           "doc_id": "cult-019",
@@ -1063,6 +1396,28 @@
           "score": 0.45
         },
         {
+          "doc_id": "muni-042",
+          "desk": "Municipal",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 2,
+          "tags_dropped": 2,
+          "seo_state": "missing",
+          "title_state": "ok",
+          "score": 0.45
+        },
+        {
+          "doc_id": "hlth-053",
+          "desk": "Health",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 2,
+          "tags_dropped": 2,
+          "seo_state": "missing",
+          "title_state": "ok",
+          "score": 0.45
+        },
+        {
           "doc_id": "wx-003",
           "desk": "News",
           "tag_state": "reduced",
@@ -1076,6 +1431,28 @@
         {
           "doc_id": "envr-029",
           "desk": "News",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 2,
+          "tags_dropped": 2,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.8
+        },
+        {
+          "doc_id": "indg-044",
+          "desk": "Indigenous",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 2,
+          "tags_dropped": 2,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.8
+        },
+        {
+          "doc_id": "tech-059",
+          "desk": "Technology",
           "tag_state": "reduced",
           "n_tags_en": 4,
           "n_tags_fr": 2,
@@ -1108,6 +1485,28 @@
         },
         {
           "doc_id": "cult-032",
+          "desk": "Arts",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 3,
+          "tags_dropped": 1,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.9
+        },
+        {
+          "doc_id": "cult-047",
+          "desk": "Arts",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 3,
+          "tags_dropped": 1,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.9
+        },
+        {
+          "doc_id": "cult-060",
           "desk": "Arts",
           "tag_state": "reduced",
           "n_tags_en": 4,
@@ -1241,6 +1640,72 @@
         {
           "doc_id": "immi-040",
           "desk": "Politics",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "hlth-041",
+          "desk": "Health",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "edu-043",
+          "desk": "Education",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "just-046",
+          "desk": "Justice",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "wx-049",
+          "desk": "News",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "hous-050",
+          "desk": "Municipal",
+          "tag_state": "ok",
+          "n_tags_en": 3,
+          "n_tags_fr": 3,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "indg-057",
+          "desk": "Indigenous",
           "tag_state": "ok",
           "n_tags_en": 4,
           "n_tags_fr": 4,
@@ -1483,53 +1948,53 @@
       "desk": [
         {
           "segment": "Arts",
-          "n": 5,
+          "n": 8,
           "thin": false,
           "unserved": 0,
-          "divergent": 3,
+          "divergent": 4,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.8,
-            "gap": 0.2
+            "fr": 1.0,
+            "gap": 0.0
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.8667,
-            "gap": 0.1333
+            "fr": 0.875,
+            "gap": 0.125
           },
           "fluency_register": {
             "en": 1.0,
-            "fr": 0.6,
-            "gap": 0.4
+            "fr": 0.75,
+            "gap": 0.25
           },
-          "worst_gap": 0.4
+          "worst_gap": 0.25
         },
         {
           "segment": "News",
-          "n": 9,
+          "n": 13,
           "thin": false,
           "unserved": 2,
-          "divergent": 5,
+          "divergent": 7,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.8889,
-            "gap": 0.1111
+            "fr": 0.8462,
+            "gap": 0.1538
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.7037,
-            "gap": 0.2963
+            "fr": 0.7692,
+            "gap": 0.2308
           },
           "fluency_register": {
             "en": 1.0,
-            "fr": 0.7778,
-            "gap": 0.2222
+            "fr": 0.7692,
+            "gap": 0.2308
           },
-          "worst_gap": 0.2963
+          "worst_gap": 0.2308
         },
         {
           "segment": "Business",
-          "n": 7,
+          "n": 9,
           "thin": false,
           "unserved": 1,
           "divergent": 4,
@@ -1540,38 +2005,15 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.7143,
-            "gap": 0.2857
+            "fr": 0.7778,
+            "gap": 0.2222
           },
           "fluency_register": {
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
-          "worst_gap": 0.2857
-        },
-        {
-          "segment": "Education",
-          "n": 5,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 4,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.8,
-            "gap": 0.2
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 0.8,
-            "gap": 0.2
-          },
-          "worst_gap": 0.2
+          "worst_gap": 0.2222
         },
         {
           "segment": "Politics",
@@ -1598,30 +2040,76 @@
         },
         {
           "segment": "Municipal",
-          "n": 13,
+          "n": 18,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 7,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.8889,
+            "gap": 0.1111
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.856,
+            "gap": 0.144
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.8889,
+            "gap": 0.1111
+          },
+          "worst_gap": 0.144
+        },
+        {
+          "segment": "Education",
+          "n": 7,
           "thin": false,
           "unserved": 0,
           "divergent": 4,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.9231,
-            "gap": 0.0769
+            "fr": 1.0,
+            "gap": 0.0
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.9031,
-            "gap": 0.0969
+            "fr": 0.8571,
+            "gap": 0.1429
           },
           "fluency_register": {
             "en": 1.0,
-            "fr": 0.8462,
-            "gap": 0.1538
+            "fr": 0.8571,
+            "gap": 0.1429
           },
-          "worst_gap": 0.1538
+          "worst_gap": 0.1429
         },
         {
           "segment": "Health",
-          "n": 6,
+          "n": 9,
+          "thin": false,
+          "unserved": 1,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9259,
+            "gap": 0.0741
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0741
+        },
+        {
+          "segment": "Indigenous",
+          "n": 9,
           "thin": false,
           "unserved": 0,
           "divergent": 2,
@@ -1632,19 +2120,19 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.9444,
-            "gap": 0.0556
+            "fr": 0.963,
+            "gap": 0.037
           },
           "fluency_register": {
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
-          "worst_gap": 0.0556
+          "worst_gap": 0.037
         },
         {
           "segment": "Technology",
-          "n": 4,
+          "n": 7,
           "thin": false,
           "unserved": 0,
           "divergent": 1,
@@ -1655,42 +2143,19 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.9583,
-            "gap": 0.0417
+            "fr": 0.9762,
+            "gap": 0.0238
           },
           "fluency_register": {
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
-          "worst_gap": 0.0417
-        },
-        {
-          "segment": "Indigenous",
-          "n": 4,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 1,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "worst_gap": 0.0
+          "worst_gap": 0.0238
         },
         {
           "segment": "Justice",
-          "n": 4,
+          "n": 7,
           "thin": false,
           "unserved": 0,
           "divergent": 0,
@@ -1714,31 +2179,8 @@
       ],
       "region": [
         {
-          "segment": "Prairies",
-          "n": 5,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 4,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.7,
-            "gap": 0.3
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "worst_gap": 0.3
-        },
-        {
           "segment": "West",
-          "n": 5,
+          "n": 7,
           "thin": false,
           "unserved": 1,
           "divergent": 4,
@@ -1749,21 +2191,67 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.7,
-            "gap": 0.3
+            "fr": 0.7857,
+            "gap": 0.2143
           },
           "fluency_register": {
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
-          "worst_gap": 0.3
+          "worst_gap": 0.2143
         },
         {
           "segment": "Ontario",
+          "n": 18,
+          "thin": false,
+          "unserved": 3,
+          "divergent": 9,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.8889,
+            "gap": 0.1111
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8056,
+            "gap": 0.1944
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "worst_gap": 0.1944
+        },
+        {
+          "segment": "Quebec",
           "n": 11,
           "thin": false,
-          "unserved": 2,
+          "unserved": 0,
+          "divergent": 5,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.9091,
+            "gap": 0.0909
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8249,
+            "gap": 0.1751
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.9091,
+            "gap": 0.0909
+          },
+          "worst_gap": 0.1751
+        },
+        {
+          "segment": "Prairies",
+          "n": 11,
+          "thin": false,
+          "unserved": 0,
           "divergent": 6,
           "retrieval_p_at_1": {
             "en": 1.0,
@@ -1772,91 +2260,45 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.7727,
-            "gap": 0.2273
+            "fr": 0.8333,
+            "gap": 0.1667
           },
           "fluency_register": {
             "en": 1.0,
-            "fr": 0.7273,
-            "gap": 0.2727
+            "fr": 0.9091,
+            "gap": 0.0909
           },
-          "worst_gap": 0.2727
-        },
-        {
-          "segment": "Quebec",
-          "n": 6,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 2,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.8457,
-            "gap": 0.1543
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "worst_gap": 0.1543
+          "worst_gap": 0.1667
         },
         {
           "segment": "National",
-          "n": 20,
+          "n": 23,
           "thin": false,
           "unserved": 0,
           "divergent": 5,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.95,
-            "gap": 0.05
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.925,
-            "gap": 0.075
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 0.9,
-            "gap": 0.1
-          },
-          "worst_gap": 0.1
-        },
-        {
-          "segment": "North",
-          "n": 6,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 2,
-          "retrieval_p_at_1": {
-            "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 0.9722,
-            "gap": 0.0278
+            "fr": 0.9348,
+            "gap": 0.0652
           },
           "fluency_register": {
             "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
+            "fr": 0.913,
+            "gap": 0.087
           },
-          "worst_gap": 0.0278
+          "worst_gap": 0.087
         },
         {
           "segment": "Atlantic",
-          "n": 5,
+          "n": 7,
           "thin": false,
           "unserved": 0,
-          "divergent": 0,
+          "divergent": 1,
           "retrieval_p_at_1": {
             "en": 1.0,
             "fr": 1.0,
@@ -1864,19 +2306,42 @@
           },
           "content_coverage": {
             "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
+            "fr": 0.9524,
+            "gap": 0.0476
           },
           "fluency_register": {
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
           },
-          "worst_gap": 0.0
+          "worst_gap": 0.0476
+        },
+        {
+          "segment": "North",
+          "n": 11,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9545,
+            "gap": 0.0455
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0455
         },
         {
           "segment": "Outaouais",
-          "n": 2,
+          "n": 5,
           "thin": false,
           "unserved": 0,
           "divergent": 0,
@@ -1907,36 +2372,13 @@
           "divergent": 3,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.6667,
-            "gap": 0.3333
+            "fr": 1.0,
+            "gap": 0.0
           },
           "content_coverage": {
             "en": 1.0,
             "fr": 0.7778,
             "gap": 0.2222
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 0.3333,
-            "gap": 0.6667
-          },
-          "worst_gap": 0.6667
-        },
-        {
-          "segment": "homelessness",
-          "n": 3,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 2,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 0.6667,
-            "gap": 0.3333
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.8333,
-            "gap": 0.1667
           },
           "fluency_register": {
             "en": 1.0,
@@ -1953,8 +2395,54 @@
           "divergent": 1,
           "retrieval_p_at_1": {
             "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
             "fr": 0.5,
             "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "homelessness",
+          "n": 4,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.7917,
+            "gap": 0.2083
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "music",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
           },
           "content_coverage": {
             "en": 1.0,
@@ -2015,6 +2503,29 @@
           "worst_gap": 0.5
         },
         {
+          "segment": "snow_removal",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.5
+        },
+        {
           "segment": "wildfire",
           "n": 1,
           "thin": true,
@@ -2061,27 +2572,27 @@
           "worst_gap": 0.3889
         },
         {
-          "segment": "severe_weather",
-          "n": 6,
-          "thin": false,
-          "unserved": 1,
-          "divergent": 4,
+          "segment": "ferries",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 1,
           "retrieval_p_at_1": {
             "en": 1.0,
-            "fr": 0.8333,
-            "gap": 0.1667
+            "fr": 1.0,
+            "gap": 0.0
           },
           "content_coverage": {
-            "en": 1.0,
-            "fr": 0.6389,
-            "gap": 0.3611
-          },
-          "fluency_register": {
             "en": 1.0,
             "fr": 0.6667,
             "gap": 0.3333
           },
-          "worst_gap": 0.3611
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.3333
         },
         {
           "segment": "french_schools",
@@ -2103,29 +2614,6 @@
             "en": 1.0,
             "fr": 1.0,
             "gap": 0.0
-          },
-          "worst_gap": 0.3333
-        },
-        {
-          "segment": "heritage",
-          "n": 3,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 2,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 0.6667,
-            "gap": 0.3333
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 0.8889,
-            "gap": 0.1111
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 0.6667,
-            "gap": 0.3333
           },
           "worst_gap": 0.3333
         },
@@ -2153,6 +2641,52 @@
           "worst_gap": 0.3333
         },
         {
+          "segment": "museums",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.3333
+        },
+        {
+          "segment": "severe_weather",
+          "n": 9,
+          "thin": false,
+          "unserved": 1,
+          "divergent": 6,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.7778,
+            "gap": 0.2222
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.7222,
+            "gap": 0.2778
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "worst_gap": 0.3333
+        },
+        {
           "segment": "rail",
           "n": 1,
           "thin": true,
@@ -2174,6 +2708,29 @@
             "gap": 0.0
           },
           "worst_gap": 0.2593
+        },
+        {
+          "segment": "heritage",
+          "n": 4,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9167,
+            "gap": 0.0833
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.75,
+            "gap": 0.25
+          },
+          "worst_gap": 0.25
         },
         {
           "segment": "municipal_budget",
@@ -2245,6 +2802,29 @@
           "worst_gap": 0.1667
         },
         {
+          "segment": "paramedics",
+          "n": 2,
+          "thin": false,
+          "unserved": 1,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8334,
+            "gap": 0.1666
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.1666
+        },
+        {
           "segment": "broadband",
           "n": 2,
           "thin": false,
@@ -2266,6 +2846,52 @@
             "gap": 0.0
           },
           "worst_gap": 0.0834
+        },
+        {
+          "segment": "indigenous",
+          "n": 9,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.963,
+            "gap": 0.037
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.037
+        },
+        {
+          "segment": "access_info",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
         },
         {
           "segment": "ai_policy",
@@ -2291,7 +2917,53 @@
           "worst_gap": 0.0
         },
         {
+          "segment": "co_op_housing",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
           "segment": "conservation",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "coroner",
           "n": 1,
           "thin": true,
           "unserved": 0,
@@ -2360,7 +3032,76 @@
           "worst_gap": 0.0
         },
         {
+          "segment": "credit_unions",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
           "segment": "cybersecurity",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "daycare",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "digital_id",
           "n": 1,
           "thin": true,
           "unserved": 0,
@@ -2475,29 +3216,6 @@
           "worst_gap": 0.0
         },
         {
-          "segment": "indigenous",
-          "n": 4,
-          "thin": false,
-          "unserved": 0,
-          "divergent": 1,
-          "retrieval_p_at_1": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "content_coverage": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "fluency_register": {
-            "en": 1.0,
-            "fr": 1.0,
-            "gap": 0.0
-          },
-          "worst_gap": 0.0
-        },
-        {
           "segment": "interest_rates",
           "n": 1,
           "thin": true,
@@ -2524,6 +3242,75 @@
           "segment": "legal_aid",
           "n": 1,
           "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "libraries",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "literacy",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "long_term_care",
+          "n": 2,
+          "thin": false,
           "unserved": 0,
           "divergent": 0,
           "retrieval_p_at_1": {
@@ -2659,6 +3446,52 @@
           "worst_gap": 0.0
         },
         {
+          "segment": "telecom",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "tourism",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
           "segment": "transit_tolls",
           "n": 2,
           "thin": false,
@@ -2703,6 +3536,29 @@
             "gap": 0.0
           },
           "worst_gap": 0.0
+        },
+        {
+          "segment": "water_quality",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
         }
       ]
     },
@@ -2721,8 +3577,8 @@
         "en": {
           "retrieved": [
             "ei-001",
-            "hous-024",
-            "wx-035"
+            "hlth-041",
+            "muni-058"
           ],
           "gold_docs": [
             "ei-001"
@@ -2745,8 +3601,9 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.9565217391304348,
+            "score": 0.9130434782608695,
             "unsupported_terms": [
+              "about",
               "now"
             ]
           },
@@ -2771,8 +3628,8 @@
         "fr": {
           "retrieved": [
             "ei-001",
-            "just-030",
-            "wx-035"
+            "tech-048",
+            "just-030"
           ],
           "gold_docs": [
             "ei-001"
@@ -2924,7 +3781,7 @@
           "retrieved": [
             "hlth-002",
             "envr-029",
-            "hlth-028"
+            "indg-044"
           ],
           "gold_docs": [
             "hlth-002"
@@ -2999,8 +3856,8 @@
         "en": {
           "retrieved": [
             "wx-003",
-            "wx-035",
-            "agri-013"
+            "muni-042",
+            "wx-035"
           ],
           "gold_docs": [
             "wx-003"
@@ -3023,10 +3880,8 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.9,
-            "unsupported_terms": [
-              "during"
-            ]
+            "score": 1.0,
+            "unsupported_terms": []
           },
           "fluency": {
             "score": 1.0,
@@ -3050,7 +3905,7 @@
           "retrieved": [
             "wx-003",
             "wx-035",
-            "agri-013"
+            "muni-042"
           ],
           "gold_docs": [
             "wx-003"
@@ -3077,10 +3932,9 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.8,
+            "score": 0.9,
             "unsupported_terms": [
-              "32",
-              "pend"
+              "32"
             ]
           },
           "fluency": {
@@ -3100,6 +3954,11 @@
               "term": "halte-chaleur",
               "stem": "halt-chaleur",
               "coverage": 0.2
+            },
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
             }
           ],
           "coverage_vs_en": {
@@ -3148,8 +4007,8 @@
         "en": {
           "retrieved": [
             "hous-024",
-            "wx-003",
-            "hlth-037"
+            "econ-054",
+            "muni-042"
           ],
           "gold_docs": [
             "wx-003",
@@ -3157,27 +4016,34 @@
           ],
           "answer": "Municipalities opened eleven warming centres across the affected region for residents without power.",
           "p_at_1": 1.0,
-          "p_at_k": 0.6666666666666666,
-          "recall_at_k": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
-          "ndcg": 1.0,
+          "ndcg": 0.6131471927654584,
           "numeric_grounding": {
-            "score": 1.0,
+            "score": 0.0,
             "checked": 1,
-            "unsupported": []
+            "unsupported": [
+              "11"
+            ]
           },
           "numeric_grounding_gold": {
             "score": 1.0,
             "checked": 1,
             "unsupported": []
           },
-          "retrieval_induced_loss": 0.0,
+          "retrieval_induced_loss": 1.0,
           "entailment": {
-            "score": 0.7272727272727273,
+            "score": 0.2727272727272727,
             "unsupported_terms": [
+              "acros",
               "affect",
+              "eleven",
+              "municipaliti",
+              "power",
               "region",
-              "resident"
+              "resident",
+              "without"
             ]
           },
           "fluency": {
@@ -3200,9 +4066,9 @@
         },
         "fr": {
           "retrieved": [
-            "tech-039",
-            "muni-011",
-            "hous-024"
+            "tech-059",
+            "hous-050",
+            "tech-039"
           ],
           "gold_docs": [
             "wx-003",
@@ -3210,28 +4076,26 @@
           ],
           "answer": "Les municipalités ont ouvert onze centres d'hébergement chauffés dans la région touchée pour les résidents privés d'électricité.",
           "p_at_1": 0.0,
-          "p_at_k": 0.3333333333333333,
-          "recall_at_k": 0.5,
-          "mrr": 0.3333333333333333,
-          "ndcg": 0.3065735963827292,
+          "p_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0,
           "numeric_grounding": {
-            "score": 0.0,
+            "score": 1.0,
             "checked": 1,
-            "unsupported": [
-              "11"
-            ]
+            "unsupported": []
           },
           "numeric_grounding_gold": {
             "score": 1.0,
             "checked": 1,
             "unsupported": []
           },
-          "retrieval_induced_loss": 1.0,
+          "retrieval_induced_loss": 0.0,
           "entailment": {
             "score": 0.36363636363636365,
             "unsupported_terms": [
               "chauffé",
-              "onze",
+              "héberg",
               "ouvert",
               "privé",
               "région",
@@ -3258,18 +4122,7 @@
               "longest": 17
             }
           },
-          "weak_terms": [
-            {
-              "term": "halte-chaleur",
-              "stem": "halt-chaleur",
-              "coverage": 0.2
-            },
-            {
-              "term": "foncière",
-              "stem": "foncièr",
-              "coverage": 0.65
-            }
-          ],
+          "weak_terms": [],
           "coverage_vs_en": {
             "score": 1.0,
             "numeric_score": 1.0,
@@ -3283,7 +4136,7 @@
       },
       "severity": "wrong_docs",
       "severity_reasons": [
-        "Gold-document retrieval diverged (EN-only: wx-003)"
+        "Gold-document retrieval diverged (EN-only: hous-024)"
       ],
       "drift": {
         "mdr": 1.0,
@@ -3367,7 +4220,7 @@
         "fr": {
           "retrieved": [
             "edu-004",
-            "muni-031",
+            "muni-042",
             "just-017"
           ],
           "gold_docs": [
@@ -3527,7 +4380,7 @@
           "retrieved": [
             "trns-005",
             "wx-035",
-            "just-017"
+            "envr-052"
           ],
           "gold_docs": [
             "trns-005"
@@ -3776,8 +4629,8 @@
         "en": {
           "retrieved": [
             "hous-007",
-            "muni-020",
-            "muni-011"
+            "tech-039",
+            "muni-042"
           ],
           "gold_docs": [
             "hous-007"
@@ -3800,11 +4653,8 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.8,
-            "unsupported_terms": [
-              "against",
-              "had"
-            ]
+            "score": 1.0,
+            "unsupported_terms": []
           },
           "fluency": {
             "score": 1.0,
@@ -3827,8 +4677,8 @@
         "fr": {
           "retrieved": [
             "hous-007",
-            "muni-020",
-            "econ-018"
+            "econ-018",
+            "muni-020"
           ],
           "gold_docs": [
             "hous-007"
@@ -3903,8 +4753,8 @@
         "en": {
           "retrieved": [
             "just-008",
-            "envr-029",
-            "edu-023"
+            "econ-045",
+            "envr-029"
           ],
           "gold_docs": [
             "just-008"
@@ -3951,8 +4801,8 @@
         "fr": {
           "retrieved": [
             "just-008",
-            "hlth-015",
-            "econ-033"
+            "edu-043",
+            "hlth-015"
           ],
           "gold_docs": [
             "just-008"
@@ -4033,8 +4883,8 @@
         "en": {
           "retrieved": [
             "econ-009",
-            "econ-018",
-            "immi-040"
+            "cult-060",
+            "econ-018"
           ],
           "gold_docs": [
             "econ-009"
@@ -4086,7 +4936,7 @@
           "retrieved": [
             "econ-009",
             "tech-039",
-            "hlth-037"
+            "econ-018"
           ],
           "gold_docs": [
             "econ-009"
@@ -4166,7 +5016,7 @@
           "retrieved": [
             "envr-010",
             "agri-013",
-            "edu-023"
+            "muni-042"
           ],
           "gold_docs": [
             "envr-010"
@@ -4214,7 +5064,7 @@
           "retrieved": [
             "envr-010",
             "agri-013",
-            "wx-035"
+            "cult-047"
           ],
           "gold_docs": [
             "envr-010"
@@ -4237,9 +5087,10 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.9444444444444444,
+            "score": 0.8888888888888888,
             "unsupported_terms": [
-              "touch"
+              "touch",
+              "été"
             ]
           },
           "fluency": {
@@ -4289,8 +5140,8 @@
         "en": {
           "retrieved": [
             "muni-011",
-            "edu-004",
-            "just-030"
+            "muni-042",
+            "edu-004"
           ],
           "gold_docs": [
             "muni-011"
@@ -4340,8 +5191,8 @@
         "fr": {
           "retrieved": [
             "muni-011",
-            "just-030",
-            "muni-020"
+            "muni-042",
+            "just-030"
           ],
           "gold_docs": [
             "muni-011"
@@ -4364,8 +5215,9 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.9375,
+            "score": 0.875,
             "unsupported_terms": [
+              "prévu",
               "vote"
             ]
           },
@@ -4382,6 +5234,11 @@
             }
           },
           "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
             {
               "term": "foncière",
               "stem": "foncièr",
@@ -4481,7 +5338,7 @@
           "retrieved": [
             "immi-012",
             "immi-040",
-            "tech-014"
+            "hlth-053"
           ],
           "gold_docs": [
             "immi-012"
@@ -4494,12 +5351,12 @@
           "ndcg": 1.0,
           "numeric_grounding": {
             "score": 1.0,
-            "checked": 2,
+            "checked": 3,
             "unsupported": []
           },
           "numeric_grounding_gold": {
             "score": 1.0,
-            "checked": 2,
+            "checked": 3,
             "unsupported": []
           },
           "retrieval_induced_loss": 0.0,
@@ -4574,7 +5431,7 @@
           "retrieved": [
             "edu-034",
             "edu-004",
-            "cult-006"
+            "wx-049"
           ],
           "gold_docs": [
             "edu-004",
@@ -4607,9 +5464,9 @@
               "amid",
               "below",
               "billion",
-              "city",
               "growth",
               "property",
+              "reserv",
               "target",
               "tax",
               "while"
@@ -4636,8 +5493,8 @@
         "fr": {
           "retrieved": [
             "edu-004",
-            "edu-034",
-            "muni-020"
+            "wx-049",
+            "econ-045"
           ],
           "gold_docs": [
             "edu-004",
@@ -4646,10 +5503,10 @@
           ],
           "answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.",
           "p_at_1": 1.0,
-          "p_at_k": 0.6666666666666666,
-          "recall_at_k": 0.6666666666666666,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.3333333333333333,
           "mrr": 1.0,
-          "ndcg": 0.7653606369886217,
+          "ndcg": 0.46927872602275644,
           "numeric_grounding": {
             "score": 1.0,
             "checked": 2,
@@ -4679,6 +5536,11 @@
           },
           "weak_terms": [
             {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
               "term": "conseiller",
               "stem": "conseiller",
               "coverage": 0.55
@@ -4703,9 +5565,9 @@
           }
         }
       },
-      "severity": "omission",
+      "severity": "wrong_docs",
       "severity_reasons": [
-        "French omits content present in English: 3.9, 4.1"
+        "Gold-document retrieval diverged (EN-only: edu-034)"
       ],
       "drift": {
         "mdr": 0.0,
@@ -4737,26 +5599,28 @@
       "gold_docs": [
         "cult-006",
         "immi-012",
-        "cult-032"
+        "cult-032",
+        "indg-057"
       ],
       "langs": {
         "en": {
           "retrieved": [
-            "cult-032",
+            "indg-057",
             "tech-026",
-            "envr-029"
+            "cult-032"
           ],
           "gold_docs": [
             "cult-006",
             "immi-012",
-            "cult-032"
+            "cult-032",
+            "indg-057"
           ],
           "answer": "Federal supports include a $12 million touring fund expansion with a quarter reserved for official language minority communities, and a $31 million increase in settlement funding for francophone agencies.",
           "p_at_1": 1.0,
-          "p_at_k": 0.3333333333333333,
-          "recall_at_k": 0.3333333333333333,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
-          "ndcg": 0.46927872602275644,
+          "ndcg": 0.7039180890341347,
           "numeric_grounding": {
             "score": 0.33333333333333337,
             "checked": 3,
@@ -4807,38 +5671,41 @@
         "fr": {
           "retrieved": [
             "immi-012",
-            "cult-032",
-            "indg-025"
+            "indg-057",
+            "econ-045"
           ],
           "gold_docs": [
             "cult-006",
             "immi-012",
-            "cult-032"
+            "cult-032",
+            "indg-057"
           ],
           "answer": "Les appuis fédéraux comprennent une bonification de 12 millions de dollars du fonds de tournée et une hausse de 31 millions de dollars du financement de l'établissement pour les organismes francophones.",
           "p_at_1": 1.0,
           "p_at_k": 0.6666666666666666,
-          "recall_at_k": 0.6666666666666666,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
           "ndcg": 0.7653606369886217,
           "numeric_grounding": {
-            "score": 1.0,
+            "score": 0.5,
             "checked": 2,
-            "unsupported": []
+            "unsupported": [
+              "12"
+            ]
           },
           "numeric_grounding_gold": {
             "score": 1.0,
             "checked": 2,
             "unsupported": []
           },
-          "retrieval_induced_loss": 0.0,
+          "retrieval_induced_loss": 0.5,
           "entailment": {
             "score": 0.6,
             "unsupported_terms": [
               "12",
               "bonification",
               "comprennent",
-              "fédér",
+              "fond",
               "hauss",
               "tourné"
             ]
@@ -4855,13 +5722,7 @@
               "longest": 31
             }
           },
-          "weak_terms": [
-            {
-              "term": "minoritaire",
-              "stem": "minoritair",
-              "coverage": 0.6
-            }
-          ],
+          "weak_terms": [],
           "coverage_vs_en": {
             "score": 0.6667,
             "numeric_score": 0.6667,
@@ -4877,7 +5738,7 @@
       },
       "severity": "wrong_docs",
       "severity_reasons": [
-        "Gold-document retrieval diverged (FR-only: immi-012)"
+        "Gold-document retrieval diverged (EN-only: cult-032; FR-only: immi-012)"
       ],
       "drift": {
         "mdr": 0.0,
@@ -5074,8 +5935,8 @@
         "en": {
           "retrieved": [
             "agri-013",
-            "envr-010",
-            "edu-023"
+            "cult-047",
+            "envr-010"
           ],
           "gold_docs": [
             "agri-013"
@@ -5123,7 +5984,7 @@
           "retrieved": [
             "agri-013",
             "envr-010",
-            "wx-035"
+            "cult-047"
           ],
           "gold_docs": [
             "agri-013"
@@ -5196,8 +6057,8 @@
         "en": {
           "retrieved": [
             "tech-014",
-            "hlth-015",
-            "hous-036"
+            "indg-057",
+            "hlth-015"
           ],
           "gold_docs": [
             "tech-014"
@@ -5244,8 +6105,8 @@
         "fr": {
           "retrieved": [
             "tech-014",
-            "hous-036",
-            "indg-025"
+            "indg-057",
+            "tech-059"
           ],
           "gold_docs": [
             "tech-014"
@@ -5318,8 +6179,8 @@
         "en": {
           "retrieved": [
             "hlth-015",
-            "tech-014",
-            "just-038"
+            "econ-045",
+            "tech-014"
           ],
           "gold_docs": [
             "hlth-015"
@@ -5366,8 +6227,8 @@
         "fr": {
           "retrieved": [
             "hlth-015",
-            "wx-035",
-            "edu-023"
+            "envr-052",
+            "wx-049"
           ],
           "gold_docs": [
             "hlth-015"
@@ -5406,6 +6267,16 @@
             }
           },
           "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            },
             {
               "term": "poste",
               "stem": "post",
@@ -5448,14 +6319,15 @@
         "en": {
           "retrieved": [
             "envr-016",
-            "envr-010"
+            "econ-054",
+            "muni-042"
           ],
           "gold_docs": [
             "envr-016"
           ],
           "answer": "Wildfires consumed 4.2 million hectares this season, surpassing the 2023 record.",
           "p_at_1": 1.0,
-          "p_at_k": 0.5,
+          "p_at_k": 0.3333333333333333,
           "recall_at_k": 1.0,
           "mrr": 1.0,
           "ndcg": 1.0,
@@ -5495,8 +6367,8 @@
         "fr": {
           "retrieved": [
             "envr-016",
-            "envr-010",
-            "tech-039"
+            "envr-052",
+            "envr-010"
           ],
           "gold_docs": [
             "envr-016"
@@ -5577,7 +6449,7 @@
         "en": {
           "retrieved": [
             "just-017",
-            "hlth-037",
+            "muni-042",
             "hous-007"
           ],
           "gold_docs": [
@@ -5625,8 +6497,8 @@
         "fr": {
           "retrieved": [
             "just-017",
-            "immi-012",
-            "tech-026"
+            "muni-042",
+            "immi-012"
           ],
           "gold_docs": [
             "just-017"
@@ -5665,6 +6537,11 @@
             }
           },
           "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
             {
               "term": "poste",
               "stem": "post",
@@ -5850,8 +6727,8 @@
         "en": {
           "retrieved": [
             "cult-019",
-            "just-017",
-            "edu-023"
+            "cult-047",
+            "muni-058"
           ],
           "gold_docs": [
             "cult-019"
@@ -5989,7 +6866,7 @@
           "retrieved": [
             "muni-020",
             "indg-021",
-            "envr-016"
+            "tech-039"
           ],
           "gold_docs": [
             "muni-020"
@@ -6113,7 +6990,7 @@
           "retrieved": [
             "indg-021",
             "muni-020",
-            "econ-009"
+            "hlth-041"
           ],
           "gold_docs": [
             "indg-021"
@@ -6239,14 +7116,15 @@
       "langs": {
         "en": {
           "retrieved": [
-            "trns-022"
+            "trns-022",
+            "trns-051"
           ],
           "gold_docs": [
             "trns-022"
           ],
           "answer": "On-time performance was 67 per cent, below the 80 per cent target, largely due to freight track sharing.",
           "p_at_1": 1.0,
-          "p_at_k": 1.0,
+          "p_at_k": 0.5,
           "recall_at_k": 1.0,
           "mrr": 1.0,
           "ndcg": 1.0,
@@ -6286,8 +7164,8 @@
         "fr": {
           "retrieved": [
             "trns-022",
-            "wx-035",
-            "muni-020"
+            "edu-043",
+            "wx-035"
           ],
           "gold_docs": [
             "trns-022"
@@ -6325,7 +7203,13 @@
               "longest": 15
             }
           },
-          "weak_terms": [],
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
           "coverage_vs_en": {
             "score": 0.7407,
             "numeric_score": 1.0,
@@ -6542,8 +7426,8 @@
         "fr": {
           "retrieved": [
             "hous-024",
-            "wx-035",
-            "hlth-037"
+            "hlth-053",
+            "wx-035"
           ],
           "gold_docs": [
             "hous-024"
@@ -6634,7 +7518,7 @@
           "retrieved": [
             "hous-024",
             "econ-009",
-            "wx-003"
+            "wx-049"
           ],
           "gold_docs": [
             "wx-003",
@@ -6642,26 +7526,32 @@
           ],
           "answer": "People can go to warming centres — municipalities opened eleven during the ice storm, and shelter warming centres operated 71 nights.",
           "p_at_1": 1.0,
-          "p_at_k": 0.6666666666666666,
-          "recall_at_k": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
-          "ndcg": 0.9197207891481876,
+          "ndcg": 0.6131471927654584,
           "numeric_grounding": {
-            "score": 1.0,
+            "score": 0.5,
             "checked": 2,
-            "unsupported": []
+            "unsupported": [
+              "11"
+            ]
           },
           "numeric_grounding_gold": {
             "score": 1.0,
             "checked": 2,
             "unsupported": []
           },
-          "retrieval_induced_loss": 0.0,
+          "retrieval_induced_loss": 0.5,
           "entailment": {
-            "score": 0.8571428571428571,
+            "score": 0.5714285714285714,
             "unsupported_terms": [
               "during",
-              "go"
+              "eleven",
+              "go",
+              "ice",
+              "municipaliti",
+              "storm"
             ]
           },
           "fluency": {
@@ -6763,9 +7653,9 @@
           }
         }
       },
-      "severity": "wrong_docs",
+      "severity": "omission",
       "severity_reasons": [
-        "Gold-document retrieval diverged (EN-only: wx-003)"
+        "French omits content present in English: 71"
       ],
       "drift": {
         "mdr": 1.0,
@@ -6803,7 +7693,7 @@
           "retrieved": [
             "indg-021",
             "muni-020",
-            "envr-010"
+            "indg-057"
           ],
           "gold_docs": [
             "muni-020",
@@ -6931,7 +7821,7 @@
         "en": {
           "retrieved": [
             "tech-014",
-            "econ-033",
+            "econ-054",
             "muni-020"
           ],
           "gold_docs": [
@@ -6991,8 +7881,8 @@
         "fr": {
           "retrieved": [
             "tech-014",
-            "hlth-028",
-            "cult-019"
+            "econ-054",
+            "hlth-028"
           ],
           "gold_docs": [
             "hlth-015",
@@ -7018,12 +7908,13 @@
           },
           "retrieval_induced_loss": 1.0,
           "entailment": {
-            "score": 0.2222222222222222,
+            "score": 0.1111111111111111,
             "unsupported_terms": [
               "140",
               "causé",
               "fermetur",
               "infirmier",
+              "post",
               "soin",
               "urgenc",
               "vacant"
@@ -7041,18 +7932,7 @@
               "longest": 14
             }
           },
-          "weak_terms": [
-            {
-              "term": "minoritaire",
-              "stem": "minoritair",
-              "coverage": 0.6
-            },
-            {
-              "term": "poste",
-              "stem": "post",
-              "coverage": 0.75
-            }
-          ],
+          "weak_terms": [],
           "coverage_vs_en": {
             "score": 0.8333,
             "numeric_score": 1.0,
@@ -7085,44 +7965,56 @@
       "gold_docs": [
         "cult-019",
         "cult-006",
-        "cult-032"
+        "cult-032",
+        "cult-047"
       ],
       "langs": {
         "en": {
           "retrieved": [
+            "cult-047",
             "cult-032",
-            "edu-034",
-            "cult-006"
+            "tech-026"
           ],
           "gold_docs": [
             "cult-019",
             "cult-006",
-            "cult-032"
+            "cult-032",
+            "cult-047"
           ],
           "answer": "The broadcaster is opening three bureaus in official language minority markets, and the arts council reserved a quarter of its $12 million touring fund for those communities.",
           "p_at_1": 1.0,
           "p_at_k": 0.6666666666666666,
-          "recall_at_k": 0.6666666666666666,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
-          "ndcg": 0.7039180890341347,
+          "ndcg": 0.7653606369886217,
           "numeric_grounding": {
-            "score": 1.0,
+            "score": 0.0,
             "checked": 3,
-            "unsupported": []
+            "unsupported": [
+              "0.25",
+              "12",
+              "3"
+            ]
           },
           "numeric_grounding_gold": {
             "score": 1.0,
             "checked": 3,
             "unsupported": []
           },
-          "retrieval_induced_loss": 0.0,
+          "retrieval_induced_loss": 1.0,
           "entailment": {
-            "score": 0.7777777777777778,
+            "score": 0.4444444444444444,
             "unsupported_terms": [
-              "broadcast",
+              "12",
+              "arts",
               "bureau",
+              "council",
               "market",
-              "those"
+              "quart",
+              "reserv",
+              "those",
+              "three",
+              "tour"
             ]
           },
           "fluency": {
@@ -7145,21 +8037,22 @@
         },
         "fr": {
           "retrieved": [
-            "edu-034",
-            "cult-019",
+            "cult-047",
+            "cult-032",
             "cult-006"
           ],
           "gold_docs": [
             "cult-019",
             "cult-006",
-            "cult-032"
+            "cult-032",
+            "cult-047"
           ],
           "answer": "Le diffuseur ouvre trois bureaux dans des marchés francophones, et le conseil des arts réserve le quart de son fonds de tournée de 12 millions de dollars.",
-          "p_at_1": 0.0,
-          "p_at_k": 0.6666666666666666,
-          "recall_at_k": 0.6666666666666666,
-          "mrr": 0.5,
-          "ndcg": 0.5307212739772434,
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 0.75,
+          "mrr": 1.0,
+          "ndcg": 1.0,
           "numeric_grounding": {
             "score": 1.0,
             "checked": 3,
@@ -7172,9 +8065,11 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.8666666666666667,
+            "score": 0.7333333333333333,
             "unsupported_terms": [
-              "ouvr",
+              "bure",
+              "diffuseur",
+              "marché",
               "réserv"
             ]
           },
@@ -7202,16 +8097,6 @@
               "term": "minoritaire",
               "stem": "minoritair",
               "coverage": 0.6
-            },
-            {
-              "term": "scolaire",
-              "stem": "scolair",
-              "coverage": 0.7
-            },
-            {
-              "term": "poste",
-              "stem": "post",
-              "coverage": 0.75
             }
           ],
           "coverage_vs_en": {
@@ -7227,7 +8112,7 @@
       },
       "severity": "wrong_docs",
       "severity_reasons": [
-        "Gold-document retrieval diverged (EN-only: cult-032; FR-only: cult-019)"
+        "Gold-document retrieval diverged (FR-only: cult-006)"
       ],
       "drift": {
         "mdr": 0.0,
@@ -7298,8 +8183,8 @@
         "fr": {
           "retrieved": [
             "indg-025",
-            "tech-014",
-            "immi-040"
+            "indg-057",
+            "edu-056"
           ],
           "gold_docs": [
             "indg-025"
@@ -7339,13 +8224,7 @@
               "longest": 17
             }
           },
-          "weak_terms": [
-            {
-              "term": "poste",
-              "stem": "post",
-              "coverage": 0.75
-            }
-          ],
+          "weak_terms": [],
           "coverage_vs_en": {
             "score": 1.0,
             "numeric_score": 1.0,
@@ -7381,7 +8260,7 @@
           "retrieved": [
             "tech-026",
             "just-030",
-            "cult-032"
+            "tech-048"
           ],
           "gold_docs": [
             "tech-026"
@@ -7427,14 +8306,15 @@
         },
         "fr": {
           "retrieved": [
-            "tech-026"
+            "tech-026",
+            "tech-048"
           ],
           "gold_docs": [
             "tech-026"
           ],
           "answer": "Les évaluations d'incidence algorithmique deviennent obligatoires le 1er septembre pour 340 systèmes recensés.",
           "p_at_1": 1.0,
-          "p_at_k": 1.0,
+          "p_at_k": 0.5,
           "recall_at_k": 1.0,
           "mrr": 1.0,
           "ndcg": 1.0,
@@ -7552,7 +8432,7 @@
           "retrieved": [
             "agri-027",
             "agri-013",
-            "econ-009"
+            "indg-057"
           ],
           "gold_docs": [
             "agri-027"
@@ -7678,7 +8558,7 @@
           "retrieved": [
             "hlth-028",
             "hlth-002",
-            "just-038"
+            "hlth-053"
           ],
           "gold_docs": [
             "hlth-028"
@@ -7751,8 +8631,8 @@
         "en": {
           "retrieved": [
             "envr-029",
-            "hlth-037",
-            "agri-013"
+            "indg-044",
+            "hlth-037"
           ],
           "gold_docs": [
             "envr-029"
@@ -7874,7 +8754,7 @@
           "retrieved": [
             "just-030",
             "just-008",
-            "envr-029"
+            "hlth-041"
           ],
           "gold_docs": [
             "just-030"
@@ -8001,7 +8881,7 @@
         "en": {
           "retrieved": [
             "muni-031",
-            "immi-040",
+            "muni-058",
             "muni-011"
           ],
           "gold_docs": [
@@ -8051,8 +8931,8 @@
         "fr": {
           "retrieved": [
             "muni-031",
-            "trns-022",
-            "just-030"
+            "muni-058",
+            "trns-022"
           ],
           "gold_docs": [
             "muni-031"
@@ -8075,8 +8955,10 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 1.0,
-            "unsupported_terms": []
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "admissibl"
+            ]
           },
           "fluency": {
             "score": 1.0,
@@ -8090,7 +8972,13 @@
               "longest": 23
             }
           },
-          "weak_terms": [],
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
           "coverage_vs_en": {
             "score": 1.0,
             "numeric_score": 1.0,
@@ -8314,7 +9202,7 @@
           "retrieved": [
             "econ-033",
             "hous-007",
-            "trns-022"
+            "econ-054"
           ],
           "gold_docs": [
             "econ-033"
@@ -8582,6 +9470,7 @@
         "fr": {
           "retrieved": [
             "wx-035",
+            "envr-052",
             "wx-003"
           ],
           "gold_docs": [
@@ -8589,7 +9478,7 @@
           ],
           "answer": "La tempête post-tropicale a laissé 140 millimètres de pluie et inondé 620 propriétés.",
           "p_at_1": 1.0,
-          "p_at_k": 0.5,
+          "p_at_k": 0.3333333333333333,
           "recall_at_k": 1.0,
           "mrr": 1.0,
           "ndcg": 1.0,
@@ -8661,8 +9550,8 @@
         "en": {
           "retrieved": [
             "hous-036",
-            "muni-031",
-            "tech-014"
+            "tech-059",
+            "muni-031"
           ],
           "gold_docs": [
             "hous-036"
@@ -8709,8 +9598,8 @@
         "fr": {
           "retrieved": [
             "hous-036",
-            "muni-031",
-            "indg-021"
+            "tech-059",
+            "muni-031"
           ],
           "gold_docs": [
             "hous-036"
@@ -8783,14 +9672,15 @@
         "en": {
           "retrieved": [
             "hlth-037",
-            "hlth-028"
+            "muni-058",
+            "hlth-041"
           ],
           "gold_docs": [
             "hlth-037"
           ],
           "answer": "The pharmacare formulary added 34 medications, including six diabetes treatments and four contraceptives.",
           "p_at_1": 1.0,
-          "p_at_k": 0.5,
+          "p_at_k": 0.3333333333333333,
           "recall_at_k": 1.0,
           "mrr": 1.0,
           "ndcg": 1.0,
@@ -8830,8 +9720,8 @@
         "fr": {
           "retrieved": [
             "hlth-037",
-            "wx-035",
-            "agri-027"
+            "agri-027",
+            "wx-035"
           ],
           "gold_docs": [
             "hlth-037"
@@ -8952,7 +9842,7 @@
         "fr": {
           "retrieved": [
             "just-038",
-            "hous-024",
+            "edu-043",
             "indg-025"
           ],
           "gold_docs": [
@@ -8993,9 +9883,9 @@
           },
           "weak_terms": [
             {
-              "term": "halte-chaleur",
-              "stem": "halt-chaleur",
-              "coverage": 0.2
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
             }
           ],
           "coverage_vs_en": {
@@ -9285,8 +10175,8 @@
         "en": {
           "retrieved": [
             "wx-035",
-            "envr-016",
-            "agri-027"
+            "indg-057",
+            "envr-016"
           ],
           "gold_docs": [
             "agri-027",
@@ -9294,10 +10184,10 @@
           ],
           "answer": "Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coastal properties and cut power to 1,900 customers.",
           "p_at_1": 1.0,
-          "p_at_k": 0.6666666666666666,
-          "recall_at_k": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
           "mrr": 1.0,
-          "ndcg": 0.9197207891481876,
+          "ndcg": 0.6131471927654584,
           "numeric_grounding": {
             "score": 1.0,
             "checked": 3,
@@ -9310,8 +10200,14 @@
           },
           "retrieval_induced_loss": 0.0,
           "entailment": {
-            "score": 0.9444444444444444,
+            "score": 0.6111111111111112,
             "unsupported_terms": [
+              "18",
+              "crop",
+              "cut",
+              "drought",
+              "forecast",
+              "prairie",
               "while"
             ]
           },
@@ -9337,7 +10233,7 @@
           "retrieved": [
             "wx-035",
             "agri-027",
-            "cult-006"
+            "indg-057"
           ],
           "gold_docs": [
             "agri-027",
@@ -9378,13 +10274,7 @@
               "longest": 15
             }
           },
-          "weak_terms": [
-            {
-              "term": "minoritaire",
-              "stem": "minoritair",
-              "coverage": 0.6
-            }
-          ],
+          "weak_terms": [],
           "coverage_vs_en": {
             "score": 0.3333,
             "numeric_score": 0.3333,
@@ -9399,9 +10289,9 @@
           }
         }
       },
-      "severity": "omission",
+      "severity": "wrong_docs",
       "severity_reasons": [
-        "French omits content present in English: 1900, 620"
+        "Gold-document retrieval diverged (FR-only: agri-027)"
       ],
       "drift": {
         "mdr": 0.0,
@@ -9477,8 +10367,8 @@
         "fr": {
           "retrieved": [
             "indg-025",
-            "cult-032",
-            "cult-019"
+            "cult-047",
+            "cult-032"
           ],
           "gold_docs": [
             "edu-034",
@@ -9505,7 +10395,7 @@
             "score": 0.7333333333333333,
             "unsupported_terms": [
               "comprennent",
-              "francophon",
+              "nouvell",
               "provincial",
               "écol"
             ]
@@ -9527,11 +10417,6 @@
               "term": "minoritaire",
               "stem": "minoritair",
               "coverage": 0.6
-            },
-            {
-              "term": "poste",
-              "stem": "post",
-              "coverage": 0.75
             }
           ],
           "coverage_vs_en": {
@@ -9740,8 +10625,8 @@
         "en": {
           "retrieved": [
             "hlth-028",
-            "hlth-002",
-            "hlth-037"
+            "hlth-037",
+            "hlth-002"
           ],
           "gold_docs": [
             "hlth-028",
@@ -9752,7 +10637,7 @@
           "p_at_k": 0.6666666666666666,
           "recall_at_k": 1.0,
           "mrr": 1.0,
-          "ndcg": 0.9197207891481876,
+          "ndcg": 1.0,
           "numeric_grounding": {
             "score": 1.0,
             "checked": 4,
@@ -9791,8 +10676,8 @@
         },
         "fr": {
           "retrieved": [
-            "hlth-028",
             "hlth-037",
+            "hlth-028",
             "hlth-002"
           ],
           "gold_docs": [
@@ -9843,6 +10728,3507 @@
             "truncated": false,
             "len_tokens": 18,
             "ref_len_tokens": 17
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q53",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'prepose aux beneficiaires' is the Quebec/Ontario francophone job title; metropolitan French uses 'aide-soignant'.",
+      "gold_docs": [
+        "hlth-041"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hlth-041",
+            "edu-043",
+            "trns-051"
+          ],
+          "gold_docs": [
+            "hlth-041"
+          ],
+          "answer": "The new rules require 3.5 hours of daily direct care per resident across 41 long-term care homes.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9230769230769231,
+            "unsupported_terms": [
+              "require"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 9.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hlth-041",
+            "indg-044",
+            "hlth-015"
+          ],
+          "gold_docs": [
+            "hlth-041"
+          ],
+          "answer": "Les nouvelles règles exigent 3,5 heures de soins directs par jour par résident dans 41 centres de soins de longue durée.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9166666666666666,
+            "unsupported_terms": [
+              "exigent"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 13,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q54",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'deneigement' and 'deblaiement' are Canadian winter-service vocabulary.",
+      "gold_docs": [
+        "muni-042"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "muni-042",
+            "envr-010",
+            "muni-020"
+          ],
+          "gold_docs": [
+            "muni-042"
+          ],
+          "answer": "The city is reviewing snow removal contracts after 4,800 service complaints, with twelve of nineteen sectors missing clearing deadlines.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "muni-042",
+            "muni-020",
+            "muni-011"
+          ],
+          "gold_docs": [
+            "muni-042"
+          ],
+          "answer": "La ville révise ses contrats de déneigement après 4 800 plaintes de service.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 13.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.3333,
+            "numeric_score": 0.3333,
+            "length_score": 0.7407,
+            "missing": [
+              "12",
+              "19"
+            ],
+            "truncated": true,
+            "len_tokens": 8,
+            "ref_len_tokens": 15
+          }
+        }
+      },
+      "severity": "omission",
+      "severity_reasons": [
+        "French omits content present in English: 12, 19"
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q55",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'pouponniere' and 'service de garde' are Quebec terms; metropolitan French uses 'creche'.",
+      "gold_docs": [
+        "edu-043"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "edu-043",
+            "hlth-028",
+            "tech-059"
+          ],
+          "gold_docs": [
+            "edu-043"
+          ],
+          "answer": "The average wait for a subsidized infant daycare place is 19 months, with 51,000 children on the waitlist.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 18.0,
+              "longest": 18
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "edu-043",
+            "just-038",
+            "hlth-028"
+          ],
+          "gold_docs": [
+            "edu-043"
+          ],
+          "answer": "L'attente moyenne pour une place en pouponnière subventionnée est de 19 mois, et 51 000 enfants figurent sur la liste d'attente.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 13,
+            "ref_len_tokens": 12
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q56",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "indg-044"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "indg-044",
+            "immi-012",
+            "hlth-002"
+          ],
+          "gold_docs": [
+            "indg-044"
+          ],
+          "answer": "The treaty land entitlement settlement transfers 78,000 hectares to four First Nations with $340 million in compensation.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.0,
+              "longest": 17
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "indg-044",
+            "envr-016",
+            "hlth-041"
+          ],
+          "gold_docs": [
+            "indg-044"
+          ],
+          "answer": "Le règlement sur les droits fonciers issus de traités transfère 78 000 hectares à quatre Premières Nations, avec 340 millions de dollars en compensation.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9411764705882353,
+            "unsupported_terms": [
+              "avec"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 24.0,
+              "longest": 24
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 17,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q57",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "just-046"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "just-046",
+            "muni-042",
+            "hlth-028"
+          ],
+          "gold_docs": [
+            "just-046"
+          ],
+          "answer": "The coroner made eleven recommendations, including expanded take-home naloxone distribution; the ministry accepted eight.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9166666666666666,
+            "unsupported_terms": [
+              "made"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "just-046",
+            "trns-022",
+            "muni-058"
+          ],
+          "gold_docs": [
+            "just-046"
+          ],
+          "answer": "Le coroner a formulé onze recommandations, dont l'élargissement de la distribution de naloxone à emporter; le ministère en a accepté huit.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9166666666666666,
+            "unsupported_terms": [
+              "formulé"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 12,
+            "ref_len_tokens": 12
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q58",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "cult-047"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "cult-047",
+            "edu-034",
+            "immi-012"
+          ],
+          "gold_docs": [
+            "cult-047"
+          ],
+          "answer": "Commercial radio requires 65 per cent French-language vocal music.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 9.0,
+              "longest": 9
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "cult-047",
+            "immi-012",
+            "agri-013"
+          ],
+          "gold_docs": [
+            "cult-047"
+          ],
+          "answer": "La radio commerciale exige 65 pour cent de musique vocale de langue française.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 13.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 9,
+            "ref_len_tokens": 9
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q59",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "tech-048"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "tech-048",
+            "tech-014",
+            "hlth-053"
+          ],
+          "gold_docs": [
+            "tech-048"
+          ],
+          "answer": "The digital identity program was delayed to 2028 pending a privacy impact review, after the commissioner raised data retention concerns.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9333333333333333,
+            "unsupported_terms": [
+              "after"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 20.0,
+              "longest": 20
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "tech-048",
+            "tech-014",
+            "indg-025"
+          ],
+          "gold_docs": [
+            "tech-048"
+          ],
+          "answer": "Le programme d'identité numérique a été reporté à 2028 en attendant un examen des incidences sur la vie privée.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 11,
+            "ref_len_tokens": 15
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q60",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'refroidissement eolien' is the Canadian meteorological term; France uses 'temperature ressentie'.",
+      "gold_docs": [
+        "wx-049"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "wx-049",
+            "hlth-015",
+            "envr-052"
+          ],
+          "gold_docs": [
+            "wx-049"
+          ],
+          "answer": "Wind chill reached near minus 48 during the school closures.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.7777777777777778,
+            "unsupported_terms": [
+              "during",
+              "reach"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 10.0,
+              "longest": 10
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "wx-049",
+            "envr-052",
+            "hlth-015"
+          ],
+          "gold_docs": [
+            "wx-049"
+          ],
+          "answer": "Le refroidissement éolien a atteint près de moins 48 pendant les fermetures d'écoles.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.7777777777777778,
+            "unsupported_terms": [
+              "atteint",
+              "pend"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 13.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 9,
+            "ref_len_tokens": 9
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q61",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "hous-050"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hous-050",
+            "hous-036",
+            "hous-024"
+          ],
+          "gold_docs": [
+            "hous-050"
+          ],
+          "answer": "The federal program will fund 1,900 co-operative housing units across 34 projects.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 12.0,
+              "longest": 12
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hous-050",
+            "hous-036",
+            "immi-040"
+          ],
+          "gold_docs": [
+            "hous-050"
+          ],
+          "answer": "Le programme fédéral financera 1 900 logements coopératifs répartis dans 34 projets.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8888888888888888,
+            "unsupported_terms": [
+              "coopératif"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 12.0,
+              "longest": 12
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 9,
+            "ref_len_tokens": 10
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q62",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'traversier' is the Canadian term; metropolitan French uses 'ferry' or 'bac'.",
+      "gold_docs": [
+        "trns-051"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "trns-051",
+            "muni-058",
+            "edu-023"
+          ],
+          "gold_docs": [
+            "trns-051"
+          ],
+          "answer": "Ferry service was cut from ten to six daily crossings after a vessel was removed for hull repairs expected to take fourteen weeks.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 0.9864,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.9545454545454546,
+              "avg_sentence_len": 23.0,
+              "longest": 23
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "trns-051",
+            "agri-013",
+            "muni-058"
+          ],
+          "gold_docs": [
+            "trns-051"
+          ],
+          "answer": "Le service de traversier est passé de dix à six traversées par jour après le retrait d'un navire pour des réparations de coque.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9166666666666666,
+            "unsupported_terms": [
+              "passé"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 23.0,
+              "longest": 23
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.6667,
+            "numeric_score": 0.6667,
+            "length_score": 1.0,
+            "missing": [
+              "14"
+            ],
+            "truncated": false,
+            "len_tokens": 12,
+            "ref_len_tokens": 16
+          }
+        }
+      },
+      "severity": "omission",
+      "severity_reasons": [
+        "French omits content present in English: 14"
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "banlieusard",
+            "france": "navetteur",
+            "n": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q63",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "envr-052"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "envr-052",
+            "hlth-053",
+            "hlth-015"
+          ],
+          "gold_docs": [
+            "envr-052"
+          ],
+          "answer": "Public health units posted 412 beach closure days last summer, up 34 per cent.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "envr-052",
+            "wx-035",
+            "hlth-015"
+          ],
+          "gold_docs": [
+            "envr-052"
+          ],
+          "answer": "Les bureaux de santé publique ont affiché 412 jours de fermeture de plages l'été dernier, en hausse de 34 pour cent.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 13,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q64",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "hlth-053"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hlth-053",
+            "tech-048",
+            "tech-014"
+          ],
+          "gold_docs": [
+            "hlth-053"
+          ],
+          "answer": "Ambulance offload delays reached a record 118,000 hours, with a median of 92 minutes against a 30-minute target.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "30-minute"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 18.0,
+              "longest": 18
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hlth-053",
+            "hlth-028",
+            "hlth-041"
+          ],
+          "gold_docs": [
+            "hlth-053"
+          ],
+          "answer": "Les délais de transfert des ambulances ont atteint un sommet de 118 000 heures, avec une médiane de 145 minutes contre une cible de 30 minutes.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 0.6666666666666667,
+            "checked": 3,
+            "unsupported": [
+              "145"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 0.6666666666666667,
+            "checked": 3,
+            "unsupported": [
+              "145"
+            ]
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8,
+            "unsupported_terms": [
+              "145",
+              "avec",
+              "contr"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 26.0,
+              "longest": 26
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.6667,
+            "numeric_score": 0.6667,
+            "length_score": 1.0,
+            "missing": [
+              "92"
+            ],
+            "truncated": false,
+            "len_tokens": 16,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "wrong_fact",
+      "severity_reasons": [
+        "French asserts unsupported figure(s): 145"
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q65",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "econ-054"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "econ-054",
+            "hlth-053",
+            "econ-045"
+          ],
+          "gold_docs": [
+            "econ-054"
+          ],
+          "answer": "Cross-border tourism spending reached $4.7 billion, returning to 2019 levels.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 5.5,
+              "longest": 6
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "econ-054",
+            "edu-043",
+            "muni-011"
+          ],
+          "gold_docs": [
+            "econ-054"
+          ],
+          "answer": "Les dépenses touristiques transfrontalières ont atteint 4,7 milliards de dollars, revenant aux niveaux de 2019.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 15.0,
+              "longest": 15
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 9,
+            "ref_len_tokens": 8
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q66",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "just-055"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "just-055",
+            "edu-004",
+            "trns-022"
+          ],
+          "gold_docs": [
+            "just-055"
+          ],
+          "answer": "The access to information backlog reached 32,000 overdue requests, with a median completion time of 94 days.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.0,
+              "longest": 17
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "just-055",
+            "hlth-002",
+            "just-008"
+          ],
+          "gold_docs": [
+            "just-055"
+          ],
+          "answer": "L'arriéré d'accès à l'information a atteint 32 000 demandes en retard, avec un délai médian de traitement de 94 jours.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 20.0,
+              "longest": 20
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 14,
+            "ref_len_tokens": 13
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q67",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "edu-056"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "edu-056",
+            "wx-049",
+            "envr-016"
+          ],
+          "gold_docs": [
+            "edu-056"
+          ],
+          "answer": "Grade three reading scores rose 9 percentage points, with 68 per cent now meeting the provincial standard.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "68"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.0,
+              "longest": 17
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "edu-056",
+            "muni-020",
+            "immi-012"
+          ],
+          "gold_docs": [
+            "edu-056"
+          ],
+          "answer": "Les résultats en lecture de troisième année ont augmenté de 9 points de pourcentage, et 68 pour cent des élèves atteignent la norme provinciale.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9230769230769231,
+            "unsupported_terms": [
+              "68"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 24.0,
+              "longest": 24
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 13,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q68",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "indg-057"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "indg-057",
+            "immi-040",
+            "econ-033"
+          ],
+          "gold_docs": [
+            "indg-057"
+          ],
+          "answer": "The country food program distributed 240,000 kilograms of food across eighteen communities.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9,
+            "unsupported_terms": [
+              "acros"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 12.0,
+              "longest": 12
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "indg-057",
+            "muni-020",
+            "indg-025"
+          ],
+          "gold_docs": [
+            "indg-057"
+          ],
+          "answer": "Le programme d'alimentation traditionnelle a distribué 240 000 kilogrammes de nourriture dans dix-huit communautés.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 10,
+            "ref_len_tokens": 11
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q69",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "muni-058"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "muni-058",
+            "tech-039",
+            "cult-019"
+          ],
+          "gold_docs": [
+            "muni-058"
+          ],
+          "answer": "Four library branches added full-time social workers, after a pilot showed a 31 per cent drop in security incidents.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "muni-058",
+            "tech-039",
+            "agri-027"
+          ],
+          "gold_docs": [
+            "muni-058"
+          ],
+          "answer": "Quatre succursales de bibliothèque ont ajouté des travailleuses et travailleurs sociaux à temps plein, après une baisse de 31 pour cent des incidents de sécurité.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 25.0,
+              "longest": 25
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 15,
+            "ref_len_tokens": 16
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q70",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "tech-059"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "tech-059",
+            "hlth-053",
+            "hous-036"
+          ],
+          "gold_docs": [
+            "tech-059"
+          ],
+          "answer": "Northern satellite service raised median download speeds to 48 megabits per second from 9.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "tech-059",
+            "hous-036",
+            "tech-014"
+          ],
+          "gold_docs": [
+            "tech-059"
+          ],
+          "answer": "Le service satellite du Nord a fait passer les vitesses médianes de téléchargement de 9 à 48 mégabits par seconde.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 20.0,
+              "longest": 20
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 11,
+            "ref_len_tokens": 11
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q71",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "cult-060"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "cult-060"
+          ],
+          "gold_docs": [
+            "cult-060"
+          ],
+          "answer": "The museum returned 1,100 cultural objects over three years, with 62 requests still in process.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8333333333333334,
+            "unsupported_terms": [
+              "62",
+              "still"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 15.0,
+              "longest": 15
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "cult-060"
+          ],
+          "gold_docs": [
+            "cult-060"
+          ],
+          "answer": "Le musée a restitué 1 100 objets culturels en trois ans.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 11.0,
+              "longest": 11
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 0.6667,
+            "numeric_score": 0.6667,
+            "length_score": 0.8102,
+            "missing": [
+              "62"
+            ],
+            "truncated": true,
+            "len_tokens": 7,
+            "ref_len_tokens": 12
+          }
+        }
+      },
+      "severity": "omission",
+      "severity_reasons": [
+        "French omits content present in English: 62"
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q72",
+      "divergence_class": "lexical_ca_fr",
+      "note": "'caisse populaire' is the Quebec institution; metropolitan French says 'banque cooperative'.",
+      "gold_docs": [
+        "econ-045"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "econ-045",
+            "cult-019",
+            "just-038"
+          ],
+          "gold_docs": [
+            "econ-045"
+          ],
+          "answer": "Credit unions reported 4.1 per cent membership growth, with 62 rural branches the only financial institution in their community.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "62"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 10.0,
+              "longest": 16
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "econ-045",
+            "econ-009",
+            "econ-018"
+          ],
+          "gold_docs": [
+            "econ-045"
+          ],
+          "answer": "Les caisses populaires ont déclaré une croissance du sociétariat de 4,1 pour cent, et 62 succursales rurales demeurent la seule institution financière de leur communauté.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "62"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 25.0,
+              "longest": 25
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 14,
+            "ref_len_tokens": 14
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q73",
+      "divergence_class": "multi_doc",
+      "note": null,
+      "gold_docs": [
+        "muni-042",
+        "wx-049",
+        "hous-024"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hous-024",
+            "indg-044",
+            "muni-042"
+          ],
+          "gold_docs": [
+            "muni-042",
+            "wx-049",
+            "hous-024"
+          ],
+          "answer": "The city is reviewing snow removal contracts after 4,800 complaints, extreme cold closed schools in three divisions, and shelters ran at 96 per cent capacity.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 0.7039180890341347,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.7,
+            "unsupported_terms": [
+              "clos",
+              "cold",
+              "division",
+              "extreme",
+              "ran",
+              "school"
+            ]
+          },
+          "fluency": {
+            "score": 0.9591,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.8636363636363636,
+              "avg_sentence_len": 25.0,
+              "longest": 25
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "indg-044",
+            "trns-005",
+            "wx-003"
+          ],
+          "gold_docs": [
+            "muni-042",
+            "wx-049",
+            "hous-024"
+          ],
+          "answer": "La ville révise ses contrats de déneigement après 4 800 plaintes, et le froid extrême a fermé des écoles dans trois divisions scolaires.",
+          "p_at_1": 0.0,
+          "p_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0,
+          "numeric_grounding": {
+            "score": 0.0,
+            "checked": 2,
+            "unsupported": [
+              "3",
+              "4800"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 1.0,
+          "entailment": {
+            "score": 0.07142857142857142,
+            "unsupported_terms": [
+              "800",
+              "contrat",
+              "divis",
+              "déneig",
+              "extrêm",
+              "fermé",
+              "froid",
+              "plaint",
+              "révis",
+              "scolair"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 23.0,
+              "longest": 23
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "péage",
+              "stem": "péag",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.6667,
+            "numeric_score": 0.6667,
+            "length_score": 0.9722,
+            "missing": [
+              "96"
+            ],
+            "truncated": true,
+            "len_tokens": 14,
+            "ref_len_tokens": 20
+          }
+        }
+      },
+      "severity": "wrong_docs",
+      "severity_reasons": [
+        "Gold-document retrieval diverged (EN-only: hous-024, muni-042)"
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 2,
+        "opportunities": 2,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 2
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q74",
+      "divergence_class": "multi_doc",
+      "note": null,
+      "gold_docs": [
+        "hlth-053",
+        "hlth-041"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hlth-053",
+            "hlth-041",
+            "econ-054"
+          ],
+          "gold_docs": [
+            "hlth-053",
+            "hlth-041"
+          ],
+          "answer": "Ambulance offload delays reached 118,000 hours while new long-term care rules require 3.5 hours of daily direct care.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8666666666666667,
+            "unsupported_terms": [
+              "require",
+              "while"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 9.5,
+              "longest": 13
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hlth-041",
+            "hlth-053",
+            "hlth-015"
+          ],
+          "gold_docs": [
+            "hlth-053",
+            "hlth-041"
+          ],
+          "answer": "Les délais de transfert des ambulances ont atteint 118 000 heures, et les nouvelles règles en soins de longue durée exigent 3,5 heures de soins directs par jour.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9333333333333333,
+            "unsupported_terms": [
+              "exigent"
+            ]
+          },
+          "fluency": {
+            "score": 0.9769,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.9230769230769231,
+              "avg_sentence_len": 28.0,
+              "longest": 28
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 17,
+            "ref_len_tokens": 17
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q75",
+      "divergence_class": "multi_doc",
+      "note": null,
+      "gold_docs": [
+        "indg-044",
+        "indg-057",
+        "cult-032"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "cult-032",
+            "indg-057",
+            "tech-026"
+          ],
+          "gold_docs": [
+            "indg-044",
+            "indg-057",
+            "cult-032"
+          ],
+          "answer": "Supports include a settlement transferring 78,000 hectares, a country food program in eighteen communities, and a heritage digitization fund.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 0.7653606369886217,
+          "numeric_grounding": {
+            "score": 0.5,
+            "checked": 2,
+            "unsupported": [
+              "78000"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.5,
+          "entailment": {
+            "score": 0.6666666666666666,
+            "unsupported_terms": [
+              "78",
+              "hectar",
+              "include",
+              "settlement",
+              "transferr"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "indg-057",
+            "cult-032",
+            "just-038"
+          ],
+          "gold_docs": [
+            "indg-044",
+            "indg-057",
+            "cult-032"
+          ],
+          "answer": "Les appuis comprennent un règlement transférant 78 000 hectares et un programme d'alimentation traditionnelle dans dix-huit communautés.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 0.6666666666666666,
+          "mrr": 1.0,
+          "ndcg": 0.7653606369886217,
+          "numeric_grounding": {
+            "score": 0.5,
+            "checked": 2,
+            "unsupported": [
+              "78000"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.5,
+          "entailment": {
+            "score": 0.5833333333333334,
+            "unsupported_terms": [
+              "78",
+              "comprennent",
+              "hectar",
+              "règl",
+              "transfér"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.0,
+              "longest": 17
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 12,
+            "ref_len_tokens": 15
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q76",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "just-055"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "just-055",
+            "edu-004",
+            "trns-022"
+          ],
+          "gold_docs": [
+            "just-055"
+          ],
+          "answer": "The access to information backlog reached 32,000 overdue requests, with fourteen institutions accounting for 71 per cent of delays.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "just-055",
+            "just-008",
+            "cult-032"
+          ],
+          "gold_docs": [
+            "just-055"
+          ],
+          "answer": "L'arriéré d'accès à l'information a atteint 32 000 demandes en retard, quatorze institutions comptant pour 71 pour cent des retards.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9230769230769231,
+            "unsupported_terms": [
+              "compt"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 20.0,
+              "longest": 20
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 14,
+            "ref_len_tokens": 15
+          }
+        }
+      },
+      "severity": "none",
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
+    },
+    {
+      "query_id": "q77",
+      "divergence_class": "lexical_ca_fr",
+      "note": "Second halte-chaleur probe in a different weather context.",
+      "gold_docs": [
+        "wx-049"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "wx-049",
+            "hous-024",
+            "econ-054"
+          ],
+          "gold_docs": [
+            "wx-049"
+          ],
+          "answer": "Twenty-two warming locations opened in the city during the extreme cold warning.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 12.0,
+              "longest": 12
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "wx-049",
+            "hous-050",
+            "tech-039"
+          ],
+          "gold_docs": [
+            "wx-049"
+          ],
+          "answer": "Vingt-deux centres d'hébergement chauffés ont ouvert dans la ville pendant l'avertissement de froid extrême.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8,
+            "unsupported_terms": [
+              "chauffé",
+              "héberg"
+            ]
+          },
+          "fluency": {
+            "score": 0.3,
+            "register": {
+              "score": 0.0,
+              "violations": [
+                {
+                  "found": "centres d'hébergement chauff",
+                  "preferred": "halte-chaleur",
+                  "severity": "high",
+                  "note": "Emergency warming facilities are 'haltes-chaleur' in Canadian usage."
+                }
+              ]
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 10,
+            "ref_len_tokens": 9
+          }
+        }
+      },
+      "severity": "register",
+      "severity_reasons": [
+        "Register: 'centres d'hébergement chauff' → 'halte-chaleur'"
+      ],
+      "drift": {
+        "mdr": 1.0,
+        "substituted": 1,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 1,
+        "scored_opportunities": 1,
+        "events": [
+          {
+            "type": "substituted",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q78",
+      "divergence_class": "multi_doc",
+      "note": null,
+      "gold_docs": [
+        "tech-059",
+        "indg-057"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "tech-059",
+            "indg-057",
+            "hous-036"
+          ],
+          "gold_docs": [
+            "tech-059",
+            "indg-057"
+          ],
+          "answer": "Northern satellite service reached 48 megabits per second while the country food program distributed 240,000 kilograms across eighteen communities.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8421052631578947,
+            "unsupported_terms": [
+              "acros",
+              "reach",
+              "while"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "tech-059",
+            "indg-057",
+            "hous-036"
+          ],
+          "gold_docs": [
+            "tech-059",
+            "indg-057"
+          ],
+          "answer": "Le service satellite du Nord a atteint 48 mégabits par seconde, et le programme d'alimentation traditionnelle a distribué 240 000 kilogrammes dans dix-huit communautés.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.875,
+            "unsupported_terms": [
+              "atteint",
+              "distribué"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 24.0,
+              "longest": 24
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "numeric_score": 1.0,
+            "length_score": 1.0,
+            "missing": [],
+            "truncated": false,
+            "len_tokens": 16,
+            "ref_len_tokens": 19
           }
         }
       },

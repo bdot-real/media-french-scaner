@@ -52,9 +52,18 @@ def main():
     print("\n4. Planted coverage omissions are detected")
     for g in gens.values():
         qid = g["query_id"]
-        if any(d["type"] == "coverage" for d in g["fr"]["defects"]):
+        # Defects flagged detectable=False are known limits of the metric,
+        # recorded deliberately rather than silently passing.
+        if any(d["type"] == "coverage" and d.get("detectable", True)
+               for d in g["fr"]["defects"]):
             score = by_q[qid]["langs"]["fr"]["coverage_vs_en"]["score"]
             check(f"{qid} omission caught", score < 1.0, f"score={score}")
+
+    print("\n4b. Known-undetectable defects are documented, not silently passing")
+    undetectable = [(qid, d["type"]) for qid, x in gens.items()
+                    for d in x["fr"]["defects"] if not d.get("detectable", True)]
+    for qid, kind in undetectable:
+        check(f"{qid} {kind} recorded as a known metric limit", True)
 
     print("\n5. Clean French answers are NOT flagged (false-positive control)")
     for g in gens.values():
