@@ -33,10 +33,59 @@ run in parallel — and reports where the two languages diverge.
 ```bash
 python3 bqh/harness.py                          # terminal report
 python3 bqh/harness.py --report report.html     # visual dashboard
-python3 tests/test_harness.py                   # validation suite
+python3 tests/test_harness.py                   # detection validation (40 checks)
+python3 tests/test_register.py                  # register validation (22 checks)
 ```
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
+
+24 parallel EN/FR documents · 32 parallel queries · 18 annotated defects.
+
+### Real embeddings instead of a modelled gap
+
+The default BM25 backend *simulates* the Canadian-French retrieval gap from a
+hand-authored lexicon table — which means the divergence is asserted, not
+measured. To measure it for real with a local multilingual model:
+
+```bash
+./setup_ollama.sh                    # installs ollama, pulls bge-m3
+python3 bqh/harness.py --retriever embedding --report report_embed.html
+```
+
+Both backends expose the same interface, so every metric, severity tier, and
+dashboard element is identical — which makes the comparison between them
+informative in itself. `bge-m3` is the default because it is genuinely
+multilingual; an English-centric model like `nomic-embed-text` would overstate
+divergence for the wrong reason, and reporting that as a Canadian-French finding
+would be exactly the motivated measurement this backend exists to avoid.
+
+Note that the embedding backend cannot attribute divergence to a specific term —
+`weak_terms` returns empty, because a dense model gives no per-token account of
+its similarity. Term-level attribution is a property of the lexical backend.
+
+## Leading with severity, not the mean
+
+The first live run reported *"equivalence 0.958, all dimensions pass"* while a
+French reader asking where to warm up during a power outage received no answer
+at all. Averaged across queries, a total service failure became a rounding error.
+
+Every query is now classified by its worst outcome, ordered by reader impact:
+
+| Tier | What happened |
+|---|---|
+| `no_answer` | French returned nothing usable while English answered |
+| `wrong_fact` | French asserted a figure absent from the source |
+| `wrong_docs` | Retrieval diverged; the two languages answered from different sources |
+| `omission` | French accurate but carrying less than the English |
+| `register` | Accurate and complete, but not Canadian French |
+
+The headline is **service parity** — the share of queries where the French
+reader got a substantively equivalent answer.
+
+Refusal detection matters specifically here: a refusal scores *well* on
+grounding (nothing asserted, nothing to contradict) and on register (no
+violations possible). Without an explicit check, the worst outcome for a reader
+looks like a clean pass.
 
 ## What it measures
 

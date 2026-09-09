@@ -20,6 +20,14 @@ DIM_LABELS = {
 }
 
 
+SEV_ORDER = ["no_answer", "wrong_fact", "wrong_docs", "omission", "register"]
+SEV_LABEL = {"no_answer": "No answer returned", "wrong_fact": "Unsupported fact",
+             "wrong_docs": "Different sources", "omission": "Reduced content",
+             "register": "Register"}
+SEV_RANK = {"no_answer": 0, "wrong_fact": 1, "wrong_docs": 2, "omission": 3,
+            "register": 4}
+
+
 def esc(x):
     return html.escape(str(x), quote=True)
 
@@ -95,6 +103,48 @@ def render(summary, rows):
           <td class="num">{fr['numeric_grounding_gold']['score']:.2f}</td>
           <td class="num">{fr['fluency']['register']['score']:.2f}</td>
           <td class="num">{fr['coverage_vs_en']['score']:.2f}</td></tr>"""
+
+    sv = summary.get("severity")
+    parity = f"{sv['parity_rate']*100:.0f}%" if sv else "—"
+    ndim = len(dims)
+    if sv and sv["n_unserved"]:
+        headline = (f"<strong>{sv['n_unserved']} quer"
+                    f"{'y' if sv['n_unserved']==1 else 'ies'} where the French "
+                    f"reader was not served</strong> — either no answer was "
+                    f"returned, or the answer asserted a fact the source does "
+                    f"not support. Both are mandate failures, not quality deltas.")
+    elif sv and sv["cases"]:
+        headline = (f"<strong>{len(sv['cases'])} of {summary['n_queries']} queries "
+                    f"diverged</strong> between English and French, though none "
+                    f"left the French reader unserved.")
+    else:
+        headline = "<strong>No divergence detected</strong> across the query set."
+
+    sevblock = ""
+    if sv and sv["cases"]:
+        tiles = "".join(
+            f'<div class="sev-tile r{SEV_RANK.get(t,5)}">'
+            f'<div class="sev-n">{sv["counts"][t]}</div>'
+            f'<div class="sev-l">{esc(SEV_LABEL.get(t,t))}</div></div>'
+            for t in SEV_ORDER if sv["counts"].get(t))
+        cards = ""
+        for c in sv["cases"][:4]:
+            cards += f"""
+      <div class="case r{SEV_RANK.get(c['tier'],5)}">
+        <div class="case-h"><span class="case-tier">{esc(SEV_LABEL.get(c['tier'],c['tier']))}</span>
+          <span class="qid">{esc(c['query_id'])}</span></div>
+        <div class="case-why">{esc(c['reasons'][0] if c['reasons'] else '')}</div>
+        <div class="case-ab"><span class="ab-l">EN</span>
+          <span class="ab-t">{esc(c['en_answer'][:200])}</span></div>
+        <div class="case-ab"><span class="ab-l fr">FR</span>
+          <span class="ab-t">{esc(c['fr_answer'][:200])}</span></div>
+      </div>"""
+        sevblock = f"""<h2>What the French reader experienced</h2>
+<p class="h2sub">Every query classified by its worst outcome, ordered by reader impact.</p>
+<div class="card">
+  <div class="sev-row">{tiles}</div>
+  {cards}
+</div>"""
 
     mode = summary.get("mode", "offline")
     worst_label = DIM_LABELS.get(worst[0], (worst[0], ""))[0]
@@ -198,6 +248,30 @@ td.gap{{color:var(--text-secondary)}}
 .note,.qs{{color:var(--text-muted);font-size:12px}}
 .qtext{{color:var(--text-secondary);font-size:12px}}
 .scroll{{overflow-x:auto}}
+.sev-row{{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}}
+.sev-tile{{flex:1;min-width:104px;padding:12px 14px;border-radius:8px;
+  border:1px solid var(--border);background:var(--surface-0)}}
+.sev-tile.r0{{border-color:color-mix(in srgb,var(--critical) 55%,transparent);
+  background:color-mix(in srgb,var(--critical) 9%,var(--surface-0))}}
+.sev-tile.r1{{border-color:color-mix(in srgb,var(--critical) 38%,transparent)}}
+.sev-n{{font-size:26px;font-weight:650;line-height:1;letter-spacing:-.02em}}
+.sev-tile.r0 .sev-n{{color:var(--critical)}}
+.sev-l{{font-size:11px;color:var(--text-muted);margin-top:5px;
+  text-transform:uppercase;letter-spacing:.06em;font-weight:600}}
+.case{{border:1px solid var(--border);border-left:3px solid var(--text-muted);
+  border-radius:7px;padding:13px 15px;margin-top:11px;background:var(--surface-0)}}
+.case.r0{{border-left-color:var(--critical)}}
+.case.r1{{border-left-color:var(--critical);opacity:.96}}
+.case-h{{display:flex;gap:9px;align-items:baseline;margin-bottom:3px}}
+.case-tier{{font-size:11px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.06em}}
+.case.r0 .case-tier{{color:var(--critical)}}
+.case-why{{font-size:12.5px;color:var(--text-secondary);margin-bottom:9px}}
+.case-ab{{display:flex;gap:9px;margin-top:5px;font-size:12.5px;line-height:1.45}}
+.ab-l{{flex:0 0 22px;font-size:10px;font-weight:700;color:var(--series-en);
+  padding-top:2px;letter-spacing:.05em}}
+.ab-l.fr{{color:var(--series-fr)}}
+.ab-t{{color:var(--text-secondary)}}
 footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   font-size:12px;color:var(--text-muted)}}
 @media (max-width:720px){{
@@ -214,24 +288,25 @@ footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   The unit of analysis is the gap between the two, because that gap is what a
   bilingual public-service mandate actually commits to.</p>
   <div class="meta">{summary['n_queries']} parallel queries · 12 parallel documents ·
-   Canadian French (Radio-Canada conventions) · mode <code>{esc(mode)}</code></div>
+   Canadian French (Radio-Canada conventions)<br>
+   mode <code>{esc(mode)}</code> · retrieval <code>{esc(summary.get('retriever','bm25'))}</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig {'warn' if idx < 0.95 else ''}">{idx:.3f}</div>
-    <div class="hero-lab">Equivalence index</div>
+    <div class="hero-fig {'warn' if sv and sv['parity_rate'] < 0.9 else ''}">{parity}</div>
+    <div class="hero-lab">Service parity</div>
   </div>
   <div class="hero-txt">
-    <p style="margin-top:0"><strong>{len(failing)} of {len(dims)} quality dimensions
-    fail equivalence</strong> at an 8-point gap threshold. The widest gap is
-    <strong>{esc(worst_label)}</strong> at {worst[1]['gap']:+.3f} —
-    English {worst[1]['en']:.3f} against French {worst[1]['fr']:.3f}.</p>
-    <p style="margin-bottom:0">Both languages would pass a conventional
-    single-language quality bar. The divergence is only visible when the two are
-    measured against each other on the same corpus and the same information needs.</p>
+    <p style="margin-top:0">{headline}</p>
+    <p style="margin-bottom:0">Equivalence index {idx:.3f} across
+    {ndim} dimensions. A mean over all queries understates this: bilingual
+    public service is not an average commitment, so the harness leads with the
+    worst outcome a reader actually experienced.</p>
   </div>
 </div>
+
+{sevblock}
 
 <h2>Quality dimensions</h2>
 <p class="h2sub">Each row is one metric measured independently in both languages.

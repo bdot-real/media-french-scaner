@@ -23,6 +23,8 @@ from metrics.grounding import (coverage_vs_reference, lexical_entailment,
                                numeric_grounding)
 from metrics.fluency import fluency_score
 from metrics import severity as sev
+from metrics.embedding import (DEFAULT_MODEL, DEFAULT_HOST, EmbeddingRetriever,
+                               check_available)
 
 CORPUS = Path(__file__).resolve().parent / "corpus"
 LANGS = ("en", "fr")
@@ -168,14 +170,22 @@ PROVIDERS = {"anthropic": generate_anthropic, "openrouter": generate_openrouter}
 
 
 def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
-             provider="anthropic", verbose=False, cache_path=None):
+             provider="anthropic", verbose=False, cache_path=None,
+             retriever="bm25", embed_model=DEFAULT_MODEL,
+             embed_host=DEFAULT_HOST, embed_cache=None):
     by_id = {d["doc_id"]: d for d in docs}
     cache = {}
     if cache_path and cache_path.exists():
         cache = json.loads(cache_path.read_text())
         if verbose and cache:
             print(f"  Reusing {len(cache)} cached generations", file=sys.stderr)
-    retrievers = {lang: BilingualRetriever(docs, lang) for lang in LANGS}
+    if retriever == "embedding":
+        retrievers = {lang: EmbeddingRetriever(docs, lang, host=embed_host,
+                                               model=embed_model,
+                                               cache=embed_cache)
+                      for lang in LANGS}
+    else:
+        retrievers = {lang: BilingualRetriever(docs, lang) for lang in LANGS}
     rows = []
 
     for q in queries:
@@ -369,6 +379,14 @@ def main():
                     help="Model id; defaults per provider")
     ap.add_argument("-v", "--verbose", action="store_true",
                     help="Log each live generation call")
+    ap.add_argument("--retriever", default="bm25",
+                    choices=("bm25", "embedding"),
+                    help="bm25 = lexical with a modelled Canadian-French "
+                         "lexicon gap; embedding = real dense retrieval via "
+                         "a local Ollama model (divergence measured, not modelled)")
+    ap.add_argument("--embed-model", default=DEFAULT_MODEL,
+                    help=f"Ollama embedding model (default: {DEFAULT_MODEL})")
+    ap.add_argument("--embed-host", default=DEFAULT_HOST)
     ap.add_argument("--limit", type=int, metavar="N",
                     help="Evaluate only the first N queries (useful when a "
                          "live provider caps daily requests)")
@@ -384,6 +402,24 @@ def main():
                      "openrouter": "nex-agi/nex-n2.5-pro:free"}
     model = args.model or default_model[args.provider]
 
+    if args.retriever == "embedding":
+        ok, msg = check_available(args.embed_host, args.embed_model)
+        print(f"  {msg}", file=sys.stderr)
+        if not ok:
+            raise SystemExit(
+                "  Embedding retrieval unavailable. Run with --retriever bm25, "
+                "or set up Ollama:\n"
+                "    brew install ollama && ollama serve\n"
+                f"    ollama pull {args.embed_model}")
+
+    # Embedding vectors are deterministic for a given model+text, so cache
+    # them across runs: re-embedding 24 documents on every invocation would
+    # make the demo slow for no benefit.
+    embed_cache = {}
+    embed_cache_path = Path("embed_cache.json")
+    if args.retriever == "embedding" and embed_cache_path.exists():
+        embed_cache = json.loads(embed_cache_path.read_text())
+
     docs, queries, gens = load_corpus()
     if args.limit:
         queries = queries[:args.limit]
@@ -393,8 +429,16 @@ def main():
     rows, summary = evaluate(docs, queries, gens, live=args.live,
                              model=model, k=args.k, provider=args.provider,
                              verbose=args.verbose,
-                             cache_path=Path(args.cache) if (args.live and args.cache) else None)
+                             cache_path=Path(args.cache) if (args.live and args.cache) else None,
+                             retriever=args.retriever,
+                             embed_model=args.embed_model,
+                             embed_host=args.embed_host,
+                             embed_cache=embed_cache)
     summary["mode"] = f"live · {args.provider} · {model}" if args.live else "offline"
+    summary["retriever"] = (f"embedding · {args.embed_model}"
+                            if args.retriever == "embedding" else "bm25 (modelled lexicon gap)")
+    if args.retriever == "embedding" and embed_cache:
+        embed_cache_path.write_text(json.dumps(embed_cache))
     print_report(summary)
 
     if args.json:
