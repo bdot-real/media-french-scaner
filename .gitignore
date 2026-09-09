@@ -1,2 +1,10 @@
 __pycache__/
 *.pyc
+
+# Live-run artifacts: regenerate with --live, never commit
+results_live.json
+report_live.html
+
+# Never commit credentials
+.env
+*.key

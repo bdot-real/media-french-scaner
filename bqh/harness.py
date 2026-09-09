@@ -12,6 +12,7 @@ import json
 import os
 import statistics
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -37,36 +38,91 @@ def load_corpus():
     return docs, queries, {g["query_id"]: g for g in gens}
 
 
-def generate_live(query, lang, contexts, model):
-    """Generate an answer with the Claude API. Only used with --live."""
+SYSTEM_PROMPTS = {
+    "fr": ("Tu es un assistant de recherche pour une salle de nouvelles. "
+           "Réponds en français canadien (normes de Radio-Canada), pas en "
+           "français métropolitain. N'affirme rien qui ne se trouve pas dans "
+           "les sources. Réponds en 1 à 3 phrases."),
+    "en": ("You are a newsroom research assistant. Answer in English. Assert "
+           "nothing that is not in the sources. Answer in 1-3 sentences."),
+}
+
+
+def _build_prompt(query, lang, contexts):
+    joined = "\n\n".join(contexts) if contexts else "(no documents retrieved)"
+    label = "Sources" if lang == "en" else "Sources"
+    q = "Question" if lang == "en" else "Question"
+    return SYSTEM_PROMPTS[lang], f"{label}:\n{joined}\n\n{q}: {query}"
+
+
+def generate_anthropic(query, lang, contexts, model):
+    """Generate through the Anthropic API directly."""
     try:
         import anthropic
     except ImportError:
         raise SystemExit(
-            "--live requires the anthropic package: pip install anthropic"
-        )
+            "--provider anthropic requires: pip install anthropic")
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        raise SystemExit("--live requires ANTHROPIC_API_KEY to be set.")
+        raise SystemExit("--provider anthropic requires ANTHROPIC_API_KEY.")
 
     client = anthropic.Anthropic()
-    style = (
-        "Réponds en français canadien (normes de Radio-Canada), pas en français "
-        "métropolitain. N'affirme rien qui ne soit pas dans les sources."
-        if lang == "fr" else
-        "Answer in English. Assert nothing that is not in the sources."
-    )
-    joined = "\n\n".join(contexts)
-    msg = client.messages.create(
-        model=model,
-        max_tokens=400,
-        system=f"You are a newsroom research assistant. {style} Answer in 1-3 sentences.",
-        messages=[{"role": "user",
-                   "content": f"Sources:\n{joined}\n\nQuestion: {query}"}],
-    )
+    system, user = _build_prompt(query, lang, contexts)
+    msg = client.messages.create(model=model, max_tokens=400, system=system,
+                                 messages=[{"role": "user", "content": user}])
     return msg.content[0].text.strip()
 
 
-def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3):
+def generate_openrouter(query, lang, contexts, model, _retries=3):
+    """Generate through OpenRouter (stdlib only — no SDK dependency).
+
+    Free-tier OpenRouter endpoints rate-limit and occasionally return a
+    provider error, so this retries with backoff. A run that silently dropped
+    failed queries would bias the comparison, so exhaustion raises instead.
+    """
+    import urllib.error
+    import urllib.request
+
+    key = os.environ.get("OPENROUTER_API_KEY")
+    if not key:
+        raise SystemExit(
+            "--provider openrouter requires OPENROUTER_API_KEY to be set.")
+
+    system, user = _build_prompt(query, lang, contexts)
+    payload = json.dumps({
+        "model": model,
+        "max_tokens": 400,
+        "temperature": 0,
+        "messages": [{"role": "system", "content": system},
+                     {"role": "user", "content": user}],
+    }).encode("utf-8")
+
+    last = None
+    for attempt in range(_retries):
+        req = urllib.request.Request(
+            "https://openrouter.ai/api/v1/chat/completions", data=payload,
+            headers={"Authorization": f"Bearer {key}",
+                     "Content-Type": "application/json",
+                     "HTTP-Referer": "https://github.com/bilingual-quality-harness",
+                     "X-Title": "Bilingual Quality Harness"})
+        try:
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                body = json.loads(resp.read().decode("utf-8"))
+            if "error" in body:
+                last = body["error"].get("message", str(body["error"]))
+            else:
+                return body["choices"][0]["message"]["content"].strip()
+        except (urllib.error.URLError, KeyError, ValueError, TimeoutError) as exc:
+            last = str(exc)
+        if attempt < _retries - 1:
+            time.sleep(2 * (attempt + 1))
+    raise RuntimeError(f"OpenRouter failed after {_retries} attempts: {last}")
+
+
+PROVIDERS = {"anthropic": generate_anthropic, "openrouter": generate_openrouter}
+
+
+def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
+             provider="anthropic", verbose=False):
     by_id = {d["doc_id"]: d for d in docs}
     retrievers = {lang: BilingualRetriever(docs, lang) for lang in LANGS}
     rows = []
@@ -84,7 +140,10 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3):
                         for d in ranked if d in by_id]
 
             if live:
-                answer = generate_live(q[lang], lang, contexts, model)
+                if verbose:
+                    print(f"    {q['query_id']} [{lang}] generating…",
+                          file=sys.stderr)
+                answer = PROVIDERS[provider](q[lang], lang, contexts, model)
             else:
                 answer = gens[q["query_id"]][lang]["answer"]
 
@@ -221,17 +280,30 @@ def print_report(summary):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--live", action="store_true",
-                    help="Generate answers via the Claude API instead of the frozen corpus")
-    ap.add_argument("--model", default="claude-sonnet-5")
+                    help="Generate answers from a live model instead of the frozen corpus")
+    ap.add_argument("--provider", default="anthropic", choices=sorted(PROVIDERS),
+                    help="Live generation backend (default: anthropic)")
+    ap.add_argument("--model", default=None,
+                    help="Model id; defaults per provider")
+    ap.add_argument("-v", "--verbose", action="store_true",
+                    help="Log each live generation call")
     ap.add_argument("--k", type=int, default=3, help="Retrieval depth")
     ap.add_argument("--json", metavar="PATH", help="Write full results as JSON")
     ap.add_argument("--report", metavar="PATH", help="Write the HTML dashboard")
     args = ap.parse_args()
 
+    default_model = {"anthropic": "claude-sonnet-5",
+                     "openrouter": "nex-agi/nex-n2.5-pro:free"}
+    model = args.model or default_model[args.provider]
+
     docs, queries, gens = load_corpus()
+    if args.live:
+        print(f"  Live generation: {args.provider} · {model} "
+              f"({len(queries) * 2} calls)", file=sys.stderr)
     rows, summary = evaluate(docs, queries, gens, live=args.live,
-                             model=args.model, k=args.k)
-    summary["mode"] = "live" if args.live else "offline"
+                             model=model, k=args.k, provider=args.provider,
+                             verbose=args.verbose)
+    summary["mode"] = f"live · {args.provider} · {model}" if args.live else "offline"
     print_report(summary)
 
     if args.json:

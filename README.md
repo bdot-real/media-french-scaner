@@ -126,16 +126,43 @@ $ python3 tests/test_harness.py
 
 ## Live mode
 
+Offline mode is deterministic and frozen. Live mode generates the answers from a
+real model and scores those instead — retrieval, metrics, and reporting are
+unchanged.
+
+**OpenRouter** (no SDK required — stdlib HTTP only):
+
 ```bash
-export ANTHROPIC_API_KEY=...
-pip install anthropic
-python3 bqh/harness.py --live --model claude-sonnet-5 --report report.html
+export OPENROUTER_API_KEY=sk-or-...
+python3 bqh/harness.py --live --provider openrouter --report report_live.html
 ```
 
-Generation moves to the Claude API; retrieval, scoring, and reporting are
-unchanged. The French system prompt explicitly requests Canadian French, so
-live mode also tests whether prompt-level instruction is sufficient to hold
-register — which is itself the interesting question.
+Defaults to `nex-agi/nex-n2.5-pro:free`. Override with `--model`; add `-v` to log
+each call. 32 sequential calls (16 queries × 2 languages), so expect a few
+minutes on free-tier endpoints.
+
+**Anthropic API:**
+
+```bash
+export ANTHROPIC_API_KEY=sk-ant-...
+pip install anthropic
+python3 bqh/harness.py --live --provider anthropic --model claude-sonnet-5
+```
+
+### What live mode actually tests
+
+The French system prompt explicitly asks for Canadian French to Radio-Canada
+conventions. So a live run answers a sharper question than the frozen corpus can:
+**is prompt-level instruction enough to hold register?**
+
+If `fluency_register` still diverges when the model was *told* to write Canadian
+French, that is a finding about the model, not about the prompt — and it is the
+argument for a register-aware evaluation gate in the pipeline rather than a
+better system prompt.
+
+Free-tier endpoints rate-limit and intermittently error. The client retries with
+backoff and raises on exhaustion rather than skipping the query, because
+silently dropping failed generations would bias the EN/FR comparison.
 
 ## Corpus
 
