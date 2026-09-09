@@ -959,6 +959,293 @@
         "answer": "Le service satellite du Nord a atteint 48 mégabits par seconde, et le programme d'alimentation traditionnelle a distribué 240 000 kilogrammes dans dix-huit communautés.",
         "defects": []
       }
+    },
+    {
+      "query_id": "q79",
+      "en": {
+        "answer": "Softwood lumber duties were raised to 21.2 per cent from 14.5 per cent, effective April 15."
+      },
+      "fr": {
+        "answer": "Les droits sur le bois d'œuvre ont été portés de 14,5 à 21,2 pour cent, à compter du 15 avril.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q80",
+      "en": {
+        "answer": "Mandatory nursing overtime fell 38 per cent after a staffing agreement added 1,450 full-time positions."
+      },
+      "fr": {
+        "answer": "Le temps supplémentaire obligatoire des infirmières a chuté de 38 pour cent après une entente ajoutant 1 450 postes à temps complet.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q81",
+      "en": {
+        "answer": "The bail compliance program reduced failures to appear by 26 per cent and avoided an estimated 31,000 detention days."
+      },
+      "fr": {
+        "answer": "Le programme a réduit les défauts de comparution de 26 pour cent et évité environ 31 000 jours de détention.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q82",
+      "en": {
+        "answer": "The housing guarantee helped fill 92 of 108 vacant teaching positions, with eleven still vacant in the smallest communities."
+      },
+      "fr": {
+        "answer": "La garantie de logement a permis de pourvoir 92 des 108 postes d'enseignement vacants.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the eleven still-vacant positions present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q83",
+      "en": {
+        "answer": "Producer-funded recycling shifted an estimated $156 million in annual costs from municipalities to producers."
+      },
+      "fr": {
+        "answer": "Le recyclage financé par les producteurs a transféré environ $156,000,000 en coûts annuels des municipalités aux producteurs.",
+        "defects": [
+          {
+            "type": "localization",
+            "detail": "Anglo currency format: symbol before the amount and comma grouping. FR requires 156 000 000 $.",
+            "span": "$156,000,000"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q84",
+      "en": {
+        "answer": "Air quality advisories tripled to 41 days, with fine particulate exceedances on 28 days."
+      },
+      "fr": {
+        "answer": "Les avertissements de qualité de l'air ont triplé pour atteindre 41 jours, avec des dépassements de particules fines pendant 28 jours.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q85",
+      "en": {
+        "answer": "The Indigenous-governed health centre serves 6,800 residents across three communities, employing 74 staff."
+      },
+      "fr": {
+        "answer": "Le centre de santé à gouvernance autochtone dessert 6 800 résidents de trois communautés et emploie 74 personnes.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q86",
+      "en": {
+        "answer": "All new open datasets require full bilingual metadata from July 1; 41 per cent of existing datasets are English-only."
+      },
+      "fr": {
+        "answer": "Tous les nouveaux jeux de données ouverts exigent des métadonnées entièrement bilingues à compter du 07/01.",
+        "defects": [
+          {
+            "type": "localization",
+            "detail": "All-numeric date 07/01 is ambiguous across conventions.",
+            "span": "07/01"
+          },
+          {
+            "type": "coverage",
+            "detail": "Omits the 41 per cent English-only finding present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q87",
+      "en": {
+        "answer": "Regional shooting days rose 47 per cent, with 22 productions generating an estimated $118 million in local spending."
+      },
+      "fr": {
+        "answer": "Les jours de tournage en région ont augmenté de 47 pour cent, et 22 productions ont généré environ 118 millions de dollars en dépenses locales.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q88",
+      "en": {
+        "answer": "Landlord eviction applications reached 92,000, the highest on record, with a median hearing wait of 8 months."
+      },
+      "fr": {
+        "answer": "Les demandes d'éviction ont atteint 92 000, un sommet historique, avec un délai médian avant audience de 8 mois.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q89",
+      "en": {
+        "answer": "Rapid snowmelt forced the evacuation of 1,240 residents from four river communities."
+      },
+      "fr": {
+        "answer": "La fonte rapide des neiges a forcé l'évacuation de 1 240 résidents de quatre communautés riveraines.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q90",
+      "en": {
+        "answer": "The minimum wage rises to $16.45 an hour October 1 and will be indexed to inflation annually."
+      },
+      "fr": {
+        "answer": "Le salaire minimum passera à 16,45 dollars l'heure le 1er octobre et sera indexé annuellement à l'inflation.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q91",
+      "en": {
+        "answer": "Dental care plan enrolment passed 3.1 million people, with 24,000 participating providers."
+      },
+      "fr": {
+        "answer": "Les inscriptions au régime de soins dentaires ont dépassé 3,1 millions de personnes, avec 24 000 prestataires participants.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q92",
+      "en": {
+        "answer": "The review commission received 214 applications in six months, with eleven advancing to full investigation."
+      },
+      "fr": {
+        "answer": "La commission de révision a reçu 214 demandes en six mois, dont onze sont passées à l'enquête complète.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q93",
+      "en": {
+        "answer": "Apprenticeship completions rose 22 per cent, with registrations reaching 18,400."
+      },
+      "fr": {
+        "answer": "Les certifications d'apprentissage ont augmenté de 22 pour cent, et les inscriptions ont atteint 18 400.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q94",
+      "en": {
+        "answer": "Winning bidders must cover 92 per cent of rural population in licensed areas within five years."
+      },
+      "fr": {
+        "answer": "Les enchérisseurs retenus devront desservir 92 pour cent de la population rurale des zones visées dans un délai de cinq ans.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q95",
+      "en": {
+        "answer": "Volunteer fire departments reported a 24 per cent decline in active members, with 41 departments below recommended staffing."
+      },
+      "fr": {
+        "answer": "Les services d'incendie bénévoles ont signalé une baisse de 24 pour cent des membres actifs.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 41 understaffed departments present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q96",
+      "en": {
+        "answer": "The ban expanded to four categories including takeout containers and cutlery, effective September."
+      },
+      "fr": {
+        "answer": "L'interdiction s'étend à quatre catégories, dont les contenants pour emporter et les ustensiles, à compter de septembre.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q97",
+      "en": {
+        "answer": "The grant will support 46 Indigenous-language titles over three years, including 18 children's books."
+      },
+      "fr": {
+        "answer": "La subvention appuiera 46 titres en langues autochtones sur trois ans, dont 18 livres pour enfants.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q98",
+      "en": {
+        "answer": "Grocery price inflation slowed to 1.8 per cent, the lowest since 2020."
+      },
+      "fr": {
+        "answer": "L'inflation des prix en épicerie a ralenti à 1.8 pour cent, son plus bas niveau depuis 2020.",
+        "defects": [
+          {
+            "type": "localization",
+            "detail": "Decimal point instead of the French decimal comma (1,8).",
+            "span": "1.8"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q99",
+      "en": {
+        "answer": "Nursing overtime fell 38 per cent, dental plan enrolment passed 3.1 million, and youth mental health waits exceed six months in seven provinces."
+      },
+      "fr": {
+        "answer": "Le temps supplémentaire des infirmières a chuté de 38 pour cent et les inscriptions au régime dentaire ont dépassé 3,1 millions.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Third document (youth mental health waits) missing.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q100",
+      "en": {
+        "answer": "Spring melt evacuated 1,240 residents while drought cut the Prairie crop forecast 18 per cent."
+      },
+      "fr": {
+        "answer": "La fonte printanière a évacué 1 240 résidents, et la sécheresse a réduit les prévisions de récolte des Prairies de 18 pour cent.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q101",
+      "en": {
+        "answer": "New open datasets require bilingual metadata from July 1, and a publishing grant supports 46 Indigenous-language titles."
+      },
+      "fr": {
+        "answer": "Les nouveaux jeux de données exigent des métadonnées bilingues dès le 1er juillet, et une subvention appuie 46 titres en langues autochtones.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q102",
+      "en": {
+        "answer": "Eviction applications reached 92,000 with an 8-month median hearing wait, while shelters ran at 96 per cent capacity turning away 84 people nightly."
+      },
+      "fr": {
+        "answer": "Les demandes d'éviction ont atteint 92 000 avec un délai médian de 8 mois, et les refuges ont fonctionné à 96 pour cent de leur capacité.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 84 people turned away nightly present in EN.",
+            "span": null
+          }
+        ]
+      }
     }
   ]
 }

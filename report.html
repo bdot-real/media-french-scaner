@@ -161,19 +161,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>EN / FR output equivalence for a journalistic RAG workflow</h1>
   <p class="sub">Measures whether an AI content pipeline performs <em>equivalently</em> in English and Canadian French — not whether it performs adequately in each. The unit of analysis is the gap between the two, because that gap is what a bilingual public-service mandate actually commits to.</p>
-  <div class="meta">78 parallel queries · 24 parallel documents ·
+  <div class="meta">102 parallel queries · 24 parallel documents ·
    Canadian French (Radio-Canada conventions)<br>
    mode <code>offline</code> · retrieval <code>bm25 (modelled lexicon gap)</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig warn">71%</div>
+    <div class="hero-fig warn">69%</div>
     <div class="hero-lab">Service parity</div>
   </div>
   <div class="hero-txt">
-    <p style="margin-top:0"><strong>4 queries where the French reader was not served</strong> — either no answer was returned, or the answer asserted a fact the source does not support. Both are mandate failures, not quality deltas.</p>
-    <p style="margin-bottom:0">Equivalence index 0.959 · 9
+    <p style="margin-top:0"><strong>6 queries where the French reader was not served</strong> — either no answer was returned, or the answer asserted a fact the source does not support. Both are mandate failures, not quality deltas.</p>
+    <p style="margin-bottom:0">Equivalence index 0.959 · 10
     dimensions. A mean over all queries understates this: bilingual public service is not an average commitment, so the harness leads with the worst outcome a reader actually experienced.</p>
   </div>
 </div>
@@ -181,7 +181,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <h2>What the French reader experienced</h2>
 <p class="h2sub">Every query classified by its worst outcome, ordered by reader impact.</p>
 <div class="card">
-  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">4</div><div class="sev-l">Unsupported fact</div></div><div class="sev-tile r2"><div class="sev-n">7</div><div class="sev-l">Different sources</div></div><div class="sev-tile r3"><div class="sev-n">12</div><div class="sev-l">Reduced content</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Register</div></div></div>
+  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">6</div><div class="sev-l">Unsupported fact</div></div><div class="sev-tile r2"><div class="sev-n">11</div><div class="sev-l">Different sources</div></div><div class="sev-tile r3"><div class="sev-n">15</div><div class="sev-l">Reduced content</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Register</div></div></div>
   
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Unsupported fact</span>
@@ -240,16 +240,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.974, gap +0.026">
+             aria-label="English 1.000, French 0.961, gap +0.039">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="97.44" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.08" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="97.44" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.08" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.974</td>
-      <td class="num gap">+0.026</td>
+      <td class="num fr">0.961</td>
+      <td class="num gap">+0.039</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -259,16 +259,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.942, French 0.926, gap +0.016">
+             aria-label="English 0.939, French 0.922, gap +0.017">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="92.63" y1="11" x2="94.23" y2="11" class="gapline"/>
-          <circle cx="94.23" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="92.63" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="92.16" y1="11" x2="93.87" y2="11" class="gapline"/>
+          <circle cx="93.87" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="92.16" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.942</td>
-      <td class="num fr">0.926</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.939</td>
+      <td class="num fr">0.922</td>
+      <td class="num gap">+0.017</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -278,16 +278,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.958, French 0.942, gap +0.016">
+             aria-label="English 0.954, French 0.932, gap +0.022">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="94.17" y1="11" x2="95.76" y2="11" class="gapline"/>
-          <circle cx="95.76" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="94.17" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.21" y1="11" x2="95.42" y2="11" class="gapline"/>
+          <circle cx="95.42" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.21" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.958</td>
-      <td class="num fr">0.942</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.954</td>
+      <td class="num fr">0.932</td>
+      <td class="num gap">+0.022</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -297,16 +297,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.970, gap +0.030">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="97.01" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.24" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="97.01" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.24" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.970</td>
-      <td class="num gap">+0.030</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -316,16 +316,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.921, French 0.906, gap +0.015">
+             aria-label="English 0.928, French 0.895, gap +0.033">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="90.60" y1="11" x2="92.09" y2="11" class="gapline"/>
-          <circle cx="92.09" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="90.60" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="89.54" y1="11" x2="92.81" y2="11" class="gapline"/>
+          <circle cx="92.81" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="89.54" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.921</td>
-      <td class="num fr">0.906</td>
-      <td class="num gap">+0.015</td>
+      <td class="num en">0.928</td>
+      <td class="num fr">0.895</td>
+      <td class="num gap">+0.033</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -335,16 +335,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.894, French 0.872, gap +0.022">
+             aria-label="English 0.901, French 0.871, gap +0.031">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="87.17" y1="11" x2="89.43" y2="11" class="gapline"/>
-          <circle cx="89.43" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="87.17" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="87.09" y1="11" x2="90.15" y2="11" class="gapline"/>
+          <circle cx="90.15" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="87.09" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.894</td>
-      <td class="num fr">0.872</td>
-      <td class="num gap">+0.022</td>
+      <td class="num en">0.901</td>
+      <td class="num fr">0.871</td>
+      <td class="num gap">+0.031</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -354,16 +354,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.888, gap +0.112">
+             aria-label="English 1.000, French 0.884, gap +0.116">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="88.77" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="88.39" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="88.77" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="88.39" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.888</td>
-      <td class="num gap">+0.112</td>
+      <td class="num fr">0.884</td>
+      <td class="num gap">+0.116</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
     <tr class="dim ok">
@@ -373,16 +373,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.923, gap +0.077">
+             aria-label="English 1.000, French 0.941, gap +0.059">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="92.31" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="94.12" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="92.31" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="94.12" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.923</td>
-      <td class="num gap">+0.077</td>
+      <td class="num fr">0.941</td>
+      <td class="num gap">+0.059</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -392,16 +392,35 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.996, French 0.941, gap +0.055">
+             aria-label="English 0.996, French 0.955, gap +0.042">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="94.08" y1="11" x2="99.55" y2="11" class="gapline"/>
-          <circle cx="99.55" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="94.08" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="95.48" y1="11" x2="99.64" y2="11" class="gapline"/>
+          <circle cx="99.64" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="95.48" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">0.996</td>
-      <td class="num fr">0.941</td>
-      <td class="num gap">+0.055</td>
+      <td class="num fr">0.955</td>
+      <td class="num gap">+0.042</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Localization conventions</span>
+        <span class="dim-desc">Dates, currency, decimals, units</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.990, French 0.976, gap +0.015">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="97.55" y1="11" x2="99.02" y2="11" class="gapline"/>
+          <circle cx="99.02" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="97.55" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.990</td>
+      <td class="num fr">0.976</td>
+      <td class="num gap">+0.015</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr></tbody>
   </table></div>
@@ -415,11 +434,11 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">halte-chaleur</td>
           <td class="cov"><span class="covbar"><span style="width:20%"></span></span>
               <span class="covnum">0.20</span></td>
-          <td class="qs">q03, q14, q16, q19, q28, q29, q43, q60, q73, q77</td></tr>
+          <td class="qs">q03, q14, q16, q19, q28, q29, q60, q77</td></tr>
       <tr><td class="term">banlieusard</td>
           <td class="cov"><span class="covbar"><span style="width:30%"></span></span>
               <span class="covnum">0.30</span></td>
-          <td class="qs">q06, q16, q62, q73</td></tr>
+          <td class="qs">q06, q16, q62</td></tr>
       <tr><td class="term">assurance-emploi</td>
           <td class="cov"><span class="covbar"><span style="width:35%"></span></span>
               <span class="covnum">0.35</span></td>
@@ -431,27 +450,27 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">prestataire</td>
           <td class="cov"><span class="covbar"><span style="width:50%"></span></span>
               <span class="covnum">0.50</span></td>
-          <td class="qs">q01, q22, q51</td></tr>
+          <td class="qs">q01, q22, q27, q51, q91</td></tr>
       <tr><td class="term">conseiller</td>
           <td class="cov"><span class="covbar"><span style="width:55%"></span></span>
               <span class="covnum">0.55</span></td>
-          <td class="qs">q03, q05, q12, q14, q21, q42, q54</td></tr>
+          <td class="qs">q03, q05, q12, q14, q21, q42, q54, q92</td></tr>
       <tr><td class="term">minoritaire</td>
           <td class="cov"><span class="covbar"><span style="width:60%"></span></span>
               <span class="covnum">0.60</span></td>
-          <td class="qs">q07, q23, q32, q40, q50, q75, q76</td></tr>
+          <td class="qs">q07, q23, q32, q40, q76, q79</td></tr>
       <tr><td class="term">foncière</td>
           <td class="cov"><span class="covbar"><span style="width:65%"></span></span>
               <span class="covnum">0.65</span></td>
-          <td class="qs">q12, q54, q65</td></tr>
+          <td class="qs">q12, q54</td></tr>
       <tr><td class="term">scolaire</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q05, q14, q19, q42, q60, q77</td></tr>
+          <td class="qs">q05, q14, q19, q20, q42, q60, q77, q84, q87</td></tr>
       <tr><td class="term">péage</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q06, q16, q73</td></tr></tbody>
+          <td class="qs">q06, q16</td></tr></tbody>
 </table></div></div>
 
 <h2>Divergent queries</h2>
@@ -513,7 +532,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q32</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">register</span></td>
           <td class="note">CLOSM probe across two documents.</td></tr>
       <tr><td class="qid">q35</td>
           <td>—</td>
@@ -531,6 +550,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td>multi_doc</td>
           <td class="issues"><span class="tag">omission</span></td>
           <td class="note"></td></tr>
+      <tr><td class="qid">q50</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">retrieval miss</span></td>
+          <td class="note">Minority-language education vocabulary across two documents.</td></tr>
       <tr><td class="qid">q51</td>
           <td>multi_doc</td>
           <td class="issues"><span class="tag">fabricated figure</span></td>
@@ -557,12 +580,40 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q75</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">fabricated figure</span></td>
           <td class="note"></td></tr>
       <tr><td class="qid">q77</td>
           <td>lexical_ca_fr</td>
           <td class="issues"><span class="tag">register</span></td>
-          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr></tbody>
+          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr>
+      <tr><td class="qid">q82</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q83</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q86</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q95</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q99</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q101</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q102</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr></tbody>
 </table></div></div>
 
 <h2>Metropolitan drift and false correction</h2>
@@ -575,10 +626,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <div class="sev-tile r0">
       <div class="sev-n">80%</div>
       <div class="sev-l">Quebec false correction rate</div></div>
-    <div class="sev-tile"><div class="sev-n">17</div>
+    <div class="sev-tile"><div class="sev-n">20</div>
       <div class="sev-l">Rephrased — not drift</div></div>
   </div>
-  <p class="note-p"><strong>MDR</strong> counts substitutions only: 3 of 5 scored opportunities. 17 cases where the model rephrased around the term are excluded from the denominator entirely — verbosity is not drift, and scoring it either way would bias the rate.</p>
+  <p class="note-p"><strong>MDR</strong> counts substitutions only: 3 of 5 scored opportunities. 20 cases where the model rephrased around the term are excluded from the denominator entirely — verbosity is not drift, and scoring it either way would bias the rate.</p>
   <table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
   <p class="note-p" style="margin-top:16px"><strong>QFCR</strong> sends already-correct Canadian French through a naive &ldquo;corrige ce texte&rdquo; prompt, so any alteration is a false correction by construction: 12 of 15 valid Quebec forms were altered. A pipeline can generate perfect Canadian French and still ship metropolitan copy because the proofreading step rewrote it.</p>
   <table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
@@ -618,21 +669,46 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">hlth-053</td><td>Health</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">indg-044</td><td>Indigenous</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">tech-059</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-041</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">edu-043</td><td>Education</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-046</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">wx-049</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-050</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-057</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
 </div>
 
+<h2>Terminology and answerability</h2>
+<p class="h2sub">Consistency and refusal behaviour across the whole run — failures that are invisible when answers are scored one at a time.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile r1">
+      <div class="sev-n">57%</div>
+      <div class="sev-l">FR terminology consistency</div></div>
+    <div class="sev-tile"><div class="sev-n">100%</div>
+      <div class="sev-l">FR answer rate</div></div>
+    <div class="sev-tile ">
+      <div class="sev-n">0</div>
+      <div class="sev-l">Answered in one language only</div></div>
+  </div>
+  <p class="note-p">A pipeline can render the same programme three ways across a run and each answer looks fine alone. It breaks archive search and house style, and is systematically worse in the second language where no single reviewer sees all the output.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Concept</th><th>Canonical form</th>
+      <th class="num">Canonical use</th><th class="num">Mentions</th>
+      <th>Replaced with</th></tr></thead>
+    <tbody><tr class="divrow"><td>warming centre</td><td class="term">halte-chaleur</td><td class="num">0%</td><td class="num">3</td><td class="note"></td></tr><tr class=""><td>employment insurance</td><td class="term">assurance-emploi</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>property tax</td><td class="term">taxe foncière</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>long term care</td><td class="term">soins de longue durée</td><td class="num">100%</td><td class="num">2</td><td class="note"></td></tr></tbody></table></div>
+  <p class="note-p" style="margin-top:16px">A refusal asserts nothing, so it scores perfectly on grounding and register. Refusing more often in one language is rationing service by language, and conventional quality metrics cannot see it.
+   EN 100% · FR 100%.
+   within expected expansion (FR/EN 0.90).</p>
+  
+</div>
+
 <h2>Where divergence concentrates</h2>
 <p class="h2sub">An aggregate says whether the pipeline is failing; segmentation says where, which is what routes it to an owner.</p>
 <div class="card"><div class="segrow"><div class="segcol"><h3>By desk</h3><table>
               <thead><tr><th>Desk</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>Arts</td><td class="num">8</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.250</td></tr><tr><td>News</td><td class="num">13</td><td class="num">7</td><td class="num">2</td><td class="num gap">+0.231</td></tr><tr><td>Business</td><td class="num">9</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.222</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Municipal</td><td class="num">18</td><td class="num">7</td><td class="num">0</td><td class="num gap">+0.144</td></tr><tr><td>Education</td><td class="num">7</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Health</td><td class="num">9</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.074</td></tr><tr><td>Indigenous</td><td class="num">9</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.037</td></tr></tbody></table></div><div class="segcol"><h3>By region</h3><table>
+              <tbody><tr><td>Indigenous</td><td class="num">10</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Municipal</td><td class="num">22</td><td class="num">10</td><td class="num">1</td><td class="num gap">+0.197</td></tr><tr><td>Arts</td><td class="num">11</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.182</td></tr><tr><td>News</td><td class="num">17</td><td class="num">8</td><td class="num">2</td><td class="num gap">+0.176</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Business</td><td class="num">13</td><td class="num">5</td><td class="num">1</td><td class="num gap">+0.154</td></tr><tr><td>Education</td><td class="num">9</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.148</td></tr><tr><td>Health</td><td class="num">12</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.097</td></tr></tbody></table></div><div class="segcol"><h3>By region</h3><table>
               <thead><tr><th>Region</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>West</td><td class="num">7</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.214</td></tr><tr><td>Ontario</td><td class="num">18</td><td class="num">9</td><td class="num">3</td><td class="num gap">+0.194</td></tr><tr><td>Quebec</td><td class="num">11</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.175</td></tr><tr><td>Prairies</td><td class="num">11</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>National</td><td class="num">23</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.087</td></tr><tr><td>Atlantic</td><td class="num">7</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.048</td></tr><tr><td>North</td><td class="num">11</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.045</td></tr></tbody></table></div><div class="segcol"><h3>By topic</h3><table>
+              <tbody><tr><td>Ontario</td><td class="num">23</td><td class="num">11</td><td class="num">4</td><td class="num gap">+0.206</td></tr><tr><td>West</td><td class="num">9</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.167</td></tr><tr><td>Quebec</td><td class="num">15</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.162</td></tr><tr><td>North</td><td class="num">14</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Prairies</td><td class="num">14</td><td class="num">8</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Atlantic</td><td class="num">9</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.093</td></tr><tr><td>National</td><td class="num">30</td><td class="num">9</td><td class="num">1</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>By topic</h3><table>
               <thead><tr><th>Topic</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>homelessness</td><td class="num">4</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr></tbody></table></div></div></div>
+              <tbody><tr><td>recycling <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+1.000</td></tr><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>fire_service <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr></tbody></table></div></div></div>
 
 <h2>Per-query detail</h2>
 <p class="h2sub">Full result table — the accessible view of every number above. Divergent queries first; perfect scores are dimmed so the values that differ carry the eye.</p>
@@ -674,12 +750,44 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
       <tr class="divrow">
+          <td class="qid">q83<span class="rowtag r1">Unsupported fact</span></td>
+          <td class="qtext">Producer-funded recycling shifted an estimated $156 million in annual costs from municipal…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q86<span class="rowtag r1">Unsupported fact</span></td>
+          <td class="qtext">All new open datasets require full bilingual metadata from July 1; 41 per cent of existing…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr class="divrow">
           <td class="qid">q04<span class="rowtag r2">Different sources</span></td>
           <td class="qtext">Municipalities opened eleven warming centres across the affected region for residents with…</td>
           <td class="num pass">1.00</td><td class="num">0.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num">0.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q100<span class="rowtag r2">Different sources</span></td>
+          <td class="qtext">Spring melt evacuated 1,240 residents while drought cut the Prairie crop forecast 18 per c…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q101<span class="rowtag r2">Different sources</span></td>
+          <td class="qtext">New open datasets require bilingual metadata from July 1, and a publishing grant supports …</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
           <td class="num pass">1.00</td></tr>
       <tr class="divrow">
           <td class="qid">q14<span class="rowtag r2">Different sources</span></td>
@@ -716,7 +824,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr class="divrow">
           <td class="qid">q50<span class="rowtag r2">Different sources</span></td>
           <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td><td class="num">0.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
@@ -730,6 +838,22 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
       <tr class="divrow">
+          <td class="qid">q75<span class="rowtag r2">Different sources</span></td>
+          <td class="qtext">Supports include a settlement transferring 78,000 hectares, a country food program in eigh…</td>
+          <td class="num pass">1.00</td><td class="num">0.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q99<span class="rowtag r2">Different sources</span></td>
+          <td class="qtext">Nursing overtime fell 38 per cent, dental plan enrolment passed 3.1 million, and youth men…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr class="divrow">
           <td class="qid">q07<span class="rowtag r3">Reduced content</span></td>
           <td class="qtext">A quarter of the $12 million touring fund expansion is reserved for official language mino…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
@@ -737,6 +861,14 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.00</td>
           <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q102<span class="rowtag r3">Reduced content</span></td>
+          <td class="qtext">Eviction applications reached 92,000 with an 8-month median hearing wait, while shelters r…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.75</td></tr>
       <tr class="divrow">
           <td class="qid">q13<span class="rowtag r3">Reduced content</span></td>
           <td class="qtext">Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, …</td>
@@ -825,6 +957,22 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q82<span class="rowtag r3">Reduced content</span></td>
+          <td class="qtext">The housing guarantee helped fill 92 of 108 vacant teaching positions, with eleven still v…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q95<span class="rowtag r3">Reduced content</span></td>
+          <td class="qtext">Volunteer fire departments reported a 24 per cent decline in active members, with 41 depar…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
       <tr class="divrow">
           <td class="qid">q05<span class="rowtag r4">Register</span></td>
           <td class="qtext">Trustees asked the province for a per-student funding increase of $410, as the four boards…</td>
@@ -1242,14 +1390,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td></tr>
       <tr class="cleanrow">
-          <td class="qid">q75</td>
-          <td class="qtext">Supports include a settlement transferring 78,000 hectares, a country food program in eigh…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
           <td class="qid">q76</td>
           <td class="qtext">The access to information backlog reached 32,000 overdue requests, with fourteen instituti…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
@@ -1260,6 +1400,134 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr class="cleanrow">
           <td class="qid">q78</td>
           <td class="qtext">Northern satellite service reached 48 megabits per second while the country food program d…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q79</td>
+          <td class="qtext">Softwood lumber duties were raised to 21.2 per cent from 14.5 per cent, effective April 15…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q80</td>
+          <td class="qtext">Mandatory nursing overtime fell 38 per cent after a staffing agreement added 1,450 full-ti…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q81</td>
+          <td class="qtext">The bail compliance program reduced failures to appear by 26 per cent and avoided an estim…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q84</td>
+          <td class="qtext">Air quality advisories tripled to 41 days, with fine particulate exceedances on 28 days.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q85</td>
+          <td class="qtext">The Indigenous-governed health centre serves 6,800 residents across three communities, emp…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q87</td>
+          <td class="qtext">Regional shooting days rose 47 per cent, with 22 productions generating an estimated $118 …</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q88</td>
+          <td class="qtext">Landlord eviction applications reached 92,000, the highest on record, with a median hearin…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q89</td>
+          <td class="qtext">Rapid snowmelt forced the evacuation of 1,240 residents from four river communities.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q90</td>
+          <td class="qtext">The minimum wage rises to $16.45 an hour October 1 and will be indexed to inflation annual…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q91</td>
+          <td class="qtext">Dental care plan enrolment passed 3.1 million people, with 24,000 participating providers.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q92</td>
+          <td class="qtext">The review commission received 214 applications in six months, with eleven advancing to fu…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q93</td>
+          <td class="qtext">Apprenticeship completions rose 22 per cent, with registrations reaching 18,400.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q94</td>
+          <td class="qtext">Winning bidders must cover 92 per cent of rural population in licensed areas within five y…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q96</td>
+          <td class="qtext">The ban expanded to four categories including takeout containers and cutlery, effective Se…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q97</td>
+          <td class="qtext">The grant will support 46 Indigenous-language titles over three years, including 18 childr…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q98</td>
+          <td class="qtext">Grocery price inflation slowed to 1.8 per cent, the lowest since 2020.…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
@@ -1277,19 +1545,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>Équivalence des sorties EN/FR pour un flux journalistique à génération augmentée</h1>
   <p class="sub">Mesure si un flux de contenu par IA offre un rendement <em>équivalent</em> en anglais et en français canadien — et non s'il offre un rendement acceptable dans chaque langue. L'unité d'analyse est l'écart entre les deux, car c'est cet écart que vise un mandat de service public bilingue.</p>
-  <div class="meta">78 requêtes parallèles · 24 documents parallèles ·
+  <div class="meta">102 requêtes parallèles · 24 documents parallèles ·
    français canadien (normes de Radio-Canada)<br>
    mode <code>offline</code> · repérage <code>bm25 (modelled lexicon gap)</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig warn">71%</div>
+    <div class="hero-fig warn">69%</div>
     <div class="hero-lab">Parité de service</div>
   </div>
   <div class="hero-txt">
-    <p style="margin-top:0"><strong>4 requêtes où le lectorat francophone n'a pas été servi</strong> — soit aucune réponse n'a été fournie, soit la réponse avance un fait que la source n'appuie pas. Dans les deux cas, il s'agit d'un manquement au mandat, et non d'un simple écart de qualité.</p>
-    <p style="margin-bottom:0">Indice d'équivalence 0.959 · 9
+    <p style="margin-top:0"><strong>6 requêtes où le lectorat francophone n'a pas été servi</strong> — soit aucune réponse n'a été fournie, soit la réponse avance un fait que la source n'appuie pas. Dans les deux cas, il s'agit d'un manquement au mandat, et non d'un simple écart de qualité.</p>
+    <p style="margin-bottom:0">Indice d'équivalence 0.959 · 10
     dimensions. Une moyenne sur l'ensemble des requêtes en atténue la portée&nbsp;: le service public bilingue n'est pas un engagement moyen. Le banc d'essai met donc en tête le pire résultat vécu par une lectrice ou un lecteur.</p>
   </div>
 </div>
@@ -1297,7 +1565,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <h2>Ce qu'a vécu le lectorat francophone</h2>
 <p class="h2sub">Chaque requête classée selon son pire résultat, en ordre d'incidence sur le lectorat.</p>
 <div class="card">
-  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">4</div><div class="sev-l">Fait non appuyé</div></div><div class="sev-tile r2"><div class="sev-n">7</div><div class="sev-l">Sources différentes</div></div><div class="sev-tile r3"><div class="sev-n">12</div><div class="sev-l">Contenu réduit</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Registre</div></div></div>
+  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">6</div><div class="sev-l">Fait non appuyé</div></div><div class="sev-tile r2"><div class="sev-n">11</div><div class="sev-l">Sources différentes</div></div><div class="sev-tile r3"><div class="sev-n">15</div><div class="sev-l">Contenu réduit</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Registre</div></div></div>
   
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
@@ -1356,16 +1624,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.974, gap +0.026">
+             aria-label="English 1.000, French 0.961, gap +0.039">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="97.44" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.08" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="97.44" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.08" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.974</td>
-      <td class="num gap">+0.026</td>
+      <td class="num fr">0.961</td>
+      <td class="num gap">+0.039</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1375,16 +1643,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.942, French 0.926, gap +0.016">
+             aria-label="English 0.939, French 0.922, gap +0.017">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="92.63" y1="11" x2="94.23" y2="11" class="gapline"/>
-          <circle cx="94.23" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="92.63" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="92.16" y1="11" x2="93.87" y2="11" class="gapline"/>
+          <circle cx="93.87" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="92.16" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.942</td>
-      <td class="num fr">0.926</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.939</td>
+      <td class="num fr">0.922</td>
+      <td class="num gap">+0.017</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1394,16 +1662,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.958, French 0.942, gap +0.016">
+             aria-label="English 0.954, French 0.932, gap +0.022">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="94.17" y1="11" x2="95.76" y2="11" class="gapline"/>
-          <circle cx="95.76" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="94.17" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.21" y1="11" x2="95.42" y2="11" class="gapline"/>
+          <circle cx="95.42" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.21" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.958</td>
-      <td class="num fr">0.942</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.954</td>
+      <td class="num fr">0.932</td>
+      <td class="num gap">+0.022</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1413,16 +1681,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.970, gap +0.030">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="97.01" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.24" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="97.01" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.24" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.970</td>
-      <td class="num gap">+0.030</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1432,16 +1700,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.921, French 0.906, gap +0.015">
+             aria-label="English 0.928, French 0.895, gap +0.033">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="90.60" y1="11" x2="92.09" y2="11" class="gapline"/>
-          <circle cx="92.09" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="90.60" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="89.54" y1="11" x2="92.81" y2="11" class="gapline"/>
+          <circle cx="92.81" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="89.54" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.921</td>
-      <td class="num fr">0.906</td>
-      <td class="num gap">+0.015</td>
+      <td class="num en">0.928</td>
+      <td class="num fr">0.895</td>
+      <td class="num gap">+0.033</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1451,16 +1719,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.894, French 0.872, gap +0.022">
+             aria-label="English 0.901, French 0.871, gap +0.031">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="87.17" y1="11" x2="89.43" y2="11" class="gapline"/>
-          <circle cx="89.43" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="87.17" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="87.09" y1="11" x2="90.15" y2="11" class="gapline"/>
+          <circle cx="90.15" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="87.09" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.894</td>
-      <td class="num fr">0.872</td>
-      <td class="num gap">+0.022</td>
+      <td class="num en">0.901</td>
+      <td class="num fr">0.871</td>
+      <td class="num gap">+0.031</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -1470,16 +1738,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.888, gap +0.112">
+             aria-label="English 1.000, French 0.884, gap +0.116">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="88.77" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="88.39" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="88.77" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="88.39" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.888</td>
-      <td class="num gap">+0.112</td>
+      <td class="num fr">0.884</td>
+      <td class="num gap">+0.116</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1489,16 +1757,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.923, gap +0.077">
+             aria-label="English 1.000, French 0.941, gap +0.059">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="92.31" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="94.12" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="92.31" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="94.12" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.923</td>
-      <td class="num gap">+0.077</td>
+      <td class="num fr">0.941</td>
+      <td class="num gap">+0.059</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1508,16 +1776,35 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.996, French 0.941, gap +0.055">
+             aria-label="English 0.996, French 0.955, gap +0.042">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="94.08" y1="11" x2="99.55" y2="11" class="gapline"/>
-          <circle cx="99.55" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="94.08" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="95.48" y1="11" x2="99.64" y2="11" class="gapline"/>
+          <circle cx="99.64" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="95.48" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">0.996</td>
-      <td class="num fr">0.941</td>
-      <td class="num gap">+0.055</td>
+      <td class="num fr">0.955</td>
+      <td class="num gap">+0.042</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Conventions de localisation</span>
+        <span class="dim-desc">Dates, devises, décimales, unités</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.990, French 0.976, gap +0.015">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="97.55" y1="11" x2="99.02" y2="11" class="gapline"/>
+          <circle cx="99.02" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="97.55" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.990</td>
+      <td class="num fr">0.976</td>
+      <td class="num gap">+0.015</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr></tbody>
   </table></div>
@@ -1531,11 +1818,11 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">halte-chaleur</td>
           <td class="cov"><span class="covbar"><span style="width:20%"></span></span>
               <span class="covnum">0.20</span></td>
-          <td class="qs">q03, q14, q16, q19, q28, q29, q43, q60, q73, q77</td></tr>
+          <td class="qs">q03, q14, q16, q19, q28, q29, q60, q77</td></tr>
       <tr><td class="term">banlieusard</td>
           <td class="cov"><span class="covbar"><span style="width:30%"></span></span>
               <span class="covnum">0.30</span></td>
-          <td class="qs">q06, q16, q62, q73</td></tr>
+          <td class="qs">q06, q16, q62</td></tr>
       <tr><td class="term">assurance-emploi</td>
           <td class="cov"><span class="covbar"><span style="width:35%"></span></span>
               <span class="covnum">0.35</span></td>
@@ -1547,27 +1834,27 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">prestataire</td>
           <td class="cov"><span class="covbar"><span style="width:50%"></span></span>
               <span class="covnum">0.50</span></td>
-          <td class="qs">q01, q22, q51</td></tr>
+          <td class="qs">q01, q22, q27, q51, q91</td></tr>
       <tr><td class="term">conseiller</td>
           <td class="cov"><span class="covbar"><span style="width:55%"></span></span>
               <span class="covnum">0.55</span></td>
-          <td class="qs">q03, q05, q12, q14, q21, q42, q54</td></tr>
+          <td class="qs">q03, q05, q12, q14, q21, q42, q54, q92</td></tr>
       <tr><td class="term">minoritaire</td>
           <td class="cov"><span class="covbar"><span style="width:60%"></span></span>
               <span class="covnum">0.60</span></td>
-          <td class="qs">q07, q23, q32, q40, q50, q75, q76</td></tr>
+          <td class="qs">q07, q23, q32, q40, q76, q79</td></tr>
       <tr><td class="term">foncière</td>
           <td class="cov"><span class="covbar"><span style="width:65%"></span></span>
               <span class="covnum">0.65</span></td>
-          <td class="qs">q12, q54, q65</td></tr>
+          <td class="qs">q12, q54</td></tr>
       <tr><td class="term">scolaire</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q05, q14, q19, q42, q60, q77</td></tr>
+          <td class="qs">q05, q14, q19, q20, q42, q60, q77, q84, q87</td></tr>
       <tr><td class="term">péage</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q06, q16, q73</td></tr></tbody>
+          <td class="qs">q06, q16</td></tr></tbody>
 </table></div></div>
 
 <h2>Divergent queries</h2>
@@ -1629,7 +1916,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q32</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">register</span></td>
           <td class="note">CLOSM probe across two documents.</td></tr>
       <tr><td class="qid">q35</td>
           <td>—</td>
@@ -1647,6 +1934,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td>multi_doc</td>
           <td class="issues"><span class="tag">omission</span></td>
           <td class="note"></td></tr>
+      <tr><td class="qid">q50</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">retrieval miss</span></td>
+          <td class="note">Minority-language education vocabulary across two documents.</td></tr>
       <tr><td class="qid">q51</td>
           <td>multi_doc</td>
           <td class="issues"><span class="tag">fabricated figure</span></td>
@@ -1673,12 +1964,40 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q75</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">fabricated figure</span></td>
           <td class="note"></td></tr>
       <tr><td class="qid">q77</td>
           <td>lexical_ca_fr</td>
           <td class="issues"><span class="tag">register</span></td>
-          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr></tbody>
+          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr>
+      <tr><td class="qid">q82</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q83</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q86</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q95</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q99</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q101</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q102</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr></tbody>
 </table></div></div>
 
 <h2>Dérive métropolitaine et fausse correction</h2>
@@ -1691,10 +2010,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <div class="sev-tile r0">
       <div class="sev-n">80%</div>
       <div class="sev-l">Taux de fausse correction québécoise</div></div>
-    <div class="sev-tile"><div class="sev-n">17</div>
+    <div class="sev-tile"><div class="sev-n">20</div>
       <div class="sev-l">Reformulations — hors dérive</div></div>
   </div>
-  <p class="note-p">Le <strong>TDM</strong> ne compte que les substitutions&nbsp;: 3 occasions sur 5 retenues. Les 17 cas où le modèle a reformulé plutôt que de substituer sont exclus du dénominateur — la verbosité n'est pas de la dérive, et les compter d'une façon ou d'une autre fausserait le taux.</p>
+  <p class="note-p">Le <strong>TDM</strong> ne compte que les substitutions&nbsp;: 3 occasions sur 5 retenues. Les 20 cas où le modèle a reformulé plutôt que de substituer sont exclus du dénominateur — la verbosité n'est pas de la dérive, et les compter d'une façon ou d'une autre fausserait le taux.</p>
   <table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
   <p class="note-p" style="margin-top:16px">Le <strong>TFCQ</strong> soumet un texte déjà correct en français canadien à une consigne de révision sommaire («&nbsp;corrige ce texte&nbsp;»); toute modification constitue donc une fausse correction&nbsp;: 12 formes québécoises valides sur 15 ont été altérées. Un flux peut produire un français canadien impeccable et diffuser malgré tout une copie métropolitaine parce que l'étape de révision l'a réécrite.</p>
   <table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
@@ -1734,21 +2053,46 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">hlth-053</td><td>Health</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">indg-044</td><td>Indigenous</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">tech-059</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-041</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">edu-043</td><td>Education</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-046</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">wx-049</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-050</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-057</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
 </div>
 
+<h2>Terminologie et capacité de réponse</h2>
+<p class="h2sub">Cohérence et comportement de refus sur l'ensemble du cycle — des défaillances invisibles lorsque les réponses sont évaluées une à une.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile r1">
+      <div class="sev-n">57%</div>
+      <div class="sev-l">Cohérence terminologique FR</div></div>
+    <div class="sev-tile"><div class="sev-n">100%</div>
+      <div class="sev-l">Taux de réponse FR</div></div>
+    <div class="sev-tile ">
+      <div class="sev-n">0</div>
+      <div class="sev-l">Réponse dans une seule langue</div></div>
+  </div>
+  <p class="note-p">Un flux peut rendre un même programme de trois façons au cours d'un cycle, et chaque réponse paraît correcte isolément. Cela nuit à la recherche en archives et au code rédactionnel, et le problème est systématiquement plus marqué dans la seconde langue, où personne ne voit l'ensemble de la production.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Notion</th><th>Forme retenue</th>
+      <th class="num">Emploi de la forme retenue</th><th class="num">Occurrences</th>
+      <th>Remplacée par</th></tr></thead>
+    <tbody><tr class="divrow"><td>warming centre</td><td class="term">halte-chaleur</td><td class="num">0%</td><td class="num">3</td><td class="note"></td></tr><tr class=""><td>employment insurance</td><td class="term">assurance-emploi</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>property tax</td><td class="term">taxe foncière</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>long term care</td><td class="term">soins de longue durée</td><td class="num">100%</td><td class="num">2</td><td class="note"></td></tr></tbody></table></div>
+  <p class="note-p" style="margin-top:16px">Un refus n'avance rien; il obtient donc une note parfaite en véracité et en registre. Refuser plus souvent dans une langue revient à rationner le service selon la langue, et les mesures de qualité habituelles ne peuvent pas le déceler.
+   EN 100% · FR 100%.
+   within expected expansion (FR/EN 0.90).</p>
+  
+</div>
+
 <h2>Où se concentre la divergence</h2>
 <p class="h2sub">Un résultat global indique si le flux échoue; la segmentation indique où, ce qui permet d'en confier la correction à une équipe.</p>
 <div class="card"><div class="segrow"><div class="segcol"><h3>Par pupitre</h3><table>
               <thead><tr><th>Desk</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>Arts</td><td class="num">8</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.250</td></tr><tr><td>News</td><td class="num">13</td><td class="num">7</td><td class="num">2</td><td class="num gap">+0.231</td></tr><tr><td>Business</td><td class="num">9</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.222</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Municipal</td><td class="num">18</td><td class="num">7</td><td class="num">0</td><td class="num gap">+0.144</td></tr><tr><td>Education</td><td class="num">7</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Health</td><td class="num">9</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.074</td></tr><tr><td>Indigenous</td><td class="num">9</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.037</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
+              <tbody><tr><td>Indigenous</td><td class="num">10</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Municipal</td><td class="num">22</td><td class="num">10</td><td class="num">1</td><td class="num gap">+0.197</td></tr><tr><td>Arts</td><td class="num">11</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.182</td></tr><tr><td>News</td><td class="num">17</td><td class="num">8</td><td class="num">2</td><td class="num gap">+0.176</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Business</td><td class="num">13</td><td class="num">5</td><td class="num">1</td><td class="num gap">+0.154</td></tr><tr><td>Education</td><td class="num">9</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.148</td></tr><tr><td>Health</td><td class="num">12</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.097</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
               <thead><tr><th>Region</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>West</td><td class="num">7</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.214</td></tr><tr><td>Ontario</td><td class="num">18</td><td class="num">9</td><td class="num">3</td><td class="num gap">+0.194</td></tr><tr><td>Quebec</td><td class="num">11</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.175</td></tr><tr><td>Prairies</td><td class="num">11</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>National</td><td class="num">23</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.087</td></tr><tr><td>Atlantic</td><td class="num">7</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.048</td></tr><tr><td>North</td><td class="num">11</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.045</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
+              <tbody><tr><td>Ontario</td><td class="num">23</td><td class="num">11</td><td class="num">4</td><td class="num gap">+0.206</td></tr><tr><td>West</td><td class="num">9</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.167</td></tr><tr><td>Quebec</td><td class="num">15</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.162</td></tr><tr><td>North</td><td class="num">14</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Prairies</td><td class="num">14</td><td class="num">8</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Atlantic</td><td class="num">9</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.093</td></tr><tr><td>National</td><td class="num">30</td><td class="num">9</td><td class="num">1</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
               <thead><tr><th>Topic</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>homelessness</td><td class="num">4</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr></tbody></table></div></div></div>
+              <tbody><tr><td>recycling <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+1.000</td></tr><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>fire_service <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr></tbody></table></div></div></div>
 
 <h2>Détail par requête</h2>
 <p class="h2sub">Tableau complet des résultats — la version accessible de chacun des chiffres ci-dessus. Les requêtes divergentes figurent en tête; les résultats parfaits sont atténués afin de mettre en évidence les valeurs qui diffèrent.</p>
@@ -1790,12 +2134,44 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
       <tr class="divrow">
+          <td class="qid">q83<span class="rowtag r1">Fait non appuyé</span></td>
+          <td class="qtext">Producer-funded recycling shifted an estimated $156 million in annual costs from municipal…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q86<span class="rowtag r1">Fait non appuyé</span></td>
+          <td class="qtext">All new open datasets require full bilingual metadata from July 1; 41 per cent of existing…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr class="divrow">
           <td class="qid">q04<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Municipalities opened eleven warming centres across the affected region for residents with…</td>
           <td class="num pass">1.00</td><td class="num">0.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num">0.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q100<span class="rowtag r2">Sources différentes</span></td>
+          <td class="qtext">Spring melt evacuated 1,240 residents while drought cut the Prairie crop forecast 18 per c…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q101<span class="rowtag r2">Sources différentes</span></td>
+          <td class="qtext">New open datasets require bilingual metadata from July 1, and a publishing grant supports …</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
           <td class="num pass">1.00</td></tr>
       <tr class="divrow">
           <td class="qid">q14<span class="rowtag r2">Sources différentes</span></td>
@@ -1832,7 +2208,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr class="divrow">
           <td class="qid">q50<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td><td class="num">0.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
@@ -1846,6 +2222,22 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
       <tr class="divrow">
+          <td class="qid">q75<span class="rowtag r2">Sources différentes</span></td>
+          <td class="qtext">Supports include a settlement transferring 78,000 hectares, a country food program in eigh…</td>
+          <td class="num pass">1.00</td><td class="num">0.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="divrow">
+          <td class="qid">q99<span class="rowtag r2">Sources différentes</span></td>
+          <td class="qtext">Nursing overtime fell 38 per cent, dental plan enrolment passed 3.1 million, and youth men…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr class="divrow">
           <td class="qid">q07<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">A quarter of the $12 million touring fund expansion is reserved for official language mino…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
@@ -1853,6 +2245,14 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num">0.00</td>
           <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q102<span class="rowtag r3">Contenu réduit</span></td>
+          <td class="qtext">Eviction applications reached 92,000 with an 8-month median hearing wait, while shelters r…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.75</td></tr>
       <tr class="divrow">
           <td class="qid">q13<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, …</td>
@@ -1941,6 +2341,22 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q82<span class="rowtag r3">Contenu réduit</span></td>
+          <td class="qtext">The housing guarantee helped fill 92 of 108 vacant teaching positions, with eleven still v…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.67</td></tr>
+      <tr class="divrow">
+          <td class="qid">q95<span class="rowtag r3">Contenu réduit</span></td>
+          <td class="qtext">Volunteer fire departments reported a 24 per cent decline in active members, with 41 depar…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num">0.50</td></tr>
       <tr class="divrow">
           <td class="qid">q05<span class="rowtag r4">Registre</span></td>
           <td class="qtext">Trustees asked the province for a per-student funding increase of $410, as the four boards…</td>
@@ -2358,14 +2774,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td></tr>
       <tr class="cleanrow">
-          <td class="qid">q75</td>
-          <td class="qtext">Supports include a settlement transferring 78,000 hectares, a country food program in eigh…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
           <td class="qid">q76</td>
           <td class="qtext">The access to information backlog reached 32,000 overdue requests, with fourteen instituti…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
@@ -2376,6 +2784,134 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr class="cleanrow">
           <td class="qid">q78</td>
           <td class="qtext">Northern satellite service reached 48 megabits per second while the country food program d…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q79</td>
+          <td class="qtext">Softwood lumber duties were raised to 21.2 per cent from 14.5 per cent, effective April 15…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q80</td>
+          <td class="qtext">Mandatory nursing overtime fell 38 per cent after a staffing agreement added 1,450 full-ti…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q81</td>
+          <td class="qtext">The bail compliance program reduced failures to appear by 26 per cent and avoided an estim…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q84</td>
+          <td class="qtext">Air quality advisories tripled to 41 days, with fine particulate exceedances on 28 days.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q85</td>
+          <td class="qtext">The Indigenous-governed health centre serves 6,800 residents across three communities, emp…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q87</td>
+          <td class="qtext">Regional shooting days rose 47 per cent, with 22 productions generating an estimated $118 …</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q88</td>
+          <td class="qtext">Landlord eviction applications reached 92,000, the highest on record, with a median hearin…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q89</td>
+          <td class="qtext">Rapid snowmelt forced the evacuation of 1,240 residents from four river communities.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q90</td>
+          <td class="qtext">The minimum wage rises to $16.45 an hour October 1 and will be indexed to inflation annual…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q91</td>
+          <td class="qtext">Dental care plan enrolment passed 3.1 million people, with 24,000 participating providers.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q92</td>
+          <td class="qtext">The review commission received 214 applications in six months, with eleven advancing to fu…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q93</td>
+          <td class="qtext">Apprenticeship completions rose 22 per cent, with registrations reaching 18,400.…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q94</td>
+          <td class="qtext">Winning bidders must cover 92 per cent of rural population in licensed areas within five y…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q96</td>
+          <td class="qtext">The ban expanded to four categories including takeout containers and cutlery, effective Se…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q97</td>
+          <td class="qtext">The grant will support 46 Indigenous-language titles over three years, including 18 childr…</td>
+          <td class="num pass">1.00</td><td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td>
+          <td class="num pass">1.00</td></tr>
+      <tr class="cleanrow">
+          <td class="qid">q98</td>
+          <td class="qtext">Grocery price inflation slowed to 1.8 per cent, the lowest since 2020.…</td>
           <td class="num pass">1.00</td><td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>

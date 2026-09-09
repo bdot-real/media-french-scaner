@@ -72,6 +72,24 @@ STRINGS = {
         "sub_seg": ("An aggregate says whether the pipeline is failing; "
                     "segmentation says where, which is what routes it to an "
                     "owner."),
+        "h_lang": "Terminology and answerability",
+        "sub_lang": ("Consistency and refusal behaviour across the whole run — "
+                     "failures that are invisible when answers are scored one "
+                     "at a time."),
+        "term_lab": "FR terminology consistency",
+        "answer_lab": "FR answer rate",
+        "asym_lab": "Answered in one language only",
+        "th_concept": "Concept", "th_canonical": "Canonical form",
+        "th_uses": "Canonical use", "th_mentions": "Mentions",
+        "term_note": ("A pipeline can render the same programme three ways "
+                      "across a run and each answer looks fine alone. It breaks "
+                      "archive search and house style, and is systematically "
+                      "worse in the second language where no single reviewer "
+                      "sees all the output."),
+        "answer_note": ("A refusal asserts nothing, so it scores perfectly on "
+                        "grounding and register. Refusing more often in one "
+                        "language is rationing service by language, and "
+                        "conventional quality metrics cannot see it."),
         "h_lex": "Root cause — lexicon coverage",
         "sub_lex": ("Canadian French administrative and regional vocabulary the "
                     "retriever represents weakly. This is what converts a red "
@@ -132,6 +150,7 @@ STRINGS = {
             "content_coverage": ("Content coverage vs EN", "Does FR carry the same facts as EN"),
             "fluency_register": ("Canadian French register", "Metropolitan forms and anglicisms"),
             "fluency_overall": ("Fluency (composite)", "Register and readability combined"),
+            "localization": ("Localization conventions", "Dates, currency, decimals, units"),
         },
     },
     "fr": {
@@ -192,6 +211,26 @@ STRINGS = {
         "sub_seg": ("Un résultat global indique si le flux échoue; la "
                     "segmentation indique où, ce qui permet d'en confier la "
                     "correction à une équipe."),
+        "h_lang": "Terminologie et capacité de réponse",
+        "sub_lang": ("Cohérence et comportement de refus sur l'ensemble du "
+                     "cycle — des défaillances invisibles lorsque les réponses "
+                     "sont évaluées une à une."),
+        "term_lab": "Cohérence terminologique FR",
+        "answer_lab": "Taux de réponse FR",
+        "asym_lab": "Réponse dans une seule langue",
+        "th_concept": "Notion", "th_canonical": "Forme retenue",
+        "th_uses": "Emploi de la forme retenue", "th_mentions": "Occurrences",
+        "term_note": ("Un flux peut rendre un même programme de trois façons "
+                      "au cours d'un cycle, et chaque réponse paraît correcte "
+                      "isolément. Cela nuit à la recherche en archives et au "
+                      "code rédactionnel, et le problème est systématiquement "
+                      "plus marqué dans la seconde langue, où personne ne voit "
+                      "l'ensemble de la production."),
+        "answer_note": ("Un refus n'avance rien; il obtient donc une note "
+                        "parfaite en véracité et en registre. Refuser plus "
+                        "souvent dans une langue revient à rationner le service "
+                        "selon la langue, et les mesures de qualité "
+                        "habituelles ne peuvent pas le déceler."),
         "h_lex": "Cause profonde — couverture lexicale",
         "sub_lex": ("Vocabulaire administratif et régional du français canadien "
                     "faiblement représenté par le moteur de repérage. C'est ce "
@@ -261,6 +300,7 @@ STRINGS = {
             "content_coverage": ("Couverture du contenu c. EN", "Le français rend-il les mêmes faits que l'anglais"),
             "fluency_register": ("Registre du français canadien", "Formes métropolitaines et anglicismes"),
             "fluency_overall": ("Fluidité (composite)", "Registre et lisibilité combinés"),
+            "localization": ("Conventions de localisation", "Dates, devises, décimales, unités"),
         },
     },
 }

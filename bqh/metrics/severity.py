@@ -52,7 +52,8 @@ REFUSAL_PATTERNS = [
     r"\bles sources (?:fournies |disponibles )?ne\b",
     r"\bimpossible de répondre\b", r"\bje ne (?:peux|dispose)\b",
     r"\bpas (?:d'|de )information\b", r"\bne permet(?:tent)? pas de\b",
-    r"\bsources? (?:provided|available) (?:do|does) not\b",
+    r"\bsources?\b[^.]{0,40}\b(?:do|does) not (?:mention|contain|indicate|provide|specify)\b",
+    r"\b(?:do|does) not (?:mention|contain|indicate|specify)\b",
     r"\bno (?:information|mention|indication)\b",
     r"\bcannot (?:answer|determine)\b", r"\bdon't have (?:enough )?information\b",
 ]

@@ -747,6 +747,227 @@
         "indg-057"
       ],
       "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q79",
+      "en": "How much were softwood lumber duties raised to?",
+      "fr": "À combien les droits sur le bois d'œuvre ont-ils été portés?",
+      "gold_docs": [
+        "econ-061"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q80",
+      "en": "By how much did mandatory nursing overtime fall?",
+      "fr": "De combien le temps supplémentaire obligatoire des infirmières a-t-il chuté?",
+      "gold_docs": [
+        "hlth-062"
+      ],
+      "divergence_class": "lexical_ca_fr"
+    },
+    {
+      "query_id": "q81",
+      "en": "How effective was the bail compliance program?",
+      "fr": "Quelle a été l'efficacité du programme de conformité aux conditions de mise en liberté?",
+      "gold_docs": [
+        "just-063"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q82",
+      "en": "How did the housing guarantee affect teacher recruitment?",
+      "fr": "Quel effet la garantie de logement a-t-elle eu sur le recrutement d'enseignants?",
+      "gold_docs": [
+        "edu-064"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q83",
+      "en": "How much did producer-funded recycling shift in costs?",
+      "fr": "Quel montant de coûts la transition vers un recyclage financé par les producteurs a-t-elle transféré?",
+      "gold_docs": [
+        "muni-065"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q84",
+      "en": "How many air quality advisory days were recorded?",
+      "fr": "Combien de jours d'avertissement de qualité de l'air ont été enregistrés?",
+      "gold_docs": [
+        "envr-066"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q85",
+      "en": "How many residents does the Indigenous health centre serve?",
+      "fr": "Combien de résidents le centre de santé autochtone dessert-il?",
+      "gold_docs": [
+        "indg-067"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q86",
+      "en": "What bilingual requirement applies to open datasets?",
+      "fr": "Quelle exigence bilingue s'applique aux jeux de données ouverts?",
+      "gold_docs": [
+        "tech-068"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q87",
+      "en": "How much did regional shooting days increase?",
+      "fr": "De combien les jours de tournage en région ont-ils augmenté?",
+      "gold_docs": [
+        "cult-069"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q88",
+      "en": "How many eviction applications were filed?",
+      "fr": "Combien de demandes d'éviction ont été déposées?",
+      "gold_docs": [
+        "hous-070"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q89",
+      "en": "How many residents were evacuated in the spring flooding?",
+      "fr": "Combien de résidents ont été évacués lors des inondations printanières?",
+      "gold_docs": [
+        "wx-071"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q90",
+      "en": "What will the minimum wage rise to?",
+      "fr": "À combien passera le salaire minimum?",
+      "gold_docs": [
+        "econ-072"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q91",
+      "en": "How many people enrolled in the dental care plan?",
+      "fr": "Combien de personnes se sont inscrites au régime de soins dentaires?",
+      "gold_docs": [
+        "hlth-073"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q92",
+      "en": "How many applications did the review commission receive?",
+      "fr": "Combien de demandes la commission de révision a-t-elle reçues?",
+      "gold_docs": [
+        "just-074"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q93",
+      "en": "How much did apprenticeship completions rise?",
+      "fr": "De combien les certifications d'apprentissage ont-elles augmenté?",
+      "gold_docs": [
+        "edu-075"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q94",
+      "en": "What rural coverage does the spectrum auction require?",
+      "fr": "Quelle couverture en région l'enchère du spectre exige-t-elle?",
+      "gold_docs": [
+        "tech-076"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q95",
+      "en": "What decline did volunteer fire departments report?",
+      "fr": "Quelle baisse les services d'incendie bénévoles ont-ils signalée?",
+      "gold_docs": [
+        "muni-077"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q96",
+      "en": "What categories does the plastics ban now cover?",
+      "fr": "Quelles catégories l'interdiction des plastiques vise-t-elle maintenant?",
+      "gold_docs": [
+        "envr-078"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q97",
+      "en": "How many Indigenous-language titles will the grant support?",
+      "fr": "Combien de titres en langues autochtones la subvention appuiera-t-elle?",
+      "gold_docs": [
+        "cult-079"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q98",
+      "en": "How fast is grocery price inflation?",
+      "fr": "À quel rythme progresse l'inflation des prix en épicerie?",
+      "gold_docs": [
+        "econ-080"
+      ],
+      "divergence_class": "lexical_ca_fr"
+    },
+    {
+      "query_id": "q99",
+      "en": "What health workforce pressures are reported?",
+      "fr": "Quelles pressions sur la main-d'œuvre en santé sont signalées?",
+      "gold_docs": [
+        "hlth-062",
+        "hlth-073",
+        "hlth-028"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q100",
+      "en": "How are weather events affecting Prairie communities?",
+      "fr": "Comment les événements météorologiques touchent-ils les communautés des Prairies?",
+      "gold_docs": [
+        "wx-071",
+        "agri-027"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q101",
+      "en": "What bilingual and Indigenous-language obligations exist?",
+      "fr": "Quelles obligations existent en matière de bilinguisme et de langues autochtones?",
+      "gold_docs": [
+        "tech-068",
+        "cult-079"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q102",
+      "en": "What housing and eviction pressures face tenants?",
+      "fr": "Quelles pressions liées au logement et aux évictions touchent les locataires?",
+      "gold_docs": [
+        "hous-070",
+        "hous-024"
+      ],
+      "divergence_class": "multi_doc"
     }
   ]
 }

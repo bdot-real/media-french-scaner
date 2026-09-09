@@ -33,10 +33,11 @@ run in parallel — and reports where the two languages diverge.
 ```bash
 python3 bqh/harness.py                          # terminal report
 python3 bqh/harness.py --report report.html     # visual dashboard
-python3 tests/test_harness.py                   # detection validation (86 checks)
+python3 tests/test_harness.py                   # detection validation (111 checks)
 python3 tests/test_register.py                  # register validation (22 checks)
 python3 tests/test_drift.py                     # MDR/QFCR validation (21 checks)
 python3 tests/test_i18n.py                      # French UI copy validation (16 checks)
+python3 tests/test_newdims.py                   # localization/terminology/answerability (27 checks)
 ```
 
 The report ships **both languages in one file** with a toggle. The French is
@@ -55,7 +56,7 @@ French.
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
 
-60 parallel EN/FR documents · 78 parallel queries · 30 annotated defects ·
+80 parallel EN/FR documents · 102 parallel queries · 38 annotated defects ·
 31 media assets (19 images, 7 videos, 5 audio) · 32 documents with editorial
 metadata.
 
@@ -134,6 +135,53 @@ because the modelled and measured backends could be compared directly.
 Note that the embedding backend cannot attribute divergence to a specific term —
 `weak_terms` returns empty, because a dense model gives no per-token account of
 its similarity. Term-level attribution is a property of the lexical backend.
+
+## Localization, terminology, answerability
+
+Three dimensions that grounding and register checks structurally cannot see.
+
+### Localization conventions
+
+A French answer can be grounded, complete, and in correct Canadian register and
+still be unpublishable: `$4,100,000` instead of `4 100 000 $`, `3.9` instead of
+`3,9`, `03/04` for a date that means April 3 in Canada and March 4 in the US.
+
+These are not style preferences. **A misread date in a story about a filing
+deadline is a factual error the grounding checks cannot detect**, because every
+digit is present and correct.
+
+### Terminology consistency
+
+Scored one at a time, every answer can look fine while the run as a whole
+renders the same programme three ways. Measured here across the full answer
+set: **French 0.571 against English 1.000**, and `warming_centre` is **0%
+canonical** — every French mention uses a variant rather than `halte-chaleur`.
+
+This breaks archive search and house style, and it is systematically worse in
+the second language, where no single reviewer sees all the output.
+
+One implementation note: variant patterns overlap by design (`régime
+d'assurance-emploi` contains `assurance-emploi`), so the matcher claims each
+character span once, canonical pattern first. Counting each pattern
+independently double-counted spans and reported correct copy as inconsistent.
+
+### Readability parity
+
+The often-quoted "French runs 15–20% longer" applies to raw text. This harness
+compares content tokens after stopword removal, and the French stoplist is
+larger, which cancels most of that expansion.
+
+**Measured across the 68 defect-free answer pairs in this corpus: mean ratio
+1.00, stdev 0.115.** The constant is measured, not assumed — two hand-written
+guesses (1.05 and 0.85) both produced false "content dropped" verdicts on
+faithful French before it was calibrated against the corpus.
+
+### Answerability
+
+A refusal asserts nothing, so it scores *perfectly* on grounding and register.
+Without an explicit check, the worst outcome for a reader — no answer at all —
+is invisible to conventional quality metrics. Tracked per language as
+answered / refused / hedged, with the asymmetric cases named.
 
 ## Metropolitan Drift Rate and Quebec False Correction Rate
 
@@ -268,6 +316,15 @@ looks like a clean pass.
 | `grounding_entailment` | Are content words traceable to the source? |
 | `content_coverage` | Does the French answer carry the same facts as the English one? |
 | `fluency_register` | Is it **Canadian** French, not metropolitan French? |
+| `localization` | Dates, currency, decimals, units — Canadian conventions? |
+
+Plus three corpus-level measures that cannot be computed per answer:
+
+| Measure | Question |
+|---|---|
+| terminology consistency | Is the same programme named the same way all run? |
+| readability parity | Is the FR/EN length relationship stable? |
+| answerability | Does each language get an answer *at all*? |
 
 ### Why grounding is split in two
 

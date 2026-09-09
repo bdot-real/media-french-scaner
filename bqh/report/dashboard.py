@@ -463,6 +463,51 @@ def render_lang(summary, rows, lang):
     <tbody>{erows}</tbody></table></div>
 </div>"""
 
+    # --- terminology + answerability ---
+    tm = (summary.get("terminology") or {}).get("fr") or {}
+    an = summary.get("answerability") or {}
+    rp = summary.get("readability_parity") or {}
+    langblock = ""
+    if tm.get("n_concepts") or an.get("per_language"):
+        trows = "".join(
+            f"<tr class=\"{'divrow' if c['consistency'] < 1.0 else ''}\">"
+            f"<td>{esc(c['concept'].replace('_',' '))}</td>"
+            f"<td class=\"term\">{esc(c['canonical'][:46])}</td>"
+            f"<td class=\"num\">{c['consistency']*100:.0f}%</td>"
+            f"<td class=\"num\">{c['mentions']}</td>"
+            f"<td class=\"note\">{esc(', '.join(v['pattern'][:26] for v in c['variants'][1:3]))}</td></tr>"
+            for c in tm.get("concepts", []))
+        asym = "".join(
+            f"<tr class=\"divrow\"><td class=\"qid\">{esc(a['query_id'])}</td>"
+            f"<td>{esc(a['served'].upper())}</td><td>{esc(a['denied'].upper())}</td></tr>"
+            for a in an.get("asymmetric", [])[:8])
+        fr_ans = an.get("per_language", {}).get("fr", {})
+        en_ans = an.get("per_language", {}).get("en", {})
+        langblock = f"""<h2>{T['h_lang']}</h2>
+<p class="h2sub">{T['sub_lang']}</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile {'r1' if tm.get('score',1) < 0.9 else ''}">
+      <div class="sev-n">{tm.get('score',1)*100:.0f}%</div>
+      <div class="sev-l">{T['term_lab']}</div></div>
+    <div class="sev-tile"><div class="sev-n">{fr_ans.get('answer_rate',1)*100:.0f}%</div>
+      <div class="sev-l">{T['answer_lab']}</div></div>
+    <div class="sev-tile {'r0' if an.get('n_asymmetric') else ''}">
+      <div class="sev-n">{an.get('n_asymmetric',0)}</div>
+      <div class="sev-l">{T['asym_lab']}</div></div>
+  </div>
+  <p class="note-p">{T['term_note']}</p>
+  <div class="scroll"><table>
+    <thead><tr><th>{T['th_concept']}</th><th>{T['th_canonical']}</th>
+      <th class="num">{T['th_uses']}</th><th class="num">{T['th_mentions']}</th>
+      <th>{T['th_replaced']}</th></tr></thead>
+    <tbody>{trows}</tbody></table></div>
+  <p class="note-p" style="margin-top:16px">{T['answer_note']}
+   EN {en_ans.get('answer_rate',1)*100:.0f}% · FR {fr_ans.get('answer_rate',1)*100:.0f}%.
+   {esc(rp.get('verdict',''))} (FR/EN {rp.get('ratio',1):.2f}).</p>
+  {'<div class="scroll"><table><thead><tr><th>' + T['th_query'] + '</th><th>Served</th><th>Denied</th></tr></thead><tbody>' + asym + '</tbody></table></div>' if asym else ''}
+</div>"""
+
     # --- segmentation ---
     segs = summary.get("segments") or {}
     segblock = ""
@@ -554,6 +599,8 @@ def render_lang(summary, rows, lang):
 {mediablock}
 
 {edblock}
+
+{langblock}
 
 {segblock}
 

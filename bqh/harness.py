@@ -25,6 +25,9 @@ from metrics.fluency import fluency_score
 from metrics import severity as sev
 from metrics.media import evaluate_editorial, evaluate_media
 from metrics.segments import segment
+from metrics.localization import localization_check
+from metrics.consistency import readability_parity, terminology_consistency
+from metrics.answerability import answerability
 from metrics.drift import (corpus_drift, corpus_false_correction,
                            measure_drift, measure_false_correction)
 from metrics.embedding import (DEFAULT_MODEL, DEFAULT_HOST, EmbeddingRetriever,
@@ -237,6 +240,7 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
             num_gold = numeric_grounding(answer, gold_ctx, lang)
             ent = lexical_entailment(answer, contexts, lang)
             flu = fluency_score(answer, lang)
+            loc = localization_check(answer, lang)
 
             row["langs"][lang] = {
                 "retrieved": ranked,
@@ -253,6 +257,7 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
                     max(0.0, num_gold["score"] - num["score"]), 4),
                 "entailment": ent,
                 "fluency": flu,
+                "localization": loc,
                 "weak_terms": retr.weak_terms(q[lang], ranked),
             }
 
@@ -289,6 +294,16 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
         summary["false_correction"] = {"error": str(exc),
                                        "qfcr": 0.0, "valid_forms_present": 0}
     summary["segments"] = segment(rows, docs)
+    # Corpus-level dimensions: these cannot be computed per answer, because
+    # inconsistency and length drift are only visible across a whole run.
+    summary["answerability"] = answerability(rows)
+    summary["terminology"] = {
+        lang: terminology_consistency(
+            [r["langs"][lang]["answer"] for r in rows], lang)
+        for lang in LANGS}
+    summary["readability_parity"] = readability_parity(
+        [r["langs"]["en"]["answer"] for r in rows],
+        [r["langs"]["fr"]["answer"] for r in rows])
     return rows, summary
 
 
@@ -302,6 +317,7 @@ DIMENSIONS = [
     ("content_coverage", lambda r: r["coverage_vs_en"]["score"]),
     ("fluency_register", lambda r: r["fluency"]["register"]["score"]),
     ("fluency_overall", lambda r: r["fluency"]["score"]),
+    ("localization", lambda r: r["localization"]["score"]),
 ]
 
 
@@ -370,6 +386,32 @@ def print_report(summary):
     print("  " + "-" * 62)
     print(f"  Equivalence index: {summary['equivalence_index']:.3f}"
           f"   (1.000 = perfect parity)")
+    ans = summary.get("answerability")
+    if ans and ans["n_asymmetric"]:
+        print()
+        print(f"  Answerability: EN {ans['per_language']['en']['answer_rate']*100:.0f}% "
+              f"answered · FR {ans['per_language']['fr']['answer_rate']*100:.0f}% answered "
+              f"(gap {ans['answer_gap']:+.3f})")
+        print(f"  ** {ans['n_asymmetric']} quer"
+              f"{'y' if ans['n_asymmetric']==1 else 'ies'} answered in one "
+              f"language and refused in the other **")
+        for a in ans["asymmetric"][:4]:
+            print(f"     {a['query_id']}: served in {a['served'].upper()}, "
+                  f"denied in {a['denied'].upper()}")
+    term = summary.get("terminology")
+    if term:
+        print()
+        print(f"  Terminology consistency: EN {term['en']['score']:.3f} · "
+              f"FR {term['fr']['score']:.3f}")
+        for c in term["fr"]["concepts"][:3]:
+            if c["consistency"] < 1.0:
+                print(f"    {c['concept']:<22} {c['consistency']*100:.0f}% canonical "
+                      f"({c['mentions']} mentions of '{c['canonical'][:34]}')")
+    rp = summary.get("readability_parity")
+    if rp:
+        print(f"  Readability parity: FR/EN ratio {rp['ratio']:.2f} "
+              f"(expected {rp['expected']:.2f}) — {rp['verdict']}")
+
     dr, qf = summary.get("drift"), summary.get("false_correction")
     if dr and dr["scored_opportunities"]:
         print()

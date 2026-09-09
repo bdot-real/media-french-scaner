@@ -65,13 +65,21 @@ def main():
     for qid, kind in undetectable:
         check(f"{qid} {kind} recorded as a known metric limit", True)
 
+    print("\n4c. Planted localization defects are detected")
+    for g in gens.values():
+        qid = g["query_id"]
+        if any(d["type"] == "localization" for d in g["fr"]["defects"]):
+            score = by_q[qid]["langs"]["fr"]["localization"]["score"]
+            check(f"{qid} localization issue caught", score < 1.0, f"score={score}")
+
     print("\n5. Clean French answers are NOT flagged (false-positive control)")
     for g in gens.values():
         qid = g["query_id"]
         if not g["fr"]["defects"]:
             L = by_q[qid]["langs"]["fr"]
             clean = (L["numeric_grounding_gold"]["score"] == 1.0
-                     and L["fluency"]["register"]["score"] == 1.0)
+                     and L["fluency"]["register"]["score"] == 1.0
+                     and L["localization"]["score"] == 1.0)
             check(f"{qid} clean answer unflagged", clean,
                   f"ground={L['numeric_grounding_gold']['score']} "
                   f"reg={L['fluency']['register']['score']}")

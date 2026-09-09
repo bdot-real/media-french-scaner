@@ -2004,6 +2004,386 @@
         "en_seo": "A national museum returned 1,100 cultural objects to source communities.",
         "fr_seo": "Un musée national a restitué 1 100 objets culturels."
       }
+    },
+    {
+      "doc_id": "econ-061",
+      "topic": "trade",
+      "meta": {
+        "date": "2027-04-01",
+        "desk": "Business",
+        "region": "West",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Softwood lumber duties raised to 21 per cent",
+        "body": "The United States raised combined softwood lumber duties to 21.2 per cent from 14.5 per cent, effective April 15. Canadian producers shipped 12.8 billion board feet south last year. Three mills announced curtailments affecting 640 workers. The trade minister said Canada will challenge the determination. Duty deposits held in escrow now exceed 9 billion dollars."
+      },
+      "fr": {
+        "title": "Les droits sur le bois d'œuvre portés à 21 pour cent",
+        "body": "Les États-Unis ont porté les droits combinés sur le bois d'œuvre de 14,5 à 21,2 pour cent, à compter du 15 avril. Les producteurs canadiens ont expédié 12,8 milliards de pieds-planche vers le sud l'an dernier. Trois usines ont annoncé des ralentissements touchant 640 travailleurs. La ministre du Commerce a affirmé que le Canada contestera la décision. Les dépôts de droits détenus en fiducie dépassent maintenant 9 milliards de dollars."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "hlth-062",
+      "topic": "nursing",
+      "meta": {
+        "date": "2027-04-08",
+        "desk": "Health",
+        "region": "Quebec",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Mandatory overtime for nurses drops after staffing agreement",
+        "body": "Mandatory overtime hours for nurses fell 38 per cent following a staffing agreement signed in September. The health network added 1,450 full-time positions. Agency nursing costs declined to 218 million dollars from 340 million. Two regions still report weekly mandatory overtime. The union said the agreement expires in 2029."
+      },
+      "fr": {
+        "title": "Le temps supplémentaire obligatoire des infirmières recule après une entente sur la dotation",
+        "body": "Les heures de temps supplémentaire obligatoire des infirmières ont chuté de 38 pour cent à la suite d'une entente sur la dotation signée en septembre. Le réseau de la santé a ajouté 1 450 postes à temps complet. Les coûts de main-d'œuvre indépendante ont reculé de 340 à 218 millions de dollars. Deux régions signalent encore du temps supplémentaire obligatoire chaque semaine. Le syndicat a indiqué que l'entente vient à échéance en 2029."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "just-063",
+      "topic": "bail",
+      "meta": {
+        "date": "2027-04-15",
+        "desk": "Justice",
+        "region": "Ontario",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Bail compliance program reduces failures to appear",
+        "body": "A bail compliance program reduced failures to appear by 26 per cent across eleven courthouses. Participants receive reminders and transportation support. The program cost 6.4 million dollars and served 4,100 accused. Detention days avoided were estimated at 31,000. The attorney general extended the program for three years."
+      },
+      "fr": {
+        "title": "Un programme de conformité aux conditions de mise en liberté réduit les défauts de comparution",
+        "body": "Un programme de conformité aux conditions de mise en liberté a réduit de 26 pour cent les défauts de comparution dans onze palais de justice. Les personnes participantes reçoivent des rappels et un soutien au transport. Le programme a coûté 6,4 millions de dollars et a desservi 4 100 personnes accusées. On estime à 31 000 le nombre de jours de détention évités. Le procureur général a prolongé le programme de trois ans."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "edu-064",
+      "topic": "teacher_shortage",
+      "meta": {
+        "date": "2027-04-22",
+        "desk": "Education",
+        "region": "North",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Territorial schools recruit teachers with housing guarantee",
+        "body": "Territorial schools filled 92 of 108 vacant teaching positions after adding a housing guarantee to recruitment packages. Turnover had reached 34 per cent annually. The housing subsidy costs 2.8 million dollars a year. Eleven positions remain vacant in the smallest communities. The department will report on retention after two years."
+      },
+      "fr": {
+        "title": "Les écoles territoriales recrutent des enseignants avec une garantie de logement",
+        "body": "Les écoles territoriales ont pourvu 92 des 108 postes d'enseignement vacants après avoir ajouté une garantie de logement aux offres de recrutement. Le roulement avait atteint 34 pour cent par année. La subvention au logement coûte 2,8 millions de dollars par année. Onze postes demeurent vacants dans les plus petites communautés. Le ministère fera rapport sur la rétention après deux ans."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "muni-065",
+      "topic": "recycling",
+      "meta": {
+        "date": "2027-04-29",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "Producer-funded recycling transition completes",
+        "body": "The transition to producer-funded recycling completed this month, shifting an estimated 156 million dollars in annual costs from municipalities to producers. Collection schedules changed in 38 municipalities. Contamination rates rose 4 percentage points during the transition. The province set a 75 per cent diversion target for 2030."
+      },
+      "fr": {
+        "title": "La transition vers un recyclage financé par les producteurs est achevée",
+        "body": "La transition vers un recyclage financé par les producteurs s'est achevée ce mois-ci, transférant environ 156 millions de dollars en coûts annuels des municipalités aux producteurs. Les horaires de collecte ont changé dans 38 municipalités. Les taux de contamination ont augmenté de 4 points de pourcentage pendant la transition. La province a fixé une cible de détournement de 75 pour cent pour 2030."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "envr-066",
+      "topic": "air_quality",
+      "meta": {
+        "date": "2027-05-06",
+        "desk": "News",
+        "region": "West",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Air quality advisories triple in coastal region",
+        "body": "Air quality advisories tripled to 41 days last year, driven by wildfire smoke drifting from interior fires. Fine particulate readings exceeded provincial objectives on 28 days. Emergency visits for respiratory complaints rose 19 per cent. Three school districts adopted indoor recess protocols. The health authority distributed 12,000 filtration units."
+      },
+      "fr": {
+        "title": "Les avertissements de qualité de l'air triplent dans la région côtière",
+        "body": "Les avertissements de qualité de l'air ont triplé pour atteindre 41 jours l'an dernier, en raison de la fumée des feux de forêt de l'intérieur. Les relevés de particules fines ont dépassé les objectifs provinciaux pendant 28 jours. Les visites aux urgences pour des troubles respiratoires ont augmenté de 19 pour cent. Trois districts scolaires ont adopté des protocoles de récréation à l'intérieur. L'autorité sanitaire a distribué 12 000 appareils de filtration."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "indg-067",
+      "topic": "indigenous",
+      "meta": {
+        "date": "2027-05-13",
+        "desk": "Indigenous",
+        "region": "Quebec",
+        "author": "K. Whiteduck"
+      },
+      "en": {
+        "title": "Health centre opens with Indigenous-led governance",
+        "body": "A community health centre governed by an Indigenous board opened this week, serving 6,800 residents across three communities. Services include primary care, midwifery, and traditional healing. Provincial funding covers 82 per cent of operating costs. The centre employs 74 staff, 61 of them Indigenous. Wait times for primary care fell to four days from nineteen."
+      },
+      "fr": {
+        "title": "Un centre de santé ouvre avec une gouvernance autochtone",
+        "body": "Un centre de santé communautaire dirigé par un conseil autochtone a ouvert cette semaine et dessert 6 800 résidents de trois communautés. Les services comprennent les soins de première ligne, la pratique sage-femme et la guérison traditionnelle. Le financement provincial couvre 82 pour cent des coûts de fonctionnement. Le centre emploie 74 personnes, dont 61 sont autochtones. Les délais d'attente en première ligne sont passés de dix-neuf à quatre jours."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "tech-068",
+      "topic": "open_data",
+      "meta": {
+        "date": "2027-05-20",
+        "desk": "Technology",
+        "region": "National",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Open government portal adds bilingual dataset requirement",
+        "body": "The open government portal will require full bilingual metadata for all new datasets beginning July 1. An audit found 41 per cent of existing datasets carry English-only descriptions. Departments have two years to remediate 2,900 affected records. The treasury board allocated 8 million dollars for translation. Download volumes reached 14 million last year."
+      },
+      "fr": {
+        "title": "Le portail du gouvernement ouvert impose des métadonnées bilingues",
+        "body": "Le portail du gouvernement ouvert exigera des métadonnées entièrement bilingues pour tous les nouveaux jeux de données à compter du 1er juillet. Une vérification a révélé que 41 pour cent des jeux de données existants ne portent qu'une description en anglais. Les ministères disposent de deux ans pour corriger 2 900 fiches touchées. Le Conseil du Trésor a affecté 8 millions de dollars à la traduction. Les téléchargements ont atteint 14 millions l'an dernier."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "cult-069",
+      "topic": "film",
+      "meta": {
+        "date": "2027-05-27",
+        "desk": "Arts",
+        "region": "Quebec",
+        "author": "C. Bourgeois"
+      },
+      "en": {
+        "title": "Film production incentive raises regional shooting days",
+        "body": "A regional production incentive raised shooting days outside major centres by 47 per cent. Twenty-two productions qualified, generating an estimated 118 million dollars in local spending. The credit covers 8 per cent of eligible regional labour costs. Crew shortages limited two productions. The program is under review for renewal in 2028."
+      },
+      "fr": {
+        "title": "Un incitatif à la production cinématographique augmente les jours de tournage en région",
+        "body": "Un incitatif à la production en région a fait augmenter de 47 pour cent les jours de tournage à l'extérieur des grands centres. Vingt-deux productions se sont qualifiées, générant environ 118 millions de dollars en dépenses locales. Le crédit couvre 8 pour cent des coûts de main-d'œuvre admissibles en région. La pénurie d'équipes techniques a limité deux productions. Le programme fait l'objet d'un examen en vue d'un renouvellement en 2028."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "hous-070",
+      "topic": "evictions",
+      "meta": {
+        "date": "2027-06-03",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Eviction applications reach highest level on record",
+        "body": "Landlord applications to evict tenants reached 92,000 last year, the highest on record. Non-payment accounted for 76 per cent of applications. The tribunal's median hearing wait was 8 months. Legal clinics represented tenants in 11 per cent of hearings. The province added 40 adjudicators in January."
+      },
+      "fr": {
+        "title": "Les demandes d'éviction atteignent un sommet historique",
+        "body": "Les demandes d'éviction déposées par des propriétaires ont atteint 92 000 l'an dernier, un sommet historique. Le non-paiement représentait 76 pour cent des demandes. Le délai médian avant audience au tribunal était de 8 mois. Des cliniques juridiques ont représenté des locataires dans 11 pour cent des audiences. La province a ajouté 40 arbitres en janvier."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "wx-071",
+      "topic": "flooding",
+      "meta": {
+        "date": "2027-06-10",
+        "desk": "News",
+        "region": "Prairies",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Spring melt forces evacuation of river communities",
+        "body": "Rapid snowmelt forced the evacuation of 1,240 residents from four river communities. River levels crested 2.3 metres above flood stage. Provincial crews placed 480,000 sandbags. Two highways remain closed. The flood forecast centre said levels should recede by the weekend."
+      },
+      "fr": {
+        "title": "La fonte printanière force l'évacuation de communautés riveraines",
+        "body": "La fonte rapide des neiges a forcé l'évacuation de 1 240 résidents de quatre communautés riveraines. Les niveaux des rivières ont atteint un sommet de 2,3 mètres au-dessus du seuil d'inondation. Les équipes provinciales ont placé 480 000 sacs de sable. Deux autoroutes demeurent fermées. Le centre de prévision des crues a indiqué que les niveaux devraient baisser d'ici la fin de semaine."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "econ-072",
+      "topic": "minimum_wage",
+      "meta": {
+        "date": "2027-06-17",
+        "desk": "Business",
+        "region": "Atlantic",
+        "author": "R. Comeau"
+      },
+      "en": {
+        "title": "Minimum wage indexed to inflation from October",
+        "body": "The minimum wage rises to 16.45 dollars an hour October 1 and will be indexed to inflation annually thereafter. About 61,000 workers earn within 50 cents of the current rate. Business groups warned of pressure on small employers. The labour ministry estimated a 0.3 per cent effect on employment. Nova Scotia and New Brunswick announced similar indexation."
+      },
+      "fr": {
+        "title": "Le salaire minimum sera indexé à l'inflation dès octobre",
+        "body": "Le salaire minimum passera à 16,45 dollars l'heure le 1er octobre et sera ensuite indexé annuellement à l'inflation. Environ 61 000 personnes gagnent à 50 cents ou moins du taux actuel. Des groupes d'affaires ont prévenu de pressions sur les petits employeurs. Le ministère du Travail estime l'effet sur l'emploi à 0,3 pour cent. La Nouvelle-Écosse et le Nouveau-Brunswick ont annoncé une indexation semblable."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "hlth-073",
+      "topic": "dental",
+      "meta": {
+        "date": "2027-06-24",
+        "desk": "Health",
+        "region": "National",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Dental care plan enrolment passes three million",
+        "body": "Enrolment in the national dental care plan passed 3.1 million people, with 24,000 providers participating. Claims totalled 1.9 billion dollars in the first full year. Rural provider participation lags at 58 per cent. The plan expands to remaining age groups in September. Average claim value was 412 dollars."
+      },
+      "fr": {
+        "title": "Les inscriptions au régime de soins dentaires dépassent trois millions",
+        "body": "Les inscriptions au régime national de soins dentaires ont dépassé 3,1 millions de personnes, avec 24 000 prestataires participants. Les réclamations ont totalisé 1,9 milliard de dollars au cours de la première année complète. La participation des prestataires en région rurale accuse un retard, à 58 pour cent. Le régime s'étendra aux groupes d'âge restants en septembre. La valeur moyenne des réclamations était de 412 dollars."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "just-074",
+      "topic": "wrongful_conviction",
+      "meta": {
+        "date": "2027-07-01",
+        "desk": "Justice",
+        "region": "National",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Independent review commission receives first applications",
+        "body": "A new independent commission reviewing potential wrongful convictions received 214 applications in its first six months. Eleven cases advanced to full investigation. The commission has a budget of 18 million dollars and 32 staff. Its predecessor process averaged four years per review. The chair said the target is eighteen months."
+      },
+      "fr": {
+        "title": "La commission indépendante de révision reçoit ses premières demandes",
+        "body": "Une nouvelle commission indépendante chargée de réviser d'éventuelles erreurs judiciaires a reçu 214 demandes au cours de ses six premiers mois. Onze dossiers sont passés à l'étape de l'enquête complète. La commission dispose d'un budget de 18 millions de dollars et de 32 employés. Le processus antérieur prenait en moyenne quatre ans par révision. La présidente a indiqué que la cible est de dix-huit mois."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "edu-075",
+      "topic": "apprenticeship",
+      "meta": {
+        "date": "2027-07-08",
+        "desk": "Education",
+        "region": "Prairies",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Apprenticeship completions rise after wage subsidy",
+        "body": "Apprenticeship completions rose 22 per cent following a wage subsidy for employers taking on first-year apprentices. Registrations reached 18,400. Women represent 12 per cent of registrations in construction trades, up from 8 per cent. The subsidy costs 34 million dollars annually. Completion rates remain below 60 per cent in three trades."
+      },
+      "fr": {
+        "title": "Les certifications d'apprentissage augmentent après une subvention salariale",
+        "body": "Les certifications d'apprentissage ont augmenté de 22 pour cent à la suite d'une subvention salariale offerte aux employeurs qui embauchent des apprentis de première année. Les inscriptions ont atteint 18 400. Les femmes représentent 12 pour cent des inscriptions dans les métiers de la construction, contre 8 pour cent auparavant. La subvention coûte 34 millions de dollars par année. Les taux de certification demeurent sous 60 pour cent dans trois métiers."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "tech-076",
+      "topic": "spectrum",
+      "meta": {
+        "date": "2027-07-15",
+        "desk": "Technology",
+        "region": "National",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Spectrum auction sets rural deployment conditions",
+        "body": "A spectrum auction raised 3.4 billion dollars with conditions requiring rural deployment within five years. Winning bidders must cover 92 per cent of rural population in licensed areas. Four regional carriers acquired licences. Set-aside spectrum accounted for 28 per cent of licences. Deployment reports are due annually."
+      },
+      "fr": {
+        "title": "L'enchère du spectre impose des conditions de déploiement en région",
+        "body": "Une enchère du spectre a rapporté 3,4 milliards de dollars, assortie de conditions exigeant un déploiement en région dans un délai de cinq ans. Les enchérisseurs retenus devront desservir 92 pour cent de la population rurale des zones visées. Quatre entreprises régionales ont acquis des licences. Le spectre réservé représentait 28 pour cent des licences. Des rapports de déploiement sont exigés chaque année."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "muni-077",
+      "topic": "fire_service",
+      "meta": {
+        "date": "2027-07-22",
+        "desk": "Municipal",
+        "region": "Atlantic",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "Volunteer fire departments report recruitment crisis",
+        "body": "Volunteer fire departments reported a 24 per cent decline in active members over five years. Forty-one departments operate below recommended staffing. Response times in rural areas averaged 14 minutes against a 10-minute standard. The province announced a 5,000 dollar annual tax credit for volunteers. Training costs remain the main barrier."
+      },
+      "fr": {
+        "title": "Les services d'incendie bénévoles signalent une crise du recrutement",
+        "body": "Les services d'incendie bénévoles ont signalé une baisse de 24 pour cent du nombre de membres actifs en cinq ans. Quarante et un services fonctionnent sous les effectifs recommandés. Les temps de réponse en milieu rural s'établissaient en moyenne à 14 minutes, contre une norme de 10 minutes. La province a annoncé un crédit d'impôt annuel de 5 000 dollars pour les bénévoles. Les coûts de formation demeurent le principal obstacle."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "envr-078",
+      "topic": "plastics",
+      "meta": {
+        "date": "2027-07-29",
+        "desk": "News",
+        "region": "Ontario",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Single-use plastics ban expands to new categories",
+        "body": "The single-use plastics ban expanded to four new categories including takeout containers and cutlery, effective September. Retailers have twelve months to clear existing stock. An estimated 29,000 tonnes are diverted annually under the current ban. Three industry associations filed a legal challenge. Compostable alternatives cost about 40 per cent more."
+      },
+      "fr": {
+        "title": "L'interdiction des plastiques à usage unique s'étend à de nouvelles catégories",
+        "body": "L'interdiction des plastiques à usage unique s'étend à quatre nouvelles catégories, dont les contenants pour emporter et les ustensiles, à compter de septembre. Les détaillants disposent de douze mois pour écouler leurs stocks. On estime à 29 000 tonnes la quantité détournée annuellement en vertu de l'interdiction actuelle. Trois associations de l'industrie ont déposé une contestation judiciaire. Les solutions compostables coûtent environ 40 pour cent de plus."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "cult-079",
+      "topic": "libraries_pub",
+      "meta": {
+        "date": "2027-08-05",
+        "desk": "Arts",
+        "region": "North",
+        "author": "C. Bourgeois"
+      },
+      "en": {
+        "title": "Publishing grant supports Indigenous-language titles",
+        "body": "A publishing grant will support 46 Indigenous-language titles over three years, including 18 children's books. Print runs average 1,200 copies. Nine languages are represented. Publishers cited typesetting for syllabics as a technical barrier. The program budget is 4.2 million dollars."
+      },
+      "fr": {
+        "title": "Une subvention à l'édition appuie des titres en langues autochtones",
+        "body": "Une subvention à l'édition appuiera 46 titres en langues autochtones sur trois ans, dont 18 livres pour enfants. Les tirages sont en moyenne de 1 200 exemplaires. Neuf langues sont représentées. Des éditeurs ont mentionné la composition en syllabiques comme obstacle technique. Le budget du programme s'élève à 4,2 millions de dollars."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "econ-080",
+      "topic": "grocery",
+      "meta": {
+        "date": "2027-08-12",
+        "desk": "Business",
+        "region": "National",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Grocery price inflation slows to 1.8 per cent",
+        "body": "Grocery price inflation slowed to 1.8 per cent year over year, the lowest since 2020. Fresh vegetable prices fell 3.1 per cent. Meat prices rose 4.4 per cent. The competition bureau's grocery monitoring report is due in November. Food bank usage remained 32 per cent above pre-2020 levels."
+      },
+      "fr": {
+        "title": "L'inflation des prix en épicerie ralentit à 1,8 pour cent",
+        "body": "L'inflation des prix en épicerie a ralenti à 1,8 pour cent sur douze mois, son plus bas niveau depuis 2020. Les prix des légumes frais ont reculé de 3,1 pour cent. Les prix de la viande ont augmenté de 4,4 pour cent. Le rapport de surveillance de l'épicerie du bureau de la concurrence est attendu en novembre. Le recours aux banques alimentaires demeurait 32 pour cent au-dessus des niveaux d'avant 2020."
+      },
+      "media": []
     }
   ]
 }
