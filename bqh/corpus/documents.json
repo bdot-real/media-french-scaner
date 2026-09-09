@@ -1,0 +1,149 @@
+{
+  "_comment": "Parallel EN/FR journalistic corpus. Canadian news domains. FR side is Canadian French (fin de semaine, courriel, assurance-emploi), not metropolitan.",
+  "documents": [
+    {
+      "doc_id": "ei-001",
+      "topic": "employment_insurance",
+      "en": {
+        "title": "Employment insurance changes take effect for seasonal workers",
+        "body": "Ottawa confirmed Tuesday that changes to the employment insurance program will take effect on January 8. Seasonal workers in Atlantic Canada will need 420 insurable hours to qualify, down from 700. Service Canada said roughly 61,000 claimants are affected. The department will process claims within 28 days. Minister Carla Boisvert said the change responds to a 2023 review of regional unemployment rates."
+      },
+      "fr": {
+        "title": "Des changements à l'assurance-emploi entrent en vigueur pour les travailleurs saisonniers",
+        "body": "Ottawa a confirmé mardi que des changements au régime d'assurance-emploi entreront en vigueur le 8 janvier. Les travailleurs saisonniers du Canada atlantique auront besoin de 420 heures assurables pour être admissibles, contre 700 auparavant. Service Canada indique qu'environ 61 000 prestataires sont touchés. Le ministère traitera les demandes dans un délai de 28 jours. La ministre Carla Boisvert a affirmé que ce changement donne suite à un examen des taux de chômage régionaux mené en 2023."
+      }
+    },
+    {
+      "doc_id": "hlth-002",
+      "topic": "health_transfer",
+      "en": {
+        "title": "Provinces sign health transfer deal after eight months of talks",
+        "body": "Nine provinces signed bilateral health agreements with Ottawa on Thursday, unlocking $46.2 billion over ten years. Quebec signed separately, securing an asymmetrical arrangement that preserves provincial control over delivery. Health Minister Daniel Okonkwo said the funds are tied to shared indicators on wait times and family doctor access. Alberta has not signed. The first payments are scheduled for April 1."
+      },
+      "fr": {
+        "title": "Les provinces signent une entente sur les transferts en santé après huit mois de pourparlers",
+        "body": "Neuf provinces ont signé jeudi des ententes bilatérales en santé avec Ottawa, débloquant 46,2 milliards de dollars sur dix ans. Le Québec a signé séparément, obtenant une entente asymétrique qui préserve le contrôle provincial sur la prestation des services. Le ministre de la Santé, Daniel Okonkwo, a précisé que les fonds sont liés à des indicateurs communs sur les temps d'attente et l'accès à un médecin de famille. L'Alberta n'a pas signé. Les premiers versements sont prévus le 1er avril."
+      }
+    },
+    {
+      "doc_id": "wx-003",
+      "topic": "severe_weather",
+      "en": {
+        "title": "Ice storm knocks out power to 180,000 homes in eastern Ontario",
+        "body": "Freezing rain that began Friday night left about 180,000 homes without electricity across eastern Ontario and the Outaouais. Hydro One said crews expect to restore most service by Sunday evening. Municipalities opened eleven warming centres. Environment Canada measured 24 millimetres of ice accretion at Kemptville. Two weather-related deaths were reported on Highway 417."
+      },
+      "fr": {
+        "title": "Une tempête de verglas prive 180 000 foyers d'électricité dans l'est de l'Ontario",
+        "body": "La pluie verglaçante qui a commencé vendredi soir a privé d'électricité environ 180 000 foyers dans l'est de l'Ontario et en Outaouais. Hydro One a indiqué que les équipes prévoient rétablir la majeure partie du service d'ici dimanche soir. Les municipalités ont ouvert onze haltes-chaleur. Environnement Canada a mesuré 24 millimètres d'accumulation de glace à Kemptville. Deux décès liés aux conditions météorologiques ont été signalés sur l'autoroute 417."
+      }
+    },
+    {
+      "doc_id": "edu-004",
+      "topic": "school_funding",
+      "en": {
+        "title": "School boards warn of shortfall as enrolment climbs",
+        "body": "Four school boards told a legislative committee Wednesday they face a combined $88 million shortfall next year. Enrolment across the four boards rose 5.4 per cent, driven largely by newcomer families. Trustees asked for a per-student funding increase of $410. The province said its budget will be tabled in March. A francophone board reported the sharpest increase, at 9 per cent."
+      },
+      "fr": {
+        "title": "Des conseils scolaires préviennent d'un manque à gagner alors que les effectifs augmentent",
+        "body": "Quatre conseils scolaires ont indiqué mercredi à un comité législatif qu'ils font face à un manque à gagner combiné de 88 millions de dollars l'an prochain. Les effectifs des quatre conseils ont augmenté de 5,4 pour cent, en grande partie en raison de l'arrivée de familles nouvellement installées. Les conseillers scolaires ont demandé une hausse du financement de 410 dollars par élève. La province a indiqué que son budget sera déposé en mars. Un conseil francophone a signalé la plus forte hausse, soit 9 pour cent."
+      }
+    },
+    {
+      "doc_id": "trns-005",
+      "topic": "transit_tolls",
+      "en": {
+        "title": "Bridge toll increase deferred after municipal pushback",
+        "body": "The interprovincial bridge authority deferred a planned toll increase Monday following objections from four municipalities. The toll booth rate was to rise to $4.75 from $3.90 on February 1. The authority said it will hold consultations through the spring. Weekday crossings average 71,000 vehicles. A commuter advocacy group called the deferral temporary relief."
+      },
+      "fr": {
+        "title": "La hausse du péage du pont est reportée après des objections municipales",
+        "body": "L'administration du pont interprovincial a reporté lundi une hausse de péage prévue à la suite d'objections de quatre municipalités. Le tarif au poste de péage devait passer de 3,90 $ à 4,75 $ le 1er février. L'administration a indiqué qu'elle tiendra des consultations jusqu'au printemps. On compte en moyenne 71 000 véhicules en semaine. Un groupe de défense des banlieusards a qualifié le report de répit temporaire."
+      }
+    },
+    {
+      "doc_id": "cult-006",
+      "topic": "arts_funding",
+      "en": {
+        "title": "Arts council expands touring fund for official language minority communities",
+        "body": "The national arts council announced Friday it will expand its touring fund by $12 million over three years, with a quarter reserved for official language minority communities. Applications open March 15. The council said 340 organizations applied last cycle and 118 were funded. Artists in northern communities will be eligible for a travel supplement."
+      },
+      "fr": {
+        "title": "Le conseil des arts bonifie son fonds de tournée pour les communautés de langue officielle en situation minoritaire",
+        "body": "Le conseil des arts a annoncé vendredi qu'il bonifiera son fonds de tournée de 12 millions de dollars sur trois ans, dont le quart est réservé aux communautés de langue officielle en situation minoritaire. Les demandes seront acceptées à compter du 15 mars. Le conseil a indiqué que 340 organismes avaient présenté une demande au dernier cycle et que 118 ont été financés. Les artistes des communautés nordiques auront droit à un supplément de déplacement."
+      }
+    },
+    {
+      "doc_id": "hous-007",
+      "topic": "housing",
+      "en": {
+        "title": "Rental vacancy rate falls to lowest level in two decades",
+        "body": "The national rental vacancy rate fell to 1.5 per cent last year, the lowest since 2001, according to the housing agency's annual report released Tuesday. Average two-bedroom rent rose 8.2 per cent. Vacancy was tightest in Halifax at 0.9 per cent. The agency attributed the decline to population growth outpacing completions. Purpose-built rental starts rose 4 per cent."
+      },
+      "fr": {
+        "title": "Le taux d'inoccupation des logements locatifs tombe à son plus bas en vingt ans",
+        "body": "Le taux national d'inoccupation des logements locatifs est tombé à 1,5 pour cent l'an dernier, son plus bas niveau depuis 2001, selon le rapport annuel de la société d'habitation publié mardi. Le loyer moyen d'un logement de deux chambres a augmenté de 8,2 pour cent. L'inoccupation était la plus serrée à Halifax, à 0,9 pour cent. La société attribue cette baisse à une croissance démographique plus rapide que les mises en chantier achevées. Les mises en chantier de logements locatifs construits à cette fin ont augmenté de 4 pour cent."
+      }
+    },
+    {
+      "doc_id": "just-008",
+      "topic": "courts",
+      "en": {
+        "title": "Court backlog grows as judicial vacancies persist",
+        "body": "The number of criminal cases pending more than 18 months rose 14 per cent last year, according to figures tabled Thursday. Thirty-eight federal judicial appointments remain vacant. The chief justice warned that delays risk stays of proceedings under the Jordan framework. The justice department said 22 appointments are in final review. Legal aid clinics reported a 30 per cent rise in intake."
+      },
+      "fr": {
+        "title": "L'arriéré judiciaire s'alourdit alors que des postes de juges demeurent vacants",
+        "body": "Le nombre de causes criminelles en attente depuis plus de 18 mois a augmenté de 14 pour cent l'an dernier, selon des données déposées jeudi. Trente-huit postes de juges de nomination fédérale demeurent vacants. Le juge en chef a averti que les délais risquent d'entraîner des arrêts de procédures en vertu de l'arrêt Jordan. Le ministère de la Justice a indiqué que 22 nominations sont à l'étape de l'examen final. Les cliniques d'aide juridique ont signalé une hausse de 30 pour cent des demandes."
+      }
+    },
+    {
+      "doc_id": "econ-009",
+      "topic": "interest_rates",
+      "en": {
+        "title": "Central bank holds rate, signals cuts later this year",
+        "body": "The central bank held its policy rate at 3.75 per cent Wednesday, the third consecutive hold. The governor said inflation returned to the 2 per cent target in November. Markets now price two cuts before December. The bank revised growth forecasts down to 1.4 per cent. Shelter costs remain the largest contributor to inflation."
+      },
+      "fr": {
+        "title": "La banque centrale maintient son taux et laisse entrevoir des baisses cette année",
+        "body": "La banque centrale a maintenu mercredi son taux directeur à 3,75 pour cent, un troisième maintien consécutif. Le gouverneur a affirmé que l'inflation est revenue à la cible de 2 pour cent en novembre. Les marchés prévoient maintenant deux baisses d'ici décembre. La banque a révisé à la baisse ses prévisions de croissance, à 1,4 pour cent. Les coûts du logement demeurent le principal facteur d'inflation."
+      }
+    },
+    {
+      "doc_id": "envr-010",
+      "topic": "fisheries",
+      "en": {
+        "title": "Snow crab quota cut by 22 per cent in Gulf zones",
+        "body": "Fisheries and Oceans set the snow crab quota for southern Gulf zones at 18,400 tonnes Monday, a 22 per cent reduction. The department cited a decline in the biomass survey. Fishing groups called the cut severe and requested a review of the survey method. The season opens in late April. Roughly 700 licence holders are affected."
+      },
+      "fr": {
+        "title": "Le quota de crabe des neiges réduit de 22 pour cent dans les zones du Golfe",
+        "body": "Pêches et Océans a fixé lundi le quota de crabe des neiges pour les zones du sud du Golfe à 18 400 tonnes, une réduction de 22 pour cent. Le ministère invoque une baisse observée lors du relevé de la biomasse. Des groupes de pêcheurs ont qualifié la réduction de sévère et ont demandé une révision de la méthode de relevé. La saison s'ouvre à la fin avril. Environ 700 titulaires de permis sont touchés."
+      }
+    },
+    {
+      "doc_id": "muni-011",
+      "topic": "municipal_budget",
+      "en": {
+        "title": "City tables budget with 3.9 per cent property tax increase",
+        "body": "City council tabled a $4.1 billion operating budget Tuesday carrying a 3.9 per cent residential property tax increase. The budget adds 40 transit operators and funds two new library branches. Council will vote on February 26. The chief financial officer said reserves are at 8 per cent of expenditures, below the 10 per cent target. Public consultation runs for three weeks."
+      },
+      "fr": {
+        "title": "La ville dépose un budget prévoyant une hausse de 3,9 pour cent de la taxe foncière",
+        "body": "Le conseil municipal a déposé mardi un budget de fonctionnement de 4,1 milliards de dollars comportant une hausse de 3,9 pour cent de la taxe foncière résidentielle. Le budget prévoit l'embauche de 40 chauffeurs de transport en commun et le financement de deux nouvelles succursales de bibliothèque. Le conseil se prononcera le 26 février. La directrice des finances a indiqué que les réserves représentent 8 pour cent des dépenses, sous la cible de 10 pour cent. La consultation publique se poursuit pendant trois semaines."
+      }
+    },
+    {
+      "doc_id": "immi-012",
+      "topic": "immigration",
+      "en": {
+        "title": "Francophone immigration target met for second year",
+        "body": "The immigration department said Friday it admitted 8.1 per cent of newcomers outside Quebec as French speakers last year, exceeding its 8 per cent target for a second year. Community organizations welcomed the figure but noted retention outside major centres remains low. The department will raise the target to 10 per cent by 2027. Settlement funding for francophone agencies rose $31 million."
+      },
+      "fr": {
+        "title": "La cible d'immigration francophone atteinte pour une deuxième année",
+        "body": "Le ministère de l'Immigration a indiqué vendredi que 8,1 pour cent des personnes nouvellement arrivées à l'extérieur du Québec l'an dernier étaient francophones, dépassant sa cible de 8 pour cent pour une deuxième année. Des organismes communautaires ont salué ce résultat, mais ont noté que la rétention à l'extérieur des grands centres demeure faible. Le ministère portera la cible à 10 pour cent d'ici 2027. Le financement de l'établissement destiné aux organismes francophones a augmenté de 31 millions de dollars."
+      }
+    }
+  ]
+}

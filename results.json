@@ -1,0 +1,2246 @@
+{
+  "summary": {
+    "dimensions": {
+      "retrieval_p_at_1": {
+        "en": 1.0,
+        "fr": 0.9375,
+        "gap": 0.0625,
+        "equivalent": true
+      },
+      "retrieval_recall": {
+        "en": 0.9375,
+        "fr": 0.9062,
+        "gap": 0.0312,
+        "equivalent": true
+      },
+      "retrieval_ndcg": {
+        "en": 0.9516,
+        "fr": 0.9133,
+        "gap": 0.0383,
+        "equivalent": true
+      },
+      "grounding_numeric": {
+        "en": 1.0,
+        "fr": 0.9375,
+        "gap": 0.0625,
+        "equivalent": true
+      },
+      "grounding_in_context": {
+        "en": 0.9219,
+        "fr": 0.8281,
+        "gap": 0.0938,
+        "equivalent": false
+      },
+      "grounding_entailment": {
+        "en": 0.8427,
+        "fr": 0.7751,
+        "gap": 0.0676,
+        "equivalent": true
+      },
+      "content_coverage": {
+        "en": 1.0,
+        "fr": 0.8333,
+        "gap": 0.1667,
+        "equivalent": false
+      },
+      "fluency_register": {
+        "en": 1.0,
+        "fr": 0.8125,
+        "gap": 0.1875,
+        "equivalent": false
+      },
+      "fluency_overall": {
+        "en": 0.9872,
+        "fr": 0.8478,
+        "gap": 0.1394,
+        "equivalent": false
+      }
+    },
+    "n_queries": 16,
+    "threshold": 0.08,
+    "equivalence_index": 0.9056,
+    "failing_dimensions": [
+      "grounding_in_context",
+      "content_coverage",
+      "fluency_register",
+      "fluency_overall"
+    ],
+    "weak_lexicon": [
+      {
+        "term": "halte-chaleur",
+        "coverage": 0.2,
+        "queries": [
+          "q03",
+          "q11"
+        ]
+      },
+      {
+        "term": "banlieusard",
+        "coverage": 0.3,
+        "queries": [
+          "q06",
+          "q09",
+          "q12",
+          "q16"
+        ]
+      },
+      {
+        "term": "assurance-emploi",
+        "coverage": 0.35,
+        "queries": [
+          "q01",
+          "q02"
+        ]
+      },
+      {
+        "term": "assurable",
+        "coverage": 0.45,
+        "queries": [
+          "q01",
+          "q02"
+        ]
+      },
+      {
+        "term": "prestataire",
+        "coverage": 0.5,
+        "queries": [
+          "q01",
+          "q02"
+        ]
+      },
+      {
+        "term": "conseiller",
+        "coverage": 0.55,
+        "queries": [
+          "q02",
+          "q05",
+          "q12",
+          "q13",
+          "q14"
+        ]
+      },
+      {
+        "term": "minoritaire",
+        "coverage": 0.6,
+        "queries": [
+          "q06",
+          "q07",
+          "q11",
+          "q15"
+        ]
+      },
+      {
+        "term": "foncière",
+        "coverage": 0.65,
+        "queries": [
+          "q03",
+          "q04",
+          "q05",
+          "q06",
+          "q08",
+          "q12",
+          "q14"
+        ]
+      },
+      {
+        "term": "scolaire",
+        "coverage": 0.7,
+        "queries": [
+          "q02",
+          "q05",
+          "q12",
+          "q13",
+          "q14"
+        ]
+      },
+      {
+        "term": "péage",
+        "coverage": 0.7,
+        "queries": [
+          "q06",
+          "q09",
+          "q12",
+          "q16"
+        ]
+      },
+      {
+        "term": "poste",
+        "coverage": 0.75,
+        "queries": [
+          "q06",
+          "q09",
+          "q12",
+          "q15",
+          "q16"
+        ]
+      }
+    ],
+    "divergent_queries": [
+      {
+        "query_id": "q03",
+        "divergence_class": null,
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 0.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.0
+      },
+      {
+        "query_id": "q04",
+        "divergence_class": "lexical_ca_fr",
+        "note": "warming centre / halte-chaleur. The metropolitan gloss is 'centre d'hebergement' or 'salle chauffee'; halte-chaleur is Quebec/Ontario francophone usage.",
+        "en_p1": 1.0,
+        "fr_p1": 0.0,
+        "en_ground": 1.0,
+        "fr_ground": 0.0,
+        "fr_register": 0.0,
+        "fr_coverage": 1.0
+      },
+      {
+        "query_id": "q05",
+        "divergence_class": "lexical_ca_fr",
+        "note": "school trustee / conseiller scolaire. Metropolitan French has no equivalent office.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 0.0,
+        "fr_coverage": 1.0
+      },
+      {
+        "query_id": "q07",
+        "divergence_class": "lexical_ca_fr",
+        "note": "CLOSM is a Canadian statutory concept with no metropolitan analogue.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 0.0,
+        "fr_coverage": 0.6666666666666666
+      },
+      {
+        "query_id": "q13",
+        "divergence_class": null,
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.5
+      },
+      {
+        "query_id": "q14",
+        "divergence_class": "multi_doc",
+        "note": "Multi-document synthesis. Divergence compounds when more than one document must be retrieved.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 0.5,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.5
+      },
+      {
+        "query_id": "q15",
+        "divergence_class": "multi_doc",
+        "note": null,
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 1.0,
+        "fr_ground": 1.0,
+        "fr_register": 1.0,
+        "fr_coverage": 0.6666666666666666
+      },
+      {
+        "query_id": "q16",
+        "divergence_class": "multi_doc",
+        "note": "commuter / banlieusard. Metropolitan French prefers 'navetteur' or 'usager'.",
+        "en_p1": 1.0,
+        "fr_p1": 1.0,
+        "en_ground": 0.25,
+        "fr_ground": 0.25,
+        "fr_register": 1.0,
+        "fr_coverage": 1.0
+      }
+    ],
+    "mode": "offline"
+  },
+  "rows": [
+    {
+      "query_id": "q01",
+      "divergence_class": "lexical_ca_fr",
+      "note": "EI / assurance-emploi. Metropolitan-tuned retrievers weight 'chomage' over the Canadian administrative term.",
+      "gold_docs": [
+        "ei-001"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "ei-001"
+          ],
+          "answer": "Seasonal workers in Atlantic Canada now need 420 insurable hours to qualify for employment insurance, down from 700. The change takes effect January 8 and affects about 61,000 claimants.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9130434782608695,
+            "unsupported_terms": [
+              "about",
+              "now"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.5,
+              "longest": 18
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "ei-001"
+          ],
+          "answer": "Les travailleurs saisonniers du Canada atlantique ont maintenant besoin de 420 heures assurables pour être admissibles à l'assurance-emploi, contre 700 auparavant. Le changement entre en vigueur le 8 janvier et touche environ 61 000 prestataires.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.875,
+            "unsupported_terms": [
+              "entr",
+              "mainten",
+              "touch"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.5,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "assurance-emploi",
+              "stem": "assuranc-emploi",
+              "coverage": 0.35
+            },
+            {
+              "term": "assurable",
+              "stem": "assur",
+              "coverage": 0.45
+            },
+            {
+              "term": "prestataire",
+              "stem": "prestatair",
+              "coverage": 0.5
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q02",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "hlth-002"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hlth-002",
+            "edu-004",
+            "ei-001"
+          ],
+          "answer": "Quebec signed separately from the other nine provinces, securing an asymmetrical arrangement that preserves provincial control over service delivery.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9333333333333333,
+            "unsupported_terms": [
+              "other"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hlth-002",
+            "edu-004",
+            "ei-001"
+          ],
+          "answer": "Le Québec a signé séparément des neuf autres provinces, obtenant une entente asymétrique qui préserve le contrôle provincial sur la prestation des services.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "autr"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 23.0,
+              "longest": 23
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "assurance-emploi",
+              "stem": "assuranc-emploi",
+              "coverage": 0.35
+            },
+            {
+              "term": "assurable",
+              "stem": "assur",
+              "coverage": 0.45
+            },
+            {
+              "term": "prestataire",
+              "stem": "prestatair",
+              "coverage": 0.5
+            },
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q03",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "wx-003"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "wx-003"
+          ],
+          "answer": "Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9,
+            "unsupported_terms": [
+              "during"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 13.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "wx-003",
+            "muni-011"
+          ],
+          "answer": "Environnement Canada a mesuré 32 millimètres d'accumulation de glace à Kemptville pendant la tempête.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.5,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 0.0,
+            "checked": 1,
+            "unsupported": [
+              "32"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 0.0,
+            "checked": 1,
+            "unsupported": [
+              "32"
+            ]
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9,
+            "unsupported_terms": [
+              "32"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 14.0,
+              "longest": 14
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.0,
+            "missing": [
+              "24"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q04",
+      "divergence_class": "lexical_ca_fr",
+      "note": "warming centre / halte-chaleur. The metropolitan gloss is 'centre d'hebergement' or 'salle chauffee'; halte-chaleur is Quebec/Ontario francophone usage.",
+      "gold_docs": [
+        "wx-003"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "wx-003"
+          ],
+          "answer": "Municipalities opened eleven warming centres across the affected region for residents without power.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.7272727272727273,
+            "unsupported_terms": [
+              "affect",
+              "region",
+              "resident"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 13.0,
+              "longest": 13
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "muni-011"
+          ],
+          "answer": "Les municipalités ont ouvert onze centres d'hébergement chauffés dans la région touchée pour les résidents privés d'électricité.",
+          "p_at_1": 0.0,
+          "p_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr": 0.0,
+          "ndcg": 0.0,
+          "numeric_grounding": {
+            "score": 0.0,
+            "checked": 1,
+            "unsupported": [
+              "11"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 1.0,
+          "entailment": {
+            "score": 0.0,
+            "unsupported_terms": [
+              "centr",
+              "chauffé",
+              "héberg",
+              "municipalité",
+              "onze",
+              "ouvert",
+              "privé",
+              "région",
+              "résident",
+              "touché"
+            ]
+          },
+          "fluency": {
+            "score": 0.3,
+            "register": {
+              "score": 0.0,
+              "violations": [
+                {
+                  "found": "centres d'hébergement chauff",
+                  "preferred": "halte-chaleur",
+                  "severity": "high",
+                  "note": "Emergency warming facilities are 'haltes-chaleur' in Canadian usage."
+                }
+              ]
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 17.0,
+              "longest": 17
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q05",
+      "divergence_class": "lexical_ca_fr",
+      "note": "school trustee / conseiller scolaire. Metropolitan French has no equivalent office.",
+      "gold_docs": [
+        "edu-004"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "edu-004",
+            "muni-011",
+            "envr-010"
+          ],
+          "answer": "Trustees asked the province for a per-student funding increase of $410, as the four boards face a combined $88 million shortfall.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "edu-004",
+            "muni-011",
+            "envr-010"
+          ],
+          "answer": "Les administrateurs ont demandé à la province une hausse du financement de 410 dollars par élève, alors que les quatre conseils font face à un manque à gagner combiné de 88 millions de dollars.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9444444444444444,
+            "unsupported_terms": [
+              "administrat"
+            ]
+          },
+          "fluency": {
+            "score": 0.2077,
+            "register": {
+              "score": 0.0,
+              "violations": [
+                {
+                  "found": "administrateurs",
+                  "preferred": "conseiller scolaire",
+                  "severity": "high",
+                  "note": "The elected school-board office is 'conseiller scolaire' in Canada; 'administrateur' denotes an appointed manager."
+                }
+              ]
+            },
+            "readability": {
+              "score": 0.6923076923076923,
+              "avg_sentence_len": 34.0,
+              "longest": 34
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q06",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "trns-005"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "trns-005",
+            "edu-004",
+            "muni-011"
+          ],
+          "answer": "The authority deferred the increase after four municipalities objected. The toll was to rise to $4.75 from $3.90 on February 1, and consultations will run through the spring.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.875,
+            "unsupported_terms": [
+              "object",
+              "run"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 7.5,
+              "longest": 11
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "trns-005",
+            "cult-006",
+            "muni-011"
+          ],
+          "answer": "L'administration a reporté la hausse après les objections de quatre municipalités. Le péage devait passer de 3,90 $ à 4,75 $ le 1er février, et des consultations auront lieu jusqu'au printemps.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9473684210526315,
+            "unsupported_terms": [
+              "lieu"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 15.5,
+              "longest": 20
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            },
+            {
+              "term": "péage",
+              "stem": "péag",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q07",
+      "divergence_class": "lexical_ca_fr",
+      "note": "CLOSM is a Canadian statutory concept with no metropolitan analogue.",
+      "gold_docs": [
+        "cult-006"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "cult-006",
+            "muni-011"
+          ],
+          "answer": "A quarter of the $12 million touring fund expansion is reserved for official language minority communities, which works out to $3 million over three years.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.5,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8125,
+            "unsupported_terms": [
+              "expansion",
+              "out",
+              "work"
+            ]
+          },
+          "fluency": {
+            "score": 0.9591,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.8636363636363636,
+              "avg_sentence_len": 25.0,
+              "longest": 25
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "cult-006"
+          ],
+          "answer": "Le quart de la bonification de 12 millions de dollars du fonds de tournée est réservé aux communautés francophones.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8,
+            "unsupported_terms": [
+              "bonification",
+              "francophon"
+            ]
+          },
+          "fluency": {
+            "score": 0.3,
+            "register": {
+              "score": 0.0,
+              "violations": [
+                {
+                  "found": "communautés francophones",
+                  "preferred": "communauté de langue officielle en situation minoritaire",
+                  "severity": "high",
+                  "note": "CLOSM is a statutory term; the paraphrase loses legal precision and excludes anglophone minority communities."
+                }
+              ]
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 19
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.6666666666666666,
+            "missing": [
+              "3"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q08",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "hous-007"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "hous-007",
+            "muni-011",
+            "econ-009"
+          ],
+          "answer": "Halifax had the tightest rental vacancy rate at 0.9 per cent, against a national rate of 1.5 per cent.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8,
+            "unsupported_terms": [
+              "against",
+              "had"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 7.0,
+              "longest": 9
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "hous-007",
+            "econ-009",
+            "muni-011"
+          ],
+          "answer": "Halifax affichait le taux d'inoccupation le plus serré, à 0,9 pour cent, contre un taux national de 1,5 pour cent.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.75,
+            "unsupported_terms": [
+              "affichait",
+              "contr"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 20.0,
+              "longest": 20
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q09",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "just-008"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "just-008"
+          ],
+          "answer": "Thirty-eight federal judicial appointments remain vacant, with 22 in final review at the justice department.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 15.0,
+              "longest": 15
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "just-008",
+            "trns-005"
+          ],
+          "answer": "Trente-huit postes de juges de nomination fédérale demeurent vacants, dont 22 à l'étape de l'examen final au ministère de la Justice.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.5,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9285714285714286,
+            "unsupported_terms": [
+              "dont"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "péage",
+              "stem": "péag",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q10",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "econ-009"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "econ-009",
+            "hous-007",
+            "trns-005"
+          ],
+          "answer": "The central bank held its policy rate at 3.75 per cent for a third consecutive time and signalled possible cuts later this year.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8235294117647058,
+            "unsupported_terms": [
+              "possible",
+              "signall",
+              "time"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 12.0,
+              "longest": 15
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "econ-009",
+            "hous-007",
+            "immi-012"
+          ],
+          "answer": "La banque centrale a maintenu son taux directeur à 3,75 pour cent pour une troisième fois consécutive et a laissé entrevoir de possibles baisses plus tard cette année.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 1,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.6875,
+            "unsupported_terms": [
+              "consécutiv",
+              "fois",
+              "laissé",
+              "possibl",
+              "tard"
+            ]
+          },
+          "fluency": {
+            "score": 0.9769,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.9230769230769231,
+              "avg_sentence_len": 28.0,
+              "longest": 28
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q11",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "envr-010"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "envr-010"
+          ],
+          "answer": "The snow crab quota for southern Gulf zones was cut 22 per cent to 18,400 tonnes, affecting roughly 700 licence holders.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 21.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "envr-010",
+            "cult-006",
+            "wx-003"
+          ],
+          "answer": "Le quota de crabe des neiges pour les zones du sud du Golfe a été réduit de 22 pour cent, à 18 400 tonnes, ce qui touche environ 700 titulaires de permis.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9444444444444444,
+            "unsupported_terms": [
+              "touch"
+            ]
+          },
+          "fluency": {
+            "score": 0.9308,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.7692307692307692,
+              "avg_sentence_len": 32.0,
+              "longest": 32
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "halte-chaleur",
+              "stem": "halt-chaleur",
+              "coverage": 0.2
+            },
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q12",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "muni-011"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "muni-011",
+            "edu-004",
+            "trns-005"
+          ],
+          "answer": "The city's $4.1 billion operating budget carries a 3.9 per cent residential property tax increase, with a council vote set for February 26.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.875,
+            "unsupported_terms": [
+              "carri",
+              "set"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 8.3,
+              "longest": 15
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "muni-011",
+            "edu-004",
+            "trns-005"
+          ],
+          "answer": "Le budget de fonctionnement de 4,1 milliards de dollars de la ville comporte une hausse de 3,9 pour cent de la taxe foncière résidentielle, et le vote du conseil est prévu le 26 février.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.9375,
+            "unsupported_terms": [
+              "vote"
+            ]
+          },
+          "fluency": {
+            "score": 0.9077,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.6923076923076923,
+              "avg_sentence_len": 34.0,
+              "longest": 34
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            },
+            {
+              "term": "péage",
+              "stem": "péag",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q13",
+      "divergence_class": null,
+      "note": null,
+      "gold_docs": [
+        "immi-012"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "immi-012",
+            "edu-004",
+            "econ-009"
+          ],
+          "answer": "Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, exceeding the 8 per cent target for a second year. The target rises to 10 per cent by 2027.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8823529411764706,
+            "unsupported_terms": [
+              "rise",
+              "yes"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 8.5,
+              "longest": 20
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "immi-012",
+            "econ-009",
+            "edu-004"
+          ],
+          "answer": "Oui. Le ministère a admis 8,1 pour cent de personnes francophones parmi les nouveaux arrivants à l'extérieur du Québec, dépassant la cible de 8 pour cent pour une deuxième année.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.6666666666666666,
+            "unsupported_terms": [
+              "admi",
+              "arriv",
+              "nouve",
+              "oui",
+              "parmi"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 15.0,
+              "longest": 29
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.5,
+            "missing": [
+              "10",
+              "2027"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q14",
+      "divergence_class": "multi_doc",
+      "note": "Multi-document synthesis. Divergence compounds when more than one document must be retrieved.",
+      "gold_docs": [
+        "edu-004",
+        "muni-011"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "edu-004",
+            "cult-006",
+            "immi-012"
+          ],
+          "answer": "School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131471927654584,
+          "numeric_grounding": {
+            "score": 0.5,
+            "checked": 4,
+            "unsupported": [
+              "3.9",
+              "4.1"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.5,
+          "entailment": {
+            "score": 0.6521739130434783,
+            "unsupported_terms": [
+              "amid",
+              "below",
+              "billion",
+              "city",
+              "growth",
+              "property",
+              "tax",
+              "while"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 9.2,
+              "longest": 11
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "edu-004",
+            "muni-011"
+          ],
+          "answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 1.0,
+            "unsupported_terms": []
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 26.0,
+              "longest": 26
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "conseiller",
+              "stem": "conseiller",
+              "coverage": 0.55
+            },
+            {
+              "term": "foncière",
+              "stem": "foncièr",
+              "coverage": 0.65
+            },
+            {
+              "term": "scolaire",
+              "stem": "scolair",
+              "coverage": 0.7
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.5,
+            "missing": [
+              "3.9",
+              "4.1"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q15",
+      "divergence_class": "multi_doc",
+      "note": null,
+      "gold_docs": [
+        "cult-006",
+        "immi-012"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "cult-006",
+            "immi-012",
+            "just-008"
+          ],
+          "answer": "Federal supports include a $12 million touring fund expansion with a quarter reserved for official language minority communities, and a $31 million increase in settlement funding for francophone agencies.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 3,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.7894736842105263,
+            "unsupported_terms": [
+              "expansion",
+              "include",
+              "increase",
+              "support"
+            ]
+          },
+          "fluency": {
+            "score": 0.9045,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.6818181818181819,
+              "avg_sentence_len": 29.0,
+              "longest": 29
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "immi-012",
+            "cult-006",
+            "just-008"
+          ],
+          "answer": "Les appuis fédéraux comprennent une bonification de 12 millions de dollars du fonds de tournée et une hausse de 31 millions de dollars du financement de l'établissement pour les organismes francophones.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.6666666666666666,
+          "recall_at_k": 1.0,
+          "mrr": 1.0,
+          "ndcg": 1.0,
+          "numeric_grounding": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 2,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.0,
+          "entailment": {
+            "score": 0.8,
+            "unsupported_terms": [
+              "appui",
+              "bonification",
+              "comprennent"
+            ]
+          },
+          "fluency": {
+            "score": 0.9423,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.8076923076923077,
+              "avg_sentence_len": 31.0,
+              "longest": 31
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "minoritaire",
+              "stem": "minoritair",
+              "coverage": 0.6
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 0.6666666666666666,
+            "missing": [
+              "0.25"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "query_id": "q16",
+      "divergence_class": "multi_doc",
+      "note": "commuter / banlieusard. Metropolitan French prefers 'navetteur' or 'usager'.",
+      "gold_docs": [
+        "wx-003",
+        "trns-005"
+      ],
+      "langs": {
+        "en": {
+          "retrieved": [
+            "trns-005",
+            "envr-010",
+            "ei-001"
+          ],
+          "answer": "An ice storm cut power to 180,000 homes and caused two deaths on Highway 417, while a planned bridge toll increase affecting 71,000 weekday crossings was deferred.",
+          "p_at_1": 1.0,
+          "p_at_k": 0.3333333333333333,
+          "recall_at_k": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131471927654584,
+          "numeric_grounding": {
+            "score": 0.25,
+            "checked": 4,
+            "unsupported": [
+              "180000",
+              "2",
+              "417"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.75,
+          "entailment": {
+            "score": 0.5,
+            "unsupported_terms": [
+              "180",
+              "417",
+              "caus",
+              "death",
+              "highway",
+              "home",
+              "ice",
+              "power",
+              "storm",
+              "two"
+            ]
+          },
+          "fluency": {
+            "score": 0.9318,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 0.7727272727272727,
+              "avg_sentence_len": 27.0,
+              "longest": 27
+            }
+          },
+          "weak_terms": [],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        },
+        "fr": {
+          "retrieved": [
+            "trns-005"
+          ],
+          "answer": "Une tempête de verglas a privé 180 000 foyers d'électricité et causé deux décès sur l'autoroute 417. Une hausse de péage prévue touchant 71 000 traversées par jour de semaine a été reportée durant la fin de semaine.",
+          "p_at_1": 1.0,
+          "p_at_k": 1.0,
+          "recall_at_k": 0.5,
+          "mrr": 1.0,
+          "ndcg": 0.6131471927654584,
+          "numeric_grounding": {
+            "score": 0.25,
+            "checked": 4,
+            "unsupported": [
+              "180000",
+              "2",
+              "417"
+            ]
+          },
+          "numeric_grounding_gold": {
+            "score": 1.0,
+            "checked": 4,
+            "unsupported": []
+          },
+          "retrieval_induced_loss": 0.75,
+          "entailment": {
+            "score": 0.2916666666666667,
+            "unsupported_terms": [
+              "180",
+              "417",
+              "autorout",
+              "causé",
+              "deux",
+              "durant",
+              "décè",
+              "fin",
+              "foyer",
+              "jour"
+            ]
+          },
+          "fluency": {
+            "score": 1.0,
+            "register": {
+              "score": 1.0,
+              "violations": []
+            },
+            "readability": {
+              "score": 1.0,
+              "avg_sentence_len": 19.0,
+              "longest": 21
+            }
+          },
+          "weak_terms": [
+            {
+              "term": "banlieusard",
+              "stem": "banlieusard",
+              "coverage": 0.3
+            },
+            {
+              "term": "péage",
+              "stem": "péag",
+              "coverage": 0.7
+            },
+            {
+              "term": "poste",
+              "stem": "post",
+              "coverage": 0.75
+            }
+          ],
+          "coverage_vs_en": {
+            "score": 1.0,
+            "missing": []
+          }
+        }
+      }
+    }
+  ]
+}

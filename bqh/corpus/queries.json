@@ -1,0 +1,123 @@
+{
+  "_comment": "Parallel query set with shared gold relevance labels. gold_docs is language-independent: a correct retriever returns the same docs for the EN and FR form of the same information need. divergence_class annotates the planted failure mode when FR underperforms.",
+  "queries": [
+    {
+      "query_id": "q01",
+      "en": "How many insurable hours do seasonal workers need to qualify for EI?",
+      "fr": "Combien d'heures assurables les travailleurs saisonniers doivent-ils accumuler pour être admissibles à l'assurance-emploi?",
+      "gold_docs": ["ei-001"],
+      "divergence_class": "lexical_ca_fr",
+      "note": "EI / assurance-emploi. Metropolitan-tuned retrievers weight 'chomage' over the Canadian administrative term."
+    },
+    {
+      "query_id": "q02",
+      "en": "Which province signed a separate health agreement with Ottawa?",
+      "fr": "Quelle province a signé une entente distincte en santé avec Ottawa?",
+      "gold_docs": ["hlth-002"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q03",
+      "en": "How much ice accumulated during the eastern Ontario storm?",
+      "fr": "Quelle épaisseur de glace s'est accumulée pendant la tempête dans l'est de l'Ontario?",
+      "gold_docs": ["wx-003"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q04",
+      "en": "Where can people go to keep warm during the outage?",
+      "fr": "Où les gens peuvent-ils aller se réchauffer pendant la panne?",
+      "gold_docs": ["wx-003"],
+      "divergence_class": "lexical_ca_fr",
+      "note": "warming centre / halte-chaleur. The metropolitan gloss is 'centre d'hebergement' or 'salle chauffee'; halte-chaleur is Quebec/Ontario francophone usage."
+    },
+    {
+      "query_id": "q05",
+      "en": "What per-student funding increase did trustees request?",
+      "fr": "Quelle hausse du financement par élève les conseillers scolaires ont-ils demandée?",
+      "gold_docs": ["edu-004"],
+      "divergence_class": "lexical_ca_fr",
+      "note": "school trustee / conseiller scolaire. Metropolitan French has no equivalent office."
+    },
+    {
+      "query_id": "q06",
+      "en": "Why was the bridge toll increase postponed?",
+      "fr": "Pourquoi la hausse du péage du pont a-t-elle été reportée?",
+      "gold_docs": ["trns-005"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q07",
+      "en": "How much money is reserved for official language minority communities?",
+      "fr": "Quelle somme est réservée aux communautés de langue officielle en situation minoritaire?",
+      "gold_docs": ["cult-006"],
+      "divergence_class": "lexical_ca_fr",
+      "note": "CLOSM is a Canadian statutory concept with no metropolitan analogue."
+    },
+    {
+      "query_id": "q08",
+      "en": "Which city had the tightest rental vacancy rate?",
+      "fr": "Quelle ville affichait le taux d'inoccupation le plus serré?",
+      "gold_docs": ["hous-007"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q09",
+      "en": "How many federal judicial appointments are vacant?",
+      "fr": "Combien de postes de juges de nomination fédérale sont vacants?",
+      "gold_docs": ["just-008"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q10",
+      "en": "What did the central bank do with its policy rate?",
+      "fr": "Qu'a fait la banque centrale de son taux directeur?",
+      "gold_docs": ["econ-009"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q11",
+      "en": "By how much was the snow crab quota reduced?",
+      "fr": "De combien le quota de crabe des neiges a-t-il été réduit?",
+      "gold_docs": ["envr-010"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q12",
+      "en": "What property tax increase is in the city budget?",
+      "fr": "Quelle hausse de taxe foncière prévoit le budget de la ville?",
+      "gold_docs": ["muni-011"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q13",
+      "en": "Did the government meet its francophone immigration target?",
+      "fr": "Le gouvernement a-t-il atteint sa cible d'immigration francophone?",
+      "gold_docs": ["immi-012"],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q14",
+      "en": "What are the funding pressures facing schools and cities?",
+      "fr": "Quelles sont les pressions financières auxquelles font face les écoles et les villes?",
+      "gold_docs": ["edu-004", "muni-011"],
+      "divergence_class": "multi_doc",
+      "note": "Multi-document synthesis. Divergence compounds when more than one document must be retrieved."
+    },
+    {
+      "query_id": "q15",
+      "en": "What federal supports exist for francophone communities?",
+      "fr": "Quels sont les appuis fédéraux destinés aux communautés francophones?",
+      "gold_docs": ["cult-006", "immi-012"],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q16",
+      "en": "How are weather and infrastructure affecting commuters?",
+      "fr": "Comment la météo et les infrastructures touchent-elles les banlieusards?",
+      "gold_docs": ["wx-003", "trns-005"],
+      "divergence_class": "multi_doc",
+      "note": "commuter / banlieusard. Metropolitan French prefers 'navetteur' or 'usager'."
+    }
+  ]
+}

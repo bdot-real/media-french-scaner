@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bilingual Quality Harness</title>
+<style>
+:root {
+  color-scheme: light;
+  --surface-0:#f4f4f2; --surface-1:#fcfcfb; --border:#e2e1dd;
+  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#7a7975;
+  --series-en:#2a78d6; --series-fr:#eb6834;
+  --track:#e6e5e1; --good:#0ca30c; --critical:#d92020;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-0:#111110; --surface-1:#1a1a19; --border:#333331;
+    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+    --series-en:#3987e5; --series-fr:#d95926;
+    --track:#2e2e2b; --good:#3ab53a; --critical:#f06a6a;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-0:#111110; --surface-1:#1a1a19; --border:#333331;
+  --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#8f8e86;
+  --series-en:#3987e5; --series-fr:#d95926;
+  --track:#2e2e2b; --good:#3ab53a; --critical:#f06a6a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface-0);color:var(--text-primary);
+  font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 24px 72px}
+header{margin-bottom:28px}
+.eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--text-muted);font-weight:600}
+h1{font-size:29px;line-height:1.2;margin:8px 0 6px;letter-spacing:-.02em}
+.sub{color:var(--text-secondary);max-width:66ch;margin:0}
+.meta{margin-top:12px;font-size:13px;color:var(--text-muted)}
+.meta code{background:var(--surface-1);border:1px solid var(--border);
+  border-radius:4px;padding:1px 6px;font-size:12px}
+.card{background:var(--surface-1);border:1px solid var(--border);
+  border-radius:10px;padding:22px;margin:20px 0}
+.hero{display:flex;gap:34px;align-items:flex-start;flex-wrap:wrap}
+.hero-fig{font-size:60px;line-height:1;font-weight:650;letter-spacing:-.03em}
+.hero-fig.warn{color:var(--critical)}
+.hero-lab{font-size:12px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--text-muted);font-weight:600;margin-top:8px}
+.hero-txt{flex:1;min-width:280px;color:var(--text-secondary)}
+.hero-txt strong{color:var(--text-primary)}
+h2{font-size:17px;margin:34px 0 4px;letter-spacing:-.01em}
+.h2sub{color:var(--text-muted);font-size:13px;margin:0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--border);
+  vertical-align:middle}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text-muted);font-weight:600;border-bottom:1px solid var(--border)}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:none}
+.dim th{font-weight:500;width:33%}
+.dim-name{display:block;color:var(--text-primary)}
+.dim-desc{display:block;font-size:11.5px;color:var(--text-muted);margin-top:1px}
+td.plot{width:31%;padding:9px 14px}
+td.plot svg{width:100%;height:22px;overflow:visible}
+.track{stroke:var(--track);stroke-width:2;vector-effect:non-scaling-stroke}
+.gapline{stroke:var(--text-muted);stroke-width:2;opacity:.45;
+  vector-effect:non-scaling-stroke}
+.mark-en{fill:var(--series-en);stroke:var(--surface-1);stroke-width:1.5;
+  vector-effect:non-scaling-stroke}
+.mark-fr{fill:var(--series-fr);stroke:var(--surface-1);stroke-width:1.5;
+  vector-effect:non-scaling-stroke}
+.num{text-align:right;font-variant-numeric:tabular-nums;width:8%;
+  font-feature-settings:"tnum"}
+td.en{color:var(--series-en);font-weight:600}
+td.fr{color:var(--series-fr);font-weight:600}
+td.gap{color:var(--text-secondary)}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;
+  border-radius:99px;border:1px solid}
+.pill.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 40%,transparent)}
+.pill.divergent{color:var(--critical);
+  border-color:color-mix(in srgb,var(--critical) 45%,transparent)}
+.legend{display:flex;gap:18px;font-size:12.5px;color:var(--text-secondary);
+  margin:0 0 14px;align-items:center}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;
+  margin-right:6px;vertical-align:-1px}
+.covbar{display:inline-block;width:88px;height:7px;background:var(--track);
+  border-radius:99px;overflow:hidden;vertical-align:middle;margin-right:8px}
+.covbar span{display:block;height:100%;background:var(--series-fr);
+  border-radius:99px}
+.covnum{font-variant-numeric:tabular-nums;color:var(--text-secondary);font-size:12px}
+.term{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+.qid{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;
+  color:var(--text-secondary)}
+.tag{display:inline-block;font-size:11px;padding:1.5px 7px;border-radius:4px;
+  background:color-mix(in srgb,var(--series-fr) 15%,transparent);
+  color:var(--text-primary);margin-right:4px;
+  border:1px solid color-mix(in srgb,var(--series-fr) 30%,transparent)}
+.note,.qs{color:var(--text-muted);font-size:12px}
+.qtext{color:var(--text-secondary);font-size:12px}
+.scroll{overflow-x:auto}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
+  font-size:12px;color:var(--text-muted)}
+@media (max-width:720px){
+  td.plot{display:none} .dim th{width:auto}
+  .hero-fig{font-size:46px}
+}
+</style></head><body>
+<div class="wrap">
+<header>
+  <div class="eyebrow">Bilingual Quality Harness</div>
+  <h1>EN / FR output equivalence for a journalistic RAG workflow</h1>
+  <p class="sub">Measures whether an AI content pipeline performs <em>equivalently</em>
+  in English and Canadian French — not whether it performs adequately in each.
+  The unit of analysis is the gap between the two, because that gap is what a
+  bilingual public-service mandate actually commits to.</p>
+  <div class="meta">16 parallel queries · 12 parallel documents ·
+   Canadian French (Radio-Canada conventions) · mode <code>offline</code></div>
+</header>
+
+<div class="card hero">
+  <div>
+    <div class="hero-fig warn">0.906</div>
+    <div class="hero-lab">Equivalence index</div>
+  </div>
+  <div class="hero-txt">
+    <p style="margin-top:0"><strong>4 of 9 quality dimensions
+    fail equivalence</strong> at an 8-point gap threshold. The widest gap is
+    <strong>Canadian French register</strong> at +0.188 —
+    English 1.000 against French 0.812.</p>
+    <p style="margin-bottom:0">Both languages would pass a conventional
+    single-language quality bar. The divergence is only visible when the two are
+    measured against each other on the same corpus and the same information needs.</p>
+  </div>
+</div>
+
+<h2>Quality dimensions</h2>
+<p class="h2sub">Each row is one metric measured independently in both languages.
+ The connecting line is the equivalence gap.</p>
+<div class="card">
+  <div class="legend">
+    <span><i style="background:var(--series-en)"></i>English</span>
+    <span><i style="background:var(--series-fr)"></i>Canadian French</span>
+    <span style="color:var(--text-muted)">— scale 0 to 1, higher is better</span>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>Dimension</th><th>0 → 1</th><th class="num">EN</th>
+      <th class="num">FR</th><th class="num">Gap</th><th>Status</th></tr></thead>
+    <tbody>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Retrieval precision@1</span>
+        <span class="dim-desc">Top result is a gold document</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 1.000, French 0.938, gap +0.062">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="93.75" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.75" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">1.000</td>
+      <td class="num fr">0.938</td>
+      <td class="num gap">+0.062</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Retrieval recall@3</span>
+        <span class="dim-desc">Gold documents found in top 3</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.938, French 0.906, gap +0.031">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="90.62" y1="11" x2="93.75" y2="11" class="gapline"/>
+          <circle cx="93.75" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="90.62" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.938</td>
+      <td class="num fr">0.906</td>
+      <td class="num gap">+0.031</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Retrieval nDCG@3</span>
+        <span class="dim-desc">Rank quality of gold documents</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.952, French 0.913, gap +0.038">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="91.33" y1="11" x2="95.16" y2="11" class="gapline"/>
+          <circle cx="95.16" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="91.33" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.952</td>
+      <td class="num fr">0.913</td>
+      <td class="num gap">+0.038</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Grounding — fabrication</span>
+        <span class="dim-desc">Figures absent from the source document</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 1.000, French 0.938, gap +0.062">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="93.75" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.75" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">1.000</td>
+      <td class="num fr">0.938</td>
+      <td class="num gap">+0.062</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim divergent">
+      <th scope="row">
+        <span class="dim-name">Grounding — in retrieved context</span>
+        <span class="dim-desc">Figures unsupported by what retrieval returned</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.922, French 0.828, gap +0.094">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="82.81" y1="11" x2="92.19" y2="11" class="gapline"/>
+          <circle cx="92.19" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="82.81" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.922</td>
+      <td class="num fr">0.828</td>
+      <td class="num gap">+0.094</td>
+      <td class="status"><span class="pill divergent">divergent</span></td>
+    </tr>
+    <tr class="dim ok">
+      <th scope="row">
+        <span class="dim-name">Grounding — lexical entailment</span>
+        <span class="dim-desc">Content words traceable to source</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.843, French 0.775, gap +0.068">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="77.51" y1="11" x2="84.27" y2="11" class="gapline"/>
+          <circle cx="84.27" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="77.51" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.843</td>
+      <td class="num fr">0.775</td>
+      <td class="num gap">+0.068</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
+    </tr>
+    <tr class="dim divergent">
+      <th scope="row">
+        <span class="dim-name">Content coverage vs EN</span>
+        <span class="dim-desc">Does FR carry the same facts as EN</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 1.000, French 0.833, gap +0.167">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="83.33" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="83.33" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">1.000</td>
+      <td class="num fr">0.833</td>
+      <td class="num gap">+0.167</td>
+      <td class="status"><span class="pill divergent">divergent</span></td>
+    </tr>
+    <tr class="dim divergent">
+      <th scope="row">
+        <span class="dim-name">Canadian French register</span>
+        <span class="dim-desc">Metropolitan forms and anglicisms</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 1.000, French 0.812, gap +0.188">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="81.25" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="81.25" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">1.000</td>
+      <td class="num fr">0.812</td>
+      <td class="num gap">+0.188</td>
+      <td class="status"><span class="pill divergent">divergent</span></td>
+    </tr>
+    <tr class="dim divergent">
+      <th scope="row">
+        <span class="dim-name">Fluency (composite)</span>
+        <span class="dim-desc">Register and readability combined</span>
+      </th>
+      <td class="plot">
+        <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
+             aria-label="English 0.987, French 0.848, gap +0.139">
+          <line x1="0" y1="11" x2="100" y2="11" class="track"/>
+          <line x1="84.78" y1="11" x2="98.72" y2="11" class="gapline"/>
+          <circle cx="98.72" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="84.78" cy="11" r="4.2" class="mark-fr"/>
+        </svg>
+      </td>
+      <td class="num en">0.987</td>
+      <td class="num fr">0.848</td>
+      <td class="num gap">+0.139</td>
+      <td class="status"><span class="pill divergent">divergent</span></td>
+    </tr></tbody>
+  </table></div>
+</div>
+
+<h2>Root cause — lexicon coverage</h2>
+<p class="h2sub">Canadian French administrative and regional vocabulary that the
+ retriever represents weakly. This is what converts a red number into a fix.</p>
+<div class="card"><div class="scroll"><table>
+  <thead><tr><th>Term (stemmed)</th><th>Model coverage</th><th>Affected queries</th></tr></thead>
+  <tbody>
+      <tr><td class="term">halte-chaleur</td>
+          <td class="cov"><span class="covbar"><span style="width:20%"></span></span>
+              <span class="covnum">0.20</span></td>
+          <td class="qs">q03, q11</td></tr>
+      <tr><td class="term">banlieusard</td>
+          <td class="cov"><span class="covbar"><span style="width:30%"></span></span>
+              <span class="covnum">0.30</span></td>
+          <td class="qs">q06, q09, q12, q16</td></tr>
+      <tr><td class="term">assurance-emploi</td>
+          <td class="cov"><span class="covbar"><span style="width:35%"></span></span>
+              <span class="covnum">0.35</span></td>
+          <td class="qs">q01, q02</td></tr>
+      <tr><td class="term">assurable</td>
+          <td class="cov"><span class="covbar"><span style="width:45%"></span></span>
+              <span class="covnum">0.45</span></td>
+          <td class="qs">q01, q02</td></tr>
+      <tr><td class="term">prestataire</td>
+          <td class="cov"><span class="covbar"><span style="width:50%"></span></span>
+              <span class="covnum">0.50</span></td>
+          <td class="qs">q01, q02</td></tr>
+      <tr><td class="term">conseiller</td>
+          <td class="cov"><span class="covbar"><span style="width:55%"></span></span>
+              <span class="covnum">0.55</span></td>
+          <td class="qs">q02, q05, q12, q13, q14</td></tr>
+      <tr><td class="term">minoritaire</td>
+          <td class="cov"><span class="covbar"><span style="width:60%"></span></span>
+              <span class="covnum">0.60</span></td>
+          <td class="qs">q06, q07, q11, q15</td></tr>
+      <tr><td class="term">foncière</td>
+          <td class="cov"><span class="covbar"><span style="width:65%"></span></span>
+              <span class="covnum">0.65</span></td>
+          <td class="qs">q03, q04, q05, q06, q08, q12, q14</td></tr>
+      <tr><td class="term">scolaire</td>
+          <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
+              <span class="covnum">0.70</span></td>
+          <td class="qs">q02, q05, q12, q13, q14</td></tr>
+      <tr><td class="term">péage</td>
+          <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
+              <span class="covnum">0.70</span></td>
+          <td class="qs">q06, q09, q12, q16</td></tr></tbody>
+</table></div></div>
+
+<h2>Divergent queries</h2>
+<p class="h2sub">Every query where the French output differs materially from the English.</p>
+<div class="card"><div class="scroll"><table>
+  <thead><tr><th>Query</th><th>Class</th><th>Detected issues</th><th>Note</th></tr></thead>
+  <tbody>
+      <tr><td class="qid">q03</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q04</td>
+          <td>lexical_ca_fr</td>
+          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">fabricated figure</span><span class="tag">register</span></td>
+          <td class="note">warming centre / halte-chaleur. The metropolitan gloss is &#x27;centre d&#x27;hebergement&#x27; or &#x27;salle chauffee&#x27;; halte-chaleur is Quebec/Ontario francophone usage.</td></tr>
+      <tr><td class="qid">q05</td>
+          <td>lexical_ca_fr</td>
+          <td class="issues"><span class="tag">register</span></td>
+          <td class="note">school trustee / conseiller scolaire. Metropolitan French has no equivalent office.</td></tr>
+      <tr><td class="qid">q07</td>
+          <td>lexical_ca_fr</td>
+          <td class="issues"><span class="tag">register</span><span class="tag">omission</span></td>
+          <td class="note">CLOSM is a Canadian statutory concept with no metropolitan analogue.</td></tr>
+      <tr><td class="qid">q13</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q14</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note">Multi-document synthesis. Divergence compounds when more than one document must be retrieved.</td></tr>
+      <tr><td class="qid">q15</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q16</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="note">commuter / banlieusard. Metropolitan French prefers &#x27;navetteur&#x27; or &#x27;usager&#x27;.</td></tr></tbody>
+</table></div></div>
+
+<h2>Per-query detail</h2>
+<p class="h2sub">Full result table — the accessible view of every number above.</p>
+<div class="card"><div class="scroll"><table>
+  <thead><tr><th>Query</th><th>EN answer</th><th class="num">EN P@1</th>
+    <th class="num">FR P@1</th><th class="num">EN grnd</th><th class="num">FR grnd</th>
+    <th class="num">FR reg</th><th class="num">FR cov</th></tr></thead>
+  <tbody>
+      <tr><td class="qid">q01</td>
+          <td class="qtext">Seasonal workers in Atlantic Canada now need 420 insurable hours to qualify for employment…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q02</td>
+          <td class="qtext">Quebec signed separately from the other nine provinces, securing an asymmetrical arrangeme…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q03</td>
+          <td class="qtext">Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.00</td></tr>
+      <tr><td class="qid">q04</td>
+          <td class="qtext">Municipalities opened eleven warming centres across the affected region for residents with…</td>
+          <td class="num">1.00</td><td class="num">0.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q05</td>
+          <td class="qtext">Trustees asked the province for a per-student funding increase of $410, as the four boards…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q06</td>
+          <td class="qtext">The authority deferred the increase after four municipalities objected. The toll was to ri…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q07</td>
+          <td class="qtext">A quarter of the $12 million touring fund expansion is reserved for official language mino…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.00</td>
+          <td class="num">0.67</td></tr>
+      <tr><td class="qid">q08</td>
+          <td class="qtext">Halifax had the tightest rental vacancy rate at 0.9 per cent, against a national rate of 1…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q09</td>
+          <td class="qtext">Thirty-eight federal judicial appointments remain vacant, with 22 in final review at the j…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q10</td>
+          <td class="qtext">The central bank held its policy rate at 3.75 per cent for a third consecutive time and si…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q11</td>
+          <td class="qtext">The snow crab quota for southern Gulf zones was cut 22 per cent to 18,400 tonnes, affectin…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q12</td>
+          <td class="qtext">The city&#x27;s $4.1 billion operating budget carries a 3.9 per cent residential property tax i…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q13</td>
+          <td class="qtext">Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, …</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q14</td>
+          <td class="qtext">School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, wh…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q15</td>
+          <td class="qtext">Federal supports include a $12 million touring fund expansion with a quarter reserved for …</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.67</td></tr>
+      <tr><td class="qid">q16</td>
+          <td class="qtext">An ice storm cut power to 180,000 homes and caused two deaths on Highway 417, while a plan…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr></tbody>
+</table></div></div>
+
+<footer>
+Equivalence threshold 0.08 on any dimension.
+Grounding is scored against gold context (fabrication) and against retrieved
+context (in-context support) separately, so a retrieval miss is not misreported
+as a hallucination. Offline mode uses a frozen corpus for determinism;
+<code>--live</code> generates answers through the Claude API instead.
+</footer>
+</div></body></html>
