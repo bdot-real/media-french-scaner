@@ -299,8 +299,15 @@ def render_lang(summary, rows, lang):
         cls = "num" if v < good else "num pass"
         return f'<td class="{cls}">{v:.2f}</td>'
 
+    DETAIL_CLEAN_SHOWN = 12
+    clean_total = sum(1 for r in detail_rows if r.get("severity", "none") == "none")
+    clean_shown = 0
     detail = ""
     for r in detail_rows:
+        if r.get("severity", "none") == "none":
+            clean_shown += 1
+            if clean_shown > DETAIL_CLEAN_SHOWN:
+                continue
         en, fr = r["langs"]["en"], r["langs"]["fr"]
         tier = r.get("severity", "none")
         badge = ("" if tier == "none" else
@@ -315,6 +322,14 @@ def render_lang(summary, rows, lang):
           {_cell(fr['numeric_grounding_gold']['score'])}
           {_cell(fr['fluency']['register']['score'])}
           {_cell(fr['coverage_vs_en']['score'])}</tr>"""
+
+    detail_note = T["detail_withheld"].format(
+        hidden=max(0, clean_total - DETAIL_CLEAN_SHOWN), total=len(detail_rows)
+    ) if clean_total > DETAIL_CLEAN_SHOWN else ""
+    # Never truncate silently: a capped table with no note reads as "this is
+    # everything", which is the same failure the harness flags elsewhere.
+    detail_note_html = (f'<p class="note-p">{detail_note}</p>'
+                        if detail_note else "")
 
     sv = summary.get("severity")
     parity = f"{sv['parity_rate']*100:.0f}%" if sv else "—"
@@ -403,6 +418,8 @@ def render_lang(summary, rows, lang):
     md = summary.get("media") or {}
     media_note = T["media_note"].format(bad=md.get("n_inaccessible", 0),
                                         total=md.get("n_assets", 0)) if md else ""
+    media_ok_note = (T["media_ok"].format(n=md["n_assets"] - md["n_inaccessible"])
+                     if md.get("n_assets") else "")
     mediablock = ""
     if md.get("n_assets"):
         kinds = "".join(
@@ -417,7 +434,7 @@ def render_lang(summary, rows, lang):
             f"<td>{''.join(f'<span class=chip data-s={esc(v)}>{esc(f)}: {esc(v)}</span>' for f, v in a['fields'].items() if v != 'n/a')}</td>"
             f"<td class=\"num\">{a['score']:.2f}</td>"
             f"<td class=\"note\">{esc(', '.join(a['a11y_failures']))}</td></tr>"
-            for a in md["assets"])
+            for a in md["assets"] if not a["accessible"])
         mediablock = f"""<h2>{T['h_media']}</h2>
 <p class="h2sub">{T['sub_media']}</p>
 <div class="card">
@@ -427,7 +444,7 @@ def render_lang(summary, rows, lang):
       <div class="sev-l">{T['a11y_lab']}</div></div>
     {kinds}
   </div>
-  <p class="note-p">{media_note}</p>
+  <p class="note-p">{media_note} {media_ok_note}</p>
   <div class="scroll"><table>
     <thead><tr><th>{T['th_asset']}</th><th>{T['th_kind']}</th><th>{T['th_fields']}</th>
       <th class="num">{T['th_score']}</th><th>{T['th_a11y']}</th></tr></thead>
@@ -436,6 +453,8 @@ def render_lang(summary, rows, lang):
 
     # --- editorial metadata ---
     ed = summary.get("editorial") or {}
+    _ed_ok = sum(1 for r in (ed.get("rows") or []) if r["score"] == 1.0)
+    ed_ok_note = T["ed_ok"].format(n=_ed_ok) if ed.get("n_docs") else ""
     edblock = ""
     if ed.get("n_docs"):
         erows = "".join(
@@ -444,7 +463,7 @@ def render_lang(summary, rows, lang):
             f"<td class=\"num\">{r['n_tags_fr']}/{r['n_tags_en']}</td>"
             f"<td><span class=chip data-s={esc(r['seo_state'])}>{esc(r['seo_state'])}</span></td>"
             f"<td class=\"num\">{r['score']:.2f}</td></tr>"
-            for r in ed["rows"])
+            for r in ed["rows"] if r["score"] < 1.0)
         edblock = f"""<h2>{T['h_ed']}</h2>
 <p class="h2sub">{T['sub_ed']}</p>
 <div class="card">
@@ -457,6 +476,7 @@ def render_lang(summary, rows, lang):
     <div class="sev-tile"><div class="sev-n">{ed['score']:.2f}</div>
       <div class="sev-l">{T['edpar_lab']}</div></div>
   </div>
+  <p class="note-p">{ed_ok_note}</p>
   <div class="scroll"><table>
     <thead><tr><th>{T['th_doc']}</th><th>{T['th_desk']}</th><th class="num">{T['th_tags']}</th>
       <th>{T['th_seo']}</th><th class="num">{T['th_score']}</th></tr></thead>
@@ -587,13 +607,6 @@ def render_lang(summary, rows, lang):
   <tbody>{lex}</tbody>
 </table></div></div>
 
-<h2>Divergent queries</h2>
-<p class="h2sub">Every query where the French output differs materially from the English.</p>
-<div class="card"><div class="scroll"><table>
-  <thead><tr><th>{T["th_query"]}</th><th>{T["th_class"]}</th><th>{T["th_issues"]}</th><th>{T["th_note"]}</th></tr></thead>
-  <tbody>{div}</tbody>
-</table></div></div>
-
 {driftblock}
 
 {mediablock}
@@ -611,7 +624,8 @@ def render_lang(summary, rows, lang):
     <th class="num">FR P@1</th><th class="num">EN grnd</th><th class="num">FR grnd</th>
     <th class="num">FR reg</th><th class="num">FR cov</th></tr></thead>
   <tbody>{detail}</tbody>
-</table></div></div>
+</table></div>
+  {detail_note_html}</div>
 
 <footer>{footer}</footer>
 </div>"""

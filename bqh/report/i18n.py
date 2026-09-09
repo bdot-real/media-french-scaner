@@ -72,6 +72,12 @@ STRINGS = {
         "sub_seg": ("An aggregate says whether the pipeline is failing; "
                     "segmentation says where, which is what routes it to an "
                     "owner."),
+        "media_ok": "The other {n} assets carry complete French descriptors.",
+        "ed_ok": "Only documents with a gap are listed; {n} others are complete.",
+        "detail_withheld": ("Divergent queries listed first. {hidden} further "
+                            "queries of {total} showed no divergence on any "
+                            "dimension and are omitted here; every one is in "
+                            "the JSON output."),
         "h_lang": "Terminology and answerability",
         "sub_lang": ("Consistency and refusal behaviour across the whole run — "
                      "failures that are invisible when answers are scored one "
@@ -211,6 +217,12 @@ STRINGS = {
         "sub_seg": ("Un résultat global indique si le flux échoue; la "
                     "segmentation indique où, ce qui permet d'en confier la "
                     "correction à une équipe."),
+        "media_ok": "Les {n} autres fichiers portent des descriptifs français complets.",
+        "ed_ok": "Seuls les documents présentant un écart figurent ici; {n} autres sont complets.",
+        "detail_withheld": ("Les requêtes divergentes figurent en tête. "
+                            "{hidden} autres requêtes sur {total} n'ont montré "
+                            "aucune divergence et sont omises ici; toutes se "
+                            "trouvent dans la sortie JSON."),
         "h_lang": "Terminologie et capacité de réponse",
         "sub_lang": ("Cohérence et comportement de refus sur l'ensemble du "
                      "cycle — des défaillances invisibles lorsque les réponses "
