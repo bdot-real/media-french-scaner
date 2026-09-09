@@ -78,7 +78,8 @@ STRINGS = {
                     "number into a fix."),
         "h_detail": "Per-query detail",
         "sub_detail": ("Full result table — the accessible view of every number "
-                       "above."),
+                       "above. Divergent queries first; perfect scores are "
+                       "dimmed so the values that differ carry the eye."),
         "th_dim": "Dimension", "th_status": "Status", "th_gap": "Gap",
         "th_query": "Query", "th_class": "Class", "th_issues": "Detected issues",
         "th_note": "Note", "th_asset": "Asset", "th_kind": "Kind",
@@ -197,7 +198,9 @@ STRINGS = {
                     "qui transforme un chiffre en correctif."),
         "h_detail": "Détail par requête",
         "sub_detail": ("Tableau complet des résultats — la version accessible de "
-                       "chacun des chiffres ci-dessus."),
+                       "chacun des chiffres ci-dessus. Les requêtes divergentes "
+                       "figurent en tête; les résultats parfaits sont atténués "
+                       "afin de mettre en évidence les valeurs qui diffèrent."),
         "th_dim": "Dimension", "th_status": "État", "th_gap": "Écart",
         "th_query": "Requête", "th_class": "Catégorie",
         "th_issues": "Problèmes détectés", "th_note": "Remarque",

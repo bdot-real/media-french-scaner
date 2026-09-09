@@ -285,17 +285,36 @@ def render_lang(summary, rows, lang):
           <td class="note">{esc(d['note'] or '')}</td></tr>"""
 
     # Per-query detail for the appendix table
+    # Sort divergent queries first. Sorted by query id, the 54 of 78 rows that
+    # are legitimately all-1.00 come first and the reader scrolls through a
+    # wall of identical values before reaching anything that varies — the
+    # findings end up buried by the clean majority.
+    _sev_rank = {"no_answer": 0, "wrong_fact": 1, "wrong_docs": 2,
+                 "omission": 3, "register": 4, "none": 5}
+    detail_rows = sorted(rows, key=lambda r: (_sev_rank.get(r.get("severity"), 5),
+                                              r["query_id"]))
+
+    def _cell(v, good=1.0):
+        """Recede perfect scores so the values that differ carry the eye."""
+        cls = "num" if v < good else "num pass"
+        return f'<td class="{cls}">{v:.2f}</td>'
+
     detail = ""
-    for r in rows:
+    for r in detail_rows:
         en, fr = r["langs"]["en"], r["langs"]["fr"]
+        tier = r.get("severity", "none")
+        badge = ("" if tier == "none" else
+                 f'<span class="rowtag r{_sev_rank.get(tier,5)}">'
+                 f'{esc(SEVL.get(tier, tier))}</span>')
         detail += f"""
-      <tr><td class="qid">{esc(r['query_id'])}</td>
+      <tr class="{'divrow' if tier != 'none' else 'cleanrow'}">
+          <td class="qid">{esc(r['query_id'])}{badge}</td>
           <td class="qtext">{esc(r['langs']['en']['answer'][:90])}…</td>
-          <td class="num">{en['p_at_1']:.2f}</td><td class="num">{fr['p_at_1']:.2f}</td>
-          <td class="num">{en['numeric_grounding_gold']['score']:.2f}</td>
-          <td class="num">{fr['numeric_grounding_gold']['score']:.2f}</td>
-          <td class="num">{fr['fluency']['register']['score']:.2f}</td>
-          <td class="num">{fr['coverage_vs_en']['score']:.2f}</td></tr>"""
+          {_cell(en['p_at_1'])}{_cell(fr['p_at_1'])}
+          {_cell(en['numeric_grounding_gold']['score'])}
+          {_cell(fr['numeric_grounding_gold']['score'])}
+          {_cell(fr['fluency']['register']['score'])}
+          {_cell(fr['coverage_vs_en']['score'])}</tr>"""
 
     sv = summary.get("severity")
     parity = f"{sv['parity_rate']*100:.0f}%" if sv else "—"
