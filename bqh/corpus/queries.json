@@ -5,7 +5,9 @@
       "query_id": "q01",
       "en": "How many insurable hours do seasonal workers need to qualify for EI?",
       "fr": "Combien d'heures assurables les travailleurs saisonniers doivent-ils accumuler pour être admissibles à l'assurance-emploi?",
-      "gold_docs": ["ei-001"],
+      "gold_docs": [
+        "ei-001"
+      ],
       "divergence_class": "lexical_ca_fr",
       "note": "EI / assurance-emploi. Metropolitan-tuned retrievers weight 'chomage' over the Canadian administrative term."
     },
@@ -13,29 +15,38 @@
       "query_id": "q02",
       "en": "Which province signed a separate health agreement with Ottawa?",
       "fr": "Quelle province a signé une entente distincte en santé avec Ottawa?",
-      "gold_docs": ["hlth-002"],
+      "gold_docs": [
+        "hlth-002"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q03",
       "en": "How much ice accumulated during the eastern Ontario storm?",
       "fr": "Quelle épaisseur de glace s'est accumulée pendant la tempête dans l'est de l'Ontario?",
-      "gold_docs": ["wx-003"],
+      "gold_docs": [
+        "wx-003"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q04",
       "en": "Where can people go to keep warm during the outage?",
       "fr": "Où les gens peuvent-ils aller se réchauffer pendant la panne?",
-      "gold_docs": ["wx-003"],
+      "gold_docs": [
+        "wx-003",
+        "hous-024"
+      ],
       "divergence_class": "lexical_ca_fr",
-      "note": "warming centre / halte-chaleur. The metropolitan gloss is 'centre d'hebergement' or 'salle chauffee'; halte-chaleur is Quebec/Ontario francophone usage."
+      "note": "warming centre / halte-chaleur. Both documents describe warming facilities; the Canadian term is weakly represented in FR retrieval."
     },
     {
       "query_id": "q05",
       "en": "What per-student funding increase did trustees request?",
       "fr": "Quelle hausse du financement par élève les conseillers scolaires ont-ils demandée?",
-      "gold_docs": ["edu-004"],
+      "gold_docs": [
+        "edu-004"
+      ],
       "divergence_class": "lexical_ca_fr",
       "note": "school trustee / conseiller scolaire. Metropolitan French has no equivalent office."
     },
@@ -43,14 +54,18 @@
       "query_id": "q06",
       "en": "Why was the bridge toll increase postponed?",
       "fr": "Pourquoi la hausse du péage du pont a-t-elle été reportée?",
-      "gold_docs": ["trns-005"],
+      "gold_docs": [
+        "trns-005"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q07",
       "en": "How much money is reserved for official language minority communities?",
       "fr": "Quelle somme est réservée aux communautés de langue officielle en situation minoritaire?",
-      "gold_docs": ["cult-006"],
+      "gold_docs": [
+        "cult-006"
+      ],
       "divergence_class": "lexical_ca_fr",
       "note": "CLOSM is a Canadian statutory concept with no metropolitan analogue."
     },
@@ -58,49 +73,64 @@
       "query_id": "q08",
       "en": "Which city had the tightest rental vacancy rate?",
       "fr": "Quelle ville affichait le taux d'inoccupation le plus serré?",
-      "gold_docs": ["hous-007"],
+      "gold_docs": [
+        "hous-007"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q09",
       "en": "How many federal judicial appointments are vacant?",
       "fr": "Combien de postes de juges de nomination fédérale sont vacants?",
-      "gold_docs": ["just-008"],
+      "gold_docs": [
+        "just-008"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q10",
       "en": "What did the central bank do with its policy rate?",
       "fr": "Qu'a fait la banque centrale de son taux directeur?",
-      "gold_docs": ["econ-009"],
+      "gold_docs": [
+        "econ-009"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q11",
       "en": "By how much was the snow crab quota reduced?",
       "fr": "De combien le quota de crabe des neiges a-t-il été réduit?",
-      "gold_docs": ["envr-010"],
+      "gold_docs": [
+        "envr-010"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q12",
       "en": "What property tax increase is in the city budget?",
       "fr": "Quelle hausse de taxe foncière prévoit le budget de la ville?",
-      "gold_docs": ["muni-011"],
+      "gold_docs": [
+        "muni-011"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q13",
       "en": "Did the government meet its francophone immigration target?",
       "fr": "Le gouvernement a-t-il atteint sa cible d'immigration francophone?",
-      "gold_docs": ["immi-012"],
+      "gold_docs": [
+        "immi-012"
+      ],
       "divergence_class": null
     },
     {
       "query_id": "q14",
       "en": "What are the funding pressures facing schools and cities?",
       "fr": "Quelles sont les pressions financières auxquelles font face les écoles et les villes?",
-      "gold_docs": ["edu-004", "muni-011"],
+      "gold_docs": [
+        "edu-004",
+        "muni-011"
+      ],
       "divergence_class": "multi_doc",
       "note": "Multi-document synthesis. Divergence compounds when more than one document must be retrieved."
     },
@@ -108,16 +138,175 @@
       "query_id": "q15",
       "en": "What federal supports exist for francophone communities?",
       "fr": "Quels sont les appuis fédéraux destinés aux communautés francophones?",
-      "gold_docs": ["cult-006", "immi-012"],
+      "gold_docs": [
+        "cult-006",
+        "immi-012"
+      ],
       "divergence_class": "multi_doc"
     },
     {
       "query_id": "q16",
-      "en": "How are weather and infrastructure affecting commuters?",
-      "fr": "Comment la météo et les infrastructures touchent-elles les banlieusards?",
-      "gold_docs": ["wx-003", "trns-005"],
+      "en": "How are the ice storm and bridge tolls affecting commuters?",
+      "fr": "Comment la tempête de verglas et le péage du pont touchent-ils les banlieusards?",
+      "gold_docs": [
+        "wx-003",
+        "trns-005"
+      ],
       "divergence_class": "multi_doc",
       "note": "commuter / banlieusard. Metropolitan French prefers 'navetteur' or 'usager'."
+    },
+    {
+      "query_id": "q17",
+      "en": "By how much was the dairy production quota reduced?",
+      "fr": "De combien le quota de production laitière a-t-il été réduit?",
+      "gold_docs": [
+        "agri-013"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q18",
+      "en": "How many households did the rural broadband program connect?",
+      "fr": "Combien de ménages le programme d'Internet haute vitesse en région a-t-il branchés?",
+      "gold_docs": [
+        "tech-014"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'Internet haute vitesse en region' vs metropolitan 'tres haut debit'."
+    },
+    {
+      "query_id": "q19",
+      "en": "How many emergency room closures were reported in rural hospitals?",
+      "fr": "Combien de fermetures d'urgences ont été signalées dans les hôpitaux ruraux?",
+      "gold_docs": [
+        "hlth-015"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q20",
+      "en": "How much area burned during the wildfire season?",
+      "fr": "Quelle superficie a brûlé pendant la saison des feux de forêt?",
+      "gold_docs": [
+        "envr-016"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q21",
+      "en": "How many use-of-force complaints did the oversight agency receive?",
+      "fr": "Combien de plaintes pour usage de la force l'organisme de surveillance a-t-il reçues?",
+      "gold_docs": [
+        "just-017"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q22",
+      "en": "What is the youth unemployment rate?",
+      "fr": "Quel est le taux de chômage chez les jeunes?",
+      "gold_docs": [
+        "econ-018"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q23",
+      "en": "How many journalist positions is the broadcaster adding?",
+      "fr": "Combien de postes de journalistes le diffuseur ajoute-t-il?",
+      "gold_docs": [
+        "cult-019"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q24",
+      "en": "How many residents are affected by the boil water advisory?",
+      "fr": "Combien de résidents sont touchés par l'avis d'ébullition?",
+      "gold_docs": [
+        "muni-020"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'avis d'ebullition' is the Canadian public-health term."
+    },
+    {
+      "query_id": "q25",
+      "en": "How many long-term drinking water advisories remain?",
+      "fr": "Combien d'avis à long terme sur l'eau potable demeurent en vigueur?",
+      "gold_docs": [
+        "indg-021"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q26",
+      "en": "What was the on-time performance of passenger rail?",
+      "fr": "Quelle a été la ponctualité du service ferroviaire voyageurs?",
+      "gold_docs": [
+        "trns-022"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q27",
+      "en": "How much did international student enrolment drop?",
+      "fr": "De combien les inscriptions d'étudiants étrangers ont-elles chuté?",
+      "gold_docs": [
+        "edu-023"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q28",
+      "en": "How many people were turned away from shelters nightly?",
+      "fr": "Combien de personnes ont été refusées chaque nuit dans les refuges?",
+      "gold_docs": [
+        "hous-024"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'refuge' / 'halte-chaleur' - shelter vocabulary is Canadian-specific."
+    },
+    {
+      "query_id": "q29",
+      "en": "Where can people go to keep warm and find shelter?",
+      "fr": "Où les gens peuvent-ils aller se réchauffer et trouver un refuge?",
+      "gold_docs": [
+        "wx-003",
+        "hous-024"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "Second halte-chaleur probe across two documents."
+    },
+    {
+      "query_id": "q30",
+      "en": "What infrastructure problems are affecting drinking water?",
+      "fr": "Quels problèmes d'infrastructure touchent l'eau potable?",
+      "gold_docs": [
+        "muni-020",
+        "indg-021"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q31",
+      "en": "How are labour shortages affecting public services?",
+      "fr": "Comment les pénuries de main-d'œuvre touchent-elles les services publics?",
+      "gold_docs": [
+        "hlth-015",
+        "tech-014"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q32",
+      "en": "What federal support exists for francophone and minority language media?",
+      "fr": "Quel soutien fédéral existe pour les médias francophones et de langue minoritaire?",
+      "gold_docs": [
+        "cult-019",
+        "cult-006"
+      ],
+      "divergence_class": "multi_doc",
+      "note": "CLOSM probe across two documents."
     }
   ]
 }

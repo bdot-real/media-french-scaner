@@ -45,7 +45,9 @@ REGISTER_RULES = [
     # CLOSM: flag any loose paraphrase of the statutory term. 'communautes
     # francophones' also silently drops anglophone minority communities in
     # Quebec, which the statutory term covers.
-    (r"\b(?:collectivités?|communautés?)\s+francophones?"
+    # Any noun + "francophone" standing in for the statutory CLOSM term:
+    # communautes, collectivites, marches, milieux, regions.
+    (r"\b(?:collectivités?|communautés?|marchés?|milieux|régions?)\s+francophones?"
      r"(?:\s+(?:minoritaires?|en\s+situation\s+minoritaire))?\b",
      "communauté de langue officielle en situation minoritaire", "high",
      "CLOSM is a statutory term; the paraphrase loses legal precision and "

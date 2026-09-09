@@ -3,83 +3,428 @@
   "generations": [
     {
       "query_id": "q01",
-      "en": {"answer": "Seasonal workers in Atlantic Canada now need 420 insurable hours to qualify for employment insurance, down from 700. The change takes effect January 8 and affects about 61,000 claimants."},
-      "fr": {"answer": "Les travailleurs saisonniers du Canada atlantique ont maintenant besoin de 420 heures assurables pour être admissibles à l'assurance-emploi, contre 700 auparavant. Le changement entre en vigueur le 8 janvier et touche environ 61 000 prestataires.", "defects": []}
+      "en": {
+        "answer": "Seasonal workers in Atlantic Canada now need 420 insurable hours to qualify for employment insurance, down from 700. The change takes effect January 8 and affects about 61,000 claimants."
+      },
+      "fr": {
+        "answer": "Les travailleurs saisonniers du Canada atlantique ont maintenant besoin de 420 heures assurables pour être admissibles à l'assurance-emploi, contre 700 auparavant. Le changement entre en vigueur le 8 janvier et touche environ 61 000 prestataires.",
+        "defects": []
+      }
     },
     {
       "query_id": "q02",
-      "en": {"answer": "Quebec signed separately from the other nine provinces, securing an asymmetrical arrangement that preserves provincial control over service delivery."},
-      "fr": {"answer": "Le Québec a signé séparément des neuf autres provinces, obtenant une entente asymétrique qui préserve le contrôle provincial sur la prestation des services.", "defects": []}
+      "en": {
+        "answer": "Quebec signed separately from the other nine provinces, securing an asymmetrical arrangement that preserves provincial control over service delivery."
+      },
+      "fr": {
+        "answer": "Le Québec a signé séparément des neuf autres provinces, obtenant une entente asymétrique qui préserve le contrôle provincial sur la prestation des services.",
+        "defects": []
+      }
     },
     {
       "query_id": "q03",
-      "en": {"answer": "Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm."},
-      "fr": {"answer": "Environnement Canada a mesuré 32 millimètres d'accumulation de glace à Kemptville pendant la tempête.", "defects": [{"type": "grounding", "detail": "Fabricated figure: 32 mm, source says 24 mm.", "span": "32 millimètres"}]}
+      "en": {
+        "answer": "Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm."
+      },
+      "fr": {
+        "answer": "Environnement Canada a mesuré 32 millimètres d'accumulation de glace à Kemptville pendant la tempête.",
+        "defects": [
+          {
+            "type": "grounding",
+            "detail": "Fabricated figure: 32 mm, source says 24 mm.",
+            "span": "32 millimètres"
+          }
+        ]
+      }
     },
     {
       "query_id": "q04",
-      "en": {"answer": "Municipalities opened eleven warming centres across the affected region for residents without power."},
-      "fr": {"answer": "Les municipalités ont ouvert onze centres d'hébergement chauffés dans la région touchée pour les résidents privés d'électricité.", "defects": [{"type": "register", "detail": "Metropolitan gloss 'centre d'hebergement chauffe' instead of Canadian 'halte-chaleur'.", "span": "centres d'hébergement chauffés"}]}
+      "en": {
+        "answer": "Municipalities opened eleven warming centres across the affected region for residents without power."
+      },
+      "fr": {
+        "answer": "Les municipalités ont ouvert onze centres d'hébergement chauffés dans la région touchée pour les résidents privés d'électricité.",
+        "defects": [
+          {
+            "type": "register",
+            "detail": "Metropolitan gloss 'centre d'hebergement chauffe' instead of Canadian 'halte-chaleur'.",
+            "span": "centres d'hébergement chauffés"
+          }
+        ]
+      }
     },
     {
       "query_id": "q05",
-      "en": {"answer": "Trustees asked the province for a per-student funding increase of $410, as the four boards face a combined $88 million shortfall."},
-      "fr": {"answer": "Les administrateurs ont demandé à la province une hausse du financement de 410 dollars par élève, alors que les quatre conseils font face à un manque à gagner combiné de 88 millions de dollars.", "defects": [{"type": "register", "detail": "'administrateurs' instead of the Canadian office title 'conseillers scolaires'.", "span": "administrateurs"}]}
+      "en": {
+        "answer": "Trustees asked the province for a per-student funding increase of $410, as the four boards face a combined $88 million shortfall."
+      },
+      "fr": {
+        "answer": "Les administrateurs ont demandé à la province une hausse du financement de 410 dollars par élève, alors que les quatre conseils font face à un manque à gagner combiné de 88 millions de dollars.",
+        "defects": [
+          {
+            "type": "register",
+            "detail": "'administrateurs' instead of the Canadian office title 'conseillers scolaires'.",
+            "span": "administrateurs"
+          }
+        ]
+      }
     },
     {
       "query_id": "q06",
-      "en": {"answer": "The authority deferred the increase after four municipalities objected. The toll was to rise to $4.75 from $3.90 on February 1, and consultations will run through the spring."},
-      "fr": {"answer": "L'administration a reporté la hausse après les objections de quatre municipalités. Le péage devait passer de 3,90 $ à 4,75 $ le 1er février, et des consultations auront lieu jusqu'au printemps.", "defects": []}
+      "en": {
+        "answer": "The authority deferred the increase after four municipalities objected. The toll was to rise to $4.75 from $3.90 on February 1, and consultations will run through the spring."
+      },
+      "fr": {
+        "answer": "L'administration a reporté la hausse après les objections de quatre municipalités. Le péage devait passer de 3,90 $ à 4,75 $ le 1er février, et des consultations auront lieu jusqu'au printemps.",
+        "defects": []
+      }
     },
     {
       "query_id": "q07",
-      "en": {"answer": "A quarter of the $12 million touring fund expansion is reserved for official language minority communities, which works out to $3 million over three years."},
-      "fr": {"answer": "Le quart de la bonification de 12 millions de dollars du fonds de tournée est réservé aux communautés francophones.", "defects": [{"type": "coverage", "detail": "Omits the $3M derivation present in EN; also narrows CLOSM to 'communautes francophones', dropping anglophone minority communities.", "span": "communautés francophones"}, {"type": "register", "detail": "Statutory term 'communautes de langue officielle en situation minoritaire' replaced by imprecise paraphrase.", "span": "communautés francophones"}]}
+      "en": {
+        "answer": "A quarter of the $12 million touring fund expansion is reserved for official language minority communities, which works out to $3 million over three years."
+      },
+      "fr": {
+        "answer": "Le quart de la bonification de 12 millions de dollars du fonds de tournée est réservé aux communautés francophones.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the $3M derivation present in EN; also narrows CLOSM to 'communautes francophones', dropping anglophone minority communities.",
+            "span": "communautés francophones"
+          },
+          {
+            "type": "register",
+            "detail": "Statutory term 'communautes de langue officielle en situation minoritaire' replaced by imprecise paraphrase.",
+            "span": "communautés francophones"
+          }
+        ]
+      }
     },
     {
       "query_id": "q08",
-      "en": {"answer": "Halifax had the tightest rental vacancy rate at 0.9 per cent, against a national rate of 1.5 per cent."},
-      "fr": {"answer": "Halifax affichait le taux d'inoccupation le plus serré, à 0,9 pour cent, contre un taux national de 1,5 pour cent.", "defects": []}
+      "en": {
+        "answer": "Halifax had the tightest rental vacancy rate at 0.9 per cent, against a national rate of 1.5 per cent."
+      },
+      "fr": {
+        "answer": "Halifax affichait le taux d'inoccupation le plus serré, à 0,9 pour cent, contre un taux national de 1,5 pour cent.",
+        "defects": []
+      }
     },
     {
       "query_id": "q09",
-      "en": {"answer": "Thirty-eight federal judicial appointments remain vacant, with 22 in final review at the justice department."},
-      "fr": {"answer": "Trente-huit postes de juges de nomination fédérale demeurent vacants, dont 22 à l'étape de l'examen final au ministère de la Justice.", "defects": []}
+      "en": {
+        "answer": "Thirty-eight federal judicial appointments remain vacant, with 22 in final review at the justice department."
+      },
+      "fr": {
+        "answer": "Trente-huit postes de juges de nomination fédérale demeurent vacants, dont 22 à l'étape de l'examen final au ministère de la Justice.",
+        "defects": []
+      }
     },
     {
       "query_id": "q10",
-      "en": {"answer": "The central bank held its policy rate at 3.75 per cent for a third consecutive time and signalled possible cuts later this year."},
-      "fr": {"answer": "La banque centrale a maintenu son taux directeur à 3,75 pour cent pour une troisième fois consécutive et a laissé entrevoir de possibles baisses plus tard cette année.", "defects": []}
+      "en": {
+        "answer": "The central bank held its policy rate at 3.75 per cent for a third consecutive time and signalled possible cuts later this year."
+      },
+      "fr": {
+        "answer": "La banque centrale a maintenu son taux directeur à 3,75 pour cent pour une troisième fois consécutive et a laissé entrevoir de possibles baisses plus tard cette année.",
+        "defects": []
+      }
     },
     {
       "query_id": "q11",
-      "en": {"answer": "The snow crab quota for southern Gulf zones was cut 22 per cent to 18,400 tonnes, affecting roughly 700 licence holders."},
-      "fr": {"answer": "Le quota de crabe des neiges pour les zones du sud du Golfe a été réduit de 22 pour cent, à 18 400 tonnes, ce qui touche environ 700 titulaires de permis.", "defects": []}
+      "en": {
+        "answer": "The snow crab quota for southern Gulf zones was cut 22 per cent to 18,400 tonnes, affecting roughly 700 licence holders."
+      },
+      "fr": {
+        "answer": "Le quota de crabe des neiges pour les zones du sud du Golfe a été réduit de 22 pour cent, à 18 400 tonnes, ce qui touche environ 700 titulaires de permis.",
+        "defects": []
+      }
     },
     {
       "query_id": "q12",
-      "en": {"answer": "The city's $4.1 billion operating budget carries a 3.9 per cent residential property tax increase, with a council vote set for February 26."},
-      "fr": {"answer": "Le budget de fonctionnement de 4,1 milliards de dollars de la ville comporte une hausse de 3,9 pour cent de la taxe foncière résidentielle, et le vote du conseil est prévu le 26 février.", "defects": []}
+      "en": {
+        "answer": "The city's $4.1 billion operating budget carries a 3.9 per cent residential property tax increase, with a council vote set for February 26."
+      },
+      "fr": {
+        "answer": "Le budget de fonctionnement de 4,1 milliards de dollars de la ville comporte une hausse de 3,9 pour cent de la taxe foncière résidentielle, et le vote du conseil est prévu le 26 février.",
+        "defects": []
+      }
     },
     {
       "query_id": "q13",
-      "en": {"answer": "Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, exceeding the 8 per cent target for a second year. The target rises to 10 per cent by 2027."},
-      "fr": {"answer": "Oui. Le ministère a admis 8,1 pour cent de personnes francophones parmi les nouveaux arrivants à l'extérieur du Québec, dépassant la cible de 8 pour cent pour une deuxième année.", "defects": [{"type": "coverage", "detail": "Omits the 2027 target increase to 10 per cent, present in the EN answer.", "span": null}]}
+      "en": {
+        "answer": "Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, exceeding the 8 per cent target for a second year. The target rises to 10 per cent by 2027."
+      },
+      "fr": {
+        "answer": "Oui. Le ministère a admis 8,1 pour cent de personnes francophones parmi les nouveaux arrivants à l'extérieur du Québec, dépassant la cible de 8 pour cent pour une deuxième année.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 2027 target increase to 10 per cent, present in the EN answer.",
+            "span": null
+          }
+        ]
+      }
     },
     {
       "query_id": "q14",
-      "en": {"answer": "School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target."},
-      "fr": {"answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.", "defects": [{"type": "coverage", "detail": "Second document (municipal budget) missing entirely; retrieval returned only the education doc.", "span": null}]}
+      "en": {
+        "answer": "School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target."
+      },
+      "fr": {
+        "answer": "Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Second document (municipal budget) missing entirely; retrieval returned only the education doc.",
+            "span": null
+          }
+        ]
+      }
     },
     {
       "query_id": "q15",
-      "en": {"answer": "Federal supports include a $12 million touring fund expansion with a quarter reserved for official language minority communities, and a $31 million increase in settlement funding for francophone agencies."},
-      "fr": {"answer": "Les appuis fédéraux comprennent une bonification de 12 millions de dollars du fonds de tournée et une hausse de 31 millions de dollars du financement de l'établissement pour les organismes francophones.", "defects": [{"type": "coverage", "detail": "Drops the CLOSM set-aside qualifier on the touring fund.", "span": null}]}
+      "en": {
+        "answer": "Federal supports include a $12 million touring fund expansion with a quarter reserved for official language minority communities, and a $31 million increase in settlement funding for francophone agencies."
+      },
+      "fr": {
+        "answer": "Les appuis fédéraux comprennent une bonification de 12 millions de dollars du fonds de tournée et une hausse de 31 millions de dollars du financement de l'établissement pour les organismes francophones.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Drops the CLOSM set-aside qualifier on the touring fund.",
+            "span": null
+          }
+        ]
+      }
     },
     {
       "query_id": "q16",
-      "en": {"answer": "An ice storm cut power to 180,000 homes and caused two deaths on Highway 417, while a planned bridge toll increase affecting 71,000 weekday crossings was deferred."},
-      "fr": {"answer": "Une tempête de verglas a privé 180 000 foyers d'électricité et causé deux décès sur l'autoroute 417. Une hausse de péage prévue touchant 71 000 traversées par jour de semaine a été reportée durant la fin de semaine.", "defects": [{"type": "grounding", "detail": "Adds 'durant la fin de semaine' - temporal claim not in either source document.", "span": "durant la fin de semaine"}]}
+      "en": {
+        "answer": "An ice storm cut power to 180,000 homes and caused two deaths on Highway 417, while a planned bridge toll increase affecting 71,000 weekday crossings was deferred."
+      },
+      "fr": {
+        "answer": "Une tempête de verglas a privé 180 000 foyers d'électricité et causé deux décès sur l'autoroute 417. Une hausse de péage prévue touchant 71 000 traversées par jour de semaine a été reportée durant la fin de semaine.",
+        "defects": [
+          {
+            "type": "grounding",
+            "detail": "Adds 'durant la fin de semaine' - temporal claim not in either source document.",
+            "span": "durant la fin de semaine"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q17",
+      "en": {
+        "answer": "The national dairy commission reduced production quota by 1.8 per cent, the first cut since 2015."
+      },
+      "fr": {
+        "answer": "La commission nationale du lait a réduit le quota de production de 1,8 pour cent, une première depuis 2015.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q18",
+      "en": {
+        "answer": "The rural broadband program connected 218,000 households last year against a target of 300,000."
+      },
+      "fr": {
+        "answer": "Le programme a branché 218 000 ménages l'an dernier, contre une cible de 300 000.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q19",
+      "en": {
+        "answer": "Rural hospitals reported 1,140 temporary emergency room closures last year, more than double the previous year."
+      },
+      "fr": {
+        "answer": "Les hôpitaux ruraux ont signalé 1 140 fermetures temporaires d'urgences l'an dernier.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 'more than double' comparison present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q20",
+      "en": {
+        "answer": "Wildfires consumed 4.2 million hectares this season, surpassing the 2023 record."
+      },
+      "fr": {
+        "answer": "Les feux de forêt ont détruit 5,1 millions d'hectares cette saison, dépassant le record de 2023.",
+        "defects": [
+          {
+            "type": "grounding",
+            "detail": "Fabricated figure: 5,1 million hectares, source says 4,2.",
+            "span": "5,1 millions"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q21",
+      "en": {
+        "answer": "The civilian oversight agency received 1,880 use-of-force complaints last year, up 12 per cent."
+      },
+      "fr": {
+        "answer": "L'organisme civil de surveillance a reçu 1 880 plaintes pour usage de la force l'an dernier, en hausse de 12 pour cent.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q22",
+      "en": {
+        "answer": "Youth unemployment reached 14.2 per cent, the highest since 2016, while the overall rate rose to 6.8 per cent."
+      },
+      "fr": {
+        "answer": "Le chômage chez les jeunes a atteint 14,2 pour cent, son plus haut niveau depuis 2016.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the overall 6.8 per cent rate present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q23",
+      "en": {
+        "answer": "The public broadcaster will add 60 journalist positions across four new regional bureaus."
+      },
+      "fr": {
+        "answer": "Le diffuseur public ajoutera 60 postes de journalistes dans quatre nouveaux bureaux régionaux.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q24",
+      "en": {
+        "answer": "The boil water advisory affects about 40,000 residents after a pressure loss at a treatment plant."
+      },
+      "fr": {
+        "answer": "L'avis d'ébullition touche environ 40 000 résidents à la suite d'une perte de pression à une usine de traitement.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q25",
+      "en": {
+        "answer": "Twelve long-term drinking water advisories remain in effect, down from 105 in 2015."
+      },
+      "fr": {
+        "answer": "Douze avis à long terme sur l'eau potable demeurent en vigueur, contre 105 en 2015.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q26",
+      "en": {
+        "answer": "On-time performance was 67 per cent, below the 80 per cent target, largely due to freight track sharing."
+      },
+      "fr": {
+        "answer": "La ponctualité s'est établie à 67 pour cent, sous la cible de 80 pour cent.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the freight track-sharing cause present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q27",
+      "en": {
+        "answer": "International student enrolment dropped 31 per cent following the federal permit cap."
+      },
+      "fr": {
+        "answer": "Les inscriptions d'étudiants étrangers ont chuté de 31 pour cent à la suite du plafond fédéral sur les permis.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q28",
+      "en": {
+        "answer": "Shelters turned away an average of 84 people nightly while operating at 96 per cent capacity."
+      },
+      "fr": {
+        "answer": "Les refuges ont refusé en moyenne 84 personnes par nuit, fonctionnant à 96 pour cent de leur capacité.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q29",
+      "en": {
+        "answer": "People can go to warming centres — municipalities opened eleven during the ice storm, and shelter warming centres operated 71 nights."
+      },
+      "fr": {
+        "answer": "Les gens peuvent se rendre dans des centres d'hébergement chauffés; les municipalités en ont ouvert onze pendant la tempête de verglas.",
+        "defects": [
+          {
+            "type": "register",
+            "detail": "Metropolitan gloss instead of Canadian 'halte-chaleur'.",
+            "span": "centres d'hébergement chauffés"
+          },
+          {
+            "type": "coverage",
+            "detail": "Omits the 71 nights of shelter warming-centre operation.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q30",
+      "en": {
+        "answer": "A treatment plant pressure loss triggered a boil water advisory for 40,000 residents, while twelve long-term advisories remain in First Nations communities."
+      },
+      "fr": {
+        "answer": "Une perte de pression a déclenché un avis d'ébullition pour 40 000 résidents, et douze avis à long terme demeurent en vigueur dans les communautés des Premières Nations.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q31",
+      "en": {
+        "answer": "Nursing vacancies drove 1,140 rural emergency room closures, while labour shortages delayed rural broadband connections."
+      },
+      "fr": {
+        "answer": "Les postes vacants en soins infirmiers ont causé 1 140 fermetures d'urgences en région.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Second document (broadband labour shortage) missing entirely.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q32",
+      "en": {
+        "answer": "The broadcaster is opening three bureaus in official language minority markets, and the arts council reserved a quarter of its $12 million touring fund for those communities."
+      },
+      "fr": {
+        "answer": "Le diffuseur ouvre trois bureaux dans des marchés francophones, et le conseil des arts réserve le quart de son fonds de tournée de 12 millions de dollars.",
+        "defects": [
+          {
+            "type": "register",
+            "detail": "'marches francophones' replaces the statutory CLOSM term, dropping anglophone minority communities.",
+            "span": "marchés francophones"
+          },
+          {
+            "type": "register",
+            "detail": "Drops the CLOSM set-aside qualifier; 'marches francophones' also excludes anglophone minority communities.",
+            "span": "marchés francophones"
+          }
+        ]
+      }
     }
   ]
 }

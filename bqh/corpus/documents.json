@@ -144,6 +144,150 @@
         "title": "La cible d'immigration francophone atteinte pour une deuxième année",
         "body": "Le ministère de l'Immigration a indiqué vendredi que 8,1 pour cent des personnes nouvellement arrivées à l'extérieur du Québec l'an dernier étaient francophones, dépassant sa cible de 8 pour cent pour une deuxième année. Des organismes communautaires ont salué ce résultat, mais ont noté que la rétention à l'extérieur des grands centres demeure faible. Le ministère portera la cible à 10 pour cent d'ici 2027. Le financement de l'établissement destiné aux organismes francophones a augmenté de 31 millions de dollars."
       }
+    },
+    {
+      "doc_id": "agri-013",
+      "topic": "agriculture",
+      "en": {
+        "title": "Dairy supply management quota cut for first time in a decade",
+        "body": "The national dairy commission reduced production quota by 1.8 per cent Monday, the first cut since 2015. Producers in Quebec and Ontario hold 71 per cent of national quota. The commission cited softening domestic demand and rising imports under recent trade agreements. Farm groups requested a transition payment of $240 million. The change takes effect August 1."
+      },
+      "fr": {
+        "title": "La Commission canadienne du lait réduit le quota pour la première fois en dix ans",
+        "body": "La commission nationale du lait a réduit lundi le quota de production de 1,8 pour cent, une première depuis 2015. Les producteurs du Québec et de l'Ontario détiennent 71 pour cent du quota national. La commission invoque un ralentissement de la demande intérieure et une hausse des importations découlant des récents accords commerciaux. Les groupes agricoles ont demandé un paiement de transition de 240 millions de dollars. Le changement entre en vigueur le 1er août."
+      }
+    },
+    {
+      "doc_id": "tech-014",
+      "topic": "broadband",
+      "en": {
+        "title": "Rural broadband program falls short of connection target",
+        "body": "The rural connectivity fund connected 218,000 households last year against a target of 300,000, the auditor reported Tuesday. Delays were concentrated in northern and remote communities. The program has spent $1.7 billion of its $2.75 billion allocation. Officials attributed shortfalls to labour shortages and permitting. The target date moved to 2030."
+      },
+      "fr": {
+        "title": "Le programme d'Internet haute vitesse en région rate sa cible de branchements",
+        "body": "Le fonds pour la connectivité en région a branché 218 000 ménages l'an dernier, contre une cible de 300 000, a indiqué mardi le vérificateur. Les retards se concentrent dans les communautés nordiques et éloignées. Le programme a dépensé 1,7 milliard de dollars sur une enveloppe de 2,75 milliards. Les responsables attribuent le manque à gagner à la pénurie de main-d'œuvre et aux permis. L'échéance est reportée à 2030."
+      }
+    },
+    {
+      "doc_id": "hlth-015",
+      "topic": "emergency_rooms",
+      "en": {
+        "title": "Emergency room closures double in rural hospitals",
+        "body": "Rural hospitals reported 1,140 temporary emergency room closures last year, more than double the previous year, according to data released Wednesday. Nursing vacancies drove most closures. The average closure lasted 14 hours. Three provinces now use travel nurse agencies for more than 20 per cent of rural shifts. The health ministry announced a $95 million retention bonus."
+      },
+      "fr": {
+        "title": "Les fermetures d'urgences doublent dans les hôpitaux ruraux",
+        "body": "Les hôpitaux ruraux ont déclaré 1 140 fermetures temporaires d'urgences l'an dernier, soit plus du double de l'année précédente, selon des données publiées mercredi. Les postes vacants en soins infirmiers expliquent la plupart des fermetures. La fermeture moyenne a duré 14 heures. Trois provinces ont maintenant recours à des agences de personnel infirmier voyageur pour plus de 20 pour cent des quarts de travail en région. Le ministère de la Santé a annoncé une prime de rétention de 95 millions de dollars."
+      }
+    },
+    {
+      "doc_id": "envr-016",
+      "topic": "wildfire",
+      "en": {
+        "title": "Wildfire season burns record area across three provinces",
+        "body": "Wildfires consumed 4.2 million hectares this season, surpassing the 2023 record, the interagency centre reported Friday. Evacuation orders affected 47 communities and about 32,000 residents. Firefighting costs reached $1.1 billion. Nine international crews assisted. The centre warned that the season now begins three weeks earlier than the twenty-year average."
+      },
+      "fr": {
+        "title": "La saison des feux de forêt brûle une superficie record dans trois provinces",
+        "body": "Les feux de forêt ont détruit 4,2 millions d'hectares cette saison, dépassant le record de 2023, a indiqué vendredi le centre interagences. Des ordres d'évacuation ont touché 47 communautés et environ 32 000 résidents. Les coûts de lutte contre les incendies ont atteint 1,1 milliard de dollars. Neuf équipes internationales ont prêté main-forte. Le centre a averti que la saison commence maintenant trois semaines plus tôt que la moyenne des vingt dernières années."
+      }
+    },
+    {
+      "doc_id": "just-017",
+      "topic": "policing",
+      "en": {
+        "title": "Police oversight agency reports rise in use-of-force complaints",
+        "body": "The civilian oversight agency received 1,880 use-of-force complaints last year, up 12 per cent. Investigations concluded within the twelve-month standard in 58 per cent of cases. The agency has 41 investigators for a caseload that grew 12 per cent. Its director requested eleven additional positions. Six cases were referred to prosecutors."
+      },
+      "fr": {
+        "title": "L'organisme de surveillance policière signale une hausse des plaintes pour usage de la force",
+        "body": "L'organisme civil de surveillance a reçu 1 880 plaintes pour usage de la force l'an dernier, en hausse de 12 pour cent. Les enquêtes se sont conclues dans le délai de douze mois dans 58 pour cent des cas. L'organisme compte 41 enquêteurs pour une charge de travail qui a augmenté de 12 pour cent. Sa directrice a demandé onze postes supplémentaires. Six dossiers ont été transmis aux procureurs."
+      }
+    },
+    {
+      "doc_id": "econ-018",
+      "topic": "labour",
+      "en": {
+        "title": "Unemployment rate edges up as youth hiring slows",
+        "body": "The unemployment rate rose to 6.8 per cent last month from 6.6 per cent, the statistics agency reported Friday. Youth unemployment reached 14.2 per cent, the highest since 2016. The economy shed 18,000 jobs, concentrated in retail and construction. Wage growth held at 3.9 per cent year over year. Quebec recorded the lowest provincial rate at 5.4 per cent."
+      },
+      "fr": {
+        "title": "Le taux de chômage augmente légèrement alors que l'embauche des jeunes ralentit",
+        "body": "Le taux de chômage est passé à 6,8 pour cent le mois dernier, contre 6,6 pour cent, a indiqué vendredi l'agence de la statistique. Le chômage chez les jeunes a atteint 14,2 pour cent, son plus haut niveau depuis 2016. L'économie a perdu 18 000 emplois, surtout dans le commerce de détail et la construction. La croissance des salaires s'est maintenue à 3,9 pour cent sur douze mois. Le Québec a enregistré le taux provincial le plus bas, à 5,4 pour cent."
+      }
+    },
+    {
+      "doc_id": "cult-019",
+      "topic": "broadcasting",
+      "en": {
+        "title": "Broadcaster expands regional newsrooms in official language minority markets",
+        "body": "The public broadcaster will open four regional bureaus and add 60 journalist positions, with three bureaus in official language minority markets. The expansion follows a regulatory condition on local programming. Annual cost is estimated at $22 million. The first bureau opens in September. A union representative welcomed the positions but questioned the funding source."
+      },
+      "fr": {
+        "title": "Le diffuseur élargit ses salles de nouvelles régionales dans les marchés de langue officielle en situation minoritaire",
+        "body": "Le diffuseur public ouvrira quatre bureaux régionaux et ajoutera 60 postes de journalistes, dont trois bureaux dans des marchés de langue officielle en situation minoritaire. Cette expansion découle d'une condition réglementaire sur la programmation locale. Le coût annuel est estimé à 22 millions de dollars. Le premier bureau ouvrira en septembre. Un représentant syndical a salué les postes, mais s'est interrogé sur la source du financement."
+      }
+    },
+    {
+      "doc_id": "muni-020",
+      "topic": "water",
+      "en": {
+        "title": "City issues boil water advisory affecting 40,000 residents",
+        "body": "The city issued a boil water advisory Thursday after a pressure loss at a treatment plant affected about 40,000 residents. Officials distributed bottled water at five sites. Testing results are expected within 48 hours. The plant was built in 1974 and is scheduled for replacement in 2028. It is the third advisory in eighteen months."
+      },
+      "fr": {
+        "title": "La ville émet un avis d'ébullition touchant 40 000 résidents",
+        "body": "La ville a émis jeudi un avis d'ébullition de l'eau après une perte de pression à une usine de traitement, touchant environ 40 000 résidents. Les autorités ont distribué de l'eau embouteillée à cinq endroits. Les résultats des analyses sont attendus d'ici 48 heures. L'usine a été construite en 1974 et son remplacement est prévu en 2028. Il s'agit du troisième avis en dix-huit mois."
+      }
+    },
+    {
+      "doc_id": "indg-021",
+      "topic": "indigenous",
+      "en": {
+        "title": "First Nations water infrastructure funding announced",
+        "body": "Ottawa announced $780 million Monday for water infrastructure in 34 First Nations communities. Twelve long-term drinking water advisories remain in effect, down from 105 in 2015. Construction begins next spring on the first eight projects. Chiefs called the funding necessary but overdue. Operations and maintenance funding rises 40 per cent."
+      },
+      "fr": {
+        "title": "Financement annoncé pour les infrastructures d'eau des Premières Nations",
+        "body": "Ottawa a annoncé lundi 780 millions de dollars pour les infrastructures d'eau dans 34 communautés des Premières Nations. Douze avis à long terme sur la qualité de l'eau potable demeurent en vigueur, contre 105 en 2015. La construction des huit premiers projets débutera au printemps prochain. Des chefs ont qualifié ce financement de nécessaire, mais tardif. Le financement du fonctionnement et de l'entretien augmente de 40 pour cent."
+      }
+    },
+    {
+      "doc_id": "trns-022",
+      "topic": "rail",
+      "en": {
+        "title": "Passenger rail service adds frequencies on the corridor",
+        "body": "The passenger rail operator will add six daily round trips on the Quebec City-Windsor corridor beginning in June. Ridership rose 14 per cent last year to 4.8 million passengers. On-time performance was 67 per cent, below the 80 per cent target, largely due to freight track sharing. A dedicated track proposal remains under review. Fares increase 2.5 per cent."
+      },
+      "fr": {
+        "title": "Le service ferroviaire voyageurs ajoute des fréquences dans le corridor",
+        "body": "L'exploitant ferroviaire de voyageurs ajoutera six allers-retours quotidiens dans le corridor Québec-Windsor à compter de juin. L'achalandage a augmenté de 14 pour cent l'an dernier pour atteindre 4,8 millions de passagers. La ponctualité s'est établie à 67 pour cent, sous la cible de 80 pour cent, en grande partie en raison du partage des voies avec le transport de marchandises. Un projet de voie réservée demeure à l'étude. Les tarifs augmentent de 2,5 pour cent."
+      }
+    },
+    {
+      "doc_id": "edu-023",
+      "topic": "postsecondary",
+      "en": {
+        "title": "International student cap reduces college enrolment",
+        "body": "Colleges reported a 31 per cent drop in international student enrolment following the federal permit cap. Twelve institutions announced program suspensions. International tuition represented 34 per cent of college revenue before the cap. Provincial operating grants have been frozen since 2019. Three colleges announced layoffs totalling 640 positions."
+      },
+      "fr": {
+        "title": "Le plafond d'étudiants étrangers réduit les effectifs collégiaux",
+        "body": "Les collèges ont signalé une baisse de 31 pour cent des inscriptions d'étudiants étrangers à la suite du plafond fédéral sur les permis. Douze établissements ont annoncé des suspensions de programmes. Les droits de scolarité des étudiants étrangers représentaient 34 pour cent des revenus des collèges avant le plafond. Les subventions provinciales de fonctionnement sont gelées depuis 2019. Trois collèges ont annoncé des mises à pied totalisant 640 postes."
+      }
+    },
+    {
+      "doc_id": "hous-024",
+      "topic": "homelessness",
+      "en": {
+        "title": "Shelter system reports capacity strain through winter",
+        "body": "Municipal shelters operated at 96 per cent capacity through the winter, turning away an average of 84 people nightly. The count identified 11,200 people experiencing homelessness, up 9 per cent. Warming centres operated 71 nights. The city approved 340 new supportive housing units. Advocates said the units fall short of the identified need."
+      },
+      "fr": {
+        "title": "Le réseau d'hébergement signale une pression sur les places durant l'hiver",
+        "body": "Les refuges municipaux ont fonctionné à 96 pour cent de leur capacité durant l'hiver, refusant en moyenne 84 personnes par nuit. Le dénombrement a recensé 11 200 personnes en situation d'itinérance, une hausse de 9 pour cent. Les haltes-chaleur ont fonctionné pendant 71 nuits. La ville a approuvé 340 nouveaux logements avec services de soutien. Des groupes de défense estiment que ces logements ne répondent pas aux besoins recensés."
+      }
     }
   ]
 }
