@@ -22,6 +22,7 @@ from metrics.retrieval import (BilingualRetriever, ndcg_at_k, precision_at_k,
 from metrics.grounding import (coverage_vs_reference, lexical_entailment,
                                numeric_grounding)
 from metrics.fluency import fluency_score
+from metrics import severity as sev
 
 CORPUS = Path(__file__).resolve().parent / "corpus"
 LANGS = ("en", "fr")
@@ -225,6 +226,7 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
 
             row["langs"][lang] = {
                 "retrieved": ranked,
+                "gold_docs": q["gold_docs"],
                 "answer": answer,
                 "p_at_1": precision_at_k(ranked, q["gold_docs"], 1),
                 "p_at_k": precision_at_k(ranked, q["gold_docs"], k),
@@ -246,7 +248,9 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
         row["langs"]["en"]["coverage_vs_en"] = {"score": 1.0, "missing": []}
         rows.append(row)
 
-    return rows, aggregate(rows)
+    summary = aggregate(rows)
+    summary["severity"] = sev.summarize(rows)
+    return rows, summary
 
 
 DIMENSIONS = [
@@ -313,6 +317,7 @@ def aggregate(rows):
 
 def print_report(summary):
     d = summary["dimensions"]
+    sv = summary.get("severity")
     print()
     print("  BILINGUAL QUALITY HARNESS — EN/FR equivalence")
     print(f"  {summary['n_queries']} queries · Canadian French · journalistic corpus")
@@ -326,6 +331,23 @@ def print_report(summary):
     print("  " + "-" * 62)
     print(f"  Equivalence index: {summary['equivalence_index']:.3f}"
           f"   (1.000 = perfect parity)")
+    if sv:
+        print()
+        print(f"  Service parity: {sv['parity_rate']*100:.0f}% of queries "
+              f"answered equivalently in French")
+        if sv["n_unserved"]:
+            print(f"  ** {sv['n_unserved']} quer{'y' if sv['n_unserved']==1 else 'ies'} "
+                  f"where the French reader was not served **")
+        order = [t for t in sev.TIERS if t != "none" and sv["counts"][t]]
+        if order:
+            print("  Severity: " + " · ".join(
+                f"{sev.TIER_META[t]['label']} {sv['counts'][t]}" for t in order))
+        for c in sv["cases"][:3]:
+            print()
+            print(f"  [{sev.TIER_META[c['tier']]['label'].upper()}] {c['query_id']}"
+                  f"  {c['reasons'][0] if c['reasons'] else ''}")
+            print(f"     EN: {c['en_answer'][:96]}")
+            print(f"     FR: {c['fr_answer'][:96]}")
     if summary["failing_dimensions"]:
         print(f"  Divergent dimensions: {', '.join(summary['failing_dimensions'])}")
     if summary["weak_lexicon"]:
