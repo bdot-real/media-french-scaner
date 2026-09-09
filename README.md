@@ -36,7 +36,22 @@ python3 bqh/harness.py --report report.html     # visual dashboard
 python3 tests/test_harness.py                   # detection validation (40 checks)
 python3 tests/test_register.py                  # register validation (22 checks)
 python3 tests/test_drift.py                     # MDR/QFCR validation (21 checks)
+python3 tests/test_i18n.py                      # French UI copy validation (16 checks)
 ```
+
+The report ships **both languages in one file** with a toggle. The French is
+Canadian French to Radio-Canada conventions — a report about Canadian French
+quality written in metropolitan French would undercut its own argument — so
+`tests/test_i18n.py` runs every French UI string through the harness's own
+register checker and drift detector. The tool holds its own copy to the
+standard it measures.
+
+Terminology: `repérage` (not `recherche d'information`) for retrieval,
+`pupitre` for desk, `véracité` for grounding, `taxe foncière` and `conseiller
+scolaire` for the Canadian administrative terms. Typography follows Canadian
+practice, including a non-breaking space before `:`. The toggle defaults to the
+browser's language, so a francophone reader opening the file cold lands on
+French.
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
 
