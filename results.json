@@ -509,6 +509,1568 @@
       "worst_tier": "wrong_fact",
       "n_unserved": 2
     },
+    "drift": {
+      "mdr": 0.5,
+      "substituted": 2,
+      "preserved": 2,
+      "rephrased": 13,
+      "scored_opportunities": 4,
+      "events": [
+        {
+          "type": "substituted",
+          "quebec": "halte-chaleur",
+          "france": "centre d'hébergement chauffé",
+          "n": 1,
+          "where": "q04"
+        },
+        {
+          "type": "substituted",
+          "quebec": "halte-chaleur",
+          "france": "centre d'hébergement chauffé",
+          "n": 1,
+          "where": "q29"
+        }
+      ]
+    },
+    "media": {
+      "n_assets": 11,
+      "score": 0.7182,
+      "a11y_rate": 0.5455,
+      "n_inaccessible": 5,
+      "assets": [
+        {
+          "asset_id": "img-wx-003-a",
+          "kind": "image",
+          "fields": {
+            "alt": "missing",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.3077,
+          "a11y_failures": [
+            "alt text missing"
+          ],
+          "accessible": false,
+          "doc_id": "wx-003",
+          "desk": "News"
+        },
+        {
+          "asset_id": "img-muni-020-a",
+          "kind": "image",
+          "fields": {
+            "alt": "missing",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.3077,
+          "a11y_failures": [
+            "alt text missing"
+          ],
+          "accessible": false,
+          "doc_id": "muni-020",
+          "desk": "Municipal"
+        },
+        {
+          "asset_id": "img-cult-019-a",
+          "kind": "image",
+          "fields": {
+            "alt": "untranslated",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.4808,
+          "a11y_failures": [
+            "alt text untranslated"
+          ],
+          "accessible": false,
+          "doc_id": "cult-019",
+          "desk": "Arts"
+        },
+        {
+          "asset_id": "vid-wx-003-b",
+          "kind": "video",
+          "fields": {
+            "alt": "ok",
+            "caption": "missing",
+            "credit": "ok",
+            "transcript": "missing"
+          },
+          "score": 0.5,
+          "a11y_failures": [
+            "transcript missing"
+          ],
+          "accessible": false,
+          "doc_id": "wx-003",
+          "desk": "News"
+        },
+        {
+          "asset_id": "vid-trns-022-a",
+          "kind": "video",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "missing"
+          },
+          "score": 0.65,
+          "a11y_failures": [
+            "transcript missing"
+          ],
+          "accessible": false,
+          "doc_id": "trns-022",
+          "desk": "Municipal"
+        },
+        {
+          "asset_id": "img-envr-016-a",
+          "kind": "image",
+          "fields": {
+            "alt": "truncated",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 0.6538,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "envr-016",
+          "desk": "News"
+        },
+        {
+          "asset_id": "img-ei-001-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "ei-001",
+          "desk": "Politics"
+        },
+        {
+          "asset_id": "img-hlth-002-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "hlth-002",
+          "desk": "Health"
+        },
+        {
+          "asset_id": "aud-envr-016-b",
+          "kind": "audio",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "ok"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "envr-016",
+          "desk": "News"
+        },
+        {
+          "asset_id": "img-indg-021-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "indg-021",
+          "desk": "Indigenous"
+        },
+        {
+          "asset_id": "img-hous-024-a",
+          "kind": "image",
+          "fields": {
+            "alt": "ok",
+            "caption": "ok",
+            "credit": "ok",
+            "transcript": "n/a"
+          },
+          "score": 1.0,
+          "a11y_failures": [],
+          "accessible": true,
+          "doc_id": "hous-024",
+          "desk": "Municipal"
+        }
+      ],
+      "by_kind": {
+        "audio": {
+          "n": 1,
+          "score": 1.0,
+          "inaccessible": 0
+        },
+        "image": {
+          "n": 8,
+          "score": 0.7188,
+          "inaccessible": 3
+        },
+        "video": {
+          "n": 2,
+          "score": 0.575,
+          "inaccessible": 2
+        }
+      },
+      "field_counts": {
+        "alt": {
+          "ok": 7,
+          "missing": 2,
+          "truncated": 1,
+          "untranslated": 1
+        },
+        "caption": {
+          "ok": 10,
+          "missing": 1
+        },
+        "credit": {
+          "ok": 11
+        },
+        "transcript": {
+          "missing": 2,
+          "ok": 1
+        }
+      }
+    },
+    "editorial": {
+      "n_docs": 10,
+      "score": 0.8707,
+      "n_missing_seo": 2,
+      "total_tags_dropped": 6,
+      "rows": [
+        {
+          "doc_id": "cult-019",
+          "desk": "Arts",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 2,
+          "tags_dropped": 2,
+          "seo_state": "missing",
+          "title_state": "ok",
+          "score": 0.45
+        },
+        {
+          "doc_id": "wx-003",
+          "desk": "News",
+          "tag_state": "reduced",
+          "n_tags_en": 5,
+          "n_tags_fr": 3,
+          "tags_dropped": 2,
+          "seo_state": "missing",
+          "title_state": "ok",
+          "score": 0.49
+        },
+        {
+          "doc_id": "cult-006",
+          "desk": "Arts",
+          "tag_state": "reduced",
+          "n_tags_en": 3,
+          "n_tags_fr": 2,
+          "tags_dropped": 1,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.8667
+        },
+        {
+          "doc_id": "trns-022",
+          "desk": "Municipal",
+          "tag_state": "reduced",
+          "n_tags_en": 4,
+          "n_tags_fr": 3,
+          "tags_dropped": 1,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 0.9
+        },
+        {
+          "doc_id": "ei-001",
+          "desk": "Politics",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "hlth-002",
+          "desk": "Health",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "envr-016",
+          "desk": "News",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "muni-020",
+          "desk": "Municipal",
+          "tag_state": "ok",
+          "n_tags_en": 3,
+          "n_tags_fr": 3,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "indg-021",
+          "desk": "Indigenous",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        },
+        {
+          "doc_id": "hous-024",
+          "desk": "Municipal",
+          "tag_state": "ok",
+          "n_tags_en": 4,
+          "n_tags_fr": 4,
+          "tags_dropped": 0,
+          "seo_state": "ok",
+          "title_state": "ok",
+          "score": 1.0
+        }
+      ]
+    },
+    "false_correction": {
+      "qfcr": 0.8,
+      "valid_forms_present": 15,
+      "forms_altered": 12,
+      "events": [
+        {
+          "quebec": "fin de semaine",
+          "replaced_with": "week-end",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf01"
+        },
+        {
+          "quebec": "courriel",
+          "replaced_with": "email",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf01"
+        },
+        {
+          "quebec": "halte-chaleur",
+          "replaced_with": "centre d'hébergement chauffé",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf01"
+        },
+        {
+          "quebec": "conseiller scolaire",
+          "replaced_with": "administrateur scolaire",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf02"
+        },
+        {
+          "quebec": "taxe foncière",
+          "replaced_with": "(removed/rephrased)",
+          "n": 1,
+          "to_france_form": false,
+          "where": "pf02"
+        },
+        {
+          "quebec": "assurance-emploi",
+          "replaced_with": "assurance chômage",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf03"
+        },
+        {
+          "quebec": "stationnement",
+          "replaced_with": "parking",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf04"
+        },
+        {
+          "quebec": "banlieusard",
+          "replaced_with": "navetteur",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf04"
+        },
+        {
+          "quebec": "argent comptant",
+          "replaced_with": "cash",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf04"
+        },
+        {
+          "quebec": "présentement",
+          "replaced_with": "actuellement",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf05"
+        },
+        {
+          "quebec": "dépanneur",
+          "replaced_with": "épicerie de nuit",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf05"
+        },
+        {
+          "quebec": "magasinage",
+          "replaced_with": "shopping",
+          "n": 1,
+          "to_france_form": true,
+          "where": "pf07"
+        }
+      ],
+      "n_probes": 8,
+      "per_probe": [
+        {
+          "probe_id": "pf01",
+          "qfcr": 1.0,
+          "valid_forms_present": 3,
+          "forms_altered": 3,
+          "events": [
+            {
+              "quebec": "fin de semaine",
+              "replaced_with": "week-end",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "courriel",
+              "replaced_with": "email",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "halte-chaleur",
+              "replaced_with": "centre d'hébergement chauffé",
+              "n": 1,
+              "to_france_form": true
+            }
+          ]
+        },
+        {
+          "probe_id": "pf02",
+          "qfcr": 1.0,
+          "valid_forms_present": 2,
+          "forms_altered": 2,
+          "events": [
+            {
+              "quebec": "conseiller scolaire",
+              "replaced_with": "administrateur scolaire",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "taxe foncière",
+              "replaced_with": "(removed/rephrased)",
+              "n": 1,
+              "to_france_form": false
+            }
+          ]
+        },
+        {
+          "probe_id": "pf03",
+          "qfcr": 1.0,
+          "valid_forms_present": 1,
+          "forms_altered": 1,
+          "events": [
+            {
+              "quebec": "assurance-emploi",
+              "replaced_with": "assurance chômage",
+              "n": 1,
+              "to_france_form": true
+            }
+          ]
+        },
+        {
+          "probe_id": "pf04",
+          "qfcr": 1.0,
+          "valid_forms_present": 3,
+          "forms_altered": 3,
+          "events": [
+            {
+              "quebec": "stationnement",
+              "replaced_with": "parking",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "banlieusard",
+              "replaced_with": "navetteur",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "argent comptant",
+              "replaced_with": "cash",
+              "n": 1,
+              "to_france_form": true
+            }
+          ]
+        },
+        {
+          "probe_id": "pf05",
+          "qfcr": 1.0,
+          "valid_forms_present": 2,
+          "forms_altered": 2,
+          "events": [
+            {
+              "quebec": "présentement",
+              "replaced_with": "actuellement",
+              "n": 1,
+              "to_france_form": true
+            },
+            {
+              "quebec": "dépanneur",
+              "replaced_with": "épicerie de nuit",
+              "n": 1,
+              "to_france_form": true
+            }
+          ]
+        },
+        {
+          "probe_id": "pf06",
+          "qfcr": 0.0,
+          "valid_forms_present": 1,
+          "forms_altered": 0,
+          "events": []
+        },
+        {
+          "probe_id": "pf07",
+          "qfcr": 1.0,
+          "valid_forms_present": 1,
+          "forms_altered": 1,
+          "events": [
+            {
+              "quebec": "magasinage",
+              "replaced_with": "shopping",
+              "n": 1,
+              "to_france_form": true
+            }
+          ]
+        },
+        {
+          "probe_id": "pf08",
+          "qfcr": 0.0,
+          "valid_forms_present": 2,
+          "forms_altered": 0,
+          "events": []
+        }
+      ]
+    },
+    "segments": {
+      "desk": [
+        {
+          "segment": "Arts",
+          "n": 4,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8334,
+            "gap": 0.1666
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "Education",
+          "n": 3,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "worst_gap": 0.3333
+        },
+        {
+          "segment": "News",
+          "n": 6,
+          "thin": false,
+          "unserved": 2,
+          "divergent": 4,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "worst_gap": 0.3333
+        },
+        {
+          "segment": "Politics",
+          "n": 3,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.7222,
+            "gap": 0.2778
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.2778
+        },
+        {
+          "segment": "Municipal",
+          "n": 10,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 4,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.9,
+            "gap": 0.1
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8741,
+            "gap": 0.1259
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.8,
+            "gap": 0.2
+          },
+          "worst_gap": 0.2
+        },
+        {
+          "segment": "Health",
+          "n": 3,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8889,
+            "gap": 0.1111
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.1111
+        },
+        {
+          "segment": "Technology",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9166,
+            "gap": 0.0834
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0834
+        },
+        {
+          "segment": "Business",
+          "n": 4,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9167,
+            "gap": 0.0833
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0833
+        },
+        {
+          "segment": "Indigenous",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "Justice",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        }
+      ],
+      "region": [
+        {
+          "segment": "West",
+          "n": 1,
+          "thin": true,
+          "unserved": 1,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "Ontario",
+          "n": 10,
+          "thin": false,
+          "unserved": 1,
+          "divergent": 5,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.9,
+            "gap": 0.1
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8,
+            "gap": 0.2
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.7,
+            "gap": 0.3
+          },
+          "worst_gap": 0.3
+        },
+        {
+          "segment": "Prairies",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.1667
+        },
+        {
+          "segment": "National",
+          "n": 14,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 5,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8929,
+            "gap": 0.1071
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.8571,
+            "gap": 0.1429
+          },
+          "worst_gap": 0.1429
+        },
+        {
+          "segment": "Quebec",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8703,
+            "gap": 0.1297
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.1297
+        },
+        {
+          "segment": "North",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9166,
+            "gap": 0.0834
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0834
+        },
+        {
+          "segment": "Atlantic",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "Outaouais",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        }
+      ],
+      "topic": [
+        {
+          "segment": "arts_funding",
+          "n": 3,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.7778,
+            "gap": 0.2222
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.3333,
+            "gap": 0.6667
+          },
+          "worst_gap": 0.6667
+        },
+        {
+          "segment": "homelessness",
+          "n": 3,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.3333,
+            "gap": 0.6667
+          },
+          "worst_gap": 0.6667
+        },
+        {
+          "segment": "broadcasting",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "school_funding",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.75,
+            "gap": 0.25
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "severe_weather",
+          "n": 4,
+          "thin": false,
+          "unserved": 1,
+          "divergent": 3,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 0.75,
+            "gap": 0.25
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.625,
+            "gap": 0.375
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "wildfire",
+          "n": 1,
+          "thin": true,
+          "unserved": 1,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.5,
+            "gap": 0.5
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.5
+        },
+        {
+          "segment": "immigration",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.5834,
+            "gap": 0.4166
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.4166
+        },
+        {
+          "segment": "labour",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.6667,
+            "gap": 0.3333
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.3333
+        },
+        {
+          "segment": "rail",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.7407,
+            "gap": 0.2593
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.2593
+        },
+        {
+          "segment": "municipal_budget",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.75,
+            "gap": 0.25
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.25
+        },
+        {
+          "segment": "emergency_rooms",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 2,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.8333,
+            "gap": 0.1667
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.1667
+        },
+        {
+          "segment": "broadband",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 1,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 0.9166,
+            "gap": 0.0834
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0834
+        },
+        {
+          "segment": "agriculture",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "courts",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "employment_insurance",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "fisheries",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "health_transfer",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "housing",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "indigenous",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "interest_rates",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "policing",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "postsecondary",
+          "n": 1,
+          "thin": true,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "transit_tolls",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        },
+        {
+          "segment": "water",
+          "n": 2,
+          "thin": false,
+          "unserved": 0,
+          "divergent": 0,
+          "retrieval_p_at_1": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "content_coverage": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "fluency_register": {
+            "en": 1.0,
+            "fr": 1.0,
+            "gap": 0.0
+          },
+          "worst_gap": 0.0
+        }
+      ]
+    },
     "mode": "offline",
     "retriever": "bm25 (modelled lexicon gap)"
   },
@@ -649,7 +2211,23 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 1,
+        "rephrased": 1,
+        "opportunities": 2,
+        "scored_opportunities": 1,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "assurance-emploi",
+            "france": "assurance chômage",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q02",
@@ -773,7 +2351,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q03",
@@ -908,7 +2495,23 @@
       "severity": "wrong_fact",
       "severity_reasons": [
         "French asserts unsupported figure(s): 32"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q04",
@@ -1059,7 +2662,29 @@
       "severity": "wrong_docs",
       "severity_reasons": [
         "Gold-document retrieval diverged (EN-only: wx-003)"
-      ]
+      ],
+      "drift": {
+        "mdr": 1.0,
+        "substituted": 1,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 2,
+        "scored_opportunities": 1,
+        "events": [
+          {
+            "type": "substituted",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          },
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q05",
@@ -1204,7 +2829,23 @@
       "severity": "register",
       "severity_reasons": [
         "Register: 'administrateurs' → 'conseiller scolaire'"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "conseiller scolaire",
+            "france": "administrateur scolaire",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q06",
@@ -1339,7 +2980,23 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "banlieusard",
+            "france": "navetteur",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q07",
@@ -1480,7 +3137,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English: 3"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q08",
@@ -1598,7 +3264,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q09",
@@ -1721,7 +3396,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q10",
@@ -1844,7 +3528,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q11",
@@ -1957,7 +3650,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q12",
@@ -2091,7 +3793,23 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 1,
+        "rephrased": 1,
+        "opportunities": 2,
+        "scored_opportunities": 1,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "taxe foncière",
+            "france": "impôt local",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q13",
@@ -2218,7 +3936,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English: 10, 2027"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q14",
@@ -2368,7 +4095,29 @@
       "severity": "wrong_docs",
       "severity_reasons": [
         "Gold-document retrieval diverged (FR-only: muni-011)"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 3,
+        "opportunities": 3,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "conseiller scolaire",
+            "france": "administrateur scolaire",
+            "n": 1
+          },
+          {
+            "type": "rephrased",
+            "quebec": "taxe foncière",
+            "france": "impôt local",
+            "n": 2
+          }
+        ]
+      }
     },
     {
       "query_id": "q15",
@@ -2508,7 +4257,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English: 0.25"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q16",
@@ -2655,7 +4413,29 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 2,
+        "opportunities": 2,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "banlieusard",
+            "france": "navetteur",
+            "n": 1
+          },
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q17",
@@ -2768,7 +4548,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q18",
@@ -2887,7 +4676,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q19",
@@ -3008,7 +4806,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q20",
@@ -3134,7 +4941,16 @@
       "severity": "wrong_fact",
       "severity_reasons": [
         "French asserts unsupported figure(s): 5.1"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q21",
@@ -3258,7 +5074,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q22",
@@ -3394,7 +5219,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English: 6.8"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q23",
@@ -3523,7 +5357,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q24",
@@ -3638,7 +5481,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q25",
@@ -3757,7 +5609,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q26",
@@ -3876,7 +5737,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q27",
@@ -3997,7 +5867,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q28",
@@ -4121,7 +6000,23 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 1,
+        "scored_opportunities": 0,
+        "events": [
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q29",
@@ -4268,7 +6163,29 @@
       "severity": "wrong_docs",
       "severity_reasons": [
         "Gold-document retrieval diverged (EN-only: wx-003)"
-      ]
+      ],
+      "drift": {
+        "mdr": 1.0,
+        "substituted": 1,
+        "preserved": 0,
+        "rephrased": 1,
+        "opportunities": 2,
+        "scored_opportunities": 1,
+        "events": [
+          {
+            "type": "substituted",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          },
+          {
+            "type": "rephrased",
+            "quebec": "halte-chaleur",
+            "france": "centre d'hébergement chauffé",
+            "n": 1
+          }
+        ]
+      }
     },
     {
       "query_id": "q30",
@@ -4388,7 +6305,16 @@
         }
       },
       "severity": "none",
-      "severity_reasons": []
+      "severity_reasons": [],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q31",
@@ -4538,7 +6464,16 @@
       "severity": "omission",
       "severity_reasons": [
         "French omits content present in English"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     },
     {
       "query_id": "q32",
@@ -4679,7 +6614,16 @@
       "severity": "register",
       "severity_reasons": [
         "Register: 'marchés francophones' → 'communauté de langue officielle en situation minoritaire'"
-      ]
+      ],
+      "drift": {
+        "mdr": 0.0,
+        "substituted": 0,
+        "preserved": 0,
+        "rephrased": 0,
+        "opportunities": 0,
+        "scored_opportunities": 0,
+        "events": []
+      }
     }
   ]
 }

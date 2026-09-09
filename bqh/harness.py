@@ -23,6 +23,10 @@ from metrics.grounding import (coverage_vs_reference, lexical_entailment,
                                numeric_grounding)
 from metrics.fluency import fluency_score
 from metrics import severity as sev
+from metrics.media import evaluate_editorial, evaluate_media
+from metrics.segments import segment
+from metrics.drift import (corpus_drift, corpus_false_correction,
+                           measure_drift, measure_false_correction)
 from metrics.embedding import (DEFAULT_MODEL, DEFAULT_HOST, EmbeddingRetriever,
                                check_available)
 
@@ -260,6 +264,31 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
 
     summary = aggregate(rows)
     summary["severity"] = sev.summarize(rows)
+    # Metadata surfaces are evaluated per document, independent of the query
+    # set: an image with no French alt text fails whether or not any query
+    # happens to retrieve its article.
+    # MDR: compare each French answer against the French source it drew on.
+    # The source text is the reference for which Quebec forms were available to
+    # preserve, so an opportunity only exists where the source used one.
+    drift_pairs = []
+    for r in rows:
+        src = " ".join(by_id[d]["fr"]["title"] + ". " + by_id[d]["fr"]["body"]
+                       for d in r["gold_docs"] if d in by_id)
+        out = r["langs"]["fr"]["answer"]
+        r["drift"] = measure_drift(src, out)
+        drift_pairs.append((src, out, r["query_id"]))
+    summary["drift"] = corpus_drift(drift_pairs)
+    summary["media"] = evaluate_media(docs)
+    summary["editorial"] = evaluate_editorial(docs)
+    # QFCR is a property of the proofreading step, not of the query set, so it
+    # runs on its own probe corpus regardless of --limit.
+    try:
+        import proofread
+        summary["false_correction"] = proofread.run(live=False)
+    except Exception as exc:  # never let a probe failure kill the main report
+        summary["false_correction"] = {"error": str(exc),
+                                       "qfcr": 0.0, "valid_forms_present": 0}
+    summary["segments"] = segment(rows, docs)
     return rows, summary
 
 
@@ -341,6 +370,39 @@ def print_report(summary):
     print("  " + "-" * 62)
     print(f"  Equivalence index: {summary['equivalence_index']:.3f}"
           f"   (1.000 = perfect parity)")
+    dr, qf = summary.get("drift"), summary.get("false_correction")
+    if dr and dr["scored_opportunities"]:
+        print()
+        print(f"  Metropolitan Drift Rate (MDR): {dr['mdr']*100:.1f}%"
+              f"   ({dr['substituted']} substituted / "
+              f"{dr['scored_opportunities']} scored opportunities)")
+        print(f"    {dr['rephrased']} rephrased — excluded from MDR "
+              f"(verbosity is not drift)")
+        for e in dr["events"][:4]:
+            print(f"    {e['quebec']} → {e['france']}  ×{e['n']}  ({e['where']})")
+    if qf and qf["valid_forms_present"]:
+        print(f"  Quebec False Correction Rate (QFCR): {qf['qfcr']*100:.1f}%"
+              f"   ({qf['forms_altered']} altered / "
+              f"{qf['valid_forms_present']} valid forms)")
+        for e in qf["events"][:4]:
+            print(f"    proofreader changed {e['quebec']} → {e['replaced_with']}"
+                  f"  ({e['where']})")
+    md, ed = summary.get("media"), summary.get("editorial")
+    if md and md["n_assets"]:
+        print()
+        print(f"  Media metadata: {md['n_assets']} assets · "
+              f"FR parity {md['score']:.3f} · "
+              f"{md['a11y_rate']*100:.0f}% accessible in French")
+        if md["n_inaccessible"]:
+            print(f"  ** {md['n_inaccessible']} assets inaccessible to French users **")
+            for a in md["assets"][:4]:
+                if not a["accessible"]:
+                    print(f"     {a['asset_id']:<20} {a['kind']:<6} "
+                          f"{', '.join(a['a11y_failures'])}")
+    if ed and ed["n_docs"]:
+        print(f"  Editorial metadata: FR parity {ed['score']:.3f} · "
+              f"{ed['total_tags_dropped']} tags dropped · "
+              f"{ed['n_missing_seo']} missing FR SEO descriptions")
     if sv:
         print()
         print(f"  Service parity: {sv['parity_rate']*100:.0f}% of queries "
@@ -360,6 +422,16 @@ def print_report(summary):
             print(f"     FR: {c['fr_answer'][:96]}")
     if summary["failing_dimensions"]:
         print(f"  Divergent dimensions: {', '.join(summary['failing_dimensions'])}")
+    segs = summary.get("segments", {})
+    if segs.get("desk"):
+        worst = [d for d in segs["desk"] if d["worst_gap"] > 0.01][:4]
+        if worst:
+            print()
+            print("  Widest divergence by desk:")
+            for d in worst:
+                thin = "  (thin: n=%d)" % d["n"] if d["thin"] else ""
+                print(f"    {d['segment']:<14} gap {d['worst_gap']:+.3f}   "
+                      f"{d['divergent']}/{d['n']} queries divergent{thin}")
     if summary["weak_lexicon"]:
         print()
         print("  Lexicon coverage gaps driving retrieval divergence:")

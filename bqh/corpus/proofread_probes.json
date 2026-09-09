@@ -1,0 +1,45 @@
+{
+  "_comment": "QFCR probes: correct Canadian French sent through a naive proofreading prompt. Any alteration of a Quebec form is a false correction by construction. proofread_offline records observed proofreader behaviour for deterministic demos.",
+  "probes": [
+    {
+      "probe_id": "pf01",
+      "text": "Les municipalités ont ouvert onze haltes-chaleur durant la fin de semaine. Les résidents peuvent envoyer un courriel pour obtenir de l'aide.",
+      "proofread_offline": "Les municipalités ont ouvert onze centres d'hébergement chauffés durant le week-end. Les résidents peuvent envoyer un e-mail pour obtenir de l'aide."
+    },
+    {
+      "probe_id": "pf02",
+      "text": "Les conseillers scolaires ont demandé une hausse de la taxe foncière pour financer le transport.",
+      "proofread_offline": "Les administrateurs scolaires ont demandé une hausse de l'impôt local pour financer le transport."
+    },
+    {
+      "probe_id": "pf03",
+      "text": "Les prestataires de l'assurance-emploi doivent accumuler 420 heures assurables.",
+      "proofread_offline": "Les prestataires de l'assurance chômage doivent accumuler 420 heures assurables."
+    },
+    {
+      "probe_id": "pf04",
+      "text": "Le stationnement est gratuit et les banlieusards peuvent payer en argent comptant.",
+      "proofread_offline": "Le parking est gratuit et les navetteurs peuvent payer en cash."
+    },
+    {
+      "probe_id": "pf05",
+      "text": "Présentement, le dépanneur du coin demeure ouvert malgré la tempête.",
+      "proofread_offline": "Actuellement, l'épicerie de nuit du coin demeure ouverte malgré la tempête."
+    },
+    {
+      "probe_id": "pf06",
+      "text": "Le programme de travail partagé aide les employeurs à éviter les mises à pied.",
+      "proofread_offline": "Le programme de travail partagé aide les employeurs à éviter les mises à pied."
+    },
+    {
+      "probe_id": "pf07",
+      "text": "Le magasinage des Fêtes commence tôt cette année selon les détaillants.",
+      "proofread_offline": "Le shopping des Fêtes commence tôt cette année selon les détaillants."
+    },
+    {
+      "probe_id": "pf08",
+      "text": "Les municipalités ont ouvert des haltes-chaleur et les conseillers scolaires ont annulé les cours.",
+      "proofread_offline": "Les municipalités ont ouvert des haltes-chaleur et les conseillers scolaires ont annulé les cours."
+    }
+  ]
+}

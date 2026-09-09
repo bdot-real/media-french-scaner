@@ -11,6 +11,41 @@
       "fr": {
         "title": "Des changements à l'assurance-emploi entrent en vigueur pour les travailleurs saisonniers",
         "body": "Ottawa a confirmé mardi que des changements au régime d'assurance-emploi entreront en vigueur le 8 janvier. Les travailleurs saisonniers du Canada atlantique auront besoin de 420 heures assurables pour être admissibles, contre 700 auparavant. Service Canada indique qu'environ 61 000 prestataires sont touchés. Le ministère traitera les demandes dans un délai de 28 jours. La ministre Carla Boisvert a affirmé que ce changement donne suite à un examen des taux de chômage régionaux mené en 2023."
+      },
+      "meta": {
+        "date": "2026-01-06",
+        "desk": "Politics",
+        "region": "Atlantic",
+        "author": "R. Comeau"
+      },
+      "media": [
+        {
+          "asset_id": "img-ei-001-a",
+          "kind": "image",
+          "en_alt": "A fisher in oilskins unloads crates on a wharf at dawn.",
+          "fr_alt": "Un pêcheur en ciré décharge des caisses sur un quai à l'aube.",
+          "en_caption": "Seasonal work on the Atlantic coast begins before sunrise.",
+          "fr_caption": "Le travail saisonnier sur la côte atlantique commence avant le lever du soleil.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "employment insurance",
+          "seasonal work",
+          "Atlantic Canada",
+          "federal government"
+        ],
+        "fr_tags": [
+          "assurance-emploi",
+          "travail saisonnier",
+          "Canada atlantique",
+          "gouvernement fédéral"
+        ],
+        "en_seo": "EI changes cut required insurable hours for seasonal workers to 420.",
+        "fr_seo": "Les changements à l'assurance-emploi réduisent à 420 les heures assurables requises."
       }
     },
     {
@@ -23,6 +58,41 @@
       "fr": {
         "title": "Les provinces signent une entente sur les transferts en santé après huit mois de pourparlers",
         "body": "Neuf provinces ont signé jeudi des ententes bilatérales en santé avec Ottawa, débloquant 46,2 milliards de dollars sur dix ans. Le Québec a signé séparément, obtenant une entente asymétrique qui préserve le contrôle provincial sur la prestation des services. Le ministre de la Santé, Daniel Okonkwo, a précisé que les fonds sont liés à des indicateurs communs sur les temps d'attente et l'accès à un médecin de famille. L'Alberta n'a pas signé. Les premiers versements sont prévus le 1er avril."
+      },
+      "meta": {
+        "date": "2026-02-12",
+        "desk": "Health",
+        "region": "National",
+        "author": "S. Nadeau"
+      },
+      "media": [
+        {
+          "asset_id": "img-hlth-002-a",
+          "kind": "image",
+          "en_alt": "A hospital corridor with an empty gurney.",
+          "fr_alt": "Un corridor d'hôpital avec une civière vide.",
+          "en_caption": "Provinces signed bilateral agreements Thursday.",
+          "fr_caption": "Les provinces ont signé des ententes bilatérales jeudi.",
+          "en_credit": "The Canadian Press",
+          "fr_credit": "La Presse Canadienne",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "health transfer",
+          "provinces",
+          "Quebec",
+          "federal funding"
+        ],
+        "fr_tags": [
+          "transferts en santé",
+          "provinces",
+          "Québec",
+          "financement fédéral"
+        ],
+        "en_seo": "Nine provinces signed bilateral health agreements worth $46.2 billion.",
+        "fr_seo": "Neuf provinces ont signé des ententes bilatérales en santé de 46,2 milliards de dollars."
       }
     },
     {
@@ -35,6 +105,53 @@
       "fr": {
         "title": "Une tempête de verglas prive 180 000 foyers d'électricité dans l'est de l'Ontario",
         "body": "La pluie verglaçante qui a commencé vendredi soir a privé d'électricité environ 180 000 foyers dans l'est de l'Ontario et en Outaouais. Hydro One a indiqué que les équipes prévoient rétablir la majeure partie du service d'ici dimanche soir. Les municipalités ont ouvert onze haltes-chaleur. Environnement Canada a mesuré 24 millimètres d'accumulation de glace à Kemptville. Deux décès liés aux conditions météorologiques ont été signalés sur l'autoroute 417."
+      },
+      "meta": {
+        "date": "2026-01-19",
+        "desk": "News",
+        "region": "Ontario",
+        "author": "J. Tremblay"
+      },
+      "media": [
+        {
+          "asset_id": "img-wx-003-a",
+          "kind": "image",
+          "en_alt": "Ice-covered power lines sag over a rural road.",
+          "fr_alt": null,
+          "en_caption": "Freezing rain coated lines across eastern Ontario.",
+          "fr_caption": "La pluie verglaçante a recouvert les lignes dans l'est de l'Ontario.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        },
+        {
+          "asset_id": "vid-wx-003-b",
+          "kind": "video",
+          "en_alt": "Crews clear a fallen tree from a highway.",
+          "fr_alt": "Des équipes dégagent un arbre tombé sur une autoroute.",
+          "en_caption": "Hydro crews worked through the night.",
+          "fr_caption": null,
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "We've got crews out across the region and we expect most customers restored by Sunday evening.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "ice storm",
+          "power outage",
+          "eastern Ontario",
+          "Hydro One",
+          "warming centres"
+        ],
+        "fr_tags": [
+          "verglas",
+          "panne de courant",
+          "est de l'Ontario"
+        ],
+        "en_seo": "Freezing rain left 180,000 homes without power across eastern Ontario.",
+        "fr_seo": null
       }
     },
     {
@@ -47,7 +164,14 @@
       "fr": {
         "title": "Des conseils scolaires préviennent d'un manque à gagner alors que les effectifs augmentent",
         "body": "Quatre conseils scolaires ont indiqué mercredi à un comité législatif qu'ils font face à un manque à gagner combiné de 88 millions de dollars l'an prochain. Les effectifs des quatre conseils ont augmenté de 5,4 pour cent, en grande partie en raison de l'arrivée de familles nouvellement installées. Les conseillers scolaires ont demandé une hausse du financement de 410 dollars par élève. La province a indiqué que son budget sera déposé en mars. Un conseil francophone a signalé la plus forte hausse, soit 9 pour cent."
-      }
+      },
+      "meta": {
+        "date": "2026-02-04",
+        "desk": "Education",
+        "region": "Ontario",
+        "author": "A. Okafor"
+      },
+      "media": []
     },
     {
       "doc_id": "trns-005",
@@ -59,7 +183,14 @@
       "fr": {
         "title": "La hausse du péage du pont est reportée après des objections municipales",
         "body": "L'administration du pont interprovincial a reporté lundi une hausse de péage prévue à la suite d'objections de quatre municipalités. Le tarif au poste de péage devait passer de 3,90 $ à 4,75 $ le 1er février. L'administration a indiqué qu'elle tiendra des consultations jusqu'au printemps. On compte en moyenne 71 000 véhicules en semaine. Un groupe de défense des banlieusards a qualifié le report de répit temporaire."
-      }
+      },
+      "meta": {
+        "date": "2026-01-27",
+        "desk": "Municipal",
+        "region": "Outaouais",
+        "author": "M. Lévesque"
+      },
+      "media": []
     },
     {
       "doc_id": "cult-006",
@@ -71,6 +202,26 @@
       "fr": {
         "title": "Le conseil des arts bonifie son fonds de tournée pour les communautés de langue officielle en situation minoritaire",
         "body": "Le conseil des arts a annoncé vendredi qu'il bonifiera son fonds de tournée de 12 millions de dollars sur trois ans, dont le quart est réservé aux communautés de langue officielle en situation minoritaire. Les demandes seront acceptées à compter du 15 mars. Le conseil a indiqué que 340 organismes avaient présenté une demande au dernier cycle et que 118 ont été financés. Les artistes des communautés nordiques auront droit à un supplément de déplacement."
+      },
+      "meta": {
+        "date": "2026-03-02",
+        "desk": "Arts",
+        "region": "National",
+        "author": "C. Bourgeois"
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "arts funding",
+          "official language minority communities",
+          "touring"
+        ],
+        "fr_tags": [
+          "financement des arts",
+          "tournée"
+        ],
+        "en_seo": "Arts council expands touring fund with a quarter reserved for OLMCs.",
+        "fr_seo": "Le conseil des arts bonifie son fonds de tournée."
       }
     },
     {
@@ -83,7 +234,14 @@
       "fr": {
         "title": "Le taux d'inoccupation des logements locatifs tombe à son plus bas en vingt ans",
         "body": "Le taux national d'inoccupation des logements locatifs est tombé à 1,5 pour cent l'an dernier, son plus bas niveau depuis 2001, selon le rapport annuel de la société d'habitation publié mardi. Le loyer moyen d'un logement de deux chambres a augmenté de 8,2 pour cent. L'inoccupation était la plus serrée à Halifax, à 0,9 pour cent. La société attribue cette baisse à une croissance démographique plus rapide que les mises en chantier achevées. Les mises en chantier de logements locatifs construits à cette fin ont augmenté de 4 pour cent."
-      }
+      },
+      "meta": {
+        "date": "2026-02-18",
+        "desk": "Business",
+        "region": "National",
+        "author": "D. Singh"
+      },
+      "media": []
     },
     {
       "doc_id": "just-008",
@@ -95,7 +253,14 @@
       "fr": {
         "title": "L'arriéré judiciaire s'alourdit alors que des postes de juges demeurent vacants",
         "body": "Le nombre de causes criminelles en attente depuis plus de 18 mois a augmenté de 14 pour cent l'an dernier, selon des données déposées jeudi. Trente-huit postes de juges de nomination fédérale demeurent vacants. Le juge en chef a averti que les délais risquent d'entraîner des arrêts de procédures en vertu de l'arrêt Jordan. Le ministère de la Justice a indiqué que 22 nominations sont à l'étape de l'examen final. Les cliniques d'aide juridique ont signalé une hausse de 30 pour cent des demandes."
-      }
+      },
+      "meta": {
+        "date": "2026-02-26",
+        "desk": "Justice",
+        "region": "National",
+        "author": "P. Gagnon"
+      },
+      "media": []
     },
     {
       "doc_id": "econ-009",
@@ -107,7 +272,14 @@
       "fr": {
         "title": "La banque centrale maintient son taux et laisse entrevoir des baisses cette année",
         "body": "La banque centrale a maintenu mercredi son taux directeur à 3,75 pour cent, un troisième maintien consécutif. Le gouverneur a affirmé que l'inflation est revenue à la cible de 2 pour cent en novembre. Les marchés prévoient maintenant deux baisses d'ici décembre. La banque a révisé à la baisse ses prévisions de croissance, à 1,4 pour cent. Les coûts du logement demeurent le principal facteur d'inflation."
-      }
+      },
+      "meta": {
+        "date": "2026-03-11",
+        "desk": "Business",
+        "region": "National",
+        "author": "D. Singh"
+      },
+      "media": []
     },
     {
       "doc_id": "envr-010",
@@ -119,7 +291,14 @@
       "fr": {
         "title": "Le quota de crabe des neiges réduit de 22 pour cent dans les zones du Golfe",
         "body": "Pêches et Océans a fixé lundi le quota de crabe des neiges pour les zones du sud du Golfe à 18 400 tonnes, une réduction de 22 pour cent. Le ministère invoque une baisse observée lors du relevé de la biomasse. Des groupes de pêcheurs ont qualifié la réduction de sévère et ont demandé une révision de la méthode de relevé. La saison s'ouvre à la fin avril. Environ 700 titulaires de permis sont touchés."
-      }
+      },
+      "meta": {
+        "date": "2026-03-16",
+        "desk": "News",
+        "region": "Atlantic",
+        "author": "R. Comeau"
+      },
+      "media": []
     },
     {
       "doc_id": "muni-011",
@@ -131,7 +310,14 @@
       "fr": {
         "title": "La ville dépose un budget prévoyant une hausse de 3,9 pour cent de la taxe foncière",
         "body": "Le conseil municipal a déposé mardi un budget de fonctionnement de 4,1 milliards de dollars comportant une hausse de 3,9 pour cent de la taxe foncière résidentielle. Le budget prévoit l'embauche de 40 chauffeurs de transport en commun et le financement de deux nouvelles succursales de bibliothèque. Le conseil se prononcera le 26 février. La directrice des finances a indiqué que les réserves représentent 8 pour cent des dépenses, sous la cible de 10 pour cent. La consultation publique se poursuit pendant trois semaines."
-      }
+      },
+      "meta": {
+        "date": "2026-02-21",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "M. Lévesque"
+      },
+      "media": []
     },
     {
       "doc_id": "immi-012",
@@ -143,7 +329,14 @@
       "fr": {
         "title": "La cible d'immigration francophone atteinte pour une deuxième année",
         "body": "Le ministère de l'Immigration a indiqué vendredi que 8,1 pour cent des personnes nouvellement arrivées à l'extérieur du Québec l'an dernier étaient francophones, dépassant sa cible de 8 pour cent pour une deuxième année. Des organismes communautaires ont salué ce résultat, mais ont noté que la rétention à l'extérieur des grands centres demeure faible. Le ministère portera la cible à 10 pour cent d'ici 2027. Le financement de l'établissement destiné aux organismes francophones a augmenté de 31 millions de dollars."
-      }
+      },
+      "meta": {
+        "date": "2026-03-05",
+        "desk": "Politics",
+        "region": "National",
+        "author": "S. Nadeau"
+      },
+      "media": []
     },
     {
       "doc_id": "agri-013",
@@ -155,7 +348,14 @@
       "fr": {
         "title": "La Commission canadienne du lait réduit le quota pour la première fois en dix ans",
         "body": "La commission nationale du lait a réduit lundi le quota de production de 1,8 pour cent, une première depuis 2015. Les producteurs du Québec et de l'Ontario détiennent 71 pour cent du quota national. La commission invoque un ralentissement de la demande intérieure et une hausse des importations découlant des récents accords commerciaux. Les groupes agricoles ont demandé un paiement de transition de 240 millions de dollars. Le changement entre en vigueur le 1er août."
-      }
+      },
+      "meta": {
+        "date": "2026-03-23",
+        "desk": "Business",
+        "region": "Quebec",
+        "author": "C. Bourgeois"
+      },
+      "media": []
     },
     {
       "doc_id": "tech-014",
@@ -167,7 +367,14 @@
       "fr": {
         "title": "Le programme d'Internet haute vitesse en région rate sa cible de branchements",
         "body": "Le fonds pour la connectivité en région a branché 218 000 ménages l'an dernier, contre une cible de 300 000, a indiqué mardi le vérificateur. Les retards se concentrent dans les communautés nordiques et éloignées. Le programme a dépensé 1,7 milliard de dollars sur une enveloppe de 2,75 milliards. Les responsables attribuent le manque à gagner à la pénurie de main-d'œuvre et aux permis. L'échéance est reportée à 2030."
-      }
+      },
+      "meta": {
+        "date": "2026-04-01",
+        "desk": "Technology",
+        "region": "North",
+        "author": "A. Okafor"
+      },
+      "media": []
     },
     {
       "doc_id": "hlth-015",
@@ -179,7 +386,14 @@
       "fr": {
         "title": "Les fermetures d'urgences doublent dans les hôpitaux ruraux",
         "body": "Les hôpitaux ruraux ont déclaré 1 140 fermetures temporaires d'urgences l'an dernier, soit plus du double de l'année précédente, selon des données publiées mercredi. Les postes vacants en soins infirmiers expliquent la plupart des fermetures. La fermeture moyenne a duré 14 heures. Trois provinces ont maintenant recours à des agences de personnel infirmier voyageur pour plus de 20 pour cent des quarts de travail en région. Le ministère de la Santé a annoncé une prime de rétention de 95 millions de dollars."
-      }
+      },
+      "meta": {
+        "date": "2026-04-08",
+        "desk": "Health",
+        "region": "Prairies",
+        "author": "S. Nadeau"
+      },
+      "media": []
     },
     {
       "doc_id": "envr-016",
@@ -191,6 +405,53 @@
       "fr": {
         "title": "La saison des feux de forêt brûle une superficie record dans trois provinces",
         "body": "Les feux de forêt ont détruit 4,2 millions d'hectares cette saison, dépassant le record de 2023, a indiqué vendredi le centre interagences. Des ordres d'évacuation ont touché 47 communautés et environ 32 000 résidents. Les coûts de lutte contre les incendies ont atteint 1,1 milliard de dollars. Neuf équipes internationales ont prêté main-forte. Le centre a averti que la saison commence maintenant trois semaines plus tôt que la moyenne des vingt dernières années."
+      },
+      "meta": {
+        "date": "2026-05-14",
+        "desk": "News",
+        "region": "West",
+        "author": "J. Tremblay"
+      },
+      "media": [
+        {
+          "asset_id": "img-envr-016-a",
+          "kind": "image",
+          "en_alt": "Smoke rises from a forested ridge as a water bomber passes overhead.",
+          "fr_alt": "Fumée",
+          "en_caption": "Wildfires burned 4.2 million hectares this season.",
+          "fr_caption": "Les feux ont brûlé 4,2 millions d'hectares cette saison.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        },
+        {
+          "asset_id": "aud-envr-016-b",
+          "kind": "audio",
+          "en_alt": "Interview with an evacuated resident.",
+          "fr_alt": "Entrevue avec une résidente évacuée.",
+          "en_caption": "Residents describe leaving with an hour's notice.",
+          "fr_caption": "Des résidents racontent leur départ en une heure.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "We had about an hour to pack. The smoke came over the ridge faster than anyone expected.",
+          "fr_transcript": "On a eu environ une heure pour faire nos valises. La fumée a franchi la crête plus vite que prévu."
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "wildfire",
+          "evacuation",
+          "climate",
+          "emergency response"
+        ],
+        "fr_tags": [
+          "feux de forêt",
+          "évacuation",
+          "climat",
+          "intervention d'urgence"
+        ],
+        "en_seo": "Wildfires burned a record 4.2 million hectares across three provinces.",
+        "fr_seo": "Les feux de forêt ont brûlé un record de 4,2 millions d'hectares."
       }
     },
     {
@@ -203,7 +464,14 @@
       "fr": {
         "title": "L'organisme de surveillance policière signale une hausse des plaintes pour usage de la force",
         "body": "L'organisme civil de surveillance a reçu 1 880 plaintes pour usage de la force l'an dernier, en hausse de 12 pour cent. Les enquêtes se sont conclues dans le délai de douze mois dans 58 pour cent des cas. L'organisme compte 41 enquêteurs pour une charge de travail qui a augmenté de 12 pour cent. Sa directrice a demandé onze postes supplémentaires. Six dossiers ont été transmis aux procureurs."
-      }
+      },
+      "meta": {
+        "date": "2026-04-17",
+        "desk": "Justice",
+        "region": "National",
+        "author": "P. Gagnon"
+      },
+      "media": []
     },
     {
       "doc_id": "econ-018",
@@ -215,7 +483,14 @@
       "fr": {
         "title": "Le taux de chômage augmente légèrement alors que l'embauche des jeunes ralentit",
         "body": "Le taux de chômage est passé à 6,8 pour cent le mois dernier, contre 6,6 pour cent, a indiqué vendredi l'agence de la statistique. Le chômage chez les jeunes a atteint 14,2 pour cent, son plus haut niveau depuis 2016. L'économie a perdu 18 000 emplois, surtout dans le commerce de détail et la construction. La croissance des salaires s'est maintenue à 3,9 pour cent sur douze mois. Le Québec a enregistré le taux provincial le plus bas, à 5,4 pour cent."
-      }
+      },
+      "meta": {
+        "date": "2026-05-02",
+        "desk": "Business",
+        "region": "National",
+        "author": "D. Singh"
+      },
+      "media": []
     },
     {
       "doc_id": "cult-019",
@@ -227,6 +502,39 @@
       "fr": {
         "title": "Le diffuseur élargit ses salles de nouvelles régionales dans les marchés de langue officielle en situation minoritaire",
         "body": "Le diffuseur public ouvrira quatre bureaux régionaux et ajoutera 60 postes de journalistes, dont trois bureaux dans des marchés de langue officielle en situation minoritaire. Cette expansion découle d'une condition réglementaire sur la programmation locale. Le coût annuel est estimé à 22 millions de dollars. Le premier bureau ouvrira en septembre. Un représentant syndical a salué les postes, mais s'est interrogé sur la source du financement."
+      },
+      "meta": {
+        "date": "2026-05-20",
+        "desk": "Arts",
+        "region": "National",
+        "author": "C. Bourgeois"
+      },
+      "media": [
+        {
+          "asset_id": "img-cult-019-a",
+          "kind": "image",
+          "en_alt": "A regional newsroom with three empty desks.",
+          "fr_alt": "A regional newsroom with three empty desks.",
+          "en_caption": "Four regional bureaus will open this year.",
+          "fr_caption": "Quatre bureaux régionaux ouvriront cette année.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "broadcasting",
+          "official language minority communities",
+          "local news",
+          "jobs"
+        ],
+        "fr_tags": [
+          "radiodiffusion",
+          "nouvelles locales"
+        ],
+        "en_seo": "Broadcaster adds 60 journalists across four regional bureaus.",
+        "fr_seo": null
       }
     },
     {
@@ -239,6 +547,39 @@
       "fr": {
         "title": "La ville émet un avis d'ébullition touchant 40 000 résidents",
         "body": "La ville a émis jeudi un avis d'ébullition de l'eau après une perte de pression à une usine de traitement, touchant environ 40 000 résidents. Les autorités ont distribué de l'eau embouteillée à cinq endroits. Les résultats des analyses sont attendus d'ici 48 heures. L'usine a été construite en 1974 et son remplacement est prévu en 2028. Il s'agit du troisième avis en dix-huit mois."
+      },
+      "meta": {
+        "date": "2026-05-27",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "M. Lévesque"
+      },
+      "media": [
+        {
+          "asset_id": "img-muni-020-a",
+          "kind": "image",
+          "en_alt": "Bottled water pallets stacked at a distribution site.",
+          "fr_alt": null,
+          "en_caption": "Officials distributed bottled water at five sites.",
+          "fr_caption": "Les autorités ont distribué de l'eau embouteillée à cinq endroits.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "boil water advisory",
+          "municipal water",
+          "infrastructure"
+        ],
+        "fr_tags": [
+          "avis d'ébullition",
+          "eau municipale",
+          "infrastructures"
+        ],
+        "en_seo": "A boil water advisory affects about 40,000 city residents.",
+        "fr_seo": "Un avis d'ébullition touche environ 40 000 résidents."
       }
     },
     {
@@ -251,6 +592,41 @@
       "fr": {
         "title": "Financement annoncé pour les infrastructures d'eau des Premières Nations",
         "body": "Ottawa a annoncé lundi 780 millions de dollars pour les infrastructures d'eau dans 34 communautés des Premières Nations. Douze avis à long terme sur la qualité de l'eau potable demeurent en vigueur, contre 105 en 2015. La construction des huit premiers projets débutera au printemps prochain. Des chefs ont qualifié ce financement de nécessaire, mais tardif. Le financement du fonctionnement et de l'entretien augmente de 40 pour cent."
+      },
+      "meta": {
+        "date": "2026-06-03",
+        "desk": "Indigenous",
+        "region": "National",
+        "author": "K. Whiteduck"
+      },
+      "media": [
+        {
+          "asset_id": "img-indg-021-a",
+          "kind": "image",
+          "en_alt": "A water treatment plant under construction beside a lake.",
+          "fr_alt": "Une usine de traitement de l'eau en construction au bord d'un lac.",
+          "en_caption": "Construction begins next spring on the first eight projects.",
+          "fr_caption": "La construction des huit premiers projets débutera au printemps prochain.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "First Nations",
+          "drinking water",
+          "infrastructure",
+          "federal funding"
+        ],
+        "fr_tags": [
+          "Premières Nations",
+          "eau potable",
+          "infrastructures",
+          "financement fédéral"
+        ],
+        "en_seo": "Ottawa announced $780 million for First Nations water infrastructure.",
+        "fr_seo": "Ottawa annonce 780 millions de dollars pour les infrastructures d'eau des Premières Nations."
       }
     },
     {
@@ -263,6 +639,41 @@
       "fr": {
         "title": "Le service ferroviaire voyageurs ajoute des fréquences dans le corridor",
         "body": "L'exploitant ferroviaire de voyageurs ajoutera six allers-retours quotidiens dans le corridor Québec-Windsor à compter de juin. L'achalandage a augmenté de 14 pour cent l'an dernier pour atteindre 4,8 millions de passagers. La ponctualité s'est établie à 67 pour cent, sous la cible de 80 pour cent, en grande partie en raison du partage des voies avec le transport de marchandises. Un projet de voie réservée demeure à l'étude. Les tarifs augmentent de 2,5 pour cent."
+      },
+      "meta": {
+        "date": "2026-06-11",
+        "desk": "Municipal",
+        "region": "Quebec",
+        "author": "M. Lévesque"
+      },
+      "media": [
+        {
+          "asset_id": "vid-trns-022-a",
+          "kind": "video",
+          "en_alt": "A passenger train pulls into a station platform.",
+          "fr_alt": "Un train de voyageurs entre en gare.",
+          "en_caption": "Six daily round trips will be added in June.",
+          "fr_caption": "Six allers-retours quotidiens s'ajouteront en juin.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "Ridership is up fourteen per cent and we're adding frequencies to match demand.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "passenger rail",
+          "corridor",
+          "transit",
+          "on-time performance"
+        ],
+        "fr_tags": [
+          "train de voyageurs",
+          "corridor",
+          "transport"
+        ],
+        "en_seo": "Passenger rail adds six daily round trips on the corridor.",
+        "fr_seo": "Le service ferroviaire ajoute six allers-retours quotidiens."
       }
     },
     {
@@ -275,7 +686,14 @@
       "fr": {
         "title": "Le plafond d'étudiants étrangers réduit les effectifs collégiaux",
         "body": "Les collèges ont signalé une baisse de 31 pour cent des inscriptions d'étudiants étrangers à la suite du plafond fédéral sur les permis. Douze établissements ont annoncé des suspensions de programmes. Les droits de scolarité des étudiants étrangers représentaient 34 pour cent des revenus des collèges avant le plafond. Les subventions provinciales de fonctionnement sont gelées depuis 2019. Trois collèges ont annoncé des mises à pied totalisant 640 postes."
-      }
+      },
+      "meta": {
+        "date": "2026-06-18",
+        "desk": "Education",
+        "region": "National",
+        "author": "A. Okafor"
+      },
+      "media": []
     },
     {
       "doc_id": "hous-024",
@@ -287,6 +705,41 @@
       "fr": {
         "title": "Le réseau d'hébergement signale une pression sur les places durant l'hiver",
         "body": "Les refuges municipaux ont fonctionné à 96 pour cent de leur capacité durant l'hiver, refusant en moyenne 84 personnes par nuit. Le dénombrement a recensé 11 200 personnes en situation d'itinérance, une hausse de 9 pour cent. Les haltes-chaleur ont fonctionné pendant 71 nuits. La ville a approuvé 340 nouveaux logements avec services de soutien. Des groupes de défense estiment que ces logements ne répondent pas aux besoins recensés."
+      },
+      "meta": {
+        "date": "2026-06-25",
+        "desk": "Municipal",
+        "region": "Ontario",
+        "author": "D. Singh"
+      },
+      "media": [
+        {
+          "asset_id": "img-hous-024-a",
+          "kind": "image",
+          "en_alt": "Cots lined up in a shelter gymnasium.",
+          "fr_alt": "Des lits de camp alignés dans le gymnase d'un refuge.",
+          "en_caption": "Shelters ran at 96 per cent capacity through the winter.",
+          "fr_caption": "Les refuges ont fonctionné à 96 pour cent de leur capacité durant l'hiver.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "homelessness",
+          "shelters",
+          "winter",
+          "supportive housing"
+        ],
+        "fr_tags": [
+          "itinérance",
+          "refuges",
+          "hiver",
+          "logement avec soutien"
+        ],
+        "en_seo": "Shelters ran at 96 per cent capacity, turning away 84 people nightly.",
+        "fr_seo": "Les refuges ont fonctionné à 96 pour cent, refusant 84 personnes par nuit."
       }
     }
   ]

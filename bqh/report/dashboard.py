@@ -146,6 +146,145 @@ def render(summary, rows):
   {cards}
 </div>"""
 
+    # --- MDR / QFCR ---
+    dr = summary.get("drift") or {}
+    qf = summary.get("false_correction") or {}
+    driftblock = ""
+    if dr.get("scored_opportunities") or qf.get("valid_forms_present"):
+        ev = "".join(
+            f"<tr><td class=\"term\">{esc(e['quebec'])}</td>"
+            f"<td class=\"term drift-to\">{esc(e['france'])}</td>"
+            f"<td class=\"num\">{e['n']}</td>"
+            f"<td class=\"qid\">{esc(e['where'])}</td></tr>"
+            for e in dr.get("events", [])[:8])
+        qev = "".join(
+            f"<tr><td class=\"term\">{esc(e['quebec'])}</td>"
+            f"<td class=\"term drift-to\">{esc(e['replaced_with'])}</td>"
+            f"<td class=\"num\">{e['n']}</td>"
+            f"<td class=\"qid\">{esc(e['where'])}</td></tr>"
+            for e in qf.get("events", [])[:8])
+        driftblock = f"""<h2>Metropolitan drift and false correction</h2>
+<p class="h2sub">Two Canadian-specific metrics generic French evaluation does not provide.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile {'r1' if dr.get('mdr',0) > 0.2 else ''}">
+      <div class="sev-n">{dr.get('mdr',0)*100:.0f}%</div>
+      <div class="sev-l">Metropolitan drift rate</div></div>
+    <div class="sev-tile {'r0' if qf.get('qfcr',0) > 0.5 else ''}">
+      <div class="sev-n">{qf.get('qfcr',0)*100:.0f}%</div>
+      <div class="sev-l">Quebec false correction rate</div></div>
+    <div class="sev-tile"><div class="sev-n">{dr.get('rephrased',0)}</div>
+      <div class="sev-l">Rephrased — not drift</div></div>
+  </div>
+  <p class="note-p"><strong>MDR</strong> counts substitutions only:
+  {dr.get('substituted',0)} of {dr.get('scored_opportunities',0)} scored
+  opportunities. {dr.get('rephrased',0)} cases where the model rephrased around
+  the term are excluded from the denominator entirely — verbosity is not drift,
+  and scoring it either way would bias the rate.</p>
+  {'<table><thead><tr><th>Quebec form</th><th>Replaced with</th><th class="num">n</th><th>Where</th></tr></thead><tbody>' + ev + '</tbody></table>' if ev else ''}
+  <p class="note-p" style="margin-top:16px"><strong>QFCR</strong> sends already-correct
+  Canadian French through a naive &ldquo;corrige ce texte&rdquo; prompt, so any
+  alteration is a false correction by construction:
+  {qf.get('forms_altered',0)} of {qf.get('valid_forms_present',0)} valid Quebec
+  forms were altered. A pipeline can generate perfect Canadian French and still
+  ship metropolitan copy because the proofreading step rewrote it.</p>
+  {'<table><thead><tr><th>Valid Quebec form</th><th>Proofreader changed it to</th><th class="num">n</th><th>Probe</th></tr></thead><tbody>' + qev + '</tbody></table>' if qev else ''}
+</div>"""
+
+    # --- media metadata ---
+    md = summary.get("media") or {}
+    mediablock = ""
+    if md.get("n_assets"):
+        kinds = "".join(
+            f'<div class="sev-tile {"r0" if v["inaccessible"] else ""}">'
+            f'<div class="sev-n">{v["n"]}</div>'
+            f'<div class="sev-l">{esc(k)} · {v["inaccessible"]} failing</div></div>'
+            for k, v in md["by_kind"].items())
+        arows = "".join(
+            f"<tr class=\"{'bad' if not a['accessible'] else ''}\">"
+            f"<td class=\"term\">{esc(a['asset_id'])}</td>"
+            f"<td>{esc(a['kind'])}</td>"
+            f"<td>{''.join(f'<span class=chip data-s={esc(v)}>{esc(f)}: {esc(v)}</span>' for f, v in a['fields'].items() if v != 'n/a')}</td>"
+            f"<td class=\"num\">{a['score']:.2f}</td>"
+            f"<td class=\"note\">{esc(', '.join(a['a11y_failures']))}</td></tr>"
+            for a in md["assets"])
+        mediablock = f"""<h2>Media metadata — images, video, audio</h2>
+<p class="h2sub">Alt text, captions, credits, and transcripts. The asset is reused
+ across both language sites; the descriptors often are not.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile {'r0' if md['a11y_rate'] < 0.9 else ''}">
+      <div class="sev-n">{md['a11y_rate']*100:.0f}%</div>
+      <div class="sev-l">Accessible in French</div></div>
+    {kinds}
+  </div>
+  <p class="note-p">{md['n_inaccessible']} of {md['n_assets']} assets leave French
+  users without access to content English users can reach — missing or
+  untranslated alt text, or a missing transcript on timed media. Untranslated is
+  worse than missing: it passes a null check in a CMS audit.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Asset</th><th>Kind</th><th>Field states</th>
+      <th class="num">Score</th><th>Accessibility</th></tr></thead>
+    <tbody>{arows}</tbody></table></div>
+</div>"""
+
+    # --- editorial metadata ---
+    ed = summary.get("editorial") or {}
+    edblock = ""
+    if ed.get("n_docs"):
+        erows = "".join(
+            f"<tr><td class=\"qid\">{esc(r['doc_id'])}</td>"
+            f"<td>{esc(r['desk'] or '')}</td>"
+            f"<td class=\"num\">{r['n_tags_fr']}/{r['n_tags_en']}</td>"
+            f"<td><span class=chip data-s={esc(r['seo_state'])}>{esc(r['seo_state'])}</span></td>"
+            f"<td class=\"num\">{r['score']:.2f}</td></tr>"
+            for r in ed["rows"])
+        edblock = f"""<h2>Editorial metadata</h2>
+<p class="h2sub">Tags and SEO descriptions drive archive retrieval and topic pages —
+ a French story tagged with fewer concepts is less discoverable in French.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile"><div class="sev-n">{ed['total_tags_dropped']}</div>
+      <div class="sev-l">Tags dropped in FR</div></div>
+    <div class="sev-tile {'r1' if ed['n_missing_seo'] else ''}">
+      <div class="sev-n">{ed['n_missing_seo']}</div>
+      <div class="sev-l">Missing FR SEO</div></div>
+    <div class="sev-tile"><div class="sev-n">{ed['score']:.2f}</div>
+      <div class="sev-l">Editorial parity</div></div>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>Document</th><th>Desk</th><th class="num">FR/EN tags</th>
+      <th>SEO description</th><th class="num">Score</th></tr></thead>
+    <tbody>{erows}</tbody></table></div>
+</div>"""
+
+    # --- segmentation ---
+    segs = summary.get("segments") or {}
+    segblock = ""
+    if segs:
+        tabs = ""
+        for axis in ("desk", "region", "topic"):
+            items = [x for x in segs.get(axis, []) if x["worst_gap"] > 0.001][:8]
+            if not items:
+                continue
+            srows = "".join(
+                f"<tr><td>{esc(x['segment'])}{' <span class=thin>thin</span>' if x['thin'] else ''}</td>"
+                f"<td class=\"num\">{x['n']}</td>"
+                f"<td class=\"num\">{x['divergent']}</td>"
+                f"<td class=\"num\">{x['unserved']}</td>"
+                f"<td class=\"num gap\">{x['worst_gap']:+.3f}</td></tr>"
+                for x in items)
+            tabs += f"""<div class="segcol"><h3>By {esc(axis)}</h3><table>
+              <thead><tr><th>{esc(axis).title()}</th><th class="num">n</th>
+                <th class="num">Div.</th><th class="num">Unsvd</th>
+                <th class="num">Gap</th></tr></thead>
+              <tbody>{srows}</tbody></table></div>"""
+        if tabs:
+            segblock = f"""<h2>Where divergence concentrates</h2>
+<p class="h2sub">An aggregate says whether the pipeline is failing; segmentation says
+ where, which is what routes it to an owner.</p>
+<div class="card"><div class="segrow">{tabs}</div></div>"""
+
     mode = summary.get("mode", "offline")
     worst_label = DIM_LABELS.get(worst[0], (worst[0], ""))[0]
 
@@ -272,6 +411,23 @@ td.gap{{color:var(--text-secondary)}}
   padding-top:2px;letter-spacing:.05em}}
 .ab-l.fr{{color:var(--series-fr)}}
 .ab-t{{color:var(--text-secondary)}}
+.note-p{{font-size:13px;color:var(--text-secondary);margin:12px 0 4px;max-width:78ch}}
+.drift-to{{color:var(--series-fr)}}
+.chip{{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;
+  margin:1px 3px 1px 0;border:1px solid var(--border);color:var(--text-secondary)}}
+.chip[data-s="missing"]{{color:var(--critical);
+  border-color:color-mix(in srgb,var(--critical) 45%,transparent)}}
+.chip[data-s="untranslated"]{{color:var(--critical);
+  border-color:color-mix(in srgb,var(--critical) 45%,transparent)}}
+.chip[data-s="truncated"]{{color:var(--series-fr);
+  border-color:color-mix(in srgb,var(--series-fr) 45%,transparent)}}
+tr.bad td{{background:color-mix(in srgb,var(--critical) 6%,transparent)}}
+.segrow{{display:flex;gap:22px;flex-wrap:wrap}}
+.segcol{{flex:1;min-width:250px}}
+.segcol h3{{font-size:12px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text-muted);margin:0 0 6px}}
+.thin{{font-size:10px;color:var(--text-muted);border:1px solid var(--border);
+  border-radius:3px;padding:0 4px}}
 footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   font-size:12px;color:var(--text-muted)}}
 @media (max-width:720px){{
@@ -338,6 +494,14 @@ footer{{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   <thead><tr><th>Query</th><th>Class</th><th>Detected issues</th><th>Note</th></tr></thead>
   <tbody>{div}</tbody>
 </table></div></div>
+
+{driftblock}
+
+{mediablock}
+
+{edblock}
+
+{segblock}
 
 <h2>Per-query detail</h2>
 <p class="h2sub">Full result table — the accessible view of every number above.</p>

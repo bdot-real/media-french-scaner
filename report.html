@@ -121,6 +121,23 @@ td.gap{color:var(--text-secondary)}
   padding-top:2px;letter-spacing:.05em}
 .ab-l.fr{color:var(--series-fr)}
 .ab-t{color:var(--text-secondary)}
+.note-p{font-size:13px;color:var(--text-secondary);margin:12px 0 4px;max-width:78ch}
+.drift-to{color:var(--series-fr)}
+.chip{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:4px;
+  margin:1px 3px 1px 0;border:1px solid var(--border);color:var(--text-secondary)}
+.chip[data-s="missing"]{color:var(--critical);
+  border-color:color-mix(in srgb,var(--critical) 45%,transparent)}
+.chip[data-s="untranslated"]{color:var(--critical);
+  border-color:color-mix(in srgb,var(--critical) 45%,transparent)}
+.chip[data-s="truncated"]{color:var(--series-fr);
+  border-color:color-mix(in srgb,var(--series-fr) 45%,transparent)}
+tr.bad td{background:color-mix(in srgb,var(--critical) 6%,transparent)}
+.segrow{display:flex;gap:22px;flex-wrap:wrap}
+.segcol{flex:1;min-width:250px}
+.segcol h3{font-size:12px;text-transform:uppercase;letter-spacing:.07em;
+  color:var(--text-muted);margin:0 0 6px}
+.thin{font-size:10px;color:var(--text-muted);border:1px solid var(--border);
+  border-radius:3px;padding:0 4px}
 footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   font-size:12px;color:var(--text-muted)}
 @media (max-width:720px){
@@ -495,6 +512,90 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="issues"><span class="tag">register</span></td>
           <td class="note">CLOSM probe across two documents.</td></tr></tbody>
 </table></div></div>
+
+<h2>Metropolitan drift and false correction</h2>
+<p class="h2sub">Two Canadian-specific metrics generic French evaluation does not provide.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile r1">
+      <div class="sev-n">50%</div>
+      <div class="sev-l">Metropolitan drift rate</div></div>
+    <div class="sev-tile r0">
+      <div class="sev-n">80%</div>
+      <div class="sev-l">Quebec false correction rate</div></div>
+    <div class="sev-tile"><div class="sev-n">13</div>
+      <div class="sev-l">Rephrased — not drift</div></div>
+  </div>
+  <p class="note-p"><strong>MDR</strong> counts substitutions only:
+  2 of 4 scored
+  opportunities. 13 cases where the model rephrased around
+  the term are excluded from the denominator entirely — verbosity is not drift,
+  and scoring it either way would bias the rate.</p>
+  <table><thead><tr><th>Quebec form</th><th>Replaced with</th><th class="num">n</th><th>Where</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr></tbody></table>
+  <p class="note-p" style="margin-top:16px"><strong>QFCR</strong> sends already-correct
+  Canadian French through a naive &ldquo;corrige ce texte&rdquo; prompt, so any
+  alteration is a false correction by construction:
+  12 of 15 valid Quebec
+  forms were altered. A pipeline can generate perfect Canadian French and still
+  ship metropolitan copy because the proofreading step rewrote it.</p>
+  <table><thead><tr><th>Valid Quebec form</th><th>Proofreader changed it to</th><th class="num">n</th><th>Probe</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
+</div>
+
+<h2>Media metadata — images, video, audio</h2>
+<p class="h2sub">Alt text, captions, credits, and transcripts. The asset is reused
+ across both language sites; the descriptors often are not.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile r0">
+      <div class="sev-n">55%</div>
+      <div class="sev-l">Accessible in French</div></div>
+    <div class="sev-tile "><div class="sev-n">1</div><div class="sev-l">audio · 0 failing</div></div><div class="sev-tile r0"><div class="sev-n">8</div><div class="sev-l">image · 3 failing</div></div><div class="sev-tile r0"><div class="sev-n">2</div><div class="sev-l">video · 2 failing</div></div>
+  </div>
+  <p class="note-p">5 of 11 assets leave French
+  users without access to content English users can reach — missing or
+  untranslated alt text, or a missing transcript on timed media. Untranslated is
+  worse than missing: it passes a null check in a CMS audit.</p>
+  <div class="scroll"><table>
+    <thead><tr><th>Asset</th><th>Kind</th><th>Field states</th>
+      <th class="num">Score</th><th>Accessibility</th></tr></thead>
+    <tbody><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
+</div>
+
+<h2>Editorial metadata</h2>
+<p class="h2sub">Tags and SEO descriptions drive archive retrieval and topic pages —
+ a French story tagged with fewer concepts is less discoverable in French.</p>
+<div class="card">
+  <div class="sev-row">
+    <div class="sev-tile"><div class="sev-n">6</div>
+      <div class="sev-l">Tags dropped in FR</div></div>
+    <div class="sev-tile r1">
+      <div class="sev-n">2</div>
+      <div class="sev-l">Missing FR SEO</div></div>
+    <div class="sev-tile"><div class="sev-n">0.87</div>
+      <div class="sev-l">Editorial parity</div></div>
+  </div>
+  <div class="scroll"><table>
+    <thead><tr><th>Document</th><th>Desk</th><th class="num">FR/EN tags</th>
+      <th>SEO description</th><th class="num">Score</th></tr></thead>
+    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
+</div>
+
+<h2>Where divergence concentrates</h2>
+<p class="h2sub">An aggregate says whether the pipeline is failing; segmentation says
+ where, which is what routes it to an owner.</p>
+<div class="card"><div class="segrow"><div class="segcol"><h3>By desk</h3><table>
+              <thead><tr><th>Desk</th><th class="num">n</th>
+                <th class="num">Div.</th><th class="num">Unsvd</th>
+                <th class="num">Gap</th></tr></thead>
+              <tbody><tr><td>Arts</td><td class="num">4</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>Education</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.333</td></tr><tr><td>News</td><td class="num">6</td><td class="num">4</td><td class="num">2</td><td class="num gap">+0.333</td></tr><tr><td>Politics</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.278</td></tr><tr><td>Municipal</td><td class="num">10</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Health</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.111</td></tr><tr><td>Technology</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr><tr><td>Business</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>By region</h3><table>
+              <thead><tr><th>Region</th><th class="num">n</th>
+                <th class="num">Div.</th><th class="num">Unsvd</th>
+                <th class="num">Gap</th></tr></thead>
+              <tbody><tr><td>West <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>Ontario</td><td class="num">10</td><td class="num">5</td><td class="num">1</td><td class="num gap">+0.300</td></tr><tr><td>Prairies</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>National</td><td class="num">14</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Quebec</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.130</td></tr><tr><td>North</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>By topic</h3><table>
+              <thead><tr><th>Topic</th><th class="num">n</th>
+                <th class="num">Div.</th><th class="num">Unsvd</th>
+                <th class="num">Gap</th></tr></thead>
+              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>homelessness</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>severe_weather</td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>immigration</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.417</td></tr><tr><td>labour <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.333</td></tr></tbody></table></div></div></div>
 
 <h2>Per-query detail</h2>
 <p class="h2sub">Full result table — the accessible view of every number above.</p>

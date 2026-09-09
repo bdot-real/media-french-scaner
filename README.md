@@ -35,6 +35,7 @@ python3 bqh/harness.py                          # terminal report
 python3 bqh/harness.py --report report.html     # visual dashboard
 python3 tests/test_harness.py                   # detection validation (40 checks)
 python3 tests/test_register.py                  # register validation (22 checks)
+python3 tests/test_drift.py                     # MDR/QFCR validation (21 checks)
 ```
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
@@ -62,6 +63,105 @@ would be exactly the motivated measurement this backend exists to avoid.
 Note that the embedding backend cannot attribute divergence to a specific term —
 `weak_terms` returns empty, because a dense model gives no per-token account of
 its similarity. Term-level attribution is a property of the lexical backend.
+
+## Metropolitan Drift Rate and Quebec False Correction Rate
+
+Two Canadian-specific metrics that generic French evaluation does not provide.
+
+### MDR — Metropolitan Drift Rate
+
+The rate at which a Quebec form is replaced by its France counterpart.
+
+**MDR counts substitutions only.** If the model rephrases *around* a term
+rather than substituting the metropolitan form, that is verbosity, not drift.
+Rephrased cases are excluded from the denominator entirely — they are neither
+evidence for drift nor against it, so scoring them either way biases the rate.
+
+```
+MDR = substituted / (substituted + preserved)
+```
+
+On this corpus: **50%** — 2 substituted of 4 scored opportunities, with **13
+rephrased cases excluded**. A naive implementation counting rephrases as clean
+would have reported 2/17 ≈ 12%, understating substitution behaviour by 4×. The
+constraint is pinned by tests in `tests/test_drift.py`.
+
+### QFCR — Quebec False Correction Rate
+
+The rate at which a "proofread this" prompt incorrectly *fixes* valid regional
+usage.
+
+```
+QFCR = valid Quebec forms altered / valid Quebec forms present
+```
+
+`bqh/proofread.py` sends already-correct Canadian French through a naive
+`"Corrige et améliore ce texte en français"` prompt — deliberately not
+mentioning Canadian French, because that is the default instruction a team
+would write. Since the input is correct by construction, any alteration is a
+false correction.
+
+On the probe set: **QFCR 80%** — 12 of 15 valid Quebec forms destroyed.
+
+```
+fin de semaine    → week-end
+courriel          → email
+halte-chaleur     → centre d'hébergement chauffé
+conseiller scolaire → administrateur scolaire
+assurance-emploi  → assurance chômage
+banlieusard       → navetteur
+présentement      → actuellement
+dépanneur         → épicerie de nuit
+```
+
+This is the most actionable finding in the harness. A pipeline can generate
+perfect Canadian French and still ship metropolitan copy, because a downstream
+"quality improvement" step rewrote it. MDR and QFCR separate those two
+failures: good MDR with bad QFCR means generation is fine and **the proofreader
+is the problem**.
+
+## Metadata: media, editorial, provenance
+
+The article body is not the only thing a bilingual newsroom publishes.
+
+### Media — images, video, audio
+
+Every asset carries descriptors: alt text, captions, credits, transcripts. The
+*asset* is reused across both language sites; the descriptors often are not.
+
+| State | Meaning |
+|---|---|
+| `missing` | FR descriptor absent while EN is present |
+| `untranslated` | FR byte-identical to EN — **worse than missing**, because it passes a null check in a CMS audit |
+| `truncated` | FR present but under half the English length |
+
+Two costs compound: **accessibility** (a French screen-reader user gets nothing
+where an English one gets a description) and **discovery** (alt text and
+captions feed archive retrieval, so an undescribed French asset is
+unfindable).
+
+On this corpus: **55% of assets accessible in French**, 5 of 11 failing. Both
+videos are missing French transcripts — for timed media that removes the only
+text representation of the content, so it is treated as a hard accessibility
+failure rather than a metadata gap.
+
+### Editorial — tags, SEO descriptions, headlines
+
+Tags drive archive retrieval, related-story modules, and topic pages, so a
+French story tagged with fewer concepts is less discoverable in French — the
+same divergence the retrieval metrics measure, arriving through the CMS instead
+of the model. Tags are translated, so only the *count* of concepts carried is
+comparable across languages.
+
+On this corpus: **6 tags dropped**, 2 missing French SEO descriptions. Both arts
+documents dropped the CLOSM tag specifically.
+
+### Segmentation — desk, region, topic
+
+An aggregate says *whether* the pipeline is failing; segmentation says *where*,
+which is what routes it to an owner. Queries inherit the metadata of the
+documents their gold set points at. Segments below 2 queries are reported but
+flagged `thin`, because a one-query segment is an anecdote.
 
 ## Leading with severity, not the mean
 
