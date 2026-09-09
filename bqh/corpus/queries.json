@@ -129,7 +129,8 @@
       "fr": "Quelles sont les pressions financières auxquelles font face les écoles et les villes?",
       "gold_docs": [
         "edu-004",
-        "muni-011"
+        "muni-011",
+        "edu-034"
       ],
       "divergence_class": "multi_doc",
       "note": "Multi-document synthesis. Divergence compounds when more than one document must be retrieved."
@@ -140,7 +141,8 @@
       "fr": "Quels sont les appuis fédéraux destinés aux communautés francophones?",
       "gold_docs": [
         "cult-006",
-        "immi-012"
+        "immi-012",
+        "cult-032"
       ],
       "divergence_class": "multi_doc"
     },
@@ -150,7 +152,8 @@
       "fr": "Comment la tempête de verglas et le péage du pont touchent-ils les banlieusards?",
       "gold_docs": [
         "wx-003",
-        "trns-005"
+        "trns-005",
+        "wx-035"
       ],
       "divergence_class": "multi_doc",
       "note": "commuter / banlieusard. Metropolitan French prefers 'navetteur' or 'usager'."
@@ -303,10 +306,198 @@
       "fr": "Quel soutien fédéral existe pour les médias francophones et de langue minoritaire?",
       "gold_docs": [
         "cult-019",
-        "cult-006"
+        "cult-006",
+        "cult-032"
       ],
       "divergence_class": "multi_doc",
       "note": "CLOSM probe across two documents."
+    },
+    {
+      "query_id": "q33",
+      "en": "How many language nest programs are being funded?",
+      "fr": "Combien de programmes de nids linguistiques sont financés?",
+      "gold_docs": [
+        "indg-025"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q34",
+      "en": "When do algorithmic impact assessments become required?",
+      "fr": "À partir de quand les évaluations d'incidence algorithmique deviennent-elles obligatoires?",
+      "gold_docs": [
+        "tech-026"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q35",
+      "en": "By how much did drought cut the Prairie crop forecast?",
+      "fr": "De combien la sécheresse a-t-elle réduit les prévisions de récolte des Prairies?",
+      "gold_docs": [
+        "agri-027"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q36",
+      "en": "What is the longest median youth mental health wait time?",
+      "fr": "Quel est le délai d'attente médian le plus long en santé mentale jeunesse?",
+      "gold_docs": [
+        "hlth-028"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q37",
+      "en": "How much land does the caribou agreement protect?",
+      "fr": "Quelle superficie l'entente sur le caribou protège-t-elle?",
+      "gold_docs": [
+        "envr-029"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q38",
+      "en": "What is the new legal aid income threshold?",
+      "fr": "Quel est le nouveau seuil de revenu de l'aide juridique?",
+      "gold_docs": [
+        "just-030"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q39",
+      "en": "Who qualifies for the fare-free transit pilot?",
+      "fr": "Qui est admissible au projet pilote de gratuité du transport?",
+      "gold_docs": [
+        "muni-031"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'societe de transport' is the Canadian term; 'regie des transports' is metropolitan."
+    },
+    {
+      "query_id": "q40",
+      "en": "How many organizations were selected for archive digitization?",
+      "fr": "Combien d'organismes ont été retenus pour la numérisation d'archives?",
+      "gold_docs": [
+        "cult-032"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q41",
+      "en": "How much did small business insolvencies rise?",
+      "fr": "De combien les insolvabilités de petites entreprises ont-elles augmenté?",
+      "gold_docs": [
+        "econ-033"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q42",
+      "en": "Why is the province funding new francophone schools?",
+      "fr": "Pourquoi la province finance-t-elle de nouvelles écoles francophones?",
+      "gold_docs": [
+        "edu-034"
+      ],
+      "divergence_class": "lexical_ca_fr",
+      "note": "'conseil scolaire francophone' and Charter s.23 vocabulary are Canadian-specific."
+    },
+    {
+      "query_id": "q43",
+      "en": "How much rain did the post-tropical storm bring?",
+      "fr": "Quelle quantité de pluie la tempête post-tropicale a-t-elle laissée?",
+      "gold_docs": [
+        "wx-035"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q44",
+      "en": "What share of building costs does the northern subsidy cover?",
+      "fr": "Quelle part des coûts de construction la subvention du Nord couvre-t-elle?",
+      "gold_docs": [
+        "hous-036"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q45",
+      "en": "How many medications were added to the pharmacare formulary?",
+      "fr": "Combien de médicaments ont été ajoutés au formulaire de l'assurance médicaments?",
+      "gold_docs": [
+        "hlth-037"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q46",
+      "en": "What share of segregation placements involved Indigenous people?",
+      "fr": "Quelle proportion des placements en isolement visait des personnes autochtones?",
+      "gold_docs": [
+        "just-038"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q47",
+      "en": "How many ransomware incidents targeted municipalities?",
+      "fr": "Combien d'incidents de rançongiciel ont visé des municipalités?",
+      "gold_docs": [
+        "tech-039"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q48",
+      "en": "What is the Atlantic immigration retention rate?",
+      "fr": "Quel est le taux de rétention du programme d'immigration de l'Atlantique?",
+      "gold_docs": [
+        "immi-040"
+      ],
+      "divergence_class": null
+    },
+    {
+      "query_id": "q49",
+      "en": "How are droughts and storms affecting communities?",
+      "fr": "Comment les sécheresses et les tempêtes touchent-elles les communautés?",
+      "gold_docs": [
+        "agri-027",
+        "wx-035"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q50",
+      "en": "What supports exist for francophone and Indigenous language education?",
+      "fr": "Quels appuis existent pour l'éducation en langue française et en langues autochtones?",
+      "gold_docs": [
+        "edu-034",
+        "indg-025"
+      ],
+      "divergence_class": "multi_doc",
+      "note": "Minority-language education vocabulary across two documents."
+    },
+    {
+      "query_id": "q51",
+      "en": "What barriers do newcomers face in Atlantic Canada?",
+      "fr": "Quels obstacles rencontrent les personnes nouvellement arrivées au Canada atlantique?",
+      "gold_docs": [
+        "immi-040",
+        "hous-036"
+      ],
+      "divergence_class": "multi_doc"
+    },
+    {
+      "query_id": "q52",
+      "en": "How are health wait times and drug coverage changing?",
+      "fr": "Comment évoluent les délais d'attente en santé et la couverture des médicaments?",
+      "gold_docs": [
+        "hlth-028",
+        "hlth-037"
+      ],
+      "divergence_class": "multi_doc"
     }
   ]
 }

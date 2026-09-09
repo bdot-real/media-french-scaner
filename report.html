@@ -161,19 +161,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>EN / FR output equivalence for a journalistic RAG workflow</h1>
   <p class="sub">Measures whether an AI content pipeline performs <em>equivalently</em> in English and Canadian French — not whether it performs adequately in each. The unit of analysis is the gap between the two, because that gap is what a bilingual public-service mandate actually commits to.</p>
-  <div class="meta">32 parallel queries · 24 parallel documents ·
+  <div class="meta">52 parallel queries · 24 parallel documents ·
    Canadian French (Radio-Canada conventions)<br>
    mode <code>offline</code> · retrieval <code>bm25 (modelled lexicon gap)</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig warn">62%</div>
+    <div class="hero-fig warn">65%</div>
     <div class="hero-lab">Service parity</div>
   </div>
   <div class="hero-txt">
-    <p style="margin-top:0"><strong>2 queries where the French reader was not served</strong> — either no answer was returned, or the answer asserted a fact the source does not support. Both are mandate failures, not quality deltas.</p>
-    <p style="margin-bottom:0">Equivalence index 0.926 · 9
+    <p style="margin-top:0"><strong>3 queries where the French reader was not served</strong> — either no answer was returned, or the answer asserted a fact the source does not support. Both are mandate failures, not quality deltas.</p>
+    <p style="margin-bottom:0">Equivalence index 0.944 · 9
     dimensions. A mean over all queries understates this: bilingual public service is not an average commitment, so the harness leads with the worst outcome a reader actually experienced.</p>
   </div>
 </div>
@@ -181,7 +181,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <h2>What the French reader experienced</h2>
 <p class="h2sub">Every query classified by its worst outcome, ordered by reader impact.</p>
 <div class="card">
-  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">2</div><div class="sev-l">Unsupported fact</div></div><div class="sev-tile r2"><div class="sev-n">3</div><div class="sev-l">Different sources</div></div><div class="sev-tile r3"><div class="sev-n">7</div><div class="sev-l">Reduced content</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Register</div></div></div>
+  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">3</div><div class="sev-l">Unsupported fact</div></div><div class="sev-tile r2"><div class="sev-n">5</div><div class="sev-l">Different sources</div></div><div class="sev-tile r3"><div class="sev-n">10</div><div class="sev-l">Reduced content</div></div><div class="sev-tile r4"><div class="sev-n">1</div><div class="sev-l">Register</div></div></div>
   
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Unsupported fact</span>
@@ -201,6 +201,15 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
         <div class="case-ab"><span class="ab-l fr">FR</span>
           <span class="ab-t">Les feux de forêt ont détruit 5,1 millions d&#x27;hectares cette saison, dépassant le record de 2023.</span></div>
       </div>
+      <div class="case r1">
+        <div class="case-h"><span class="case-tier">Unsupported fact</span>
+          <span class="qid">q41</span></div>
+        <div class="case-why">French asserts unsupported figure(s): 34</div>
+        <div class="case-ab"><span class="ab-l">EN</span>
+          <span class="ab-t">Small business insolvency filings rose 26 per cent, the highest level since 2011.</span></div>
+        <div class="case-ab"><span class="ab-l fr">FR</span>
+          <span class="ab-t">Les dossiers d&#x27;insolvabilité de petites entreprises ont augmenté de 34 pour cent, leur plus haut niveau depuis 2011.</span></div>
+      </div>
       <div class="case r2">
         <div class="case-h"><span class="case-tier">Different sources</span>
           <span class="qid">q04</span></div>
@@ -209,15 +218,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <span class="ab-t">Municipalities opened eleven warming centres across the affected region for residents without power.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
           <span class="ab-t">Les municipalités ont ouvert onze centres d&#x27;hébergement chauffés dans la région touchée pour les résidents privés d&#x27;électricité.</span></div>
-      </div>
-      <div class="case r2">
-        <div class="case-h"><span class="case-tier">Different sources</span>
-          <span class="qid">q14</span></div>
-        <div class="case-why">Gold-document retrieval diverged (FR-only: muni-011)</div>
-        <div class="case-ab"><span class="ab-l">EN</span>
-          <span class="ab-t">School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target.</span></div>
-        <div class="case-ab"><span class="ab-l fr">FR</span>
-          <span class="ab-t">Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.</span></div>
       </div>
 </div>
 
@@ -240,16 +240,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.969, gap +0.031">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="96.88" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.15" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="96.88" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.15" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.969</td>
-      <td class="num gap">+0.031</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -259,16 +259,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.969, French 0.953, gap +0.016">
+             aria-label="English 0.955, French 0.933, gap +0.022">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.31" y1="11" x2="96.88" y2="11" class="gapline"/>
-          <circle cx="96.88" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.27" y1="11" x2="95.51" y2="11" class="gapline"/>
+          <circle cx="95.51" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.27" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.969</td>
-      <td class="num fr">0.953</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.955</td>
+      <td class="num fr">0.933</td>
+      <td class="num gap">+0.022</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -278,16 +278,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.973, French 0.952, gap +0.022">
+             aria-label="English 0.959, French 0.939, gap +0.020">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.16" y1="11" x2="97.33" y2="11" class="gapline"/>
-          <circle cx="97.33" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.16" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.89" y1="11" x2="95.85" y2="11" class="gapline"/>
+          <circle cx="95.85" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.89" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.973</td>
-      <td class="num fr">0.952</td>
-      <td class="num gap">+0.022</td>
+      <td class="num en">0.959</td>
+      <td class="num fr">0.939</td>
+      <td class="num gap">+0.020</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -297,36 +297,36 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.953, gap +0.047">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.31" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.15" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.15" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.953</td>
-      <td class="num gap">+0.047</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
-    <tr class="dim divergent">
+    <tr class="dim ok">
       <th scope="row">
         <span class="dim-name">Grounding — in retrieved context</span>
         <span class="dim-desc">Figures unsupported by what retrieval returned</span>
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.953, French 0.859, gap +0.094">
+             aria-label="English 0.939, French 0.885, gap +0.054">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="85.94" y1="11" x2="95.31" y2="11" class="gapline"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="85.94" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="88.46" y1="11" x2="93.91" y2="11" class="gapline"/>
+          <circle cx="93.91" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="88.46" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.953</td>
-      <td class="num fr">0.859</td>
-      <td class="num gap">+0.094</td>
-      <td class="status"><span class="pill divergent">divergent</span></td>
+      <td class="num en">0.939</td>
+      <td class="num fr">0.885</td>
+      <td class="num gap">+0.054</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -335,16 +335,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.889, French 0.842, gap +0.048">
+             aria-label="English 0.899, French 0.868, gap +0.031">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="84.20" y1="11" x2="88.95" y2="11" class="gapline"/>
-          <circle cx="88.95" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="84.20" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="86.80" y1="11" x2="89.92" y2="11" class="gapline"/>
+          <circle cx="89.92" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="86.80" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.889</td>
-      <td class="num fr">0.842</td>
-      <td class="num gap">+0.048</td>
+      <td class="num en">0.899</td>
+      <td class="num fr">0.868</td>
+      <td class="num gap">+0.031</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -354,16 +354,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.857, gap +0.143">
+             aria-label="English 1.000, French 0.870, gap +0.130">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="85.65" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="87.00" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="85.65" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="87.00" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.857</td>
-      <td class="num gap">+0.143</td>
+      <td class="num fr">0.870</td>
+      <td class="num gap">+0.130</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -373,36 +373,36 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.844, gap +0.156">
+             aria-label="English 1.000, French 0.904, gap +0.096">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="84.38" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="90.38" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="84.38" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="90.38" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.844</td>
-      <td class="num gap">+0.156</td>
+      <td class="num fr">0.904</td>
+      <td class="num gap">+0.096</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
-    <tr class="dim divergent">
+    <tr class="dim ok">
       <th scope="row">
         <span class="dim-name">Fluency (composite)</span>
         <span class="dim-desc">Register and readability combined</span>
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.992, French 0.879, gap +0.112">
+             aria-label="English 0.994, French 0.925, gap +0.069">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="87.91" y1="11" x2="99.15" y2="11" class="gapline"/>
-          <circle cx="99.15" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="87.91" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="92.51" y1="11" x2="99.42" y2="11" class="gapline"/>
+          <circle cx="99.42" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="92.51" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.992</td>
-      <td class="num fr">0.879</td>
-      <td class="num gap">+0.112</td>
-      <td class="status"><span class="pill divergent">divergent</span></td>
+      <td class="num en">0.994</td>
+      <td class="num fr">0.925</td>
+      <td class="num gap">+0.069</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
     </tr></tbody>
   </table></div>
 </div>
@@ -415,7 +415,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">halte-chaleur</td>
           <td class="cov"><span class="covbar"><span style="width:20%"></span></span>
               <span class="covnum">0.20</span></td>
-          <td class="qs">q03, q04, q16, q28, q29</td></tr>
+          <td class="qs">q03, q04, q16, q28, q29, q43, q46</td></tr>
       <tr><td class="term">banlieusard</td>
           <td class="cov"><span class="covbar"><span style="width:30%"></span></span>
               <span class="covnum">0.30</span></td>
@@ -423,31 +423,31 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">assurance-emploi</td>
           <td class="cov"><span class="covbar"><span style="width:35%"></span></span>
               <span class="covnum">0.35</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">assurable</td>
           <td class="cov"><span class="covbar"><span style="width:45%"></span></span>
               <span class="covnum">0.45</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">prestataire</td>
           <td class="cov"><span class="covbar"><span style="width:50%"></span></span>
               <span class="covnum">0.50</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">conseiller</td>
           <td class="cov"><span class="covbar"><span style="width:55%"></span></span>
               <span class="covnum">0.55</span></td>
-          <td class="qs">q05, q12, q14</td></tr>
+          <td class="qs">q05, q14, q42</td></tr>
       <tr><td class="term">minoritaire</td>
           <td class="cov"><span class="covbar"><span style="width:60%"></span></span>
               <span class="covnum">0.60</span></td>
-          <td class="qs">q07, q09, q15, q21, q23, q31, q32</td></tr>
+          <td class="qs">q07, q15, q23, q31, q32, q40, q49, q50</td></tr>
       <tr><td class="term">foncière</td>
           <td class="cov"><span class="covbar"><span style="width:65%"></span></span>
               <span class="covnum">0.65</span></td>
-          <td class="qs">q03, q04, q05, q12, q14, q20</td></tr>
+          <td class="qs">q04, q12</td></tr>
       <tr><td class="term">scolaire</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q05, q12, q14</td></tr>
+          <td class="qs">q05, q14, q32, q42</td></tr>
       <tr><td class="term">péage</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
@@ -513,8 +513,28 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q32</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">CLOSM probe across two documents.</td></tr></tbody>
+          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">register</span></td>
+          <td class="note">CLOSM probe across two documents.</td></tr>
+      <tr><td class="qid">q35</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q41</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q42</td>
+          <td>lexical_ca_fr</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note">&#x27;conseil scolaire francophone&#x27; and Charter s.23 vocabulary are Canadian-specific.</td></tr>
+      <tr><td class="qid">q49</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q51</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="note"></td></tr></tbody>
 </table></div></div>
 
 <h2>Metropolitan drift and false correction</h2>
@@ -541,25 +561,25 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile r0">
-      <div class="sev-n">55%</div>
+      <div class="sev-n">57%</div>
       <div class="sev-l">Accessible in French</div></div>
-    <div class="sev-tile "><div class="sev-n">1</div><div class="sev-l">audio · 0</div></div><div class="sev-tile r0"><div class="sev-n">8</div><div class="sev-l">image · 3</div></div><div class="sev-tile r0"><div class="sev-n">2</div><div class="sev-l">video · 2</div></div>
+    <div class="sev-tile "><div class="sev-n">2</div><div class="sev-l">audio · 0</div></div><div class="sev-tile r0"><div class="sev-n">14</div><div class="sev-l">image · 5</div></div><div class="sev-tile r0"><div class="sev-n">5</div><div class="sev-l">video · 4</div></div>
   </div>
-  <p class="note-p">5 of 11 assets leave French users without access to content English users can reach — missing or untranslated alt text, or a missing transcript on timed media. Untranslated is worse than missing: it passes a null check in a CMS audit.</p>
+  <p class="note-p">9 of 21 assets leave French users without access to content English users can reach — missing or untranslated alt text, or a missing transcript on timed media. Untranslated is worse than missing: it passes a null check in a CMS audit.</p>
   <div class="scroll"><table>
     <thead><tr><th>Asset</th><th>Kind</th><th>Field states</th>
       <th class="num">Score</th><th>Accessibility</th></tr></thead>
-    <tbody><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
+    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>video</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.20</td><td class="note">alt text missing, transcript missing</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-agri-027-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">vid-wx-035-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-029-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-032-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-edu-034-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-036-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
 </div>
 
 <h2>Editorial metadata</h2>
 <p class="h2sub">Tags and SEO descriptions drive archive retrieval and topic pages — a French story tagged with fewer concepts is less discoverable in French.</p>
 <div class="card">
   <div class="sev-row">
-    <div class="sev-tile"><div class="sev-n">6</div>
+    <div class="sev-tile"><div class="sev-n">13</div>
       <div class="sev-l">Tags dropped in FR</div></div>
     <div class="sev-tile r1">
-      <div class="sev-n">2</div>
+      <div class="sev-n">4</div>
       <div class="sev-l">Missing FR SEO</div></div>
     <div class="sev-tile"><div class="sev-n">0.87</div>
       <div class="sev-l">Editorial parity</div></div>
@@ -567,7 +587,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   <div class="scroll"><table>
     <thead><tr><th>Document</th><th>Desk</th><th class="num">FR/EN tags</th>
       <th>SEO description</th><th class="num">Score</th></tr></thead>
-    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
+    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
 </div>
 
 <h2>Where divergence concentrates</h2>
@@ -576,15 +596,15 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
               <thead><tr><th>Desk</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>Arts</td><td class="num">4</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>Education</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.333</td></tr><tr><td>News</td><td class="num">6</td><td class="num">4</td><td class="num">2</td><td class="num gap">+0.333</td></tr><tr><td>Politics</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.278</td></tr><tr><td>Municipal</td><td class="num">10</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Health</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.111</td></tr><tr><td>Technology</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr><tr><td>Business</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>By region</h3><table>
+              <tbody><tr><td>Arts</td><td class="num">5</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.400</td></tr><tr><td>News</td><td class="num">9</td><td class="num">5</td><td class="num">2</td><td class="num gap">+0.296</td></tr><tr><td>Business</td><td class="num">7</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.286</td></tr><tr><td>Education</td><td class="num">5</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Municipal</td><td class="num">13</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.154</td></tr><tr><td>Health</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.056</td></tr><tr><td>Technology</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.042</td></tr></tbody></table></div><div class="segcol"><h3>By region</h3><table>
               <thead><tr><th>Region</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>West <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>Ontario</td><td class="num">10</td><td class="num">5</td><td class="num">1</td><td class="num gap">+0.300</td></tr><tr><td>Prairies</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>National</td><td class="num">14</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Quebec</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.130</td></tr><tr><td>North</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>By topic</h3><table>
+              <tbody><tr><td>Prairies</td><td class="num">5</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.300</td></tr><tr><td>West</td><td class="num">5</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.300</td></tr><tr><td>Ontario</td><td class="num">11</td><td class="num">6</td><td class="num">2</td><td class="num gap">+0.273</td></tr><tr><td>Quebec</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.154</td></tr><tr><td>National</td><td class="num">20</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.100</td></tr><tr><td>North</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.028</td></tr></tbody></table></div><div class="segcol"><h3>By topic</h3><table>
               <thead><tr><th>Topic</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Unsvd</th>
                 <th class="num">Gap</th></tr></thead>
-              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>homelessness</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>severe_weather</td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>immigration</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.417</td></tr><tr><td>labour <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.333</td></tr></tbody></table></div></div></div>
+              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>homelessness</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>thin</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>agriculture</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.389</td></tr><tr><td>severe_weather</td><td class="num">6</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.361</td></tr></tbody></table></div></div></div>
 
 <h2>Per-query detail</h2>
 <p class="h2sub">Full result table — the accessible view of every number above.</p>
@@ -812,10 +832,150 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num">0.83</td></tr>
       <tr><td class="qid">q32</td>
           <td class="qtext">The broadcaster is opening three bureaus in official language minority markets, and the ar…</td>
-          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td><td class="num">0.00</td>
           <td class="num">1.00</td>
           <td class="num">1.00</td>
           <td class="num">0.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q33</td>
+          <td class="qtext">The commissioner announced $54 million for 22 language nest programs covering fourteen lan…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q34</td>
+          <td class="qtext">Algorithmic impact assessments become required September 1, covering 340 identified system…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q35</td>
+          <td class="qtext">Drought cut the Prairie crop forecast 18 per cent after a dry June, with poor soil moistur…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q36</td>
+          <td class="qtext">The longest median youth mental health wait was 41 weeks, with about 28,000 young people o…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q37</td>
+          <td class="qtext">The caribou conservation agreement protects 1.2 million hectares from new industrial distu…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q38</td>
+          <td class="qtext">The legal aid income threshold rises to $28,400 from $23,100 on October 1.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q39</td>
+          <td class="qtext">Riders under 18 qualify for the two-year fare-free transit pilot, covering about 19,000 st…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q40</td>
+          <td class="qtext">Thirty-one of 92 applicant organizations were selected for archive digitization in the fir…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q41</td>
+          <td class="qtext">Small business insolvency filings rose 26 per cent, the highest level since 2011.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q42</td>
+          <td class="qtext">A court ruling on section 23 Charter rights ordered a remedy, and the province will fund t…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q43</td>
+          <td class="qtext">The post-tropical storm brought 140 millimetres of rain and flooded 620 properties.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q44</td>
+          <td class="qtext">The northern subsidy covers up to 40 per cent of building costs for affordable units above…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q45</td>
+          <td class="qtext">The pharmacare formulary added 34 medications, including six diabetes treatments and four …</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q46</td>
+          <td class="qtext">Indigenous people accounted for 46 per cent of segregation placements while representing 3…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q47</td>
+          <td class="qtext">The cyber centre recorded 74 ransomware incidents against municipalities and health author…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q48</td>
+          <td class="qtext">The Atlantic immigration program reported a five-year retention rate of 78 per cent, up fr…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q49</td>
+          <td class="qtext">Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coa…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.33</td></tr>
+      <tr><td class="qid">q50</td>
+          <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q51</td>
+          <td class="qtext">Employers cited housing availability as the main barrier, and a federal subsidy now covers…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q52</td>
+          <td class="qtext">Youth mental health waits exceed six months in seven provinces, while the pharmacare formu…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
           <td class="num">1.00</td></tr></tbody>
 </table></div></div>
 
@@ -829,19 +989,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>Équivalence des sorties EN/FR pour un flux journalistique à génération augmentée</h1>
   <p class="sub">Mesure si un flux de contenu par IA offre un rendement <em>équivalent</em> en anglais et en français canadien — et non s'il offre un rendement acceptable dans chaque langue. L'unité d'analyse est l'écart entre les deux, car c'est cet écart que vise un mandat de service public bilingue.</p>
-  <div class="meta">32 requêtes parallèles · 24 documents parallèles ·
+  <div class="meta">52 requêtes parallèles · 24 documents parallèles ·
    français canadien (normes de Radio-Canada)<br>
    mode <code>offline</code> · repérage <code>bm25 (modelled lexicon gap)</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig warn">62%</div>
+    <div class="hero-fig warn">65%</div>
     <div class="hero-lab">Parité de service</div>
   </div>
   <div class="hero-txt">
-    <p style="margin-top:0"><strong>2 requêtes où le lectorat francophone n'a pas été servi</strong> — soit aucune réponse n'a été fournie, soit la réponse avance un fait que la source n'appuie pas. Dans les deux cas, il s'agit d'un manquement au mandat, et non d'un simple écart de qualité.</p>
-    <p style="margin-bottom:0">Indice d'équivalence 0.926 · 9
+    <p style="margin-top:0"><strong>3 requêtes où le lectorat francophone n'a pas été servi</strong> — soit aucune réponse n'a été fournie, soit la réponse avance un fait que la source n'appuie pas. Dans les deux cas, il s'agit d'un manquement au mandat, et non d'un simple écart de qualité.</p>
+    <p style="margin-bottom:0">Indice d'équivalence 0.944 · 9
     dimensions. Une moyenne sur l'ensemble des requêtes en atténue la portée&nbsp;: le service public bilingue n'est pas un engagement moyen. Le banc d'essai met donc en tête le pire résultat vécu par une lectrice ou un lecteur.</p>
   </div>
 </div>
@@ -849,7 +1009,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <h2>Ce qu'a vécu le lectorat francophone</h2>
 <p class="h2sub">Chaque requête classée selon son pire résultat, en ordre d'incidence sur le lectorat.</p>
 <div class="card">
-  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">2</div><div class="sev-l">Fait non appuyé</div></div><div class="sev-tile r2"><div class="sev-n">3</div><div class="sev-l">Sources différentes</div></div><div class="sev-tile r3"><div class="sev-n">7</div><div class="sev-l">Contenu réduit</div></div><div class="sev-tile r4"><div class="sev-n">2</div><div class="sev-l">Registre</div></div></div>
+  <div class="sev-row"><div class="sev-tile r1"><div class="sev-n">3</div><div class="sev-l">Fait non appuyé</div></div><div class="sev-tile r2"><div class="sev-n">5</div><div class="sev-l">Sources différentes</div></div><div class="sev-tile r3"><div class="sev-n">10</div><div class="sev-l">Contenu réduit</div></div><div class="sev-tile r4"><div class="sev-n">1</div><div class="sev-l">Registre</div></div></div>
   
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
@@ -869,6 +1029,15 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
         <div class="case-ab"><span class="ab-l fr">FR</span>
           <span class="ab-t">Les feux de forêt ont détruit 5,1 millions d&#x27;hectares cette saison, dépassant le record de 2023.</span></div>
       </div>
+      <div class="case r1">
+        <div class="case-h"><span class="case-tier">Fait non appuyé</span>
+          <span class="qid">q41</span></div>
+        <div class="case-why">French asserts unsupported figure(s): 34</div>
+        <div class="case-ab"><span class="ab-l">EN</span>
+          <span class="ab-t">Small business insolvency filings rose 26 per cent, the highest level since 2011.</span></div>
+        <div class="case-ab"><span class="ab-l fr">FR</span>
+          <span class="ab-t">Les dossiers d&#x27;insolvabilité de petites entreprises ont augmenté de 34 pour cent, leur plus haut niveau depuis 2011.</span></div>
+      </div>
       <div class="case r2">
         <div class="case-h"><span class="case-tier">Sources différentes</span>
           <span class="qid">q04</span></div>
@@ -877,15 +1046,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <span class="ab-t">Municipalities opened eleven warming centres across the affected region for residents without power.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
           <span class="ab-t">Les municipalités ont ouvert onze centres d&#x27;hébergement chauffés dans la région touchée pour les résidents privés d&#x27;électricité.</span></div>
-      </div>
-      <div class="case r2">
-        <div class="case-h"><span class="case-tier">Sources différentes</span>
-          <span class="qid">q14</span></div>
-        <div class="case-why">Gold-document retrieval diverged (FR-only: muni-011)</div>
-        <div class="case-ab"><span class="ab-l">EN</span>
-          <span class="ab-t">School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, while the city tabled a $4.1 billion budget with a 3.9 per cent property tax increase and reserves below target.</span></div>
-        <div class="case-ab"><span class="ab-l fr">FR</span>
-          <span class="ab-t">Les conseils scolaires font face à un manque à gagner combiné de 88 millions de dollars alors que les effectifs ont augmenté de 5,4 pour cent.</span></div>
       </div>
 </div>
 
@@ -908,16 +1068,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.969, gap +0.031">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="96.88" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.15" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="96.88" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.15" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.969</td>
-      <td class="num gap">+0.031</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -927,16 +1087,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.969, French 0.953, gap +0.016">
+             aria-label="English 0.955, French 0.933, gap +0.022">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.31" y1="11" x2="96.88" y2="11" class="gapline"/>
-          <circle cx="96.88" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.27" y1="11" x2="95.51" y2="11" class="gapline"/>
+          <circle cx="95.51" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.27" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.969</td>
-      <td class="num fr">0.953</td>
-      <td class="num gap">+0.016</td>
+      <td class="num en">0.955</td>
+      <td class="num fr">0.933</td>
+      <td class="num gap">+0.022</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -946,16 +1106,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.973, French 0.952, gap +0.022">
+             aria-label="English 0.959, French 0.939, gap +0.020">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.16" y1="11" x2="97.33" y2="11" class="gapline"/>
-          <circle cx="97.33" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.16" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="93.89" y1="11" x2="95.85" y2="11" class="gapline"/>
+          <circle cx="95.85" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="93.89" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.973</td>
-      <td class="num fr">0.952</td>
-      <td class="num gap">+0.022</td>
+      <td class="num en">0.959</td>
+      <td class="num fr">0.939</td>
+      <td class="num gap">+0.020</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
@@ -965,36 +1125,36 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.953, gap +0.047">
+             aria-label="English 1.000, French 0.962, gap +0.038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="95.31" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="96.15" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="96.15" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.953</td>
-      <td class="num gap">+0.047</td>
+      <td class="num fr">0.962</td>
+      <td class="num gap">+0.038</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
-    <tr class="dim divergent">
+    <tr class="dim ok">
       <th scope="row">
         <span class="dim-name">Véracité — contexte repéré</span>
         <span class="dim-desc">Chiffres non appuyés par le contexte repéré</span>
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.953, French 0.859, gap +0.094">
+             aria-label="English 0.939, French 0.885, gap +0.054">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="85.94" y1="11" x2="95.31" y2="11" class="gapline"/>
-          <circle cx="95.31" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="85.94" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="88.46" y1="11" x2="93.91" y2="11" class="gapline"/>
+          <circle cx="93.91" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="88.46" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.953</td>
-      <td class="num fr">0.859</td>
-      <td class="num gap">+0.094</td>
-      <td class="status"><span class="pill divergent">divergent</span></td>
+      <td class="num en">0.939</td>
+      <td class="num fr">0.885</td>
+      <td class="num gap">+0.054</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1003,16 +1163,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.889, French 0.842, gap +0.048">
+             aria-label="English 0.899, French 0.868, gap +0.031">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="84.20" y1="11" x2="88.95" y2="11" class="gapline"/>
-          <circle cx="88.95" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="84.20" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="86.80" y1="11" x2="89.92" y2="11" class="gapline"/>
+          <circle cx="89.92" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="86.80" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.889</td>
-      <td class="num fr">0.842</td>
-      <td class="num gap">+0.048</td>
+      <td class="num en">0.899</td>
+      <td class="num fr">0.868</td>
+      <td class="num gap">+0.031</td>
       <td class="status"><span class="pill ok">equivalent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -1022,16 +1182,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.857, gap +0.143">
+             aria-label="English 1.000, French 0.870, gap +0.130">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="85.65" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="87.00" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="85.65" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="87.00" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.857</td>
-      <td class="num gap">+0.143</td>
+      <td class="num fr">0.870</td>
+      <td class="num gap">+0.130</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
     <tr class="dim divergent">
@@ -1041,36 +1201,36 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.844, gap +0.156">
+             aria-label="English 1.000, French 0.904, gap +0.096">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="84.38" y1="11" x2="100.00" y2="11" class="gapline"/>
+          <line x1="90.38" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="84.38" cy="11" r="4.2" class="mark-fr"/>
+          <circle cx="90.38" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
       <td class="num en">1.000</td>
-      <td class="num fr">0.844</td>
-      <td class="num gap">+0.156</td>
+      <td class="num fr">0.904</td>
+      <td class="num gap">+0.096</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
-    <tr class="dim divergent">
+    <tr class="dim ok">
       <th scope="row">
         <span class="dim-name">Fluidité (composite)</span>
         <span class="dim-desc">Registre et lisibilité combinés</span>
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.992, French 0.879, gap +0.112">
+             aria-label="English 0.994, French 0.925, gap +0.069">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
-          <line x1="87.91" y1="11" x2="99.15" y2="11" class="gapline"/>
-          <circle cx="99.15" cy="11" r="4.2" class="mark-en"/>
-          <circle cx="87.91" cy="11" r="4.2" class="mark-fr"/>
+          <line x1="92.51" y1="11" x2="99.42" y2="11" class="gapline"/>
+          <circle cx="99.42" cy="11" r="4.2" class="mark-en"/>
+          <circle cx="92.51" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.992</td>
-      <td class="num fr">0.879</td>
-      <td class="num gap">+0.112</td>
-      <td class="status"><span class="pill divergent">divergent</span></td>
+      <td class="num en">0.994</td>
+      <td class="num fr">0.925</td>
+      <td class="num gap">+0.069</td>
+      <td class="status"><span class="pill ok">equivalent</span></td>
     </tr></tbody>
   </table></div>
 </div>
@@ -1083,7 +1243,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">halte-chaleur</td>
           <td class="cov"><span class="covbar"><span style="width:20%"></span></span>
               <span class="covnum">0.20</span></td>
-          <td class="qs">q03, q04, q16, q28, q29</td></tr>
+          <td class="qs">q03, q04, q16, q28, q29, q43, q46</td></tr>
       <tr><td class="term">banlieusard</td>
           <td class="cov"><span class="covbar"><span style="width:30%"></span></span>
               <span class="covnum">0.30</span></td>
@@ -1091,31 +1251,31 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <tr><td class="term">assurance-emploi</td>
           <td class="cov"><span class="covbar"><span style="width:35%"></span></span>
               <span class="covnum">0.35</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">assurable</td>
           <td class="cov"><span class="covbar"><span style="width:45%"></span></span>
               <span class="covnum">0.45</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">prestataire</td>
           <td class="cov"><span class="covbar"><span style="width:50%"></span></span>
               <span class="covnum">0.50</span></td>
-          <td class="qs">q01, q22</td></tr>
+          <td class="qs">q01, q22, q51</td></tr>
       <tr><td class="term">conseiller</td>
           <td class="cov"><span class="covbar"><span style="width:55%"></span></span>
               <span class="covnum">0.55</span></td>
-          <td class="qs">q05, q12, q14</td></tr>
+          <td class="qs">q05, q14, q42</td></tr>
       <tr><td class="term">minoritaire</td>
           <td class="cov"><span class="covbar"><span style="width:60%"></span></span>
               <span class="covnum">0.60</span></td>
-          <td class="qs">q07, q09, q15, q21, q23, q31, q32</td></tr>
+          <td class="qs">q07, q15, q23, q31, q32, q40, q49, q50</td></tr>
       <tr><td class="term">foncière</td>
           <td class="cov"><span class="covbar"><span style="width:65%"></span></span>
               <span class="covnum">0.65</span></td>
-          <td class="qs">q03, q04, q05, q12, q14, q20</td></tr>
+          <td class="qs">q04, q12</td></tr>
       <tr><td class="term">scolaire</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
-          <td class="qs">q05, q12, q14</td></tr>
+          <td class="qs">q05, q14, q32, q42</td></tr>
       <tr><td class="term">péage</td>
           <td class="cov"><span class="covbar"><span style="width:70%"></span></span>
               <span class="covnum">0.70</span></td>
@@ -1181,8 +1341,28 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="note"></td></tr>
       <tr><td class="qid">q32</td>
           <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">CLOSM probe across two documents.</td></tr></tbody>
+          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">register</span></td>
+          <td class="note">CLOSM probe across two documents.</td></tr>
+      <tr><td class="qid">q35</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q41</td>
+          <td>—</td>
+          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q42</td>
+          <td>lexical_ca_fr</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note">&#x27;conseil scolaire francophone&#x27; and Charter s.23 vocabulary are Canadian-specific.</td></tr>
+      <tr><td class="qid">q49</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">omission</span></td>
+          <td class="note"></td></tr>
+      <tr><td class="qid">q51</td>
+          <td>multi_doc</td>
+          <td class="issues"><span class="tag">fabricated figure</span></td>
+          <td class="note"></td></tr></tbody>
 </table></div></div>
 
 <h2>Dérive métropolitaine et fausse correction</h2>
@@ -1209,25 +1389,25 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile r0">
-      <div class="sev-n">55%</div>
+      <div class="sev-n">57%</div>
       <div class="sev-l">Accessibles en français</div></div>
-    <div class="sev-tile "><div class="sev-n">1</div><div class="sev-l">audio · 0</div></div><div class="sev-tile r0"><div class="sev-n">8</div><div class="sev-l">image · 3</div></div><div class="sev-tile r0"><div class="sev-n">2</div><div class="sev-l">video · 2</div></div>
+    <div class="sev-tile "><div class="sev-n">2</div><div class="sev-l">audio · 0</div></div><div class="sev-tile r0"><div class="sev-n">14</div><div class="sev-l">image · 5</div></div><div class="sev-tile r0"><div class="sev-n">5</div><div class="sev-l">video · 4</div></div>
   </div>
-  <p class="note-p">5 fichiers sur 11 privent le public francophone d'un contenu accessible au public anglophone — texte de remplacement absent ou non traduit, ou transcription manquante pour un média chronométré. Un champ non traduit est pire qu'un champ vide&nbsp;: il passe le contrôle de valeur nulle d'un audit de SGC.</p>
+  <p class="note-p">9 fichiers sur 21 privent le public francophone d'un contenu accessible au public anglophone — texte de remplacement absent ou non traduit, ou transcription manquante pour un média chronométré. Un champ non traduit est pire qu'un champ vide&nbsp;: il passe le contrôle de valeur nulle d'un audit de SGC.</p>
   <div class="scroll"><table>
     <thead><tr><th>Fichier</th><th>Type</th><th>État des champs</th>
       <th class="num">Note</th><th>Accessibilité</th></tr></thead>
-    <tbody><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
+    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>video</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.20</td><td class="note">alt text missing, transcript missing</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-agri-027-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">vid-wx-035-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-029-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-032-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-edu-034-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-036-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
 </div>
 
 <h2>Métadonnées éditoriales</h2>
 <p class="h2sub">Les mots-clés et les descriptions de référencement alimentent le repérage en archives et les pages thématiques&nbsp;: un reportage français comportant moins de mots-clés est plus difficile à trouver en français.</p>
 <div class="card">
   <div class="sev-row">
-    <div class="sev-tile"><div class="sev-n">6</div>
+    <div class="sev-tile"><div class="sev-n">13</div>
       <div class="sev-l">Mots-clés perdus en FR</div></div>
     <div class="sev-tile r1">
-      <div class="sev-n">2</div>
+      <div class="sev-n">4</div>
       <div class="sev-l">Descriptions FR absentes</div></div>
     <div class="sev-tile"><div class="sev-n">0.87</div>
       <div class="sev-l">Parité éditoriale</div></div>
@@ -1235,7 +1415,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   <div class="scroll"><table>
     <thead><tr><th>Document</th><th>Pupitre</th><th class="num">Mots-clés FR/EN</th>
       <th>Description de référencement</th><th class="num">Note</th></tr></thead>
-    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
+    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
 </div>
 
 <h2>Où se concentre la divergence</h2>
@@ -1244,15 +1424,15 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
               <thead><tr><th>Desk</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>Arts</td><td class="num">4</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>Education</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.333</td></tr><tr><td>News</td><td class="num">6</td><td class="num">4</td><td class="num">2</td><td class="num gap">+0.333</td></tr><tr><td>Politics</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.278</td></tr><tr><td>Municipal</td><td class="num">10</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Health</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.111</td></tr><tr><td>Technology</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr><tr><td>Business</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
+              <tbody><tr><td>Arts</td><td class="num">5</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.400</td></tr><tr><td>News</td><td class="num">9</td><td class="num">5</td><td class="num">2</td><td class="num gap">+0.296</td></tr><tr><td>Business</td><td class="num">7</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.286</td></tr><tr><td>Education</td><td class="num">5</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.200</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Municipal</td><td class="num">13</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.154</td></tr><tr><td>Health</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.056</td></tr><tr><td>Technology</td><td class="num">4</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.042</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
               <thead><tr><th>Region</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>West <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>Ontario</td><td class="num">10</td><td class="num">5</td><td class="num">1</td><td class="num gap">+0.300</td></tr><tr><td>Prairies</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>National</td><td class="num">14</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.143</td></tr><tr><td>Quebec</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.130</td></tr><tr><td>North</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.083</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
+              <tbody><tr><td>Prairies</td><td class="num">5</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.300</td></tr><tr><td>West</td><td class="num">5</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.300</td></tr><tr><td>Ontario</td><td class="num">11</td><td class="num">6</td><td class="num">2</td><td class="num gap">+0.273</td></tr><tr><td>Quebec</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.154</td></tr><tr><td>National</td><td class="num">20</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.100</td></tr><tr><td>North</td><td class="num">6</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.028</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
               <thead><tr><th>Topic</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>homelessness</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>severe_weather</td><td class="num">4</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>immigration</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.417</td></tr><tr><td>labour <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.333</td></tr></tbody></table></div></div></div>
+              <tbody><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>homelessness</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>wildfire <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>agriculture</td><td class="num">3</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.389</td></tr><tr><td>severe_weather</td><td class="num">6</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.361</td></tr></tbody></table></div></div></div>
 
 <h2>Détail par requête</h2>
 <p class="h2sub">Tableau complet des résultats — la version accessible de chacun des chiffres ci-dessus.</p>
@@ -1480,10 +1660,150 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num">0.83</td></tr>
       <tr><td class="qid">q32</td>
           <td class="qtext">The broadcaster is opening three bureaus in official language minority markets, and the ar…</td>
-          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td><td class="num">0.00</td>
           <td class="num">1.00</td>
           <td class="num">1.00</td>
           <td class="num">0.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q33</td>
+          <td class="qtext">The commissioner announced $54 million for 22 language nest programs covering fourteen lan…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q34</td>
+          <td class="qtext">Algorithmic impact assessments become required September 1, covering 340 identified system…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q35</td>
+          <td class="qtext">Drought cut the Prairie crop forecast 18 per cent after a dry June, with poor soil moistur…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q36</td>
+          <td class="qtext">The longest median youth mental health wait was 41 weeks, with about 28,000 young people o…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q37</td>
+          <td class="qtext">The caribou conservation agreement protects 1.2 million hectares from new industrial distu…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q38</td>
+          <td class="qtext">The legal aid income threshold rises to $28,400 from $23,100 on October 1.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q39</td>
+          <td class="qtext">Riders under 18 qualify for the two-year fare-free transit pilot, covering about 19,000 st…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q40</td>
+          <td class="qtext">Thirty-one of 92 applicant organizations were selected for archive digitization in the fir…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q41</td>
+          <td class="qtext">Small business insolvency filings rose 26 per cent, the highest level since 2011.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q42</td>
+          <td class="qtext">A court ruling on section 23 Charter rights ordered a remedy, and the province will fund t…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.50</td></tr>
+      <tr><td class="qid">q43</td>
+          <td class="qtext">The post-tropical storm brought 140 millimetres of rain and flooded 620 properties.…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q44</td>
+          <td class="qtext">The northern subsidy covers up to 40 per cent of building costs for affordable units above…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q45</td>
+          <td class="qtext">The pharmacare formulary added 34 medications, including six diabetes treatments and four …</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q46</td>
+          <td class="qtext">Indigenous people accounted for 46 per cent of segregation placements while representing 3…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q47</td>
+          <td class="qtext">The cyber centre recorded 74 ransomware incidents against municipalities and health author…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q48</td>
+          <td class="qtext">The Atlantic immigration program reported a five-year retention rate of 78 per cent, up fr…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q49</td>
+          <td class="qtext">Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coa…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">0.33</td></tr>
+      <tr><td class="qid">q50</td>
+          <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q51</td>
+          <td class="qtext">Employers cited housing availability as the main barrier, and a federal subsidy now covers…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td></tr>
+      <tr><td class="qid">q52</td>
+          <td class="qtext">Youth mental health waits exceed six months in seven provinces, while the pharmacare formu…</td>
+          <td class="num">1.00</td><td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
+          <td class="num">1.00</td>
           <td class="num">1.00</td></tr></tbody>
 </table></div></div>
 

@@ -741,6 +741,585 @@
         "en_seo": "Shelters ran at 96 per cent capacity, turning away 84 people nightly.",
         "fr_seo": "Les refuges ont fonctionné à 96 pour cent, refusant 84 personnes par nuit."
       }
+    },
+    {
+      "doc_id": "indg-025",
+      "topic": "indigenous",
+      "meta": {
+        "date": "2026-07-02",
+        "desk": "Indigenous",
+        "region": "North",
+        "author": "K. Whiteduck"
+      },
+      "en": {
+        "title": "Language revitalization program funds 22 immersion nests",
+        "body": "The Indigenous languages commissioner announced $54 million Tuesday for 22 language nest programs serving preschool children. Fourteen languages are covered, including three with fewer than 200 fluent speakers. Programs operate 30 hours weekly. The commissioner said funding stability remains the sector's main constraint, with most programs on one-year agreements. Twelve additional applications were not funded."
+      },
+      "fr": {
+        "title": "Un programme de revitalisation linguistique finance 22 nids d'immersion",
+        "body": "Le commissaire aux langues autochtones a annoncé mardi 54 millions de dollars pour 22 programmes de nids linguistiques destinés aux enfants d'âge préscolaire. Quatorze langues sont visées, dont trois comptant moins de 200 locuteurs courants. Les programmes fonctionnent 30 heures par semaine. Le commissaire a affirmé que la stabilité du financement demeure la principale contrainte du secteur, la plupart des programmes étant liés par des ententes d'un an. Douze autres demandes n'ont pas été financées."
+      },
+      "media": [
+        {
+          "asset_id": "vid-indg-025-a",
+          "kind": "video",
+          "en_alt": "Children sit in a circle with an elder in a language nest classroom.",
+          "fr_alt": "Des enfants assis en cercle avec une aînée dans une classe de nid linguistique.",
+          "en_caption": "Language nests serve preschool children 30 hours a week.",
+          "fr_caption": "Les nids linguistiques accueillent les enfants d'âge préscolaire 30 heures par semaine.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "We teach the language the way it was taught to us, through daily routine and play.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "Indigenous languages",
+          "education",
+          "revitalization",
+          "federal funding"
+        ],
+        "fr_tags": [
+          "langues autochtones",
+          "éducation",
+          "revitalisation",
+          "financement fédéral"
+        ],
+        "en_seo": "A $54 million program funds 22 Indigenous language nests for preschool children.",
+        "fr_seo": "Un programme de 54 millions de dollars finance 22 nids linguistiques autochtones."
+      }
+    },
+    {
+      "doc_id": "tech-026",
+      "topic": "ai_policy",
+      "meta": {
+        "date": "2026-07-09",
+        "desk": "Technology",
+        "region": "National",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Federal AI directive requires algorithmic impact assessments",
+        "body": "Departments must complete algorithmic impact assessments before deploying automated decision systems under a directive taking effect September 1. The directive covers 340 identified systems. Twenty-eight are classified as high impact, requiring peer review and human oversight. Departments have eighteen months to bring existing systems into compliance. The treasury board will publish assessments in an open registry."
+      },
+      "fr": {
+        "title": "Une directive fédérale sur l'IA exige des évaluations d'incidence algorithmique",
+        "body": "Les ministères devront réaliser une évaluation d'incidence algorithmique avant de déployer un système décisionnel automatisé, en vertu d'une directive qui entre en vigueur le 1er septembre. La directive vise 340 systèmes recensés. Vingt-huit sont classés à incidence élevée et exigent une évaluation par les pairs ainsi qu'une surveillance humaine. Les ministères disposent de dix-huit mois pour rendre conformes les systèmes existants. Le Conseil du Trésor publiera les évaluations dans un registre ouvert."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "artificial intelligence",
+          "federal directive",
+          "algorithmic accountability",
+          "public service"
+        ],
+        "fr_tags": [
+          "intelligence artificielle",
+          "directive fédérale"
+        ],
+        "en_seo": "Federal departments must complete algorithmic impact assessments from September 1.",
+        "fr_seo": null
+      }
+    },
+    {
+      "doc_id": "agri-027",
+      "topic": "agriculture",
+      "meta": {
+        "date": "2026-07-16",
+        "desk": "Business",
+        "region": "Prairies",
+        "author": "R. Comeau"
+      },
+      "en": {
+        "title": "Drought conditions cut Prairie crop forecast by 18 per cent",
+        "body": "The crop forecast for Prairie provinces fell 18 per cent after a dry June, the agriculture department reported Thursday. Soil moisture ratings were poor or very poor across 41 per cent of farmland. Crop insurance claims are expected to exceed $900 million. Cattle producers began early herd reductions. The department opened a livestock tax deferral for 63 designated regions."
+      },
+      "fr": {
+        "title": "La sécheresse ampute de 18 pour cent les prévisions de récolte dans les Prairies",
+        "body": "Les prévisions de récolte des provinces des Prairies ont chuté de 18 pour cent après un mois de juin sec, a indiqué jeudi le ministère de l'Agriculture. Les cotes d'humidité du sol étaient mauvaises ou très mauvaises sur 41 pour cent des terres agricoles. Les demandes d'indemnisation en assurance récolte devraient dépasser 900 millions de dollars. Les éleveurs de bovins ont commencé à réduire leur troupeau plus tôt. Le ministère a ouvert un report d'impôt pour les éleveurs dans 63 régions désignées."
+      },
+      "media": [
+        {
+          "asset_id": "img-agri-027-a",
+          "kind": "image",
+          "en_alt": "Cracked dry soil in a wheat field under a clear sky.",
+          "fr_alt": "Sol",
+          "en_caption": "Soil moisture was poor or very poor across 41 per cent of farmland.",
+          "fr_caption": "L'humidité du sol était mauvaise ou très mauvaise sur 41 pour cent des terres.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "drought",
+          "agriculture",
+          "Prairies",
+          "crop insurance"
+        ],
+        "fr_tags": [
+          "sécheresse",
+          "agriculture",
+          "Prairies",
+          "assurance récolte"
+        ],
+        "en_seo": "Drought cut the Prairie crop forecast 18 per cent after a dry June.",
+        "fr_seo": "La sécheresse ampute de 18 pour cent les prévisions de récolte des Prairies."
+      }
+    },
+    {
+      "doc_id": "hlth-028",
+      "topic": "mental_health",
+      "meta": {
+        "date": "2026-07-23",
+        "desk": "Health",
+        "region": "National",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Youth mental health wait times exceed six months in most provinces",
+        "body": "Median wait times for publicly funded youth mental health counselling exceeded six months in seven provinces, according to a report released Monday. The longest median was 41 weeks. About 28,000 young people are on waitlists nationally. Three provinces have added walk-in counselling clinics. The report recommended a national wait-time benchmark of four weeks."
+      },
+      "fr": {
+        "title": "Les délais d'attente en santé mentale jeunesse dépassent six mois dans la plupart des provinces",
+        "body": "Les délais d'attente médians pour des services publics de counseling en santé mentale jeunesse dépassaient six mois dans sept provinces, selon un rapport publié lundi. Le délai médian le plus long atteignait 41 semaines. Environ 28 000 jeunes figurent sur des listes d'attente au pays. Trois provinces ont ajouté des cliniques de counseling sans rendez-vous. Le rapport recommande une norme nationale de délai d'attente de quatre semaines."
+      },
+      "media": [
+        {
+          "asset_id": "vid-hlth-028-a",
+          "kind": "video",
+          "en_alt": "A counsellor speaks with a young person in a clinic waiting area.",
+          "fr_alt": null,
+          "en_caption": "Median waits exceeded six months in seven provinces.",
+          "fr_caption": "Les délais médians dépassaient six mois dans sept provinces.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "Forty-one weeks is not a wait, it's a barrier. Families give up before they're seen.",
+          "fr_transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "mental health",
+          "youth",
+          "wait times",
+          "health care"
+        ],
+        "fr_tags": [
+          "santé mentale",
+          "jeunesse",
+          "délais d'attente",
+          "soins de santé"
+        ],
+        "en_seo": "Youth mental health waits exceed six months in seven provinces.",
+        "fr_seo": "Les délais en santé mentale jeunesse dépassent six mois dans sept provinces."
+      }
+    },
+    {
+      "doc_id": "envr-029",
+      "topic": "conservation",
+      "meta": {
+        "date": "2026-08-06",
+        "desk": "News",
+        "region": "West",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Caribou herd recovery plan sets aside 1.2 million hectares",
+        "body": "The province and federal government signed a caribou conservation agreement Wednesday protecting 1.2 million hectares from new industrial disturbance. Four herds are covered. Population surveys counted 3,400 animals, down from 9,000 in 2005. Forestry groups warned of job losses in three communities. A transition fund of $85 million was announced alongside the agreement."
+      },
+      "fr": {
+        "title": "Un plan de rétablissement du caribou protège 1,2 million d'hectares",
+        "body": "La province et le gouvernement fédéral ont signé mercredi une entente de conservation du caribou qui soustrait 1,2 million d'hectares à toute nouvelle perturbation industrielle. Quatre hardes sont visées. Les relevés de population ont dénombré 3 400 bêtes, contre 9 000 en 2005. Des groupes forestiers ont prévenu de pertes d'emplois dans trois communautés. Un fonds de transition de 85 millions de dollars a été annoncé en même temps que l'entente."
+      },
+      "media": [
+        {
+          "asset_id": "img-envr-029-a",
+          "kind": "image",
+          "en_alt": "A caribou crosses a snow-covered clearing at the edge of a forest.",
+          "fr_alt": null,
+          "en_caption": "Population surveys counted 3,400 animals, down from 9,000 in 2005.",
+          "fr_caption": "Les relevés ont dénombré 3 400 bêtes, contre 9 000 en 2005.",
+          "en_credit": "The Canadian Press",
+          "fr_credit": "La Presse Canadienne",
+          "transcript": null
+        },
+        {
+          "asset_id": "aud-envr-029-b",
+          "kind": "audio",
+          "en_alt": "A forestry worker discusses the transition fund.",
+          "fr_alt": "Un travailleur forestier parle du fonds de transition.",
+          "en_caption": "Forestry groups warned of job losses in three communities.",
+          "fr_caption": "Des groupes forestiers ont prévenu de pertes d'emplois dans trois communautés.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "Eighty-five million sounds like a lot until you divide it across three towns and a decade.",
+          "fr_transcript": "Quatre-vingt-cinq millions, ça semble beaucoup jusqu'à ce qu'on divise ça entre trois villages et une décennie."
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "caribou",
+          "conservation",
+          "forestry",
+          "land protection"
+        ],
+        "fr_tags": [
+          "caribou",
+          "conservation"
+        ],
+        "en_seo": "A conservation agreement protects 1.2 million hectares of caribou habitat.",
+        "fr_seo": "Une entente de conservation protège 1,2 million d'hectares d'habitat du caribou."
+      }
+    },
+    {
+      "doc_id": "just-030",
+      "topic": "legal_aid",
+      "meta": {
+        "date": "2026-08-13",
+        "desk": "Justice",
+        "region": "Quebec",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Legal aid eligibility threshold raised for the first time since 2018",
+        "body": "The legal aid eligibility income threshold rises to $28,400 from $23,100 on October 1, the first increase since 2018. An estimated 47,000 additional households become eligible. The plan's budget increases by $61 million. Legal aid lawyers said caseloads already exceed capacity by 30 per cent. Family law represents 44 per cent of certificates issued."
+      },
+      "fr": {
+        "title": "Le seuil d'admissibilité à l'aide juridique relevé pour la première fois depuis 2018",
+        "body": "Le seuil de revenu d'admissibilité à l'aide juridique passera de 23 100 $ à 28 400 $ le 1er octobre, une première hausse depuis 2018. On estime que 47 000 ménages de plus deviendront admissibles. Le budget du régime augmente de 61 millions de dollars. Des avocates et avocats de l'aide juridique ont indiqué que la charge de travail dépasse déjà la capacité de 30 pour cent. Le droit de la famille représente 44 pour cent des mandats délivrés."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "legal aid",
+          "access to justice",
+          "family law",
+          "eligibility"
+        ],
+        "fr_tags": [
+          "aide juridique",
+          "accès à la justice",
+          "droit de la famille",
+          "admissibilité"
+        ],
+        "en_seo": "The legal aid income threshold rises to $28,400, the first increase since 2018.",
+        "fr_seo": "Le seuil de revenu de l'aide juridique passe à 28 400 $, une première depuis 2018."
+      }
+    },
+    {
+      "doc_id": "muni-031",
+      "topic": "municipal_transit",
+      "meta": {
+        "date": "2026-08-20",
+        "desk": "Municipal",
+        "region": "Atlantic",
+        "author": "M. Lévesque"
+      },
+      "en": {
+        "title": "Regional transit authority approves fare-free pilot for students",
+        "body": "The regional transit authority approved a two-year fare-free pilot for riders under 18, beginning January. The pilot covers about 19,000 students and costs $4.3 million annually. Ridership in that age group fell 22 per cent since 2019. Three municipalities will share the cost. The authority will report on ridership effects after twelve months."
+      },
+      "fr": {
+        "title": "La société de transport régionale approuve un projet pilote de gratuité pour les élèves",
+        "body": "La société de transport régionale a approuvé un projet pilote de gratuité de deux ans pour les usagers de moins de 18 ans, à compter de janvier. Le projet vise environ 19 000 élèves et coûte 4,3 millions de dollars par année. L'achalandage de ce groupe d'âge a chuté de 22 pour cent depuis 2019. Trois municipalités se partageront les coûts. La société fera rapport sur les effets sur l'achalandage après douze mois."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "cult-032",
+      "topic": "heritage",
+      "meta": {
+        "date": "2026-08-27",
+        "desk": "Arts",
+        "region": "National",
+        "author": "C. Bourgeois"
+      },
+      "en": {
+        "title": "Heritage fund supports digitization of community archives",
+        "body": "A $38 million heritage fund will digitize community archive collections over four years, with priority for official language minority communities and Indigenous organizations. Ninety-two organizations applied in the first round and 31 were selected. Grants range from $40,000 to $600,000. The program requires open access within two years of digitization."
+      },
+      "fr": {
+        "title": "Un fonds du patrimoine appuie la numérisation d'archives communautaires",
+        "body": "Un fonds du patrimoine de 38 millions de dollars permettra de numériser des collections d'archives communautaires sur quatre ans, en accordant la priorité aux communautés de langue officielle en situation minoritaire et aux organismes autochtones. Quatre-vingt-douze organismes ont présenté une demande au premier tour et 31 ont été retenus. Les subventions varient de 40 000 $ à 600 000 $. Le programme exige un accès libre dans les deux ans suivant la numérisation."
+      },
+      "media": [
+        {
+          "asset_id": "img-cult-032-a",
+          "kind": "image",
+          "en_alt": "An archivist handles a bound ledger over a scanning bed.",
+          "fr_alt": "Une archiviste manipule un registre relié au-dessus d'un lit de numérisation.",
+          "en_caption": "Thirty-one organizations were selected in the first round.",
+          "fr_caption": "Trente et un organismes ont été retenus au premier tour.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "heritage",
+          "archives",
+          "digitization",
+          "official language minority communities"
+        ],
+        "fr_tags": [
+          "patrimoine",
+          "archives",
+          "numérisation"
+        ],
+        "en_seo": "A $38 million fund digitizes community archives over four years.",
+        "fr_seo": "Un fonds de 38 millions de dollars numérise des archives communautaires."
+      }
+    },
+    {
+      "doc_id": "econ-033",
+      "topic": "small_business",
+      "meta": {
+        "date": "2026-09-03",
+        "desk": "Business",
+        "region": "Ontario",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Small business insolvencies rise 26 per cent year over year",
+        "body": "Small business insolvency filings rose 26 per cent last year, the highest level since 2011. Accommodation and food services accounted for 31 per cent of filings. The average liability was $412,000. A federal loan repayment deadline in January preceded the sharpest quarterly increase. Business groups requested an extension of the repayment window."
+      },
+      "fr": {
+        "title": "Les insolvabilités de petites entreprises augmentent de 26 pour cent sur un an",
+        "body": "Les dossiers d'insolvabilité de petites entreprises ont augmenté de 26 pour cent l'an dernier, atteignant leur plus haut niveau depuis 2011. L'hébergement et les services de restauration comptaient pour 31 pour cent des dossiers. Le passif moyen s'élevait à 412 000 $. Une échéance fédérale de remboursement de prêt en janvier a précédé la plus forte hausse trimestrielle. Des groupes d'affaires ont demandé une prolongation de la période de remboursement."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "edu-034",
+      "topic": "french_schools",
+      "meta": {
+        "date": "2026-09-10",
+        "desk": "Education",
+        "region": "West",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Francophone school board wins capital funding after court ruling",
+        "body": "The province will fund three new francophone schools following a court ruling on minority language education rights. The board has operated four schools above capacity since 2019. Enrolment grew 34 per cent over the decade. Construction begins in 2027. The ruling cited section 23 of the Charter and ordered a remedy within eighteen months."
+      },
+      "fr": {
+        "title": "Un conseil scolaire francophone obtient du financement d'immobilisations après une décision judiciaire",
+        "body": "La province financera trois nouvelles écoles francophones à la suite d'une décision judiciaire portant sur les droits à l'instruction dans la langue de la minorité. Le conseil exploite quatre écoles au-delà de leur capacité depuis 2019. Les effectifs ont augmenté de 34 pour cent au cours de la décennie. La construction débutera en 2027. La décision invoque l'article 23 de la Charte et ordonne une réparation dans un délai de dix-huit mois."
+      },
+      "media": [
+        {
+          "asset_id": "img-edu-034-a",
+          "kind": "image",
+          "en_alt": "Students walk past portable classrooms behind a school.",
+          "fr_alt": "Des élèves passent devant des classes mobiles derrière une école.",
+          "en_caption": "The board has operated four schools above capacity since 2019.",
+          "fr_caption": "Le conseil exploite quatre écoles au-delà de leur capacité depuis 2019.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ],
+      "editorial": {
+        "en_tags": [
+          "francophone education",
+          "minority language rights",
+          "school construction",
+          "Charter section 23"
+        ],
+        "fr_tags": [
+          "éducation francophone",
+          "construction scolaire"
+        ],
+        "en_seo": "A court ruling on section 23 rights secures three new francophone schools.",
+        "fr_seo": null
+      }
+    },
+    {
+      "doc_id": "wx-035",
+      "topic": "severe_weather",
+      "meta": {
+        "date": "2026-09-17",
+        "desk": "News",
+        "region": "Quebec",
+        "author": "J. Tremblay"
+      },
+      "en": {
+        "title": "Post-tropical storm floods coastal communities",
+        "body": "A post-tropical storm brought 140 millimetres of rain and flooded 620 properties across four coastal municipalities Saturday. Two bridges were closed for inspection. About 1,900 customers lost power. Provincial disaster assistance opened Monday. Environment Canada recorded sustained winds of 94 kilometres per hour at Sept-Îles."
+      },
+      "fr": {
+        "title": "Une tempête post-tropicale inonde des communautés côtières",
+        "body": "Une tempête post-tropicale a laissé 140 millimètres de pluie et inondé 620 propriétés dans quatre municipalités côtières samedi. Deux ponts ont été fermés pour inspection. Environ 1 900 clients ont été privés d'électricité. L'aide provinciale aux sinistrés a été ouverte lundi. Environnement Canada a enregistré des vents soutenus de 94 kilomètres à l'heure à Sept-Îles."
+      },
+      "media": [
+        {
+          "asset_id": "img-wx-035-a",
+          "kind": "image",
+          "en_alt": "Floodwater covers a coastal road beside damaged wharf pilings.",
+          "fr_alt": "Floodwater covers a coastal road beside damaged wharf pilings.",
+          "en_caption": "The storm flooded 620 properties across four municipalities.",
+          "fr_caption": "La tempête a inondé 620 propriétés dans quatre municipalités.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        },
+        {
+          "asset_id": "vid-wx-035-b",
+          "kind": "video",
+          "en_alt": "A municipal crew inspects a closed bridge.",
+          "fr_alt": "Une équipe municipale inspecte un pont fermé.",
+          "en_caption": "Two bridges were closed for inspection.",
+          "fr_caption": null,
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "en_transcript": "We'll have engineers on both structures before we reopen anything to traffic.",
+          "fr_transcript": "Des ingénieurs vont examiner les deux structures avant qu'on rouvre à la circulation."
+        }
+      ]
+    },
+    {
+      "doc_id": "hous-036",
+      "topic": "housing",
+      "meta": {
+        "date": "2026-09-24",
+        "desk": "Municipal",
+        "region": "North",
+        "author": "D. Singh"
+      },
+      "en": {
+        "title": "Northern housing costs prompt federal construction subsidy",
+        "body": "Ottawa announced a northern construction subsidy covering up to 40 per cent of building costs for affordable units above the sixtieth parallel. Material transport adds an estimated 55 per cent to construction costs in the region. The program funds 480 units over five years. Territorial governments will administer applications. Overcrowding affects 21 per cent of northern households."
+      },
+      "fr": {
+        "title": "Le coût du logement dans le Nord entraîne une subvention fédérale à la construction",
+        "body": "Ottawa a annoncé une subvention à la construction dans le Nord couvrant jusqu'à 40 pour cent des coûts de bâtiment pour des logements abordables au nord du soixantième parallèle. Le transport des matériaux ajoute environ 55 pour cent aux coûts de construction dans la région. Le programme finance 480 logements sur cinq ans. Les gouvernements territoriaux administreront les demandes. Le surpeuplement touche 21 pour cent des ménages du Nord."
+      },
+      "media": [
+        {
+          "asset_id": "img-hous-036-a",
+          "kind": "image",
+          "en_alt": "Prefabricated housing units staged on gravel near an airstrip.",
+          "fr_alt": "Des unités de logement préfabriquées déposées sur du gravier près d'une piste d'atterrissage.",
+          "en_caption": "The program funds 480 units over five years.",
+          "fr_caption": "Le programme finance 480 logements sur cinq ans.",
+          "en_credit": "CBC/Radio-Canada",
+          "fr_credit": "CBC/Radio-Canada",
+          "transcript": null
+        }
+      ]
+    },
+    {
+      "doc_id": "hlth-037",
+      "topic": "pharmacare",
+      "meta": {
+        "date": "2026-10-01",
+        "desk": "Health",
+        "region": "National",
+        "author": "S. Nadeau"
+      },
+      "en": {
+        "title": "Pharmacare formulary adds 34 medications",
+        "body": "The national pharmacare formulary added 34 medications Wednesday, including six diabetes treatments and four contraceptives. Coverage begins December 1. An estimated 2.1 million people use at least one newly listed drug. Provinces must sign bilateral agreements to receive funding; six have signed. The annual cost is projected at $1.4 billion."
+      },
+      "fr": {
+        "title": "Le formulaire de l'assurance médicaments ajoute 34 médicaments",
+        "body": "Le formulaire national de l'assurance médicaments a ajouté mercredi 34 médicaments, dont six traitements du diabète et quatre contraceptifs. La couverture débute le 1er décembre. On estime que 2,1 millions de personnes utilisent au moins un médicament nouvellement inscrit. Les provinces doivent signer des ententes bilatérales pour obtenir le financement; six l'ont fait. Le coût annuel est estimé à 1,4 milliard de dollars."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "pharmacare",
+          "prescription drugs",
+          "health policy",
+          "provinces"
+        ],
+        "fr_tags": [
+          "assurance médicaments",
+          "médicaments d'ordonnance",
+          "politique de santé",
+          "provinces"
+        ],
+        "en_seo": "The pharmacare formulary adds 34 medications effective December 1.",
+        "fr_seo": "Le formulaire de l'assurance médicaments ajoute 34 médicaments dès le 1er décembre."
+      }
+    },
+    {
+      "doc_id": "just-038",
+      "topic": "corrections",
+      "meta": {
+        "date": "2026-10-08",
+        "desk": "Justice",
+        "region": "Prairies",
+        "author": "P. Gagnon"
+      },
+      "en": {
+        "title": "Correctional investigator reports overrepresentation in segregation",
+        "body": "Indigenous people accounted for 46 per cent of structured intervention unit placements last year while representing 32 per cent of the federal inmate population, the correctional investigator reported. Average placement length was 19 days. The investigator made eleven recommendations; the service accepted six. Mental health flags were present in 58 per cent of placements."
+      },
+      "fr": {
+        "title": "L'enquêteur correctionnel signale une surreprésentation en isolement",
+        "body": "Les personnes autochtones représentaient 46 pour cent des placements en unité d'intervention structurée l'an dernier, alors qu'elles comptent pour 32 pour cent de la population carcérale fédérale, a indiqué l'enquêteur correctionnel. La durée moyenne des placements était de 19 jours. L'enquêteur a formulé onze recommandations; le service en a accepté six. Des signalements en santé mentale étaient présents dans 58 pour cent des placements."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "tech-039",
+      "topic": "cybersecurity",
+      "meta": {
+        "date": "2026-10-15",
+        "desk": "Technology",
+        "region": "National",
+        "author": "A. Okafor"
+      },
+      "en": {
+        "title": "Cyber centre reports ransomware incidents against municipalities",
+        "body": "The national cyber centre recorded 74 ransomware incidents against municipalities and health authorities last year, up 19 per cent. Nine incidents disrupted service delivery for more than a week. Median recovery cost was $1.8 million. The centre said fewer than half of affected organizations had tested backups. A new advisory service opens to municipalities in November."
+      },
+      "fr": {
+        "title": "Le centre de cybersécurité signale des incidents de rançongiciel visant des municipalités",
+        "body": "Le centre national de cybersécurité a recensé 74 incidents de rançongiciel visant des municipalités et des autorités sanitaires l'an dernier, en hausse de 19 pour cent. Neuf incidents ont perturbé la prestation de services pendant plus d'une semaine. Le coût médian de rétablissement s'élevait à 1,8 million de dollars. Le centre a indiqué que moins de la moitié des organismes touchés avaient testé leurs copies de sauvegarde. Un nouveau service-conseil sera offert aux municipalités en novembre."
+      },
+      "media": []
+    },
+    {
+      "doc_id": "immi-040",
+      "topic": "immigration",
+      "meta": {
+        "date": "2026-10-22",
+        "desk": "Politics",
+        "region": "Atlantic",
+        "author": "R. Comeau"
+      },
+      "en": {
+        "title": "Atlantic immigration pilot retention rate reaches 78 per cent",
+        "body": "The Atlantic immigration program reported a five-year retention rate of 78 per cent, up from 71 per cent in the previous cohort. Newcomers filled 6,200 designated positions last year, concentrated in health care and food processing. Francophone arrivals represented 9 per cent. Employers cited housing availability as the main barrier to further growth."
+      },
+      "fr": {
+        "title": "Le taux de rétention du programme d'immigration de l'Atlantique atteint 78 pour cent",
+        "body": "Le programme d'immigration au Canada atlantique affiche un taux de rétention sur cinq ans de 78 pour cent, contre 71 pour cent pour la cohorte précédente. Les personnes nouvellement arrivées ont pourvu 6 200 postes désignés l'an dernier, surtout en santé et en transformation alimentaire. Les arrivées francophones représentaient 9 pour cent. Les employeurs ont cité la disponibilité des logements comme principal obstacle à une croissance accrue."
+      },
+      "media": [],
+      "editorial": {
+        "en_tags": [
+          "immigration",
+          "Atlantic Canada",
+          "retention",
+          "labour"
+        ],
+        "fr_tags": [
+          "immigration",
+          "Canada atlantique",
+          "rétention",
+          "main-d'œuvre"
+        ],
+        "en_seo": "The Atlantic immigration program reports a 78 per cent five-year retention rate.",
+        "fr_seo": "Le programme d'immigration de l'Atlantique affiche un taux de rétention de 78 pour cent."
+      }
     }
   ]
 }

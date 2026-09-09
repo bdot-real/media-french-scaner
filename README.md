@@ -33,7 +33,7 @@ run in parallel — and reports where the two languages diverge.
 ```bash
 python3 bqh/harness.py                          # terminal report
 python3 bqh/harness.py --report report.html     # visual dashboard
-python3 tests/test_harness.py                   # detection validation (40 checks)
+python3 tests/test_harness.py                   # detection validation (60 checks)
 python3 tests/test_register.py                  # register validation (22 checks)
 python3 tests/test_drift.py                     # MDR/QFCR validation (21 checks)
 python3 tests/test_i18n.py                      # French UI copy validation (16 checks)
@@ -55,7 +55,8 @@ French.
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
 
-24 parallel EN/FR documents · 32 parallel queries · 18 annotated defects.
+40 parallel EN/FR documents · 52 parallel queries · 22 annotated defects ·
+21 media assets · 20 documents with editorial metadata.
 
 ### Real embeddings instead of a modelled gap
 

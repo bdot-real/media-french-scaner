@@ -425,6 +425,230 @@
           }
         ]
       }
+    },
+    {
+      "query_id": "q33",
+      "en": {
+        "answer": "The commissioner announced $54 million for 22 language nest programs covering fourteen languages."
+      },
+      "fr": {
+        "answer": "Le commissaire a annoncé 54 millions de dollars pour 22 programmes de nids linguistiques visant quatorze langues.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q34",
+      "en": {
+        "answer": "Algorithmic impact assessments become required September 1, covering 340 identified systems."
+      },
+      "fr": {
+        "answer": "Les évaluations d'incidence algorithmique deviennent obligatoires le 1er septembre pour 340 systèmes recensés.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q35",
+      "en": {
+        "answer": "Drought cut the Prairie crop forecast 18 per cent after a dry June, with poor soil moisture across 41 per cent of farmland."
+      },
+      "fr": {
+        "answer": "La sécheresse a réduit les prévisions de récolte des Prairies de 18 pour cent après un mois de juin sec.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the 41 per cent soil-moisture figure present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q36",
+      "en": {
+        "answer": "The longest median youth mental health wait was 41 weeks, with about 28,000 young people on waitlists."
+      },
+      "fr": {
+        "answer": "Le délai médian le plus long en santé mentale jeunesse atteignait 41 semaines, et environ 28 000 jeunes figurent sur des listes d'attente.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q37",
+      "en": {
+        "answer": "The caribou conservation agreement protects 1.2 million hectares from new industrial disturbance."
+      },
+      "fr": {
+        "answer": "L'entente de conservation du caribou protège 1,2 million d'hectares de toute nouvelle perturbation industrielle.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q38",
+      "en": {
+        "answer": "The legal aid income threshold rises to $28,400 from $23,100 on October 1."
+      },
+      "fr": {
+        "answer": "Le seuil de revenu de l'aide juridique passera de 23 100 $ à 28 400 $ le 1er octobre.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q39",
+      "en": {
+        "answer": "Riders under 18 qualify for the two-year fare-free transit pilot, covering about 19,000 students."
+      },
+      "fr": {
+        "answer": "Les usagers de moins de 18 ans sont admissibles au projet pilote de gratuité de deux ans, qui vise environ 19 000 élèves.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q40",
+      "en": {
+        "answer": "Thirty-one of 92 applicant organizations were selected for archive digitization in the first round."
+      },
+      "fr": {
+        "answer": "Trente et un organismes sur 92 ont été retenus pour la numérisation d'archives au premier tour.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q41",
+      "en": {
+        "answer": "Small business insolvency filings rose 26 per cent, the highest level since 2011."
+      },
+      "fr": {
+        "answer": "Les dossiers d'insolvabilité de petites entreprises ont augmenté de 34 pour cent, leur plus haut niveau depuis 2011.",
+        "defects": [
+          {
+            "type": "grounding",
+            "detail": "Fabricated figure: 34 per cent, source says 26.",
+            "span": "34 pour cent"
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q42",
+      "en": {
+        "answer": "A court ruling on section 23 Charter rights ordered a remedy, and the province will fund three new francophone schools."
+      },
+      "fr": {
+        "answer": "La province financera trois nouvelles écoles francophones à la suite d'une décision judiciaire.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Omits the section 23 Charter basis and the ordered remedy, both present in EN.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q43",
+      "en": {
+        "answer": "The post-tropical storm brought 140 millimetres of rain and flooded 620 properties."
+      },
+      "fr": {
+        "answer": "La tempête post-tropicale a laissé 140 millimètres de pluie et inondé 620 propriétés.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q44",
+      "en": {
+        "answer": "The northern subsidy covers up to 40 per cent of building costs for affordable units above the sixtieth parallel."
+      },
+      "fr": {
+        "answer": "La subvention du Nord couvre jusqu'à 40 pour cent des coûts de bâtiment pour des logements abordables au nord du soixantième parallèle.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q45",
+      "en": {
+        "answer": "The pharmacare formulary added 34 medications, including six diabetes treatments and four contraceptives."
+      },
+      "fr": {
+        "answer": "Le formulaire de l'assurance médicaments a ajouté 34 médicaments, dont six traitements du diabète et quatre contraceptifs.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q46",
+      "en": {
+        "answer": "Indigenous people accounted for 46 per cent of segregation placements while representing 32 per cent of the federal inmate population."
+      },
+      "fr": {
+        "answer": "Les personnes autochtones représentaient 46 pour cent des placements en isolement, alors qu'elles comptent pour 32 pour cent de la population carcérale fédérale.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q47",
+      "en": {
+        "answer": "The cyber centre recorded 74 ransomware incidents against municipalities and health authorities, up 19 per cent."
+      },
+      "fr": {
+        "answer": "Le centre de cybersécurité a recensé 74 incidents de rançongiciel visant des municipalités et des autorités sanitaires, en hausse de 19 pour cent.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q48",
+      "en": {
+        "answer": "The Atlantic immigration program reported a five-year retention rate of 78 per cent, up from 71 per cent."
+      },
+      "fr": {
+        "answer": "Le programme d'immigration de l'Atlantique affiche un taux de rétention sur cinq ans de 78 pour cent, contre 71 pour cent auparavant.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q49",
+      "en": {
+        "answer": "Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coastal properties and cut power to 1,900 customers."
+      },
+      "fr": {
+        "answer": "La sécheresse a réduit les prévisions de récolte de 18 pour cent dans les Prairies.",
+        "defects": [
+          {
+            "type": "coverage",
+            "detail": "Second document (post-tropical storm) missing entirely.",
+            "span": null
+          }
+        ]
+      }
+    },
+    {
+      "query_id": "q50",
+      "en": {
+        "answer": "Supports include $54 million for 22 Indigenous language nests and provincial funding for three new francophone schools ordered by a court."
+      },
+      "fr": {
+        "answer": "Les appuis comprennent 54 millions de dollars pour 22 nids linguistiques autochtones et du financement provincial pour trois nouvelles écoles francophones.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q51",
+      "en": {
+        "answer": "Employers cited housing availability as the main barrier, and a federal subsidy now covers up to 40 per cent of northern construction costs."
+      },
+      "fr": {
+        "answer": "Les employeurs ont cité la disponibilité des logements comme principal obstacle, et une subvention fédérale couvre maintenant jusqu'à 40 pour cent des coûts de construction dans le Nord.",
+        "defects": []
+      }
+    },
+    {
+      "query_id": "q52",
+      "en": {
+        "answer": "Youth mental health waits exceed six months in seven provinces, while the pharmacare formulary added 34 medications effective December 1."
+      },
+      "fr": {
+        "answer": "Les délais en santé mentale jeunesse dépassent six mois dans sept provinces, et le formulaire de l'assurance médicaments a ajouté 34 médicaments dès le 1er décembre.",
+        "defects": []
+      }
     }
   ]
 }
