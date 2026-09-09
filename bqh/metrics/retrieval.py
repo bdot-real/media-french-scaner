@@ -17,10 +17,21 @@ import re
 import unicodedata
 from collections import Counter, defaultdict
 
-# Canadian French terms under-represented in metropolitan-tuned embedding
-# spaces. Value = fraction of the term's normal retrieval weight the model
-# actually recovers. Sourced from the divergence classes annotated in
-# corpus/queries.json.
+# Canadian French terms hypothesised to be under-represented in
+# metropolitan-tuned embedding spaces. Value = fraction of the term's normal
+# retrieval weight the model recovers.
+#
+# MEASURED CORRECTION: running --retriever embedding against bge-m3 shows this
+# table overstates the effect. A current multilingual model represents these
+# terms well; French retrieval measured marginally BETTER than English, and no
+# query failed in French that succeeded in English. q04 ("halte-chaleur") goes
+# from P@1 0.0 under this table to 1.0 under real embeddings.
+#
+# The table is kept because the comparison between the two backends is the
+# finding: it shows that the intuitive assumption — Canadian vocabulary breaks
+# retrieval — does not survive measurement, while the generation, metadata and
+# post-processing gaps do. Treat these weights as a hypothesis the harness
+# disproved, not as a description of any deployed system.
 LEXICON_COVERAGE = {
     "assurance-emploi": 0.35,
     "assurable": 0.45,

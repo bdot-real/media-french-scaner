@@ -62,8 +62,8 @@ metadata.
 ### Real embeddings instead of a modelled gap
 
 The default BM25 backend *simulates* the Canadian-French retrieval gap from a
-hand-authored lexicon table — which means the divergence is asserted, not
-measured. To measure it for real with a local multilingual model:
+hand-authored lexicon table. To measure it for real with a local multilingual
+model:
 
 ```bash
 ./setup_ollama.sh                    # installs ollama, pulls bge-m3
@@ -72,10 +72,64 @@ python3 bqh/harness.py --retriever embedding --report report_embed.html
 
 Both backends expose the same interface, so every metric, severity tier, and
 dashboard element is identical — which makes the comparison between them
-informative in itself. `bge-m3` is the default because it is genuinely
-multilingual; an English-centric model like `nomic-embed-text` would overstate
-divergence for the wrong reason, and reporting that as a Canadian-French finding
-would be exactly the motivated measurement this backend exists to avoid.
+informative in itself.
+
+#### Measured result: the modelled retrieval gap did not survive contact
+
+Run against `bge-m3` (1024-dim, multilingual) on the 60-document corpus:
+
+| Dimension | BM25 gap (modelled) | Embedding gap (measured) |
+|---|---|---|
+| retrieval precision@1 | +0.026 | **−0.013** |
+| retrieval recall@3 | +0.016 | **−0.011** |
+| retrieval nDCG@3 | +0.016 | **−0.018** |
+| content coverage | +0.112 | +0.112 |
+| Canadian French register | +0.077 | +0.077 |
+| grounding (fabrication) | +0.030 | +0.030 |
+
+**Queries where French retrieval failed and English succeeded: zero.** The sign
+flips — French retrieval is marginally *better* than English under a real
+multilingual model.
+
+The clearest case is q04, the `halte-chaleur` query that was the harness's
+centrepiece finding under BM25:
+
+```
+q04  "Where can people go to keep warm?"   gold: wx-003, hous-024
+  BM25 (modelled)  FR → tech-059, hous-050, tech-039    P@1 0.0
+  bge-m3 (real)    FR → hous-024, wx-003, wx-049        P@1 1.0
+```
+
+`bge-m3` represents `halte-chaleur` perfectly well. The `LEXICON_COVERAGE`
+table assumed it would not, and that assumption was wrong.
+
+**This is the most important result in the project, and it corrects the
+hypothesis the harness was built on.** The argument was: Canadian French
+vocabulary is weakly represented, so retrieval diverges. Measured against a
+current multilingual embedding model, that specific claim does not hold. Anyone
+planning a bilingual RAG pipeline on the assumption that they must fix
+retrieval first would be optimising the wrong stage.
+
+#### What the measurement does not overturn
+
+Every non-retrieval gap is unchanged, because those metrics never depended on
+the retrieval backend:
+
+- **content coverage +0.112** — French answers carry less than their English
+  counterparts. 14 queries.
+- **Canadian French register +0.077** — metropolitan forms and dropped
+  statutory terms. 3 queries.
+- **grounding +0.030** — 4 fabricated figures.
+- **QFCR 80%** — a naive proofreading pass still destroys 12 of 15 valid Quebec
+  forms.
+- **Media metadata: 58% of assets accessible in French** — this one has nothing
+  to do with models at all.
+
+Service parity is 71% under both backends, and the same 4 queries leave the
+French reader unserved. **The divergence is real; it just lives in generation,
+metadata, and post-processing rather than retrieval.** That is a more useful
+finding than the one the harness set out to confirm, and it is only visible
+because the modelled and measured backends could be compared directly.
 
 Note that the embedding backend cannot attribute divergence to a specific term —
 `weak_terms` returns empty, because a dense model gives no per-token account of
