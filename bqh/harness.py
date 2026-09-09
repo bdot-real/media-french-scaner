@@ -72,7 +72,33 @@ def generate_anthropic(query, lang, contexts, model):
     return msg.content[0].text.strip()
 
 
-def generate_openrouter(query, lang, contexts, model, _retries=3):
+def _extract_text(body):
+    """Pull the answer text out of an OpenRouter response.
+
+    Returns (text, error). Reasoning models can return `content: null` with the
+    output stranded in `reasoning` when the token budget is spent on thinking
+    (finish_reason "length"), so a plain body["...']["content"].strip() crashes
+    mid-run. Fall back to the reasoning field, and report an empty completion as
+    a retryable error rather than silently scoring "" as an answer — an empty
+    French answer would otherwise register as a grounding success with nothing
+    to contradict.
+    """
+    try:
+        choice = body["choices"][0]
+    except (KeyError, IndexError):
+        return None, f"malformed response: {str(body)[:160]}"
+    msg = choice.get("message") or {}
+    for field in ("content", "reasoning"):
+        val = msg.get(field)
+        if isinstance(val, str) and val.strip():
+            return val.strip(), None
+    if msg.get("refusal"):
+        return None, f"model refused: {msg['refusal']}"
+    return None, (f"empty completion (finish_reason="
+                  f"{choice.get('finish_reason')!r})")
+
+
+def generate_openrouter(query, lang, contexts, model, _retries=5):
     """Generate through OpenRouter (stdlib only — no SDK dependency).
 
     Free-tier OpenRouter endpoints rate-limit and occasionally return a
@@ -90,13 +116,14 @@ def generate_openrouter(query, lang, contexts, model, _retries=3):
     system, user = _build_prompt(query, lang, contexts)
     payload = json.dumps({
         "model": model,
-        "max_tokens": 400,
+        "max_tokens": 1200,
         "temperature": 0,
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": user}],
     }).encode("utf-8")
 
     last = None
+    retry_after = None
     for attempt in range(_retries):
         req = urllib.request.Request(
             "https://openrouter.ai/api/v1/chat/completions", data=payload,
@@ -110,11 +137,29 @@ def generate_openrouter(query, lang, contexts, model, _retries=3):
             if "error" in body:
                 last = body["error"].get("message", str(body["error"]))
             else:
-                return body["choices"][0]["message"]["content"].strip()
+                text, last = _extract_text(body)
+                if text:
+                    return text
+            rate_limited = False
+        except urllib.error.HTTPError as exc:
+            last = f"HTTP Error {exc.code}: {exc.reason}"
+            # 429 on a free tier needs a real cooldown, not a 2s nudge; the
+            # window is typically tens of seconds. Honour Retry-After if sent.
+            rate_limited = exc.code == 429
+            if rate_limited:
+                hdr = exc.headers.get("Retry-After") if exc.headers else None
+                try:
+                    retry_after = int(hdr) if hdr else None
+                except ValueError:
+                    retry_after = None
         except (urllib.error.URLError, KeyError, ValueError, TimeoutError) as exc:
             last = str(exc)
+            rate_limited = False
         if attempt < _retries - 1:
-            time.sleep(2 * (attempt + 1))
+            if rate_limited:
+                time.sleep(retry_after or (30 * (attempt + 1)))
+            else:
+                time.sleep(2 * (attempt + 1))
     raise RuntimeError(f"OpenRouter failed after {_retries} attempts: {last}")
 
 
@@ -122,8 +167,13 @@ PROVIDERS = {"anthropic": generate_anthropic, "openrouter": generate_openrouter}
 
 
 def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
-             provider="anthropic", verbose=False):
+             provider="anthropic", verbose=False, cache_path=None):
     by_id = {d["doc_id"]: d for d in docs}
+    cache = {}
+    if cache_path and cache_path.exists():
+        cache = json.loads(cache_path.read_text())
+        if verbose and cache:
+            print(f"  Reusing {len(cache)} cached generations", file=sys.stderr)
     retrievers = {lang: BilingualRetriever(docs, lang) for lang in LANGS}
     rows = []
 
@@ -140,10 +190,20 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
                         for d in ranked if d in by_id]
 
             if live:
-                if verbose:
-                    print(f"    {q['query_id']} [{lang}] generating…",
-                          file=sys.stderr)
-                answer = PROVIDERS[provider](q[lang], lang, contexts, model)
+                ckey = f"{provider}|{model}|{q['query_id']}|{lang}"
+                if ckey in cache:
+                    answer = cache[ckey]
+                else:
+                    if verbose:
+                        print(f"    {q['query_id']} [{lang}] generating…",
+                              file=sys.stderr)
+                    answer = PROVIDERS[provider](q[lang], lang, contexts, model)
+                    # Checkpoint after every call: a 32-call run that dies at
+                    # call 30 should not throw away the first 29.
+                    cache[ckey] = answer
+                    if cache_path:
+                        cache_path.write_text(
+                            json.dumps(cache, ensure_ascii=False, indent=2))
             else:
                 answer = gens[q["query_id"]][lang]["answer"]
 
@@ -287,6 +347,12 @@ def main():
                     help="Model id; defaults per provider")
     ap.add_argument("-v", "--verbose", action="store_true",
                     help="Log each live generation call")
+    ap.add_argument("--limit", type=int, metavar="N",
+                    help="Evaluate only the first N queries (useful when a "
+                         "live provider caps daily requests)")
+    ap.add_argument("--cache", metavar="PATH", default="live_cache.json",
+                    help="Checkpoint file for live generations "
+                         "(default: live_cache.json; use '' to disable)")
     ap.add_argument("--k", type=int, default=3, help="Retrieval depth")
     ap.add_argument("--json", metavar="PATH", help="Write full results as JSON")
     ap.add_argument("--report", metavar="PATH", help="Write the HTML dashboard")
@@ -297,12 +363,15 @@ def main():
     model = args.model or default_model[args.provider]
 
     docs, queries, gens = load_corpus()
+    if args.limit:
+        queries = queries[:args.limit]
     if args.live:
         print(f"  Live generation: {args.provider} · {model} "
               f"({len(queries) * 2} calls)", file=sys.stderr)
     rows, summary = evaluate(docs, queries, gens, live=args.live,
                              model=model, k=args.k, provider=args.provider,
-                             verbose=args.verbose)
+                             verbose=args.verbose,
+                             cache_path=Path(args.cache) if (args.live and args.cache) else None)
     summary["mode"] = f"live · {args.provider} · {model}" if args.live else "offline"
     print_report(summary)
 

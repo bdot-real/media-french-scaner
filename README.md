@@ -155,14 +155,53 @@ The French system prompt explicitly asks for Canadian French to Radio-Canada
 conventions. So a live run answers a sharper question than the frozen corpus can:
 **is prompt-level instruction enough to hold register?**
 
-If `fluency_register` still diverges when the model was *told* to write Canadian
-French, that is a finding about the model, not about the prompt — and it is the
-argument for a register-aware evaluation gate in the pipeline rather than a
-better system prompt.
+**Measured result** (`nex-agi/nex-n2.5-pro:free` via OpenRouter, 13 query pairs):
 
-Free-tier endpoints rate-limit and intermittently error. The client retries with
-backoff and raises on exhaustion rather than skipping the query, because
-silently dropping failed generations would bias the EN/FR comparison.
+```
+  DIMENSION                     EN      FR      GAP   STATUS
+  retrieval_p_at_1           1.000   0.923   +0.077   ok
+  grounding_numeric          1.000   1.000   +0.000   ok
+  fluency_register           1.000   1.000   +0.000   ok
+  content_coverage           1.000   0.923   +0.077   ok
+  --------------------------------------------------------------
+  Equivalence index: 0.958
+```
+
+Two findings, and they point in opposite directions:
+
+**Generation held up.** Register scored a perfect 1.000 — the model used
+`conseillers scolaires`, not `administrateurs`; `communautés de langue
+officielle`, not the loose paraphrase. Grounding was clean in both languages: no
+fabricated figures. Prompt-level instruction *was* sufficient here, which is a
+real (and encouraging) result worth reporting honestly rather than assuming the
+worst.
+
+**Retrieval still failed — and the consequence got worse, not better.** Query
+q04 ("where can people go to keep warm?"):
+
+| | Answer |
+|---|---|
+| **EN** | "People can go to one of the eleven warming centres opened by municipalities." |
+| **FR** | *"Les sources fournies ne mentionnent aucune panne ni aucun endroit où les gens peuvent aller se réchauffer."* |
+
+The French user gets **no answer at all** to a question the English user gets
+answered — same corpus, same model, same prompt. The retrieval layer never
+surfaced the document, because `halte-chaleur` is weakly represented, so a
+well-behaved model correctly declined to answer.
+
+This is the argument the harness exists to make. A good model does not rescue a
+retrieval layer with uneven language coverage — it faithfully reports that it
+has nothing to say. The failure moves from *visible* (a bad French answer) to
+*invisible* (a polite refusal), which is harder to catch in production and
+worse for the reader. **Fixing the generator would not have fixed this.**
+
+### Note on the live numbers
+
+The live run covers 13 of 16 query pairs. The three multi-document queries
+(q14–q16) are missing: OpenRouter's free tier caps at 50 requests/day and the
+run exhausted it. `--limit 13` scores the complete subset rather than comparing
+uneven query sets across languages. Live generations are checkpointed to
+`live_cache.json` after every call, so a re-run resumes instead of re-paying.
 
 ## Corpus
 
