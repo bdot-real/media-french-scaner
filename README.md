@@ -77,23 +77,26 @@ informative in itself.
 
 #### Measured result: the modelled retrieval gap did not survive contact
 
-Run against `bge-m3` (1024-dim, multilingual) on the 60-document corpus:
+Run against `bge-m3` (1024-dim, multilingual). Replicated at two corpus sizes:
 
 | Dimension | BM25 gap (modelled) | Embedding gap (measured) |
 |---|---|---|
-| retrieval precision@1 | +0.026 | **−0.013** |
-| retrieval recall@3 | +0.016 | **−0.011** |
-| retrieval nDCG@3 | +0.016 | **−0.018** |
-| content coverage | +0.112 | +0.112 |
-| Canadian French register | +0.077 | +0.077 |
-| grounding (fabrication) | +0.030 | +0.030 |
+| retrieval precision@1 | +0.039 | **−0.010** |
+| retrieval recall@3 | +0.017 | +0.003 |
+| retrieval nDCG@3 | +0.022 | **−0.005** |
+| grounding (in retrieved context) | +0.033 | +0.021 |
+| content coverage | +0.116 | +0.116 |
+| Canadian French register | +0.059 | +0.059 |
+| localization | +0.015 | +0.015 |
 
-**Queries where French retrieval failed and English succeeded: zero.** The sign
-flips — French retrieval is marginally *better* than English under a real
-multilingual model.
+At 80 documents and 102 queries: **1 query where French retrieval failed and
+English succeeded, against 2 where English failed and French succeeded.** The
+sign inverts on precision and nDCG — French retrieval is marginally *ahead*.
+The same result held at 60 documents (0 French failures, 1 English), so it is
+not an artefact of one corpus.
 
-The clearest case is q04, the `halte-chaleur` query that was the harness's
-centrepiece finding under BM25:
+The clearest single case is q04, the `halte-chaleur` query that was the
+harness's centrepiece finding under BM25:
 
 ```
 q04  "Where can people go to keep warm?"   gold: wx-003, hous-024
@@ -116,18 +119,22 @@ retrieval first would be optimising the wrong stage.
 Every non-retrieval gap is unchanged, because those metrics never depended on
 the retrieval backend:
 
-- **content coverage +0.112** — French answers carry less than their English
-  counterparts. 14 queries.
-- **Canadian French register +0.077** — metropolitan forms and dropped
-  statutory terms. 3 queries.
-- **grounding +0.030** — 4 fabricated figures.
+- **content coverage +0.116** — French answers carry less than their English
+  counterparts. 17 queries.
+- **Canadian French register +0.059** — metropolitan forms and dropped
+  statutory terms.
+- **grounding +0.038** — 6 fabricated figures.
+- **terminology consistency FR 0.571 vs EN 1.000** — identical under both
+  backends, because it never touched retrieval.
+- **localization +0.015** — anglo date and currency formats in French copy.
 - **QFCR 80%** — a naive proofreading pass still destroys 12 of 15 valid Quebec
   forms.
 - **Media metadata: 58% of assets accessible in French** — this one has nothing
   to do with models at all.
 
-Service parity is 71% under both backends, and the same 4 queries leave the
-French reader unserved. **The divergence is real; it just lives in generation,
+Service parity is 69% (BM25) and 72% (embeddings) — the small difference is
+retrieval-driven, and every generation-side gap is identical to three decimal
+places. **The divergence is real; it just lives in generation,
 metadata, and post-processing rather than retrieval.** That is a more useful
 finding than the one the harness set out to confirm, and it is only visible
 because the modelled and measured backends could be compared directly.
