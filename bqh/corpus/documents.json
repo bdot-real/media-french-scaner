@@ -26,8 +26,8 @@
           "fr_alt": "Un pêcheur en ciré décharge des caisses sur un quai à l'aube.",
           "en_caption": "Seasonal work on the Atlantic coast begins before sunrise.",
           "fr_caption": "Le travail saisonnier sur la côte atlantique commence avant le lever du soleil.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -73,8 +73,8 @@
           "fr_alt": "Un corridor d'hôpital avec une civière vide.",
           "en_caption": "Provinces signed bilateral agreements Thursday.",
           "fr_caption": "Les provinces ont signé des ententes bilatérales jeudi.",
-          "en_credit": "The Canadian Press",
-          "fr_credit": "La Presse Canadienne",
+          "en_credit": "Example Newswire",
+          "fr_credit": "Exemple Agence de presse",
           "transcript": null
         }
       ],
@@ -120,8 +120,8 @@
           "fr_alt": null,
           "en_caption": "Freezing rain coated lines across eastern Ontario.",
           "fr_caption": "La pluie verglaçante a recouvert les lignes dans l'est de l'Ontario.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         },
         {
@@ -131,8 +131,8 @@
           "fr_alt": "Des équipes dégagent un arbre tombé sur une autoroute.",
           "en_caption": "Hydro crews worked through the night.",
           "fr_caption": null,
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "We've got crews out across the region and we expect most customers restored by Sunday evening.",
           "fr_transcript": null
         }
@@ -420,8 +420,8 @@
           "fr_alt": "Fumée",
           "en_caption": "Wildfires burned 4.2 million hectares this season.",
           "fr_caption": "Les feux ont brûlé 4,2 millions d'hectares cette saison.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         },
         {
@@ -431,8 +431,8 @@
           "fr_alt": "Entrevue avec une résidente évacuée.",
           "en_caption": "Residents describe leaving with an hour's notice.",
           "fr_caption": "Des résidents racontent leur départ en une heure.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "We had about an hour to pack. The smoke came over the ridge faster than anyone expected.",
           "fr_transcript": "On a eu environ une heure pour faire nos valises. La fumée a franchi la crête plus vite que prévu."
         }
@@ -517,8 +517,8 @@
           "fr_alt": "A regional newsroom with three empty desks.",
           "en_caption": "Four regional bureaus will open this year.",
           "fr_caption": "Quatre bureaux régionaux ouvriront cette année.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -562,8 +562,8 @@
           "fr_alt": null,
           "en_caption": "Officials distributed bottled water at five sites.",
           "fr_caption": "Les autorités ont distribué de l'eau embouteillée à cinq endroits.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -607,8 +607,8 @@
           "fr_alt": "Une usine de traitement de l'eau en construction au bord d'un lac.",
           "en_caption": "Construction begins next spring on the first eight projects.",
           "fr_caption": "La construction des huit premiers projets débutera au printemps prochain.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -654,8 +654,8 @@
           "fr_alt": "Un train de voyageurs entre en gare.",
           "en_caption": "Six daily round trips will be added in June.",
           "fr_caption": "Six allers-retours quotidiens s'ajouteront en juin.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "Ridership is up fourteen per cent and we're adding frequencies to match demand.",
           "fr_transcript": null
         }
@@ -720,8 +720,8 @@
           "fr_alt": "Des lits de camp alignés dans le gymnase d'un refuge.",
           "en_caption": "Shelters ran at 96 per cent capacity through the winter.",
           "fr_caption": "Les refuges ont fonctionné à 96 pour cent de leur capacité durant l'hiver.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -767,8 +767,8 @@
           "fr_alt": "Des enfants assis en cercle avec une aînée dans une classe de nid linguistique.",
           "en_caption": "Language nests serve preschool children 30 hours a week.",
           "fr_caption": "Les nids linguistiques accueillent les enfants d'âge préscolaire 30 heures par semaine.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "We teach the language the way it was taught to us, through daily routine and play.",
           "fr_transcript": null
         }
@@ -848,8 +848,8 @@
           "fr_alt": "Sol",
           "en_caption": "Soil moisture was poor or very poor across 41 per cent of farmland.",
           "fr_caption": "L'humidité du sol était mauvaise ou très mauvaise sur 41 pour cent des terres.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -895,8 +895,8 @@
           "fr_alt": null,
           "en_caption": "Median waits exceeded six months in seven provinces.",
           "fr_caption": "Les délais médians dépassaient six mois dans sept provinces.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "Forty-one weeks is not a wait, it's a barrier. Families give up before they're seen.",
           "fr_transcript": null
         }
@@ -943,8 +943,8 @@
           "fr_alt": null,
           "en_caption": "Population surveys counted 3,400 animals, down from 9,000 in 2005.",
           "fr_caption": "Les relevés ont dénombré 3 400 bêtes, contre 9 000 en 2005.",
-          "en_credit": "The Canadian Press",
-          "fr_credit": "La Presse Canadienne",
+          "en_credit": "Example Newswire",
+          "fr_credit": "Exemple Agence de presse",
           "transcript": null
         },
         {
@@ -954,8 +954,8 @@
           "fr_alt": "Un travailleur forestier parle du fonds de transition.",
           "en_caption": "Forestry groups warned of job losses in three communities.",
           "fr_caption": "Des groupes forestiers ont prévenu de pertes d'emplois dans trois communautés.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "Eighty-five million sounds like a lot until you divide it across three towns and a decade.",
           "fr_transcript": "Quatre-vingt-cinq millions, ça semble beaucoup jusqu'à ce qu'on divise ça entre trois villages et une décennie."
         }
@@ -1054,8 +1054,8 @@
           "fr_alt": "Une archiviste manipule un registre relié au-dessus d'un lit de numérisation.",
           "en_caption": "Thirty-one organizations were selected in the first round.",
           "fr_caption": "Trente et un organismes ont été retenus au premier tour.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -1119,8 +1119,8 @@
           "fr_alt": "Des élèves passent devant des classes mobiles derrière une école.",
           "en_caption": "The board has operated four schools above capacity since 2019.",
           "fr_caption": "Le conseil exploite quatre écoles au-delà de leur capacité depuis 2019.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -1164,8 +1164,8 @@
           "fr_alt": "Floodwater covers a coastal road beside damaged wharf pilings.",
           "en_caption": "The storm flooded 620 properties across four municipalities.",
           "fr_caption": "La tempête a inondé 620 propriétés dans quatre municipalités.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         },
         {
@@ -1175,8 +1175,8 @@
           "fr_alt": "Une équipe municipale inspecte un pont fermé.",
           "en_caption": "Two bridges were closed for inspection.",
           "fr_caption": null,
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "We'll have engineers on both structures before we reopen anything to traffic.",
           "fr_transcript": "Des ingénieurs vont examiner les deux structures avant qu'on rouvre à la circulation."
         }
@@ -1207,8 +1207,8 @@
           "fr_alt": "Des unités de logement préfabriquées déposées sur du gravier près d'une piste d'atterrissage.",
           "en_caption": "The program funds 480 units over five years.",
           "fr_caption": "Le programme finance 480 logements sur cinq ans.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ]
@@ -1346,8 +1346,8 @@
           "fr_alt": "Une préposée aux bénéficiaires décrit un quart de travail en soins de longue durée.",
           "en_caption": "New rules require 3.5 hours of daily direct care per resident.",
           "fr_caption": "Les nouvelles règles exigent 3,5 heures de soins directs par jour par résident.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "Three and a half hours sounds fine on paper. On the floor with eleven residents it is not the same thing.",
           "fr_transcript": null
         }
@@ -1394,8 +1394,8 @@
           "fr_alt": "Une déneigeuse de trottoir dégage une rue résidentielle après une tempête.",
           "en_caption": "Twelve of nineteen sectors missed clearing deadlines.",
           "fr_caption": "Douze secteurs sur dix-neuf ont raté les échéances de déblaiement.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -1474,8 +1474,8 @@
           "fr_alt": null,
           "en_caption": "The settlement transfers 78,000 hectares to four First Nations.",
           "fr_caption": "Le règlement transfère 78 000 hectares à quatre Premières Nations.",
-          "en_credit": "The Canadian Press",
-          "fr_credit": "La Presse Canadienne",
+          "en_credit": "Example Newswire",
+          "fr_credit": "Exemple Agence de presse",
           "transcript": null
         },
         {
@@ -1485,8 +1485,8 @@
           "fr_alt": "Un chef parle de la revendication de 1992.",
           "en_caption": "Claims were filed in 1992 and resolved this week.",
           "fr_caption": "Les revendications déposées en 1992 ont été réglées cette semaine.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "My father filed this claim. He did not live to see it settled.",
           "fr_transcript": "Mon père a déposé cette revendication. Il n'a pas vécu assez longtemps pour la voir réglée."
         }
@@ -1585,8 +1585,8 @@
           "fr_alt": "Une musicienne québécoise parle de la découvrabilité en ligne.",
           "en_caption": "Commercial radio requires 65 per cent French-language vocal music.",
           "fr_caption": "La radio commerciale exige 65 pour cent de musique vocale de langue française.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "A quota tells you what gets played. Discoverability decides what gets heard.",
           "fr_transcript": "Un quota dit ce qui est diffusé. La découvrabilité décide ce qui est entendu."
         }
@@ -1651,8 +1651,8 @@
           "fr_alt": "De la vapeur monte des véhicules au ralenti dans le froid extrême devant une école.",
           "en_caption": "Wind chill near minus 48 closed schools in three divisions.",
           "fr_caption": "Un refroidissement éolien près de moins 48 a fermé des écoles dans trois divisions.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "We opened twenty-two warming locations and they filled by nine in the morning.",
           "fr_transcript": null
         }
@@ -1732,8 +1732,8 @@
           "fr_alt": "Des véhicules attendent dans la file d'un terminal de traversier au crépuscule.",
           "en_caption": "Crossings were cut from ten to six daily.",
           "fr_caption": "Les traversées sont passées de dix à six par jour.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ]
@@ -1782,8 +1782,8 @@
           "fr_alt": "Ambulances queue outside a hospital emergency entrance.",
           "en_caption": "Offload delays reached 118,000 hours last year.",
           "fr_caption": "Les délais de transfert ont atteint 118 000 heures l'an dernier.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],
@@ -1884,8 +1884,8 @@
           "fr_alt": "Des chasseurs déchargent une prise près d'un congélateur communautaire.",
           "en_caption": "The program distributed 240,000 kilograms of food.",
           "fr_caption": null,
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "en_transcript": "Store food costs four times what it does down south. This program is not a supplement, it is the meal.",
           "fr_transcript": "La nourriture du magasin coûte quatre fois plus cher qu'au sud. Ce programme n'est pas un supplément, c'est le repas."
         }
@@ -1984,8 +1984,8 @@
           "fr_alt": "Un conservateur examine un objet sculpté dans une salle d'entreposage.",
           "en_caption": "The museum returned 1,100 objects over three years.",
           "fr_caption": "Le musée a restitué 1 100 objets en trois ans.",
-          "en_credit": "CBC/Radio-Canada",
-          "fr_credit": "CBC/Radio-Canada",
+          "en_credit": "Example Broadcaster",
+          "fr_credit": "Example Broadcaster",
           "transcript": null
         }
       ],

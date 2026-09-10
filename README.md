@@ -2,6 +2,12 @@
 
 **Does an AI content workflow perform *equivalently* in English and Canadian French?**
 
+> **All content in this repository is synthetic.** The 80 news documents,
+> their bylines, figures, quotations, and media credits are invented for
+> evaluation purposes. Nothing here reproduces real reporting, real people, or
+> any organization's actual output. This is a personal project and is not
+> affiliated with or endorsed by any broadcaster.
+
 Most multilingual evaluation asks whether a model is *good enough* in each
 language, scored separately against separate baselines. That framing can't
 detect the failure that matters for a bilingual public broadcaster: both

@@ -1,7 +1,11 @@
 __pycache__/
 *.pyc
 
-# Live-run artifacts: regenerate with --live, never commit
+# Derived caches — regenerate by re-running; embed_cache is ~8MB of raw vectors
+embed_cache.json
+live_cache.json
+
+# Live-run artifacts: regenerate with --live
 results_live.json
 report_live.html
 
