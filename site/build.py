@@ -8,7 +8,8 @@ results_embed.json, never typed into the copy, so the site cannot disagree
 with the report it links to. The test count is read by running the suites.
 
 English is served at /, French at /fr/. Both reports are published under
-/report/ exactly as the harness wrote them.
+/report/ as the harness wrote them, with the site's search and sharing meta
+added to their <head>.
 """
 
 from __future__ import annotations
@@ -18,6 +19,7 @@ import html
 import json
 import re
 import shutil
+import struct
 import subprocess
 import sys
 from pathlib import Path
@@ -25,7 +27,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
-from content import REPO, SITE, STRINGS  # noqa: E402
+from content import REPORT_PAGES, REPO, SITE, STRINGS  # noqa: E402
 
 SUITES = ["test_harness", "test_register", "test_drift", "test_i18n", "test_newdims",
           "test_site_i18n"]
@@ -36,6 +38,8 @@ SUITES = ["test_harness", "test_register", "test_drift", "test_i18n", "test_newd
 FINDING_DIMS = ["retrieval_p_at_1", "retrieval_recall", "retrieval_ndcg",
                 "grounding_in_context", "content_coverage", "fluency_register",
                 "localization"]
+
+LICENSE_URL = f"{REPO}/blob/main/LICENSE"
 
 
 # ── numbers, the way each language writes them ────────────────────────────────
@@ -114,12 +118,57 @@ def img(lang, name, alt, cls="shot"):
             f'decoding="async">')
 
 
-def head(T, lang, path, title=None):
-    other = "fr" if lang == "en" else "en"
+def png_size(path):
+    """(width, height) from a PNG's IHDR chunk."""
+    return struct.unpack(">II", path.read_bytes()[16:24])
+
+
+def jsonld(T, lang, path):
+    """Structured data for the two home pages. Nothing here that isn't read from
+    content.py or the LICENSE file."""
+    home = f"{SITE}{path}"
+    data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/",
+             "name": "French Drift", "inLanguage": ["en-CA", "fr-CA"]},
+            {"@type": "WebPage", "@id": f"{home}#webpage", "url": home,
+             "name": html.unescape(re.sub(r"<[^>]+>", "", T["title"])),
+             "description": html.unescape(re.sub(r"<[^>]+>", "", T["description"])),
+             "inLanguage": "fr-CA" if lang == "fr" else "en-CA",
+             "isPartOf": {"@id": f"{SITE}/#website"},
+             "about": {"@id": f"{SITE}/#code"},
+             "primaryImageOfPage": f"{SITE}/img/{lang}/overview.png"},
+            {"@type": "SoftwareSourceCode", "@id": f"{SITE}/#code", "name": "French Drift",
+             "alternateName": T["brand_sub"],
+             "description": html.unescape(re.sub(r"<[^>]+>", "", T["description"])),
+             "codeRepository": REPO, "programmingLanguage": "Python",
+             "license": LICENSE_URL, "url": f"{SITE}/"},
+        ],
+    }
+    # "</" can't appear inside a <script> block; escape it the JSON way.
+    body = json.dumps(data, ensure_ascii=False, indent=1).replace("</", "<\\/")
+    return f'<script type="application/ld+json">\n{body}\n</script>\n'
+
+
+def head(T, lang, path, title=None, f=None, indexable=True):
+    """The <head>. A 404 is not indexable: it gets noindex and no canonical, so
+    no search engine is told a missing page is the home page."""
     here = f"{SITE}{path}"
     alt_path = {"en": "/", "fr": "/fr/"}
     t = attr(title or T["title"])
     d = attr(T["description"])
+    image = f"{SITE}/img/{lang}/overview.png"
+    w, h = png_size(HERE / "static" / "img" / lang / "overview.png")
+    image_alt = attr(fill(T["hero_alt"], f)) if f else ""
+    if indexable:
+        where = f"""<link rel="canonical" href="{here}">
+<link rel="alternate" hreflang="en-CA" href="{SITE}{alt_path['en']}">
+<link rel="alternate" hreflang="fr-CA" href="{SITE}{alt_path['fr']}">
+<link rel="alternate" hreflang="x-default" href="{SITE}/">
+<meta name="robots" content="index, follow, max-image-preview:large">"""
+    else:
+        where = '<meta name="robots" content="noindex, follow">'
     return f"""<!doctype html>
 <html lang="{'fr-CA' if lang == 'fr' else 'en-CA'}">
 <head>
@@ -127,26 +176,31 @@ def head(T, lang, path, title=None):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{t}</title>
 <meta name="description" content="{d}">
-<link rel="canonical" href="{here}">
-<link rel="alternate" hreflang="en-CA" href="{SITE}{alt_path['en']}">
-<link rel="alternate" hreflang="fr-CA" href="{SITE}{alt_path['fr']}">
-<link rel="alternate" hreflang="x-default" href="{SITE}/">
+{where}
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="French Drift">
 <meta property="og:locale" content="{'fr_CA' if lang == 'fr' else 'en_CA'}">
 <meta property="og:locale:alternate" content="{'en_CA' if lang == 'fr' else 'fr_CA'}">
 <meta property="og:title" content="{t}">
 <meta property="og:description" content="{d}">
-<meta property="og:url" content="{here}">
-<meta property="og:image" content="{SITE}/img/{lang}/overview.png">
+{f'<meta property="og:url" content="{here}">' if indexable else ''}
+<meta property="og:image" content="{image}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="{w}">
+<meta property="og:image:height" content="{h}">
+{f'<meta property="og:image:alt" content="{image_alt}">' if image_alt else ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{t}">
 <meta name="twitter:description" content="{d}">
-<meta name="twitter:image" content="{SITE}/img/{lang}/overview.png">
+<meta name="twitter:image" content="{image}">
+{f'<meta name="twitter:image:alt" content="{image_alt}">' if image_alt else ''}
 <meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131416" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="/style.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-</head>"""
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+{jsonld(T, lang, path) if indexable else ''}</head>"""
 
 
 def chrome(T, lang):
@@ -176,7 +230,7 @@ def footer(T, lang, f):
       <span class="brand-name">French Drift</span>
       <span>{T['brand_sub']}</span>
       <a href="{REPO}">{T['nav_repo']}</a>
-      <a href="{REPO}/blob/main/LICENSE">{T['footer_license']}</a>
+      <a href="{LICENSE_URL}">{T['footer_license']}</a>
       <a href="{'/fr/' if lang == 'en' else '/'}" lang="{'fr' if lang == 'en' else 'en'}">{T['other_name']}</a>
     </div>
     <p class="self">{T['footer_self']}</p>
@@ -237,7 +291,7 @@ def page(lang, bm25, embed, checks):
     dims = "".join(f'<div class="dim"><h4>{h}</h4><p>{fill(p, f)}</p></div>'
                    for h, p in T["dims"])
 
-    return f"""{head(T, lang, path)}
+    return f"""{head(T, lang, path, f=f)}
 <body>
 {chrome(T, lang)}
 <main id="main" tabindex="-1">
@@ -385,7 +439,7 @@ def not_found(bm25, embed, checks):
         T = STRINGS[lang]
         f = facts(bm25, embed, lang, checks)
         home = "/" if lang == "en" else "/fr/"
-        out[lang] = f"""{head(T, lang, home, T['nf_title'] + ' — French Drift')}
+        out[lang] = f"""{head(T, lang, home, T['nf_title'] + ' — French Drift', indexable=False)}
 <body>
 {chrome(T, lang)}
 <main id="main" tabindex="-1" class="nf">
@@ -401,6 +455,52 @@ def not_found(bm25, embed, checks):
 </html>
 """
     return out
+
+
+def report_page(src, name):
+    """A harness report with the site's search and sharing meta in its head.
+
+    The report file stays the harness's own; this only replaces its generic
+    <title>. If the harness ever changes that line, stop rather than publish a
+    report with no title or canonical."""
+    R = REPORT_PAGES[name]
+    url = f"{SITE}/report/" + ("" if name == "index" else name)
+    t, d = attr(R["title"]), attr(R["description"])
+    image = f"{SITE}/img/en/{'overview' if name == 'index' else 'embedding-overview'}.png"
+    w, h = png_size(HERE / "static" / "img" / "en" / image.rsplit("/", 1)[1])
+    meta = f"""<title>{t}</title>
+<meta name="description" content="{d}">
+<link rel="canonical" href="{url}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="French Drift">
+<meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta property="og:title" content="{t}">
+<meta property="og:description" content="{d}">
+<meta property="og:url" content="{url}">
+<meta property="og:image" content="{image}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="{w}">
+<meta property="og:image:height" content="{h}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{t}">
+<meta name="twitter:description" content="{d}">
+<meta name="twitter:image" content="{image}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">"""
+    text = src.read_text()
+    old = "<title>Bilingual Quality Harness</title>"
+    if text.count(old) != 1:
+        raise SystemExit(f"{src.name}: expected one {old!r} to replace")
+    return text.replace(old, meta)
+
+
+def last_changed(*paths):
+    """The date the given paths last changed in git, for the sitemap's lastmod.
+    A build date would change every build and teach crawlers to ignore it."""
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", *map(str, paths)],
+                         capture_output=True, text=True, cwd=ROOT).stdout.strip()
+    return out or None
 
 
 # The site and the reports need different policies. The site runs no script at
@@ -444,21 +544,28 @@ def build(out: Path):
     (out / "404.html").write_text(nf["en"])
     (out / "fr" / "404.html").write_text(nf["fr"])
 
-    shutil.copy(ROOT / "report.html", out / "report" / "index.html")
-    shutil.copy(ROOT / "report_embed.html", out / "report" / "embedding.html")
+    (out / "report" / "index.html").write_text(report_page(ROOT / "report.html", "index"))
+    (out / "report" / "embedding.html").write_text(
+        report_page(ROOT / "report_embed.html", "embedding"))
     shutil.copytree(HERE / "static" / "img", out / "img")
     for name in ("style.css", "favicon.svg"):
         shutil.copy(HERE / "static" / name, out / name)
 
     (out / "_headers").write_text(HEADERS)
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
-    urls = "".join(f"""  <url><loc>{SITE}{p}</loc>
-    <xhtml:link rel="alternate" hreflang="en-CA" href="{SITE}/"/>
-    <xhtml:link rel="alternate" hreflang="fr-CA" href="{SITE}/fr/"/>
-  </url>
-""" for p in ("/", "/fr/"))
-    urls += "".join(f"  <url><loc>{SITE}{p}</loc></url>\n"
-                    for p in ("/report/", "/report/embedding"))
+    site_src = [HERE, ROOT / "results.json", ROOT / "results_embed.json"]
+    pages = [("/", site_src), ("/fr/", site_src),
+             ("/report/", [ROOT / "report.html"]),
+             ("/report/embedding", [ROOT / "report_embed.html"])]
+    urls = ""
+    for p, src in pages:
+        mod = last_changed(*src)
+        urls += f"  <url><loc>{SITE}{p}</loc>" + (f"<lastmod>{mod}</lastmod>" if mod else "")
+        if p in ("/", "/fr/"):
+            urls += (f'\n    <xhtml:link rel="alternate" hreflang="en-CA" href="{SITE}/"/>'
+                     f'\n    <xhtml:link rel="alternate" hreflang="fr-CA" href="{SITE}/fr/"/>'
+                     f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}/"/>\n  ')
+        urls += "</url>\n"
     (out / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '

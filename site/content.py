@@ -415,3 +415,22 @@ STRINGS = {
         "removed_note": "(supprimée ou reformulée)",
     },
 }
+
+# The two reports' <title> and description, injected by build.py when it copies
+# them. Each report is one bilingual file that opens in English (?lang=fr
+# switches it in the browser), so search engines index the English and the head
+# is written in English. Not in STRINGS: there is no separate French URL for it.
+REPORT_PAGES = {
+    "index": {
+        "title": "The EN/FR equivalence report (BM25) — French Drift",
+        "description": ("The full French Drift report on the keyword (BM25) retriever: service "
+                        "parity, per-query severity, Quebec false corrections, metropolitan "
+                        "drift and every dimension scored in English and Canadian French."),
+    },
+    "embedding": {
+        "title": "The EN/FR equivalence report (bge-m3 embeddings) — French Drift",
+        "description": ("The same French Drift report run on a multilingual embedding "
+                        "retriever (bge-m3), to show which English-French gaps come from "
+                        "retrieval and which persist regardless of it."),
+    },
+}
