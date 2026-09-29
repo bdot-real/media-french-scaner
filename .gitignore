@@ -12,3 +12,6 @@ report_live.html
 # Never commit credentials
 .env
 *.key
+
+# Site build output: regenerate with python3 site/build.py
+site/dist/
