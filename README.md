@@ -2,6 +2,9 @@
 
 **Does an AI content workflow perform *equivalently* in English and Canadian French?**
 
+Website, in English and French: **[french-drift.melx.buzz](https://french-drift.melx.buzz)**, with
+the [live report](https://french-drift.melx.buzz/report/).
+
 > **All content in this repository is synthetic.** The 80 news documents,
 > their bylines, figures, quotations, and media credits are invented for
 > evaluation purposes. Nothing here reproduces real reporting, real people, or
@@ -21,17 +24,18 @@ run in parallel — and reports where the two languages diverge.
 ```
   DIMENSION                     EN      FR      GAP   STATUS
   --------------------------------------------------------------
-  retrieval_p_at_1           1.000   0.938   +0.062   ok
-  retrieval_recall           0.938   0.906   +0.031   ok
-  retrieval_ndcg             0.952   0.913   +0.038   ok
-  grounding_numeric          1.000   0.938   +0.062   ok
-  grounding_in_context       0.922   0.828   +0.094   DIVERGENT
-  grounding_entailment       0.843   0.775   +0.068   ok
-  content_coverage           1.000   0.833   +0.167   DIVERGENT
-  fluency_register           1.000   0.812   +0.188   DIVERGENT
-  fluency_overall            0.987   0.848   +0.139   DIVERGENT
+  retrieval_p_at_1           1.000   0.961   +0.039   ok
+  retrieval_recall           0.939   0.922   +0.017   ok
+  retrieval_ndcg             0.954   0.932   +0.022   ok
+  grounding_numeric          1.000   0.962   +0.038   ok
+  grounding_in_context       0.928   0.895   +0.033   ok
+  grounding_entailment       0.901   0.871   +0.031   ok
+  content_coverage           1.000   0.884   +0.116   DIVERGENT
+  fluency_register           1.000   0.941   +0.059   ok
+  fluency_overall            0.996   0.955   +0.042   ok
+  localization               0.990   0.976   +0.015   ok
   --------------------------------------------------------------
-  Equivalence index: 0.906   (1.000 = perfect parity)
+  Equivalence index: 0.959   (1.000 = perfect parity)
 ```
 
 ## Quick start
@@ -44,6 +48,7 @@ python3 tests/test_register.py                  # register validation (22 checks
 python3 tests/test_drift.py                     # MDR/QFCR validation (21 checks)
 python3 tests/test_i18n.py                      # French UI copy validation (16 checks)
 python3 tests/test_newdims.py                   # localization/terminology/answerability (27 checks)
+python3 tests/test_site_i18n.py                 # the website's French copy (21 checks)
 ```
 
 The report ships **both languages in one file** with a toggle. The French is
@@ -58,7 +63,8 @@ Terminology: `repérage` (not `recherche d'information`) for retrieval,
 scolaire` for the Canadian administrative terms. Typography follows Canadian
 practice, including a non-breaking space before `:`. The toggle defaults to the
 browser's language, so a francophone reader opening the file cold lands on
-French.
+French; `?lang=fr` or `?lang=en` in the URL overrides it. French figures use Canadian
+conventions too: `0,959`, `58 %`.
 
 No dependencies. Python 3.8+. Runs offline and deterministically.
 
@@ -213,9 +219,9 @@ evidence for drift nor against it, so scoring them either way biases the rate.
 MDR = substituted / (substituted + preserved)
 ```
 
-On this corpus: **50%** — 2 substituted of 4 scored opportunities, with **13
+On this corpus: **60%** — 3 substituted of 5 scored opportunities, with **20
 rephrased cases excluded**. A naive implementation counting rephrases as clean
-would have reported 2/17 ≈ 12%, understating substitution behaviour by 4×. The
+would have reported 3/25 = 12%, understating substitution behaviour by 5×. The
 constraint is pinned by tests in `tests/test_drift.py`.
 
 ### QFCR — Quebec False Correction Rate
@@ -272,8 +278,8 @@ where an English one gets a description) and **discovery** (alt text and
 captions feed archive retrieval, so an undescribed French asset is
 unfindable).
 
-On this corpus: **55% of assets accessible in French**, 5 of 11 failing. Both
-videos are missing French transcripts — for timed media that removes the only
+On this corpus: **58% of assets accessible in French**, 13 of 31 failing. Five of
+the seven videos are missing French transcripts — for timed media that removes the only
 text representation of the content, so it is treated as a hard accessibility
 failure rather than a metadata gap.
 
@@ -285,8 +291,7 @@ same divergence the retrieval metrics measure, arriving through the CMS instead
 of the model. Tags are translated, so only the *count* of concepts carried is
 comparable across languages.
 
-On this corpus: **6 tags dropped**, 2 missing French SEO descriptions. Both arts
-documents dropped the CLOSM tag specifically.
+On this corpus: **23 tags dropped**, 6 missing French SEO descriptions.
 
 ### Segmentation — desk, region, topic
 
@@ -375,9 +380,9 @@ divergence is attributed to the specific vocabulary responsible:
 
 ```
   Lexicon coverage gaps driving retrieval divergence:
-    halte-chaleur          coverage 0.20   queries: q03, q11
-    banlieusard            coverage 0.30   queries: q06, q09, q12, q16
-    assurance-emploi       coverage 0.35   queries: q01, q02
+    halte-chaleur          coverage 0.20   queries: q03, q14, q16, q19, q28, q29, q60, q77
+    banlieusard            coverage 0.30   queries: q06, q16, q62
+    assurance-emploi       coverage 0.35   queries: q01, q22, q51
 ```
 
 That's an actionable finding: these are the terms to add to a synonym map, a
@@ -403,15 +408,15 @@ attribution, reporting — is what transfers to production. Swapping
 downstream still computes. The simulation makes the demo deterministic and
 offline; it isn't load-bearing for the argument.
 
-**Also frozen:** the generated answers, in offline mode. They carry nine
-deliberately planted defects (2 grounding, 3 register, 4 coverage), annotated
-in `corpus/generations.json`. `tests/test_harness.py` checks every detection
-against those annotations — including a false-positive control on the eight
-clean French answers.
+**Also frozen:** the generated answers, in offline mode. They carry 38
+deliberately planted defects (23 coverage, 7 register, 5 grounding, 3
+localization), annotated in `corpus/generations.json`. `tests/test_harness.py`
+checks every detection against those annotations — including a false-positive
+control on the 68 clean French answers.
 
 ```
 $ python3 tests/test_harness.py
-23 passed, 0 failed
+111 passed, 0 failed
 ```
 
 ## Live mode
@@ -428,8 +433,9 @@ python3 bqh/harness.py --live --provider openrouter --report report_live.html
 ```
 
 Defaults to `nex-agi/nex-n2.5-pro:free`. Override with `--model`; add `-v` to log
-each call. 32 sequential calls (16 queries × 2 languages), so expect a few
-minutes on free-tier endpoints.
+each call. 204 sequential calls (102 queries × 2 languages), so a full run
+will exceed a free-tier daily cap; use `--limit N` and re-run to resume from the
+cache.
 
 **Anthropic API:**
 
@@ -487,6 +493,9 @@ worse for the reader. **Fixing the generator would not have fixed this.**
 
 ### Note on the live numbers
 
+These figures are from an earlier, 16-query version of the corpus; they have not
+been re-run at 102 queries.
+
 The live run covers 13 of 16 query pairs. The three multi-document queries
 (q14–q16) are missing: OpenRouter's free tier caps at 50 requests/day and the
 run exhausted it. `--limit 13` scores the complete subset rather than comparing
@@ -495,13 +504,13 @@ uneven query sets across languages. Live generations are checkpointed to
 
 ## Corpus
 
-12 parallel EN/FR journalistic documents (employment insurance, health
-transfers, severe weather, school funding, tolls, arts funding, housing,
-courts, monetary policy, fisheries, municipal budget, francophone immigration)
-and 16 parallel queries with shared gold labels. French documents are written
-in Canadian French. Gold relevance is language-independent by design: a correct
-retriever returns the same documents for the English and French form of the
-same information need.
+80 parallel EN/FR journalistic documents across ten desks (news, municipal, health,
+education, arts, politics, business, technology, justice, Indigenous) and eight
+regions, with 102 parallel queries sharing gold labels, 31 media assets and 32
+documents carrying editorial metadata. French documents are written in Canadian
+French. Gold relevance is language-independent by design: a correct retriever
+returns the same documents for the English and French form of the same
+information need.
 
 Content is synthetic — plausible Canadian news copy with invented figures and
 names — so nothing here reproduces real reporting.
@@ -511,27 +520,47 @@ names — so nothing here reproduces real reporting.
 ```
 bqh/
   harness.py              runner, aggregation, CLI
+  proofread.py            QFCR probe runner
   corpus/
-    documents.json        12 parallel EN/FR articles
-    queries.json          16 parallel queries + gold labels
-    generations.json      frozen answers + annotated defects
-  metrics/
-    retrieval.py          BM25, stemming, lexicon coverage, IR metrics
-    grounding.py          numeric grounding, entailment, cross-language coverage
-    fluency.py            Canadian French register + readability
+    documents.json        80 parallel EN/FR articles + media and editorial metadata
+    queries.json          102 parallel queries + gold labels
+    generations.json      frozen answers + 38 annotated defects
+    proofread_probes.json valid Canadian French for the QFCR probe
+  metrics/                retrieval, embedding, grounding, fluency, drift,
+                          localization, consistency, answerability, media,
+                          segments, severity
   report/
-    dashboard.py          self-contained HTML dashboard
-tests/
-  test_harness.py         detection validation + false-positive control
+    dashboard.py          self-contained bilingual HTML dashboard
+    i18n.py               every UI string, EN and FR
+site/                     the website (see below)
+tests/                    six suites, 218 checks
 ```
+
+## The website
+
+`site/` builds [french-drift.melx.buzz](https://french-drift.melx.buzz): English at `/`,
+French at `/fr/`, and both reports under `/report/`. Stdlib Python, no JavaScript on
+the site itself.
+
+```bash
+node site/screenshots.mjs       # recapture report screenshots, EN and FR (needs Chrome)
+python3 site/build.py           # writes site/dist; runs every test suite first
+npx wrangler pages deploy site/dist --project-name=french-drift --branch=main
+```
+
+Every figure on the site is read from `results.json` and `results_embed.json`,
+and the build refuses to publish if any suite fails. The copy lives in
+`site/content.py`, and `tests/test_site_i18n.py` holds its French to the same
+register checker the report uses. Screenshots are regenerated from the reports
+rather than edited, so re-run `screenshots.mjs` after any change to the dashboard.
 
 ## Limitations
 
-- Lexical retrieval (BM25), not dense embeddings — the divergence *mechanism*
-  is modelled rather than measured.
+- The default backend is lexical (BM25) with a *modelled* Canadian-French gap.
+  The embedding backend measures the gap for real, but with one model (bge-m3).
 - The register rule set is a curated sample, not the full Termium corpus.
 - Cross-language content coverage compares language-neutral tokens (figures,
   proper nouns); it detects dropped facts, not paraphrase-level nuance.
-- 16 queries is a demonstration corpus. Threshold calibration at production
-  scale needs hundreds.
+- 102 queries is still a demonstration corpus. Threshold calibration at
+  production scale needs more, drawn from real traffic.
 - Single-annotator gold labels, no inter-annotator agreement.
