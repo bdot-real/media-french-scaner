@@ -70,9 +70,9 @@ def main():
     check("no metropolitan forms in French UI", not hits, str(hits[:4]))
 
     print("\n4. Canadian typographic conventions")
-    # France puts a space before ':' and ';'. Canadian practice does not for ':'
-    # in running text at this level of formality, but DOES use a non-breaking
-    # space before '%' and inside large numbers.
+    # Canadian practice puts a non-breaking space before ':' (a plain space can
+    # wrap the colon onto its own line) and none before ';', '?' or '!' — the
+    # latter being where it differs from France.
     colon_space = [p for p, t in walk(fr) if " :" in t and "&nbsp;" not in t]
     check("French copy uses Canadian colon spacing",
           len(colon_space) <= 3, f"{len(colon_space)} strings: {colon_space[:3]}")

@@ -268,6 +268,7 @@ def evaluate(docs, queries, gens, live=False, model="claude-sonnet-5", k=3,
         rows.append(row)
 
     summary = aggregate(rows)
+    summary["n_docs"] = len(docs)
     summary["severity"] = sev.summarize(rows)
     # Metadata surfaces are evaluated per document, independent of the query
     # set: an image with no French alt text fails whether or not any query

@@ -12,8 +12,9 @@ Terminology notes:
     "reperage" is the standard Quebec term for the retrieval operation itself.
   · "veracite" for grounding: no settled French term exists, and "ancrage" reads
     as a calque here. "Veracite factuelle" states what is measured.
-  · Typography follows Canadian French practice: no space before ":" (unlike
-    France), non-breaking space before "%" and inside large numbers.
+  · Typography follows Canadian French practice: a non-breaking space before
+    ":" but none before ";", "?" or "!" (unlike France), and a non-breaking
+    space inside large numbers.
 """
 
 STRINGS = {
@@ -143,6 +144,41 @@ STRINGS = {
                    "retrieval miss is not misreported as a hallucination. "
                    "Offline mode uses a frozen corpus for determinism; "
                    "<code>--live</code> generates answers through a live model."),
+        # Severity reasons, keyed by the pattern severity.classify() emits.
+        "decimal": ".",
+        "pct": "%",
+        # Enumerated values the metrics emit in English. Unknown values fall
+        # through unchanged, so a new state shows up rather than vanishing.
+        "vocab": {
+            "retrieval miss": "retrieval miss", "fabricated figure": "fabricated figure",
+            "register": "register", "omission": "omission",
+            "audio": "audio", "image": "image", "video": "video",
+            "offline": "offline", "live": "live",
+            "bm25 (modelled lexicon gap)": "bm25 (modelled lexicon gap)",
+            "embedding": "embedding",
+            "(removed/rephrased)": "(removed/rephrased)",
+            "served": "Served", "denied": "Denied",
+            "desk": "Desk", "region": "Region", "topic": "Topic",
+            "within expected expansion": "within expected expansion",
+            "col_grnd": "grnd", "col_reg": "reg", "col_cov": "cov",
+            "aria_plot": "English {en}, French {fr}, gap {gap}",
+        },
+        # field -> (label, feminine?) and state -> (masculine, feminine)
+        "fields": {"alt": ("alt", False), "caption": ("caption", True),
+                   "credit": ("credit", True), "transcript": ("transcript", True),
+                   "alt text": ("alt text", False)},
+        "states": {"ok": ("ok", "ok"), "missing": ("missing", "missing"),
+                   "untranslated": ("untranslated", "untranslated"),
+                   "truncated": ("truncated", "truncated")},
+        "segments": {},
+        "why": {"fr_refused": "French declined to answer; English answered",
+                "en_refused": "English declined to answer; French answered",
+                "figures": "French asserts unsupported figure(s): {x}",
+                "diverged": "Gold-document retrieval diverged ({x})",
+                "en_only": "EN-only: {x}", "fr_only": "FR-only: {x}",
+                "omits": "French omits content present in English",
+                "omits_x": "French omits content present in English: {x}",
+                "register": "Register: '{x}' → '{y}'"},
         "sev": {"no_answer": "No answer returned", "wrong_fact": "Unsupported fact",
                 "wrong_docs": "Different sources", "omission": "Reduced content",
                 "register": "Register"},
@@ -298,6 +334,48 @@ STRINGS = {
                    "s'appuie sur un corpus figé, gage de reproductibilité; "
                    "<code>--live</code> génère les réponses au moyen d'un "
                    "modèle en direct."),
+        # Severity reasons, keyed by the pattern severity.classify() emits.
+        "decimal": ",",
+        "pct": "&nbsp;%",
+        "vocab": {
+            "retrieval miss": "repérage manqué", "fabricated figure": "chiffre fabriqué",
+            "register": "registre", "omission": "omission",
+            "audio": "audio", "image": "image", "video": "vidéo",
+            "offline": "hors ligne", "live": "en direct",
+            "bm25 (modelled lexicon gap)": "bm25 (écart lexical modélisé)",
+            "embedding": "plongements",
+            "(removed/rephrased)": "(supprimée ou reformulée)",
+            "served": "Servie", "denied": "Refusée",
+            "desk": "Pupitre", "region": "Région", "topic": "Sujet",
+            "within expected expansion": "dans l'écart de longueur attendu",
+            "French materially shorter than expected — content likely dropped":
+                "Français nettement plus court que prévu — contenu probablement omis",
+            "French materially longer than expected — drifting toward officialese":
+                "Français nettement plus long que prévu — glissement vers le style administratif",
+            "col_grnd": "vérac.", "col_reg": "reg.", "col_cov": "couv.",
+            "aria_plot": "Anglais {en}, français {fr}, écart {gap}",
+        },
+        "fields": {"alt": ("texte de remplacement", False), "caption": ("légende", True),
+                   "credit": ("mention de source", True),
+                   "transcript": ("transcription", True),
+                   "alt text": ("texte de remplacement", False)},
+        "states": {"ok": ("conforme", "conforme"), "missing": ("manquant", "manquante"),
+                   "untranslated": ("non traduit", "non traduite"),
+                   "truncated": ("tronqué", "tronquée")},
+        "segments": {"Indigenous": "Autochtones", "Arts": "Arts", "News": "Nouvelles",
+                     "Politics": "Politique", "Business": "Économie",
+                     "Education": "Éducation", "Health": "Santé",
+                     "Technology": "Technologie", "Justice": "Justice",
+                     "Municipal": "Municipal", "West": "Ouest", "Quebec": "Québec",
+                     "North": "Nord", "Atlantic": "Atlantique"},
+        "why": {"fr_refused": "Le français n'a pas répondu; l'anglais, oui",
+                "en_refused": "L'anglais n'a pas répondu; le français, oui",
+                "figures": "Le français avance des chiffres absents de la source&nbsp;: {x}",
+                "diverged": "Le repérage des documents de référence diverge ({x})",
+                "en_only": "EN seulement&nbsp;: {x}", "fr_only": "FR seulement&nbsp;: {x}",
+                "omits": "Le français omet du contenu présent en anglais",
+                "omits_x": "Le français omet du contenu présent en anglais&nbsp;: {x}",
+                "register": "Registre&nbsp;: « {x} » → « {y} »"},
         "sev": {"no_answer": "Aucune réponse fournie",
                 "wrong_fact": "Fait non appuyé",
                 "wrong_docs": "Sources différentes",

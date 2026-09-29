@@ -445,6 +445,7 @@
         "fr_coverage": 0.75
       }
     ],
+    "n_docs": 80,
     "severity": {
       "counts": {
         "no_answer": 0,

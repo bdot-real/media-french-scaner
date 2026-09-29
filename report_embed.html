@@ -161,7 +161,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>EN / FR output equivalence for a journalistic RAG workflow</h1>
   <p class="sub">Measures whether an AI content pipeline performs <em>equivalently</em> in English and Canadian French — not whether it performs adequately in each. The unit of analysis is the gap between the two, because that gap is what a bilingual public-service mandate actually commits to.</p>
-  <div class="meta">102 parallel queries · 24 parallel documents ·
+  <div class="meta">102 parallel queries · 80 parallel documents ·
    Canadian French (Radio-Canada conventions)<br>
    mode <code>offline</code> · retrieval <code>embedding · bge-m3</code></div>
 </header>
@@ -433,149 +433,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   <tbody></tbody>
 </table></div></div>
 
-<h2>Divergent queries</h2>
-<p class="h2sub">Every query where the French output differs materially from the English.</p>
-<div class="card"><div class="scroll"><table>
-  <thead><tr><th>Query</th><th>Class</th><th>Detected issues</th><th>Note</th></tr></thead>
-  <tbody>
-      <tr><td class="qid">q03</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q04</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">warming centre / halte-chaleur. Both documents describe warming facilities; the Canadian term is weakly represented in FR retrieval.</td></tr>
-      <tr><td class="qid">q05</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">school trustee / conseiller scolaire. Metropolitan French has no equivalent office.</td></tr>
-      <tr><td class="qid">q07</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span><span class="tag">omission</span></td>
-          <td class="note">CLOSM is a Canadian statutory concept with no metropolitan analogue.</td></tr>
-      <tr><td class="qid">q13</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q14</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">Multi-document synthesis. Divergence compounds when more than one document must be retrieved.</td></tr>
-      <tr><td class="qid">q15</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q19</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q20</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q22</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q25</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">retrieval miss</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q26</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q29</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">register</span><span class="tag">omission</span></td>
-          <td class="note">Second halte-chaleur probe across two documents.</td></tr>
-      <tr><td class="qid">q31</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q32</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">CLOSM probe across two documents.</td></tr>
-      <tr><td class="qid">q35</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q41</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q42</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;conseil scolaire francophone&#x27; and Charter s.23 vocabulary are Canadian-specific.</td></tr>
-      <tr><td class="qid">q49</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q50</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">retrieval miss</span></td>
-          <td class="note">Minority-language education vocabulary across two documents.</td></tr>
-      <tr><td class="qid">q51</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q54</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;deneigement&#x27; and &#x27;deblaiement&#x27; are Canadian winter-service vocabulary.</td></tr>
-      <tr><td class="qid">q62</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;traversier&#x27; is the Canadian term; metropolitan French uses &#x27;ferry&#x27; or &#x27;bac&#x27;.</td></tr>
-      <tr><td class="qid">q64</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q71</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q73</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q75</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q77</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr>
-      <tr><td class="qid">q82</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q83</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q86</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q95</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q99</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q102</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr></tbody>
-</table></div></div>
-
 <h2>Metropolitan drift and false correction</h2>
 <p class="h2sub">Two Canadian-specific metrics generic French evaluation does not provide.</p>
 <div class="card">
@@ -590,9 +447,9 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="sev-l">Rephrased — not drift</div></div>
   </div>
   <p class="note-p"><strong>MDR</strong> counts substitutions only: 3 of 5 scored opportunities. 20 cases where the model rephrased around the term are excluded from the denominator entirely — verbosity is not drift, and scoring it either way would bias the rate.</p>
-  <table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
+  <table><thead><tr><th>Quebec form</th><th>Replaced with</th><th class="num">n</th><th>Where</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
   <p class="note-p" style="margin-top:16px"><strong>QFCR</strong> sends already-correct Canadian French through a naive &ldquo;corrige ce texte&rdquo; prompt, so any alteration is a false correction by construction: 12 of 15 valid Quebec forms were altered. A pipeline can generate perfect Canadian French and still ship metropolitan copy because the proofreading step rewrote it.</p>
-  <table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
+  <table><thead><tr><th>Valid Quebec form</th><th>Proofreader changed it to</th><th class="num">n</th><th>Probe</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
 </div>
 
 <h2>Media metadata — images, video, audio</h2>
@@ -604,11 +461,11 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="sev-l">Accessible in French</div></div>
     <div class="sev-tile r0"><div class="sev-n">5</div><div class="sev-l">audio · 1</div></div><div class="sev-tile r0"><div class="sev-n">19</div><div class="sev-l">image · 7</div></div><div class="sev-tile r0"><div class="sev-n">7</div><div class="sev-l">video · 5</div></div>
   </div>
-  <p class="note-p">13 of 31 assets leave French users without access to content English users can reach — missing or untranslated alt text, or a missing transcript on timed media. Untranslated is worse than missing: it passes a null check in a CMS audit.</p>
+  <p class="note-p">13 of 31 assets leave French users without access to content English users can reach — missing or untranslated alt text, or a missing transcript on timed media. Untranslated is worse than missing: it passes a null check in a CMS audit. The other 18 assets carry complete French descriptors.</p>
   <div class="scroll"><table>
     <thead><tr><th>Asset</th><th>Kind</th><th>Field states</th>
       <th class="num">Score</th><th>Accessibility</th></tr></thead>
-    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>video</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.20</td><td class="note">alt text missing, transcript missing</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-indg-044-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-hlth-053-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">aud-hlth-041-a</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-wx-049-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-agri-027-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">vid-wx-035-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">vid-indg-057-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-029-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-032-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-edu-034-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-036-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-muni-042-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-indg-044-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-cult-047-a</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-trns-051-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-060-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
+    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>video</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.20</td><td class="note">alt text missing, transcript missing</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-indg-044-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-hlth-053-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">aud-hlth-041-a</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-wx-049-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr></tbody></table></div>
 </div>
 
 <h2>Editorial metadata</h2>
@@ -623,10 +480,11 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <div class="sev-tile"><div class="sev-n">0.86</div>
       <div class="sev-l">Editorial parity</div></div>
   </div>
+  <p class="note-p">Only documents with a gap are listed; 18 others are complete.</p>
   <div class="scroll"><table>
     <thead><tr><th>Document</th><th>Desk</th><th class="num">FR/EN tags</th>
       <th>SEO description</th><th class="num">Score</th></tr></thead>
-    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">hlth-053</td><td>Health</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">indg-044</td><td>Indigenous</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">tech-059</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-041</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">edu-043</td><td>Education</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-046</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">wx-049</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-050</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-057</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
+    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">hlth-053</td><td>Health</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">indg-044</td><td>Indigenous</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">tech-059</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr></tbody></table></div>
 </div>
 
 <h2>Terminology and answerability</h2>
@@ -1028,472 +886,9 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
           <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q18</td>
-          <td class="qtext">The rural broadband program connected 218,000 households last year against a target of 300…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q21</td>
-          <td class="qtext">The civilian oversight agency received 1,880 use-of-force complaints last year, up 12 per …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q23</td>
-          <td class="qtext">The public broadcaster will add 60 journalist positions across four new regional bureaus.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q24</td>
-          <td class="qtext">The boil water advisory affects about 40,000 residents after a pressure loss at a treatmen…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q25</td>
-          <td class="qtext">Twelve long-term drinking water advisories remain in effect, down from 105 in 2015.…</td>
-          <td class="num">0.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q27</td>
-          <td class="qtext">International student enrolment dropped 31 per cent following the federal permit cap.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q28</td>
-          <td class="qtext">Shelters turned away an average of 84 people nightly while operating at 96 per cent capaci…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q30</td>
-          <td class="qtext">A treatment plant pressure loss triggered a boil water advisory for 40,000 residents, whil…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q33</td>
-          <td class="qtext">The commissioner announced $54 million for 22 language nest programs covering fourteen lan…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q34</td>
-          <td class="qtext">Algorithmic impact assessments become required September 1, covering 340 identified system…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q36</td>
-          <td class="qtext">The longest median youth mental health wait was 41 weeks, with about 28,000 young people o…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q37</td>
-          <td class="qtext">The caribou conservation agreement protects 1.2 million hectares from new industrial distu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q38</td>
-          <td class="qtext">The legal aid income threshold rises to $28,400 from $23,100 on October 1.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q39</td>
-          <td class="qtext">Riders under 18 qualify for the two-year fare-free transit pilot, covering about 19,000 st…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q40</td>
-          <td class="qtext">Thirty-one of 92 applicant organizations were selected for archive digitization in the fir…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q43</td>
-          <td class="qtext">The post-tropical storm brought 140 millimetres of rain and flooded 620 properties.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q44</td>
-          <td class="qtext">The northern subsidy covers up to 40 per cent of building costs for affordable units above…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q45</td>
-          <td class="qtext">The pharmacare formulary added 34 medications, including six diabetes treatments and four …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q46</td>
-          <td class="qtext">Indigenous people accounted for 46 per cent of segregation placements while representing 3…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q47</td>
-          <td class="qtext">The cyber centre recorded 74 ransomware incidents against municipalities and health author…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q48</td>
-          <td class="qtext">The Atlantic immigration program reported a five-year retention rate of 78 per cent, up fr…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q50</td>
-          <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
-          <td class="num pass">1.00</td><td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q52</td>
-          <td class="qtext">Youth mental health waits exceed six months in seven provinces, while the pharmacare formu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q53</td>
-          <td class="qtext">The new rules require 3.5 hours of daily direct care per resident across 41 long-term care…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q55</td>
-          <td class="qtext">The average wait for a subsidized infant daycare place is 19 months, with 51,000 children …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q56</td>
-          <td class="qtext">The treaty land entitlement settlement transfers 78,000 hectares to four First Nations wit…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q57</td>
-          <td class="qtext">The coroner made eleven recommendations, including expanded take-home naloxone distributio…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q58</td>
-          <td class="qtext">Commercial radio requires 65 per cent French-language vocal music.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q59</td>
-          <td class="qtext">The digital identity program was delayed to 2028 pending a privacy impact review, after th…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q60</td>
-          <td class="qtext">Wind chill reached near minus 48 during the school closures.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q61</td>
-          <td class="qtext">The federal program will fund 1,900 co-operative housing units across 34 projects.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q63</td>
-          <td class="qtext">Public health units posted 412 beach closure days last summer, up 34 per cent.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q65</td>
-          <td class="qtext">Cross-border tourism spending reached $4.7 billion, returning to 2019 levels.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q66</td>
-          <td class="qtext">The access to information backlog reached 32,000 overdue requests, with a median completio…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q67</td>
-          <td class="qtext">Grade three reading scores rose 9 percentage points, with 68 per cent now meeting the prov…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q68</td>
-          <td class="qtext">The country food program distributed 240,000 kilograms of food across eighteen communities…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q69</td>
-          <td class="qtext">Four library branches added full-time social workers, after a pilot showed a 31 per cent d…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q70</td>
-          <td class="qtext">Northern satellite service raised median download speeds to 48 megabits per second from 9.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q72</td>
-          <td class="qtext">Credit unions reported 4.1 per cent membership growth, with 62 rural branches the only fin…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q74</td>
-          <td class="qtext">Ambulance offload delays reached 118,000 hours while new long-term care rules require 3.5 …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q76</td>
-          <td class="qtext">The access to information backlog reached 32,000 overdue requests, with fourteen instituti…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q78</td>
-          <td class="qtext">Northern satellite service reached 48 megabits per second while the country food program d…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q79</td>
-          <td class="qtext">Softwood lumber duties were raised to 21.2 per cent from 14.5 per cent, effective April 15…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q80</td>
-          <td class="qtext">Mandatory nursing overtime fell 38 per cent after a staffing agreement added 1,450 full-ti…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q81</td>
-          <td class="qtext">The bail compliance program reduced failures to appear by 26 per cent and avoided an estim…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q84</td>
-          <td class="qtext">Air quality advisories tripled to 41 days, with fine particulate exceedances on 28 days.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q85</td>
-          <td class="qtext">The Indigenous-governed health centre serves 6,800 residents across three communities, emp…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q87</td>
-          <td class="qtext">Regional shooting days rose 47 per cent, with 22 productions generating an estimated $118 …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q88</td>
-          <td class="qtext">Landlord eviction applications reached 92,000, the highest on record, with a median hearin…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q89</td>
-          <td class="qtext">Rapid snowmelt forced the evacuation of 1,240 residents from four river communities.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q90</td>
-          <td class="qtext">The minimum wage rises to $16.45 an hour October 1 and will be indexed to inflation annual…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q91</td>
-          <td class="qtext">Dental care plan enrolment passed 3.1 million people, with 24,000 participating providers.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q92</td>
-          <td class="qtext">The review commission received 214 applications in six months, with eleven advancing to fu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q93</td>
-          <td class="qtext">Apprenticeship completions rose 22 per cent, with registrations reaching 18,400.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q94</td>
-          <td class="qtext">Winning bidders must cover 92 per cent of rural population in licensed areas within five y…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q96</td>
-          <td class="qtext">The ban expanded to four categories including takeout containers and cutlery, effective Se…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q97</td>
-          <td class="qtext">The grant will support 46 Indigenous-language titles over three years, including 18 childr…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q98</td>
-          <td class="qtext">Grocery price inflation slowed to 1.8 per cent, the lowest since 2020.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
           <td class="num pass">1.00</td></tr></tbody>
-</table></div></div>
+</table></div>
+  <p class="note-p">Divergent queries listed first. 58 further queries of 102 showed no divergence on any dimension and are omitted here; every one is in the JSON output.</p></div>
 
 <footer>Equivalence threshold 0.08 on any dimension. Grounding is scored against gold context (fabrication) and against retrieved context (in-context support) separately, so a retrieval miss is not misreported as a hallucination. Offline mode uses a frozen corpus for determinism; <code>--live</code> generates answers through a live model.</footer>
 </div><div class="wrap" data-lang="fr" hidden>
@@ -1505,19 +900,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   </div>
   <h1>Équivalence des sorties EN/FR pour un flux journalistique à génération augmentée</h1>
   <p class="sub">Mesure si un flux de contenu par IA offre un rendement <em>équivalent</em> en anglais et en français canadien — et non s'il offre un rendement acceptable dans chaque langue. L'unité d'analyse est l'écart entre les deux, car c'est cet écart que vise un mandat de service public bilingue.</p>
-  <div class="meta">102 requêtes parallèles · 24 documents parallèles ·
+  <div class="meta">102 requêtes parallèles · 80 documents parallèles ·
    français canadien (normes de Radio-Canada)<br>
-   mode <code>offline</code> · repérage <code>embedding · bge-m3</code></div>
+   mode <code>hors ligne</code> · repérage <code>plongements · bge-m3</code></div>
 </header>
 
 <div class="card hero">
   <div>
-    <div class="hero-fig warn">72%</div>
+    <div class="hero-fig warn">72&nbsp;%</div>
     <div class="hero-lab">Parité de service</div>
   </div>
   <div class="hero-txt">
     <p style="margin-top:0"><strong>6 requêtes où le lectorat francophone n'a pas été servi</strong> — soit aucune réponse n'a été fournie, soit la réponse avance un fait que la source n'appuie pas. Dans les deux cas, il s'agit d'un manquement au mandat, et non d'un simple écart de qualité.</p>
-    <p style="margin-bottom:0">Indice d'équivalence 0.968 · 10
+    <p style="margin-bottom:0">Indice d'équivalence 0,968 · 10
     dimensions. Une moyenne sur l'ensemble des requêtes en atténue la portée&nbsp;: le service public bilingue n'est pas un engagement moyen. Le banc d'essai met donc en tête le pire résultat vécu par une lectrice ou un lecteur.</p>
   </div>
 </div>
@@ -1530,7 +925,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
           <span class="qid">q03</span></div>
-        <div class="case-why">French asserts unsupported figure(s): 32</div>
+        <div class="case-why">Le français avance des chiffres absents de la source&nbsp;: 32</div>
         <div class="case-ab"><span class="ab-l">EN</span>
           <span class="ab-t">Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
@@ -1539,7 +934,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
           <span class="qid">q20</span></div>
-        <div class="case-why">French asserts unsupported figure(s): 5.1</div>
+        <div class="case-why">Le français avance des chiffres absents de la source&nbsp;: 5,1</div>
         <div class="case-ab"><span class="ab-l">EN</span>
           <span class="ab-t">Wildfires consumed 4.2 million hectares this season, surpassing the 2023 record.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
@@ -1548,7 +943,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
           <span class="qid">q41</span></div>
-        <div class="case-why">French asserts unsupported figure(s): 34</div>
+        <div class="case-why">Le français avance des chiffres absents de la source&nbsp;: 34</div>
         <div class="case-ab"><span class="ab-l">EN</span>
           <span class="ab-t">Small business insolvency filings rose 26 per cent, the highest level since 2011.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
@@ -1557,7 +952,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       <div class="case r1">
         <div class="case-h"><span class="case-tier">Fait non appuyé</span>
           <span class="qid">q64</span></div>
-        <div class="case-why">French asserts unsupported figure(s): 145</div>
+        <div class="case-why">Le français avance des chiffres absents de la source&nbsp;: 145</div>
         <div class="case-ab"><span class="ab-l">EN</span>
           <span class="ab-t">Ambulance offload delays reached a record 118,000 hours, with a median of 92 minutes against a 30-minute target.</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
@@ -1584,17 +979,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.961, French 0.971, gap -0.010">
+             aria-label="Anglais 0,961, français 0,971, écart -0,010">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="96.08" y1="11" x2="97.06" y2="11" class="gapline"/>
           <circle cx="96.08" cy="11" r="4.2" class="mark-en"/>
           <circle cx="97.06" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.961</td>
-      <td class="num fr">0.971</td>
-      <td class="num gap">-0.010</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,961</td>
+      <td class="num fr">0,971</td>
+      <td class="num gap">-0,010</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1603,17 +998,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.958, French 0.955, gap +0.003">
+             aria-label="Anglais 0,958, français 0,955, écart +0,003">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="95.51" y1="11" x2="95.83" y2="11" class="gapline"/>
           <circle cx="95.83" cy="11" r="4.2" class="mark-en"/>
           <circle cx="95.51" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.958</td>
-      <td class="num fr">0.955</td>
-      <td class="num gap">+0.003</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,958</td>
+      <td class="num fr">0,955</td>
+      <td class="num gap">+0,003</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1622,17 +1017,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.954, French 0.959, gap -0.005">
+             aria-label="Anglais 0,954, français 0,959, écart -0,005">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="95.41" y1="11" x2="95.93" y2="11" class="gapline"/>
           <circle cx="95.41" cy="11" r="4.2" class="mark-en"/>
           <circle cx="95.93" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.954</td>
-      <td class="num fr">0.959</td>
-      <td class="num gap">-0.005</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,954</td>
+      <td class="num fr">0,959</td>
+      <td class="num gap">-0,005</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1641,17 +1036,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.962, gap +0.038">
+             aria-label="Anglais 1,000, français 0,962, écart +0,038">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="96.24" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
           <circle cx="96.24" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">1.000</td>
-      <td class="num fr">0.962</td>
-      <td class="num gap">+0.038</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">1,000</td>
+      <td class="num fr">0,962</td>
+      <td class="num gap">+0,038</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1660,17 +1055,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.954, French 0.933, gap +0.021">
+             aria-label="Anglais 0,954, français 0,933, écart +0,021">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="93.30" y1="11" x2="95.42" y2="11" class="gapline"/>
           <circle cx="95.42" cy="11" r="4.2" class="mark-en"/>
           <circle cx="93.30" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.954</td>
-      <td class="num fr">0.933</td>
-      <td class="num gap">+0.021</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,954</td>
+      <td class="num fr">0,933</td>
+      <td class="num gap">+0,021</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1679,17 +1074,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.915, French 0.903, gap +0.012">
+             aria-label="Anglais 0,915, français 0,903, écart +0,012">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="90.27" y1="11" x2="91.48" y2="11" class="gapline"/>
           <circle cx="91.48" cy="11" r="4.2" class="mark-en"/>
           <circle cx="90.27" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.915</td>
-      <td class="num fr">0.903</td>
-      <td class="num gap">+0.012</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,915</td>
+      <td class="num fr">0,903</td>
+      <td class="num gap">+0,012</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim divergent">
       <th scope="row">
@@ -1698,16 +1093,16 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.884, gap +0.116">
+             aria-label="Anglais 1,000, français 0,884, écart +0,116">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="88.39" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
           <circle cx="88.39" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">1.000</td>
-      <td class="num fr">0.884</td>
-      <td class="num gap">+0.116</td>
+      <td class="num en">1,000</td>
+      <td class="num fr">0,884</td>
+      <td class="num gap">+0,116</td>
       <td class="status"><span class="pill divergent">divergent</span></td>
     </tr>
     <tr class="dim ok">
@@ -1717,17 +1112,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 1.000, French 0.941, gap +0.059">
+             aria-label="Anglais 1,000, français 0,941, écart +0,059">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="94.12" y1="11" x2="100.00" y2="11" class="gapline"/>
           <circle cx="100.00" cy="11" r="4.2" class="mark-en"/>
           <circle cx="94.12" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">1.000</td>
-      <td class="num fr">0.941</td>
-      <td class="num gap">+0.059</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">1,000</td>
+      <td class="num fr">0,941</td>
+      <td class="num gap">+0,059</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1736,17 +1131,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.996, French 0.955, gap +0.042">
+             aria-label="Anglais 0,996, français 0,955, écart +0,042">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="95.48" y1="11" x2="99.64" y2="11" class="gapline"/>
           <circle cx="99.64" cy="11" r="4.2" class="mark-en"/>
           <circle cx="95.48" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.996</td>
-      <td class="num fr">0.955</td>
-      <td class="num gap">+0.042</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,996</td>
+      <td class="num fr">0,955</td>
+      <td class="num gap">+0,042</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr>
     <tr class="dim ok">
       <th scope="row">
@@ -1755,17 +1150,17 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English 0.990, French 0.976, gap +0.015">
+             aria-label="Anglais 0,990, français 0,976, écart +0,015">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="97.55" y1="11" x2="99.02" y2="11" class="gapline"/>
           <circle cx="99.02" cy="11" r="4.2" class="mark-en"/>
           <circle cx="97.55" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">0.990</td>
-      <td class="num fr">0.976</td>
-      <td class="num gap">+0.015</td>
-      <td class="status"><span class="pill ok">equivalent</span></td>
+      <td class="num en">0,990</td>
+      <td class="num fr">0,976</td>
+      <td class="num gap">+0,015</td>
+      <td class="status"><span class="pill ok">équivalent</span></td>
     </tr></tbody>
   </table></div>
 </div>
@@ -1777,166 +1172,23 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
   <tbody></tbody>
 </table></div></div>
 
-<h2>Divergent queries</h2>
-<p class="h2sub">Every query where the French output differs materially from the English.</p>
-<div class="card"><div class="scroll"><table>
-  <thead><tr><th>Requête</th><th>Catégorie</th><th>Problèmes détectés</th><th>Remarque</th></tr></thead>
-  <tbody>
-      <tr><td class="qid">q03</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q04</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">warming centre / halte-chaleur. Both documents describe warming facilities; the Canadian term is weakly represented in FR retrieval.</td></tr>
-      <tr><td class="qid">q05</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">school trustee / conseiller scolaire. Metropolitan French has no equivalent office.</td></tr>
-      <tr><td class="qid">q07</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span><span class="tag">omission</span></td>
-          <td class="note">CLOSM is a Canadian statutory concept with no metropolitan analogue.</td></tr>
-      <tr><td class="qid">q13</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q14</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">Multi-document synthesis. Divergence compounds when more than one document must be retrieved.</td></tr>
-      <tr><td class="qid">q15</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q19</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q20</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q22</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q25</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">retrieval miss</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q26</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q29</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">register</span><span class="tag">omission</span></td>
-          <td class="note">Second halte-chaleur probe across two documents.</td></tr>
-      <tr><td class="qid">q31</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q32</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">CLOSM probe across two documents.</td></tr>
-      <tr><td class="qid">q35</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q41</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q42</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;conseil scolaire francophone&#x27; and Charter s.23 vocabulary are Canadian-specific.</td></tr>
-      <tr><td class="qid">q49</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q50</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">retrieval miss</span></td>
-          <td class="note">Minority-language education vocabulary across two documents.</td></tr>
-      <tr><td class="qid">q51</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q54</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;deneigement&#x27; and &#x27;deblaiement&#x27; are Canadian winter-service vocabulary.</td></tr>
-      <tr><td class="qid">q62</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note">&#x27;traversier&#x27; is the Canadian term; metropolitan French uses &#x27;ferry&#x27; or &#x27;bac&#x27;.</td></tr>
-      <tr><td class="qid">q64</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q71</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q73</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q75</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">fabricated figure</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q77</td>
-          <td>lexical_ca_fr</td>
-          <td class="issues"><span class="tag">register</span></td>
-          <td class="note">Second halte-chaleur probe in a different weather context.</td></tr>
-      <tr><td class="qid">q82</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q83</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q86</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q95</td>
-          <td>—</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q99</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">retrieval miss</span><span class="tag">fabricated figure</span><span class="tag">omission</span></td>
-          <td class="note"></td></tr>
-      <tr><td class="qid">q102</td>
-          <td>multi_doc</td>
-          <td class="issues"><span class="tag">omission</span></td>
-          <td class="note"></td></tr></tbody>
-</table></div></div>
-
 <h2>Dérive métropolitaine et fausse correction</h2>
 <p class="h2sub">Deux mesures propres au contexte canadien que l'évaluation générique du français ne fournit pas.</p>
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile r1">
-      <div class="sev-n">60%</div>
+      <div class="sev-n">60&nbsp;%</div>
       <div class="sev-l">Taux de dérive métropolitaine</div></div>
     <div class="sev-tile r0">
-      <div class="sev-n">80%</div>
+      <div class="sev-n">80&nbsp;%</div>
       <div class="sev-l">Taux de fausse correction québécoise</div></div>
     <div class="sev-tile"><div class="sev-n">20</div>
       <div class="sev-l">Reformulations — hors dérive</div></div>
   </div>
   <p class="note-p">Le <strong>TDM</strong> ne compte que les substitutions&nbsp;: 3 occasions sur 5 retenues. Les 20 cas où le modèle a reformulé plutôt que de substituer sont exclus du dénominateur — la verbosité n'est pas de la dérive, et les compter d'une façon ou d'une autre fausserait le taux.</p>
-  <table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
+  <table><thead><tr><th>Forme québécoise</th><th>Remplacée par</th><th class="num">n</th><th>Occurrence</th></tr></thead><tbody><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q04</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q29</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">q77</td></tr></tbody></table>
   <p class="note-p" style="margin-top:16px">Le <strong>TFCQ</strong> soumet un texte déjà correct en français canadien à une consigne de révision sommaire («&nbsp;corrige ce texte&nbsp;»); toute modification constitue donc une fausse correction&nbsp;: 12 formes québécoises valides sur 15 ont été altérées. Un flux peut produire un français canadien impeccable et diffuser malgré tout une copie métropolitaine parce que l'étape de révision l'a réécrite.</p>
-  <table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(removed/rephrased)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
+  <table><thead><tr><th>Forme québécoise valide</th><th>Remplacée par la correction</th><th class="num">n</th><th>Sonde</th></tr></thead><tbody><tr><td class="term">fin de semaine</td><td class="term drift-to">week-end</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">courriel</td><td class="term drift-to">email</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">halte-chaleur</td><td class="term drift-to">centre d&#x27;hébergement chauffé</td><td class="num">1</td><td class="qid">pf01</td></tr><tr><td class="term">conseiller scolaire</td><td class="term drift-to">administrateur scolaire</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">taxe foncière</td><td class="term drift-to">(supprimée ou reformulée)</td><td class="num">1</td><td class="qid">pf02</td></tr><tr><td class="term">assurance-emploi</td><td class="term drift-to">assurance chômage</td><td class="num">1</td><td class="qid">pf03</td></tr><tr><td class="term">stationnement</td><td class="term drift-to">parking</td><td class="num">1</td><td class="qid">pf04</td></tr><tr><td class="term">banlieusard</td><td class="term drift-to">navetteur</td><td class="num">1</td><td class="qid">pf04</td></tr></tbody></table>
 </div>
 
 <h2>Métadonnées des médias — images, vidéos, audio</h2>
@@ -1944,15 +1196,15 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile r0">
-      <div class="sev-n">58%</div>
+      <div class="sev-n">58&nbsp;%</div>
       <div class="sev-l">Accessibles en français</div></div>
-    <div class="sev-tile r0"><div class="sev-n">5</div><div class="sev-l">audio · 1</div></div><div class="sev-tile r0"><div class="sev-n">19</div><div class="sev-l">image · 7</div></div><div class="sev-tile r0"><div class="sev-n">7</div><div class="sev-l">video · 5</div></div>
+    <div class="sev-tile r0"><div class="sev-n">5</div><div class="sev-l">audio · 1</div></div><div class="sev-tile r0"><div class="sev-n">19</div><div class="sev-l">image · 7</div></div><div class="sev-tile r0"><div class="sev-n">7</div><div class="sev-l">vidéo · 5</div></div>
   </div>
-  <p class="note-p">13 fichiers sur 31 privent le public francophone d'un contenu accessible au public anglophone — texte de remplacement absent ou non traduit, ou transcription manquante pour un média chronométré. Un champ non traduit est pire qu'un champ vide&nbsp;: il passe le contrôle de valeur nulle d'un audit de SGC.</p>
+  <p class="note-p">13 fichiers sur 31 privent le public francophone d'un contenu accessible au public anglophone — texte de remplacement absent ou non traduit, ou transcription manquante pour un média chronométré. Un champ non traduit est pire qu'un champ vide&nbsp;: il passe le contrôle de valeur nulle d'un audit de SGC. Les 18 autres fichiers portent des descriptifs français complets.</p>
   <div class="scroll"><table>
     <thead><tr><th>Fichier</th><th>Type</th><th>État des champs</th>
       <th class="num">Note</th><th>Accessibilité</th></tr></thead>
-    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>video</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.20</td><td class="note">alt text missing, transcript missing</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-indg-044-a</td><td>image</td><td><span class=chip data-s=missing>alt: missing</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.31</td><td class="note">alt text missing</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">img-hlth-053-a</td><td>image</td><td><span class=chip data-s=untranslated>alt: untranslated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.48</td><td class="note">alt text untranslated</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.50</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">aud-hlth-041-a</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class="bad"><td class="term">vid-wx-049-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=missing>transcript: missing</span></td><td class="num">0.65</td><td class="note">transcript missing</td></tr><tr class=""><td class="term">img-envr-016-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">img-agri-027-a</td><td>image</td><td><span class=chip data-s=truncated>alt: truncated</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">0.65</td><td class="note"></td></tr><tr class=""><td class="term">vid-wx-035-b</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">vid-indg-057-a</td><td>video</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=missing>caption: missing</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">0.85</td><td class="note"></td></tr><tr class=""><td class="term">img-ei-001-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hlth-002-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-016-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-indg-021-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-024-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-envr-029-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-032-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-edu-034-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-hous-036-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-muni-042-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-indg-044-b</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">aud-cult-047-a</td><td>audio</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span><span class=chip data-s=ok>transcript: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-trns-051-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr><tr class=""><td class="term">img-cult-060-a</td><td>image</td><td><span class=chip data-s=ok>alt: ok</span><span class=chip data-s=ok>caption: ok</span><span class=chip data-s=ok>credit: ok</span></td><td class="num">1.00</td><td class="note"></td></tr></tbody></table></div>
+    <tbody><tr class="bad"><td class="term">vid-hlth-028-a</td><td>vidéo</td><td><span class=chip data-s=missing>texte de remplacement&nbsp;: manquant</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,20</td><td class="note">texte de remplacement manquant, transcription manquante</td></tr><tr class="bad"><td class="term">img-wx-003-a</td><td>image</td><td><span class=chip data-s=missing>texte de remplacement&nbsp;: manquant</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,31</td><td class="note">texte de remplacement manquant</td></tr><tr class="bad"><td class="term">img-muni-020-a</td><td>image</td><td><span class=chip data-s=missing>texte de remplacement&nbsp;: manquant</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,31</td><td class="note">texte de remplacement manquant</td></tr><tr class="bad"><td class="term">img-envr-029-a</td><td>image</td><td><span class=chip data-s=missing>texte de remplacement&nbsp;: manquant</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,31</td><td class="note">texte de remplacement manquant</td></tr><tr class="bad"><td class="term">img-indg-044-a</td><td>image</td><td><span class=chip data-s=missing>texte de remplacement&nbsp;: manquant</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,31</td><td class="note">texte de remplacement manquant</td></tr><tr class="bad"><td class="term">img-cult-019-a</td><td>image</td><td><span class=chip data-s=untranslated>texte de remplacement&nbsp;: non traduit</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,48</td><td class="note">texte de remplacement non traduit</td></tr><tr class="bad"><td class="term">img-wx-035-a</td><td>image</td><td><span class=chip data-s=untranslated>texte de remplacement&nbsp;: non traduit</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,48</td><td class="note">texte de remplacement non traduit</td></tr><tr class="bad"><td class="term">img-hlth-053-a</td><td>image</td><td><span class=chip data-s=untranslated>texte de remplacement&nbsp;: non traduit</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span></td><td class="num">0,48</td><td class="note">texte de remplacement non traduit</td></tr><tr class="bad"><td class="term">vid-wx-003-b</td><td>vidéo</td><td><span class=chip data-s=ok>texte de remplacement&nbsp;: conforme</span><span class=chip data-s=missing>légende&nbsp;: manquante</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,50</td><td class="note">transcription manquante</td></tr><tr class="bad"><td class="term">vid-trns-022-a</td><td>vidéo</td><td><span class=chip data-s=ok>texte de remplacement&nbsp;: conforme</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,65</td><td class="note">transcription manquante</td></tr><tr class="bad"><td class="term">vid-indg-025-a</td><td>vidéo</td><td><span class=chip data-s=ok>texte de remplacement&nbsp;: conforme</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,65</td><td class="note">transcription manquante</td></tr><tr class="bad"><td class="term">aud-hlth-041-a</td><td>audio</td><td><span class=chip data-s=ok>texte de remplacement&nbsp;: conforme</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,65</td><td class="note">transcription manquante</td></tr><tr class="bad"><td class="term">vid-wx-049-a</td><td>vidéo</td><td><span class=chip data-s=ok>texte de remplacement&nbsp;: conforme</span><span class=chip data-s=ok>légende&nbsp;: conforme</span><span class=chip data-s=ok>mention de source&nbsp;: conforme</span><span class=chip data-s=missing>transcription&nbsp;: manquante</span></td><td class="num">0,65</td><td class="note">transcription manquante</td></tr></tbody></table></div>
 </div>
 
 <h2>Métadonnées éditoriales</h2>
@@ -1964,13 +1216,14 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <div class="sev-tile r1">
       <div class="sev-n">6</div>
       <div class="sev-l">Descriptions FR absentes</div></div>
-    <div class="sev-tile"><div class="sev-n">0.86</div>
+    <div class="sev-tile"><div class="sev-n">0,86</div>
       <div class="sev-l">Parité éditoriale</div></div>
   </div>
+  <p class="note-p">Seuls les documents présentant un écart figurent ici; 18 autres sont complets.</p>
   <div class="scroll"><table>
     <thead><tr><th>Document</th><th>Pupitre</th><th class="num">Mots-clés FR/EN</th>
       <th>Description de référencement</th><th class="num">Note</th></tr></thead>
-    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">tech-026</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">edu-034</td><td>Education</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">hlth-053</td><td>Health</td><td class="num">2/4</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.45</td></tr><tr><td class="qid">wx-003</td><td>News</td><td class="num">3/5</td><td><span class=chip data-s=missing>missing</span></td><td class="num">0.49</td></tr><tr><td class="qid">envr-029</td><td>News</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">indg-044</td><td>Indigenous</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">tech-059</td><td>Technology</td><td class="num">2/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">0.90</td></tr><tr><td class="qid">ei-001</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-002</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">envr-016</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">muni-020</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-021</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-024</td><td>Municipal</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-025</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">agri-027</td><td>Business</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-028</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-030</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-037</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">immi-040</td><td>Politics</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hlth-041</td><td>Health</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">edu-043</td><td>Education</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">just-046</td><td>Justice</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">wx-049</td><td>News</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">hous-050</td><td>Municipal</td><td class="num">3/3</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr><tr><td class="qid">indg-057</td><td>Indigenous</td><td class="num">4/4</td><td><span class=chip data-s=ok>ok</span></td><td class="num">1.00</td></tr></tbody></table></div>
+    <tbody><tr><td class="qid">cult-019</td><td>Arts</td><td class="num">2/4</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,45</td></tr><tr><td class="qid">tech-026</td><td>Technologie</td><td class="num">2/4</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,45</td></tr><tr><td class="qid">edu-034</td><td>Éducation</td><td class="num">2/4</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,45</td></tr><tr><td class="qid">muni-042</td><td>Municipal</td><td class="num">2/4</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,45</td></tr><tr><td class="qid">hlth-053</td><td>Santé</td><td class="num">2/4</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,45</td></tr><tr><td class="qid">wx-003</td><td>Nouvelles</td><td class="num">3/5</td><td><span class=chip data-s=missing>manquante</span></td><td class="num">0,49</td></tr><tr><td class="qid">envr-029</td><td>Nouvelles</td><td class="num">2/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,80</td></tr><tr><td class="qid">indg-044</td><td>Autochtones</td><td class="num">2/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,80</td></tr><tr><td class="qid">tech-059</td><td>Technologie</td><td class="num">2/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,80</td></tr><tr><td class="qid">cult-006</td><td>Arts</td><td class="num">2/3</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,87</td></tr><tr><td class="qid">trns-022</td><td>Municipal</td><td class="num">3/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,90</td></tr><tr><td class="qid">cult-032</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,90</td></tr><tr><td class="qid">cult-047</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,90</td></tr><tr><td class="qid">cult-060</td><td>Arts</td><td class="num">3/4</td><td><span class=chip data-s=ok>conforme</span></td><td class="num">0,90</td></tr></tbody></table></div>
 </div>
 
 <h2>Terminologie et capacité de réponse</h2>
@@ -1978,9 +1231,9 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile r1">
-      <div class="sev-n">57%</div>
+      <div class="sev-n">57&nbsp;%</div>
       <div class="sev-l">Cohérence terminologique FR</div></div>
-    <div class="sev-tile"><div class="sev-n">100%</div>
+    <div class="sev-tile"><div class="sev-n">100&nbsp;%</div>
       <div class="sev-l">Taux de réponse FR</div></div>
     <div class="sev-tile ">
       <div class="sev-n">0</div>
@@ -1991,855 +1244,392 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     <thead><tr><th>Notion</th><th>Forme retenue</th>
       <th class="num">Emploi de la forme retenue</th><th class="num">Occurrences</th>
       <th>Remplacée par</th></tr></thead>
-    <tbody><tr class="divrow"><td>warming centre</td><td class="term">halte-chaleur</td><td class="num">0%</td><td class="num">3</td><td class="note"></td></tr><tr class=""><td>employment insurance</td><td class="term">assurance-emploi</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>property tax</td><td class="term">taxe foncière</td><td class="num">100%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>long term care</td><td class="term">soins de longue durée</td><td class="num">100%</td><td class="num">2</td><td class="note"></td></tr></tbody></table></div>
+    <tbody><tr class="divrow"><td>warming centre</td><td class="term">halte-chaleur</td><td class="num">0&nbsp;%</td><td class="num">3</td><td class="note"></td></tr><tr class=""><td>employment insurance</td><td class="term">assurance-emploi</td><td class="num">100&nbsp;%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>property tax</td><td class="term">taxe foncière</td><td class="num">100&nbsp;%</td><td class="num">1</td><td class="note"></td></tr><tr class=""><td>long term care</td><td class="term">soins de longue durée</td><td class="num">100&nbsp;%</td><td class="num">2</td><td class="note"></td></tr></tbody></table></div>
   <p class="note-p" style="margin-top:16px">Un refus n'avance rien; il obtient donc une note parfaite en véracité et en registre. Refuser plus souvent dans une langue revient à rationner le service selon la langue, et les mesures de qualité habituelles ne peuvent pas le déceler.
-   EN 100% · FR 100%.
-   within expected expansion (FR/EN 0.90).</p>
+   EN 100&nbsp;% · FR 100&nbsp;%.
+   dans l&#x27;écart de longueur attendu (FR/EN 0,90).</p>
   
 </div>
 
 <h2>Où se concentre la divergence</h2>
 <p class="h2sub">Un résultat global indique si le flux échoue; la segmentation indique où, ce qui permet d'en confier la correction à une équipe.</p>
 <div class="card"><div class="segrow"><div class="segcol"><h3>Par pupitre</h3><table>
-              <thead><tr><th>Desk</th><th class="num">n</th>
+              <thead><tr><th>Pupitre</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>Municipal</td><td class="num">22</td><td class="num">11</td><td class="num">1</td><td class="num gap">+0.197</td></tr><tr><td>Arts</td><td class="num">11</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.182</td></tr><tr><td>News</td><td class="num">17</td><td class="num">7</td><td class="num">2</td><td class="num gap">+0.176</td></tr><tr><td>Politics</td><td class="num">5</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.167</td></tr><tr><td>Business</td><td class="num">13</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.154</td></tr><tr><td>Education</td><td class="num">9</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0.148</td></tr><tr><td>Health</td><td class="num">12</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0.097</td></tr><tr><td>Technology</td><td class="num">10</td><td class="num">2</td><td class="num">1</td><td class="num gap">+0.067</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
-              <thead><tr><th>Region</th><th class="num">n</th>
+              <tbody><tr><td>Municipal</td><td class="num">22</td><td class="num">11</td><td class="num">1</td><td class="num gap">+0,197</td></tr><tr><td>Arts</td><td class="num">11</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0,182</td></tr><tr><td>Nouvelles</td><td class="num">17</td><td class="num">7</td><td class="num">2</td><td class="num gap">+0,176</td></tr><tr><td>Politique</td><td class="num">5</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0,167</td></tr><tr><td>Économie</td><td class="num">13</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0,154</td></tr><tr><td>Éducation</td><td class="num">9</td><td class="num">4</td><td class="num">0</td><td class="num gap">+0,148</td></tr><tr><td>Santé</td><td class="num">12</td><td class="num">4</td><td class="num">1</td><td class="num gap">+0,097</td></tr><tr><td>Technologie</td><td class="num">10</td><td class="num">2</td><td class="num">1</td><td class="num gap">+0,067</td></tr></tbody></table></div><div class="segcol"><h3>Par région</h3><table>
+              <thead><tr><th>Région</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>Ontario</td><td class="num">23</td><td class="num">11</td><td class="num">4</td><td class="num gap">+0.206</td></tr><tr><td>West</td><td class="num">9</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0.167</td></tr><tr><td>Quebec</td><td class="num">15</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0.162</td></tr><tr><td>Prairies</td><td class="num">14</td><td class="num">7</td><td class="num">0</td><td class="num gap">+0.131</td></tr><tr><td>Atlantic</td><td class="num">9</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.093</td></tr><tr><td>National</td><td class="num">30</td><td class="num">8</td><td class="num">1</td><td class="num gap">+0.083</td></tr><tr><td>North</td><td class="num">14</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0.071</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
-              <thead><tr><th>Topic</th><th class="num">n</th>
+              <tbody><tr><td>Ontario</td><td class="num">23</td><td class="num">11</td><td class="num">4</td><td class="num gap">+0,206</td></tr><tr><td>Ouest</td><td class="num">9</td><td class="num">3</td><td class="num">1</td><td class="num gap">+0,167</td></tr><tr><td>Québec</td><td class="num">15</td><td class="num">6</td><td class="num">0</td><td class="num gap">+0,162</td></tr><tr><td>Prairies</td><td class="num">14</td><td class="num">7</td><td class="num">0</td><td class="num gap">+0,131</td></tr><tr><td>Atlantique</td><td class="num">9</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0,093</td></tr><tr><td>National</td><td class="num">30</td><td class="num">8</td><td class="num">1</td><td class="num gap">+0,083</td></tr><tr><td>Nord</td><td class="num">14</td><td class="num">5</td><td class="num">0</td><td class="num gap">+0,071</td></tr></tbody></table></div><div class="segcol"><h3>Par sujet</h3><table>
+              <thead><tr><th>Sujet</th><th class="num">n</th>
                 <th class="num">Div.</th><th class="num">Non serv.</th>
                 <th class="num">Écart</th></tr></thead>
-              <tbody><tr><td>recycling <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+1.000</td></tr><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0.667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>fire_service <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr><tr><td>small_business <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0.500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0.500</td></tr></tbody></table></div></div></div>
+              <tbody><tr><td>recycling <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+1,000</td></tr><tr><td>arts_funding</td><td class="num">3</td><td class="num">3</td><td class="num">0</td><td class="num gap">+0,667</td></tr><tr><td>broadcasting</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0,500</td></tr><tr><td>fire_service <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0,500</td></tr><tr><td>music</td><td class="num">2</td><td class="num">1</td><td class="num">0</td><td class="num gap">+0,500</td></tr><tr><td>school_funding</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0,500</td></tr><tr><td>small_business <span class=thin>faible</span></td><td class="num">1</td><td class="num">1</td><td class="num">1</td><td class="num gap">+0,500</td></tr><tr><td>snow_removal</td><td class="num">2</td><td class="num">2</td><td class="num">0</td><td class="num gap">+0,500</td></tr></tbody></table></div></div></div>
 
 <h2>Détail par requête</h2>
 <p class="h2sub">Tableau complet des résultats — la version accessible de chacun des chiffres ci-dessus. Les requêtes divergentes figurent en tête; les résultats parfaits sont atténués afin de mettre en évidence les valeurs qui diffèrent.</p>
 <div class="card"><div class="scroll"><table>
   <thead><tr><th>Requête</th><th>Réponse EN</th><th class="num">EN P@1</th>
-    <th class="num">FR P@1</th><th class="num">EN grnd</th><th class="num">FR grnd</th>
-    <th class="num">FR reg</th><th class="num">FR cov</th></tr></thead>
+    <th class="num">FR P@1</th><th class="num">EN vérac.</th><th class="num">FR vérac.</th>
+    <th class="num">FR reg.</th><th class="num">FR couv.</th></tr></thead>
   <tbody>
       <tr class="divrow">
           <td class="qid">q03<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">Environment Canada measured 24 millimetres of ice accretion at Kemptville during the storm…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td></tr>
       <tr class="divrow">
           <td class="qid">q20<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">Wildfires consumed 4.2 million hectares this season, surpassing the 2023 record.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q41<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">Small business insolvency filings rose 26 per cent, the highest level since 2011.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q64<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">Ambulance offload delays reached a record 118,000 hours, with a median of 92 minutes again…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q83<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">Producer-funded recycling shifted an estimated $156 million in annual costs from municipal…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td></tr>
       <tr class="divrow">
           <td class="qid">q86<span class="rowtag r1">Fait non appuyé</span></td>
           <td class="qtext">All new open datasets require full bilingual metadata from July 1; 41 per cent of existing…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q15<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Federal supports include a $12 million touring fund expansion with a quarter reserved for …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q29<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">People can go to warming centres — municipalities opened eleven during the ice storm, and …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q31<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Nursing vacancies drove 1,140 rural emergency room closures, while labour shortages delaye…</td>
-          <td class="num">0.00</td><td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.83</td></tr>
+          <td class="num">0,00</td><td class="num">0,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,83</td></tr>
       <tr class="divrow">
           <td class="qid">q32<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">The broadcaster is opening three bureaus in official language minority markets, and the ar…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="divrow">
           <td class="qid">q51<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Employers cited housing availability as the main barrier, and a federal subsidy now covers…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="divrow">
           <td class="qid">q75<span class="rowtag r2">Sources différentes</span></td>
           <td class="qtext">Supports include a settlement transferring 78,000 hectares, a country food program in eigh…</td>
-          <td class="num">0.00</td><td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num">0,00</td><td class="num">0,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="divrow">
           <td class="qid">q07<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">A quarter of the $12 million touring fund expansion is reserved for official language mino…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q102<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Eviction applications reached 92,000 with an 8-month median hearing wait, while shelters r…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.75</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,75</td></tr>
       <tr class="divrow">
           <td class="qid">q13<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Yes. The department admitted 8.1 per cent of newcomers outside Quebec as French speakers, …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q14<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">School boards face a combined $88 million shortfall amid 5.4 per cent enrolment growth, wh…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q19<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Rural hospitals reported 1,140 temporary emergency room closures last year, more than doub…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.83</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,83</td></tr>
       <tr class="divrow">
           <td class="qid">q22<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Youth unemployment reached 14.2 per cent, the highest since 2016, while the overall rate r…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q26<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">On-time performance was 67 per cent, below the 80 per cent target, largely due to freight …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.74</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,74</td></tr>
       <tr class="divrow">
           <td class="qid">q35<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Drought cut the Prairie crop forecast 18 per cent after a dry June, with poor soil moistur…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q42<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">A court ruling on section 23 Charter rights ordered a remedy, and the province will fund t…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q49<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Drought cut Prairie crop forecasts 18 per cent while a post-tropical storm flooded 620 coa…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.33</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,33</td></tr>
       <tr class="divrow">
           <td class="qid">q54<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">The city is reviewing snow removal contracts after 4,800 service complaints, with twelve o…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.33</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,33</td></tr>
       <tr class="divrow">
           <td class="qid">q62<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Ferry service was cut from ten to six daily crossings after a vessel was removed for hull …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q71<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">The museum returned 1,100 cultural objects over three years, with 62 requests still in pro…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q73<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">The city is reviewing snow removal contracts after 4,800 complaints, extreme cold closed s…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q82<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">The housing guarantee helped fill 92 of 108 vacant teaching positions, with eleven still v…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.67</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,67</td></tr>
       <tr class="divrow">
           <td class="qid">q95<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Volunteer fire departments reported a 24 per cent decline in active members, with 41 depar…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q99<span class="rowtag r3">Contenu réduit</span></td>
           <td class="qtext">Nursing overtime fell 38 per cent, dental plan enrolment passed 3.1 million, and youth men…</td>
-          <td class="num">0.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.50</td></tr>
+          <td class="num">0,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,50</td></tr>
       <tr class="divrow">
           <td class="qid">q04<span class="rowtag r4">Registre</span></td>
           <td class="qtext">Municipalities opened eleven warming centres across the affected region for residents with…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="divrow">
           <td class="qid">q05<span class="rowtag r4">Registre</span></td>
           <td class="qtext">Trustees asked the province for a per-student funding increase of $410, as the four boards…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="divrow">
           <td class="qid">q77<span class="rowtag r4">Registre</span></td>
           <td class="qtext">Twenty-two warming locations opened in the city during the extreme cold warning.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num">0.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num">0,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q01</td>
           <td class="qtext">Seasonal workers in Atlantic Canada now need 420 insurable hours to qualify for employment…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q02</td>
           <td class="qtext">Quebec signed separately from the other nine provinces, securing an asymmetrical arrangeme…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q06</td>
           <td class="qtext">The authority deferred the increase after four municipalities objected. The toll was to ri…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q08</td>
           <td class="qtext">Halifax had the tightest rental vacancy rate at 0.9 per cent, against a national rate of 1…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q09</td>
           <td class="qtext">Thirty-eight federal judicial appointments remain vacant, with 22 in final review at the j…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q10</td>
           <td class="qtext">The central bank held its policy rate at 3.75 per cent for a third consecutive time and si…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q100</td>
           <td class="qtext">Spring melt evacuated 1,240 residents while drought cut the Prairie crop forecast 18 per c…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q101</td>
           <td class="qtext">New open datasets require bilingual metadata from July 1, and a publishing grant supports …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q11</td>
           <td class="qtext">The snow crab quota for southern Gulf zones was cut 22 per cent to 18,400 tonnes, affectin…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q12</td>
           <td class="qtext">The city&#x27;s $4.1 billion operating budget carries a 3.9 per cent residential property tax i…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q16</td>
           <td class="qtext">An ice storm cut power to 180,000 homes and caused two deaths on Highway 417, while a plan…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr>
       <tr class="cleanrow">
           <td class="qid">q17</td>
           <td class="qtext">The national dairy commission reduced production quota by 1.8 per cent, the first cut sinc…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q18</td>
-          <td class="qtext">The rural broadband program connected 218,000 households last year against a target of 300…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q21</td>
-          <td class="qtext">The civilian oversight agency received 1,880 use-of-force complaints last year, up 12 per …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q23</td>
-          <td class="qtext">The public broadcaster will add 60 journalist positions across four new regional bureaus.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q24</td>
-          <td class="qtext">The boil water advisory affects about 40,000 residents after a pressure loss at a treatmen…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q25</td>
-          <td class="qtext">Twelve long-term drinking water advisories remain in effect, down from 105 in 2015.…</td>
-          <td class="num">0.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q27</td>
-          <td class="qtext">International student enrolment dropped 31 per cent following the federal permit cap.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q28</td>
-          <td class="qtext">Shelters turned away an average of 84 people nightly while operating at 96 per cent capaci…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q30</td>
-          <td class="qtext">A treatment plant pressure loss triggered a boil water advisory for 40,000 residents, whil…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q33</td>
-          <td class="qtext">The commissioner announced $54 million for 22 language nest programs covering fourteen lan…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q34</td>
-          <td class="qtext">Algorithmic impact assessments become required September 1, covering 340 identified system…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q36</td>
-          <td class="qtext">The longest median youth mental health wait was 41 weeks, with about 28,000 young people o…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q37</td>
-          <td class="qtext">The caribou conservation agreement protects 1.2 million hectares from new industrial distu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q38</td>
-          <td class="qtext">The legal aid income threshold rises to $28,400 from $23,100 on October 1.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q39</td>
-          <td class="qtext">Riders under 18 qualify for the two-year fare-free transit pilot, covering about 19,000 st…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q40</td>
-          <td class="qtext">Thirty-one of 92 applicant organizations were selected for archive digitization in the fir…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q43</td>
-          <td class="qtext">The post-tropical storm brought 140 millimetres of rain and flooded 620 properties.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q44</td>
-          <td class="qtext">The northern subsidy covers up to 40 per cent of building costs for affordable units above…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q45</td>
-          <td class="qtext">The pharmacare formulary added 34 medications, including six diabetes treatments and four …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q46</td>
-          <td class="qtext">Indigenous people accounted for 46 per cent of segregation placements while representing 3…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q47</td>
-          <td class="qtext">The cyber centre recorded 74 ransomware incidents against municipalities and health author…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q48</td>
-          <td class="qtext">The Atlantic immigration program reported a five-year retention rate of 78 per cent, up fr…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q50</td>
-          <td class="qtext">Supports include $54 million for 22 Indigenous language nests and provincial funding for t…</td>
-          <td class="num pass">1.00</td><td class="num">0.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q52</td>
-          <td class="qtext">Youth mental health waits exceed six months in seven provinces, while the pharmacare formu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q53</td>
-          <td class="qtext">The new rules require 3.5 hours of daily direct care per resident across 41 long-term care…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q55</td>
-          <td class="qtext">The average wait for a subsidized infant daycare place is 19 months, with 51,000 children …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q56</td>
-          <td class="qtext">The treaty land entitlement settlement transfers 78,000 hectares to four First Nations wit…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q57</td>
-          <td class="qtext">The coroner made eleven recommendations, including expanded take-home naloxone distributio…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q58</td>
-          <td class="qtext">Commercial radio requires 65 per cent French-language vocal music.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q59</td>
-          <td class="qtext">The digital identity program was delayed to 2028 pending a privacy impact review, after th…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q60</td>
-          <td class="qtext">Wind chill reached near minus 48 during the school closures.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q61</td>
-          <td class="qtext">The federal program will fund 1,900 co-operative housing units across 34 projects.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q63</td>
-          <td class="qtext">Public health units posted 412 beach closure days last summer, up 34 per cent.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q65</td>
-          <td class="qtext">Cross-border tourism spending reached $4.7 billion, returning to 2019 levels.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q66</td>
-          <td class="qtext">The access to information backlog reached 32,000 overdue requests, with a median completio…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q67</td>
-          <td class="qtext">Grade three reading scores rose 9 percentage points, with 68 per cent now meeting the prov…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q68</td>
-          <td class="qtext">The country food program distributed 240,000 kilograms of food across eighteen communities…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q69</td>
-          <td class="qtext">Four library branches added full-time social workers, after a pilot showed a 31 per cent d…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q70</td>
-          <td class="qtext">Northern satellite service raised median download speeds to 48 megabits per second from 9.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q72</td>
-          <td class="qtext">Credit unions reported 4.1 per cent membership growth, with 62 rural branches the only fin…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q74</td>
-          <td class="qtext">Ambulance offload delays reached 118,000 hours while new long-term care rules require 3.5 …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q76</td>
-          <td class="qtext">The access to information backlog reached 32,000 overdue requests, with fourteen instituti…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q78</td>
-          <td class="qtext">Northern satellite service reached 48 megabits per second while the country food program d…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q79</td>
-          <td class="qtext">Softwood lumber duties were raised to 21.2 per cent from 14.5 per cent, effective April 15…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q80</td>
-          <td class="qtext">Mandatory nursing overtime fell 38 per cent after a staffing agreement added 1,450 full-ti…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q81</td>
-          <td class="qtext">The bail compliance program reduced failures to appear by 26 per cent and avoided an estim…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q84</td>
-          <td class="qtext">Air quality advisories tripled to 41 days, with fine particulate exceedances on 28 days.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q85</td>
-          <td class="qtext">The Indigenous-governed health centre serves 6,800 residents across three communities, emp…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q87</td>
-          <td class="qtext">Regional shooting days rose 47 per cent, with 22 productions generating an estimated $118 …</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q88</td>
-          <td class="qtext">Landlord eviction applications reached 92,000, the highest on record, with a median hearin…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q89</td>
-          <td class="qtext">Rapid snowmelt forced the evacuation of 1,240 residents from four river communities.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q90</td>
-          <td class="qtext">The minimum wage rises to $16.45 an hour October 1 and will be indexed to inflation annual…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q91</td>
-          <td class="qtext">Dental care plan enrolment passed 3.1 million people, with 24,000 participating providers.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q92</td>
-          <td class="qtext">The review commission received 214 applications in six months, with eleven advancing to fu…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q93</td>
-          <td class="qtext">Apprenticeship completions rose 22 per cent, with registrations reaching 18,400.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q94</td>
-          <td class="qtext">Winning bidders must cover 92 per cent of rural population in licensed areas within five y…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q96</td>
-          <td class="qtext">The ban expanded to four categories including takeout containers and cutlery, effective Se…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q97</td>
-          <td class="qtext">The grant will support 46 Indigenous-language titles over three years, including 18 childr…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr>
-      <tr class="cleanrow">
-          <td class="qid">q98</td>
-          <td class="qtext">Grocery price inflation slowed to 1.8 per cent, the lowest since 2020.…</td>
-          <td class="num pass">1.00</td><td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td>
-          <td class="num pass">1.00</td></tr></tbody>
-</table></div></div>
+          <td class="num pass">1,00</td><td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td>
+          <td class="num pass">1,00</td></tr></tbody>
+</table></div>
+  <p class="note-p">Les requêtes divergentes figurent en tête. 58 autres requêtes sur 102 n'ont montré aucune divergence et sont omises ici; toutes se trouvent dans la sortie JSON.</p></div>
 
-<footer>Seuil d'équivalence de 0.08 pour chaque dimension. La véracité est évaluée séparément par rapport au contexte de référence (fabrication) et au contexte repéré (appui contextuel), de sorte qu'un échec de repérage n'est pas rapporté à tort comme une hallucination. Le mode hors ligne s'appuie sur un corpus figé, gage de reproductibilité; <code>--live</code> génère les réponses au moyen d'un modèle en direct.</footer>
+<footer>Seuil d'équivalence de 0,08 pour chaque dimension. La véracité est évaluée séparément par rapport au contexte de référence (fabrication) et au contexte repéré (appui contextuel), de sorte qu'un échec de repérage n'est pas rapporté à tort comme une hallucination. Le mode hors ligne s'appuie sur un corpus figé, gage de reproductibilité; <code>--live</code> génère les réponses au moyen d'un modèle en direct.</footer>
 </div>
 <script>
 (function () {
@@ -2857,8 +1647,13 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);
     var b = e.target.closest && e.target.closest('.langtog');
     if (b) { show(b.getAttribute('data-switch')); }
   });
-  var saved = null;
-  try { saved = localStorage.getItem('bqh-lang'); } catch (e) {}
+  // An explicit ?lang= wins, so a link from a French page lands on French even
+  // when the reader's browser is set to English.
+  var asked = (location.search.match(/[?&]lang=(en|fr)(?:&|$)/) || [])[1];
+  var saved = asked || null;
+  if (!saved) {
+    try { saved = localStorage.getItem('bqh-lang'); } catch (e) {}
+  }
   // Fall back to the browser language so a francophone reader opening the file
   // cold lands on French without touching the control.
   if (!saved) {

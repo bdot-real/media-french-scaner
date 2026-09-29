@@ -6,6 +6,7 @@ reference palette; both modes pass all six checks at all-pairs strictness.
 """
 import html
 import json
+import re
 
 from .i18n import STRINGS
 
@@ -195,8 +196,13 @@ DOC_TAIL = """
     var b = e.target.closest && e.target.closest('.langtog');
     if (b) { show(b.getAttribute('data-switch')); }
   });
-  var saved = null;
-  try { saved = localStorage.getItem('bqh-lang'); } catch (e) {}
+  // An explicit ?lang= wins, so a link from a French page lands on French even
+  // when the reader's browser is set to English.
+  var asked = (location.search.match(/[?&]lang=(en|fr)(?:&|$)/) || [])[1];
+  var saved = asked || null;
+  if (!saved) {
+    try { saved = localStorage.getItem('bqh-lang'); } catch (e) {}
+  }
   // Fall back to the browser language so a francophone reader opening the file
   // cold lands on French without touching the control.
   if (!saved) {
@@ -217,8 +223,91 @@ SEV_RANK = {"no_answer": 0, "wrong_fact": 1, "wrong_docs": 2, "omission": 3,
             "register": 4}
 
 
+def localize_reason(text, T):
+    """Render a severity reason in the report's language.
+
+    severity.classify() writes its reasons in English, and results.json keeps
+    them that way. The French view re-renders the known patterns rather than
+    showing English prose under a French heading; anything unrecognised is
+    shown as-is, escaped.
+    """
+    W = T["why"]
+    fixed = {"French declined to answer; English answered": "fr_refused",
+             "English declined to answer; French answered": "en_refused",
+             "French omits content present in English": "omits"}
+    if text in fixed:
+        return W[fixed[text]]
+    m = re.fullmatch(r"French asserts unsupported figure\(s\): (.*)", text)
+    if m:
+        figs = re.sub(r"(?<=\d)\.(?=\d)", T["decimal"], m.group(1))
+        return W["figures"].format(x=esc(figs))
+    m = re.fullmatch(r"French omits content present in English: (.*)", text)
+    if m:
+        return W["omits_x"].format(x=esc(m.group(1)))
+    m = re.fullmatch(r"Gold-document retrieval diverged \((.*)\)", text)
+    if m:
+        parts = []
+        for part in m.group(1).split("; "):
+            side, _, ids = part.partition(": ")
+            key = {"EN-only": "en_only", "FR-only": "fr_only"}.get(side)
+            parts.append(W[key].format(x=esc(ids)) if key else esc(part))
+        return W["diverged"].format(x="; ".join(parts))
+    m = re.fullmatch(r"Register: '(.*)' → '(.*)'", text)
+    if m:
+        return W["register"].format(x=esc(m.group(1)), y=esc(m.group(2)))
+    return esc(text)
+
+
 def esc(x):
     return html.escape(str(x), quote=True)
+
+
+def num(x, spec, T):
+    """A number as the reader's language writes it: 0,959 in French, not 0.959.
+
+    The harness flags anglo decimals in French copy as a localization defect,
+    so its own report does not get to ship them.
+    """
+    return format(x, spec).replace(".", T["decimal"])
+
+
+def pct(x, T):
+    return f"{x * 100:.0f}{T['pct']}"
+
+
+def word(x, T):
+    """An enumerated value the metrics emit in English, in the report's language."""
+    return esc(T["vocab"].get(x, x))
+
+
+def field_state(field, state, T):
+    """'alt: missing' / 'texte de remplacement : manquant', agreeing in gender."""
+    label, fem = T["fields"].get(field, (field, False))
+    forms = T["states"].get(state)
+    shown = forms[1 if fem else 0] if forms else state
+    sep = "&nbsp;: " if T["decimal"] == "," else ": "
+    return f"{esc(label)}{sep}{esc(shown)}"
+
+
+def a11y_failure(text, T):
+    """'alt text missing' -> 'texte de remplacement manquant'."""
+    for field in ("alt text", "transcript", "caption", "credit"):
+        if text.startswith(field + " "):
+            state = text[len(field) + 1:]
+            label, fem = T["fields"].get(field, (field, False))
+            forms = T["states"].get(state)
+            return esc(f"{label} {forms[1 if fem else 0] if forms else state}")
+    return esc(text)
+
+
+def segment_name(x, T):
+    return esc(T["segments"].get(x, x))
+
+
+def retriever_label(x, T):
+    if x.startswith("embedding"):
+        return esc(T["vocab"]["embedding"] + x[len("embedding"):])
+    return word(x, T)
 
 
 def _bar_row(name, vals, T):
@@ -234,17 +323,17 @@ def _bar_row(name, vals, T):
       </th>
       <td class="plot">
         <svg viewBox="0 0 100 22" preserveAspectRatio="none" role="img"
-             aria-label="English {en:.3f}, French {fr:.3f}, gap {gap:+.3f}">
+             aria-label="{T['vocab']['aria_plot'].format(en=num(en, '.3f', T), fr=num(fr, '.3f', T), gap=num(gap, '+.3f', T))}">
           <line x1="0" y1="11" x2="100" y2="11" class="track"/>
           <line x1="{lo*100:.2f}" y1="11" x2="{hi*100:.2f}" y2="11" class="gapline"/>
           <circle cx="{en*100:.2f}" cy="11" r="4.2" class="mark-en"/>
           <circle cx="{fr*100:.2f}" cy="11" r="4.2" class="mark-fr"/>
         </svg>
       </td>
-      <td class="num en">{en:.3f}</td>
-      <td class="num fr">{fr:.3f}</td>
-      <td class="num gap">{gap:+.3f}</td>
-      <td class="status"><span class="pill {status}">{'equivalent' if status=='ok' else 'divergent'}</span></td>
+      <td class="num en">{num(en, '.3f', T)}</td>
+      <td class="num fr">{num(fr, '.3f', T)}</td>
+      <td class="num gap">{num(gap, '+.3f', T)}</td>
+      <td class="status"><span class="pill {status}">{T['eq_ok'] if status=='ok' else T['eq_bad']}</span></td>
     </tr>"""
 
 
@@ -263,7 +352,7 @@ def render_lang(summary, rows, lang):
     lex = "".join(f"""
       <tr><td class="term">{esc(w['term'])}</td>
           <td class="cov"><span class="covbar"><span style="width:{w['coverage']*100:.0f}%"></span></span>
-              <span class="covnum">{w['coverage']:.2f}</span></td>
+              <span class="covnum">{num(w['coverage'], '.2f', T)}</span></td>
           <td class="qs">{esc(', '.join(w['queries']))}</td></tr>"""
         for w in summary["weak_lexicon"][:10])
 
@@ -271,13 +360,13 @@ def render_lang(summary, rows, lang):
     for d in summary["divergent_queries"]:
         issues = []
         if d["en_p1"] != d["fr_p1"]:
-            issues.append("retrieval miss")
+            issues.append(T["vocab"]["retrieval miss"])
         if d["fr_ground"] < 1.0:
-            issues.append("fabricated figure")
+            issues.append(T["vocab"]["fabricated figure"])
         if d["fr_register"] < 1.0:
-            issues.append("register")
+            issues.append(T["vocab"]["register"])
         if d["fr_coverage"] < 1.0:
-            issues.append("omission")
+            issues.append(T["vocab"]["omission"])
         div += f"""
       <tr><td class="qid">{esc(d['query_id'])}</td>
           <td>{esc(d['divergence_class'] or '—')}</td>
@@ -297,7 +386,7 @@ def render_lang(summary, rows, lang):
     def _cell(v, good=1.0):
         """Recede perfect scores so the values that differ carry the eye."""
         cls = "num" if v < good else "num pass"
-        return f'<td class="{cls}">{v:.2f}</td>'
+        return f'<td class="{cls}">{num(v, ".2f", T)}</td>'
 
     DETAIL_CLEAN_SHOWN = 12
     clean_total = sum(1 for r in detail_rows if r.get("severity", "none") == "none")
@@ -332,7 +421,7 @@ def render_lang(summary, rows, lang):
                         if detail_note else "")
 
     sv = summary.get("severity")
-    parity = f"{sv['parity_rate']*100:.0f}%" if sv else "—"
+    parity = pct(sv['parity_rate'], T) if sv else "—"
     ndim = len(dims)
     if sv and sv["n_unserved"]:
         headline = (f"<strong>{sv['n_unserved']} "
@@ -357,7 +446,7 @@ def render_lang(summary, rows, lang):
       <div class="case r{SEV_RANK.get(c['tier'],5)}">
         <div class="case-h"><span class="case-tier">{esc(SEVL.get(c['tier'],c['tier']))}</span>
           <span class="qid">{esc(c['query_id'])}</span></div>
-        <div class="case-why">{esc(c['reasons'][0] if c['reasons'] else '')}</div>
+        <div class="case-why">{localize_reason(c['reasons'][0], T) if c['reasons'] else ''}</div>
         <div class="case-ab"><span class="ab-l">EN</span>
           <span class="ab-t">{esc(c['en_answer'][:200])}</span></div>
         <div class="case-ab"><span class="ab-l fr">FR</span>
@@ -373,9 +462,9 @@ def render_lang(summary, rows, lang):
     # --- MDR / QFCR ---
     dr = summary.get("drift") or {}
     qf = summary.get("false_correction") or {}
-    n_docs = summary.get("n_docs", 24)
+    n_docs = summary.get("n_docs", "?")
     other = "fr" if lang == "en" else "en"
-    footer = T["footer"].format(thr=f"{summary.get('threshold', 0.08):.2f}")
+    footer = T["footer"].format(thr=num(summary.get('threshold', 0.08), '.2f', T))
     mdr_note = T["mdr_note"].format(sub=dr.get("substituted", 0),
                                     scored=dr.get("scored_opportunities", 0),
                                     reph=dr.get("rephrased", 0))
@@ -391,27 +480,37 @@ def render_lang(summary, rows, lang):
             for e in dr.get("events", [])[:8])
         qev = "".join(
             f"<tr><td class=\"term\">{esc(e['quebec'])}</td>"
-            f"<td class=\"term drift-to\">{esc(e['replaced_with'])}</td>"
+            f"<td class=\"term drift-to\">{word(e['replaced_with'], T)}</td>"
             f"<td class=\"num\">{e['n']}</td>"
             f"<td class=\"qid\">{esc(e['where'])}</td></tr>"
             for e in qf.get("events", [])[:8])
+        # Built outside the template: a plain string nested in the f-string
+        # below is not interpolated, and shipped its placeholders verbatim.
+        drift_table = (
+            f'<table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th>'
+            f'<th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead>'
+            f'<tbody>{ev}</tbody></table>' if ev else '')
+        qfcr_table = (
+            f'<table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th>'
+            f'<th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead>'
+            f'<tbody>{qev}</tbody></table>' if qev else '')
         driftblock = f"""<h2>{T['h_drift']}</h2>
 <p class="h2sub">{T['sub_drift']}</p>
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile {'r1' if dr.get('mdr',0) > 0.2 else ''}">
-      <div class="sev-n">{dr.get('mdr',0)*100:.0f}%</div>
+      <div class="sev-n">{pct(dr.get('mdr',0), T)}</div>
       <div class="sev-l">{T['mdr_lab']}</div></div>
     <div class="sev-tile {'r0' if qf.get('qfcr',0) > 0.5 else ''}">
-      <div class="sev-n">{qf.get('qfcr',0)*100:.0f}%</div>
+      <div class="sev-n">{pct(qf.get('qfcr',0), T)}</div>
       <div class="sev-l">{T['qfcr_lab']}</div></div>
     <div class="sev-tile"><div class="sev-n">{dr.get('rephrased',0)}</div>
       <div class="sev-l">{T['reph_lab']}</div></div>
   </div>
   <p class="note-p">{mdr_note}</p>
-  {'<table><thead><tr><th>{T["th_qform"]}</th><th>{T["th_replaced"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_where"]}</th></tr></thead><tbody>' + ev + '</tbody></table>' if ev else ''}
+  {drift_table}
   <p class="note-p" style="margin-top:16px">{qfcr_note}</p>
-  {'<table><thead><tr><th>{T["th_valid"]}</th><th>{T["th_changed"]}</th><th class="num">{T["th_n"]}</th><th>{T["th_probe"]}</th></tr></thead><tbody>' + qev + '</tbody></table>' if qev else ''}
+  {qfcr_table}
 </div>"""
 
     # --- media metadata ---
@@ -425,22 +524,22 @@ def render_lang(summary, rows, lang):
         kinds = "".join(
             f'<div class="sev-tile {"r0" if v["inaccessible"] else ""}">'
             f'<div class="sev-n">{v["n"]}</div>'
-            f'<div class="sev-l">{esc(k)} · {v["inaccessible"]}</div></div>'
+            f'<div class="sev-l">{word(k, T)} · {v["inaccessible"]}</div></div>'
             for k, v in md["by_kind"].items())
         arows = "".join(
             f"<tr class=\"{'bad' if not a['accessible'] else ''}\">"
             f"<td class=\"term\">{esc(a['asset_id'])}</td>"
-            f"<td>{esc(a['kind'])}</td>"
-            f"<td>{''.join(f'<span class=chip data-s={esc(v)}>{esc(f)}: {esc(v)}</span>' for f, v in a['fields'].items() if v != 'n/a')}</td>"
-            f"<td class=\"num\">{a['score']:.2f}</td>"
-            f"<td class=\"note\">{esc(', '.join(a['a11y_failures']))}</td></tr>"
+            f"<td>{word(a['kind'], T)}</td>"
+            f"<td>{''.join(f'<span class=chip data-s={esc(v)}>{field_state(f, v, T)}</span>' for f, v in a['fields'].items() if v != 'n/a')}</td>"
+            f"<td class=\"num\">{num(a['score'], '.2f', T)}</td>"
+            f"<td class=\"note\">{', '.join(a11y_failure(x, T) for x in a['a11y_failures'])}</td></tr>"
             for a in md["assets"] if not a["accessible"])
         mediablock = f"""<h2>{T['h_media']}</h2>
 <p class="h2sub">{T['sub_media']}</p>
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile {'r0' if md['a11y_rate'] < 0.9 else ''}">
-      <div class="sev-n">{md['a11y_rate']*100:.0f}%</div>
+      <div class="sev-n">{pct(md['a11y_rate'], T)}</div>
       <div class="sev-l">{T['a11y_lab']}</div></div>
     {kinds}
   </div>
@@ -459,10 +558,10 @@ def render_lang(summary, rows, lang):
     if ed.get("n_docs"):
         erows = "".join(
             f"<tr><td class=\"qid\">{esc(r['doc_id'])}</td>"
-            f"<td>{esc(r['desk'] or '')}</td>"
+            f"<td>{segment_name(r['desk'] or '', T)}</td>"
             f"<td class=\"num\">{r['n_tags_fr']}/{r['n_tags_en']}</td>"
-            f"<td><span class=chip data-s={esc(r['seo_state'])}>{esc(r['seo_state'])}</span></td>"
-            f"<td class=\"num\">{r['score']:.2f}</td></tr>"
+            f"<td><span class=chip data-s={esc(r['seo_state'])}>{esc(T['states'].get(r['seo_state'], (r['seo_state'],)*2)[1])}</span></td>"
+            f"<td class=\"num\">{num(r['score'], '.2f', T)}</td></tr>"
             for r in ed["rows"] if r["score"] < 1.0)
         edblock = f"""<h2>{T['h_ed']}</h2>
 <p class="h2sub">{T['sub_ed']}</p>
@@ -473,7 +572,7 @@ def render_lang(summary, rows, lang):
     <div class="sev-tile {'r1' if ed['n_missing_seo'] else ''}">
       <div class="sev-n">{ed['n_missing_seo']}</div>
       <div class="sev-l">{T['seo_lab']}</div></div>
-    <div class="sev-tile"><div class="sev-n">{ed['score']:.2f}</div>
+    <div class="sev-tile"><div class="sev-n">{num(ed['score'], '.2f', T)}</div>
       <div class="sev-l">{T['edpar_lab']}</div></div>
   </div>
   <p class="note-p">{ed_ok_note}</p>
@@ -493,7 +592,7 @@ def render_lang(summary, rows, lang):
             f"<tr class=\"{'divrow' if c['consistency'] < 1.0 else ''}\">"
             f"<td>{esc(c['concept'].replace('_',' '))}</td>"
             f"<td class=\"term\">{esc(c['canonical'][:46])}</td>"
-            f"<td class=\"num\">{c['consistency']*100:.0f}%</td>"
+            f"<td class=\"num\">{pct(c['consistency'], T)}</td>"
             f"<td class=\"num\">{c['mentions']}</td>"
             f"<td class=\"note\">{esc(', '.join(v['pattern'][:26] for v in c['variants'][1:3]))}</td></tr>"
             for c in tm.get("concepts", []))
@@ -503,14 +602,18 @@ def render_lang(summary, rows, lang):
             for a in an.get("asymmetric", [])[:8])
         fr_ans = an.get("per_language", {}).get("fr", {})
         en_ans = an.get("per_language", {}).get("en", {})
+        asym_table = (
+            f'<div class="scroll"><table><thead><tr><th>{T["th_query"]}</th>'
+            f'<th>{T["vocab"]["served"]}</th><th>{T["vocab"]["denied"]}</th></tr></thead>'
+            f'<tbody>{asym}</tbody></table></div>' if asym else '')
         langblock = f"""<h2>{T['h_lang']}</h2>
 <p class="h2sub">{T['sub_lang']}</p>
 <div class="card">
   <div class="sev-row">
     <div class="sev-tile {'r1' if tm.get('score',1) < 0.9 else ''}">
-      <div class="sev-n">{tm.get('score',1)*100:.0f}%</div>
+      <div class="sev-n">{pct(tm.get('score',1), T)}</div>
       <div class="sev-l">{T['term_lab']}</div></div>
-    <div class="sev-tile"><div class="sev-n">{fr_ans.get('answer_rate',1)*100:.0f}%</div>
+    <div class="sev-tile"><div class="sev-n">{pct(fr_ans.get('answer_rate',1), T)}</div>
       <div class="sev-l">{T['answer_lab']}</div></div>
     <div class="sev-tile {'r0' if an.get('n_asymmetric') else ''}">
       <div class="sev-n">{an.get('n_asymmetric',0)}</div>
@@ -523,9 +626,9 @@ def render_lang(summary, rows, lang):
       <th>{T['th_replaced']}</th></tr></thead>
     <tbody>{trows}</tbody></table></div>
   <p class="note-p" style="margin-top:16px">{T['answer_note']}
-   EN {en_ans.get('answer_rate',1)*100:.0f}% · FR {fr_ans.get('answer_rate',1)*100:.0f}%.
-   {esc(rp.get('verdict',''))} (FR/EN {rp.get('ratio',1):.2f}).</p>
-  {'<div class="scroll"><table><thead><tr><th>' + T['th_query'] + '</th><th>Served</th><th>Denied</th></tr></thead><tbody>' + asym + '</tbody></table></div>' if asym else ''}
+   EN {pct(en_ans.get('answer_rate',1), T)} · FR {pct(fr_ans.get('answer_rate',1), T)}.
+   {word(rp.get('verdict',''), T)} (FR/EN {num(rp.get('ratio',1), '.2f', T)}).</p>
+  {asym_table}
 </div>"""
 
     # --- segmentation ---
@@ -538,14 +641,14 @@ def render_lang(summary, rows, lang):
             if not items:
                 continue
             srows = "".join(
-                f"<tr><td>{esc(x['segment'])}{' <span class=thin>'+esc(T['thin'])+'</span>' if x['thin'] else ''}</td>"
+                f"<tr><td>{segment_name(x['segment'], T)}{' <span class=thin>'+esc(T['thin'])+'</span>' if x['thin'] else ''}</td>"
                 f"<td class=\"num\">{x['n']}</td>"
                 f"<td class=\"num\">{x['divergent']}</td>"
                 f"<td class=\"num\">{x['unserved']}</td>"
-                f"<td class=\"num gap\">{x['worst_gap']:+.3f}</td></tr>"
+                f"<td class=\"num gap\">{num(x['worst_gap'], '+.3f', T)}</td></tr>"
                 for x in items)
             tabs += f"""<div class="segcol"><h3>{esc(T.get("by_"+axis, axis))}</h3><table>
-              <thead><tr><th>{esc(axis).title()}</th><th class="num">{T['th_n']}</th>
+              <thead><tr><th>{word(axis, T)}</th><th class="num">{T['th_n']}</th>
                 <th class="num">{T['th_div']}</th><th class="num">{T['th_unsvd']}</th>
                 <th class="num">{T['th_gap']}</th></tr></thead>
               <tbody>{srows}</tbody></table></div>"""
@@ -568,7 +671,7 @@ def render_lang(summary, rows, lang):
   <p class="sub">{T['intro']}</p>
   <div class="meta">{summary['n_queries']} {T['meta_docs']} · {n_docs} {T['meta_docs2']} ·
    {T['meta_cf']}<br>
-   {T['meta_mode']} <code>{esc(mode)}</code> · {T['meta_retr']} <code>{esc(summary.get('retriever','bm25'))}</code></div>
+   {T['meta_mode']} <code>{word(mode, T)}</code> · {T['meta_retr']} <code>{retriever_label(summary.get('retriever','bm25'), T)}</code></div>
 </header>
 
 <div class="card hero">
@@ -578,7 +681,7 @@ def render_lang(summary, rows, lang):
   </div>
   <div class="hero-txt">
     <p style="margin-top:0">{headline}</p>
-    <p style="margin-bottom:0">{T['eq_index']} {idx:.3f} · {ndim}
+    <p style="margin-bottom:0">{T['eq_index']} {num(idx, '.3f', T)} · {ndim}
     {T['th_dim'].lower()}s. {T['hero_tail']}</p>
   </div>
 </div>
@@ -621,8 +724,8 @@ def render_lang(summary, rows, lang):
 <p class="h2sub">{T['sub_detail']}</p>
 <div class="card"><div class="scroll"><table>
   <thead><tr><th>{T['th_query']}</th><th>{T['th_en_ans']}</th><th class="num">EN P@1</th>
-    <th class="num">FR P@1</th><th class="num">EN grnd</th><th class="num">FR grnd</th>
-    <th class="num">FR reg</th><th class="num">FR cov</th></tr></thead>
+    <th class="num">FR P@1</th><th class="num">EN {T['vocab']['col_grnd']}</th><th class="num">FR {T['vocab']['col_grnd']}</th>
+    <th class="num">FR {T['vocab']['col_reg']}</th><th class="num">FR {T['vocab']['col_cov']}</th></tr></thead>
   <tbody>{detail}</tbody>
 </table></div>
   {detail_note_html}</div>
